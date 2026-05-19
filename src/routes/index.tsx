@@ -164,9 +164,23 @@ function Index() {
                       {p.role} · {p.year}
                     </div>
                   </div>
-                  <p className="col-span-12 text-sm leading-relaxed text-muted-foreground md:col-span-4">
-                    {p.description}
-                  </p>
+                  <div className="col-span-12 md:col-span-4">
+                    {p.description && (
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {p.description}
+                      </p>
+                    )}
+                    {p.bullets && (
+                      <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                        {p.bullets.map((b) => (
+                          <li key={b} className="flex gap-3">
+                            <span className="font-mono text-muted-foreground/60">—</span>
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                   <div className="col-span-12 flex flex-wrap items-start gap-2 md:col-span-2 md:justify-end">
                     {p.tags.map((t) => (
                       <span
