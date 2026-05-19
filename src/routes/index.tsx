@@ -208,7 +208,7 @@ function Index() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h2 className="text-3xl font-medium leading-tight tracking-tight md:text-5xl">
+            <h2 className="text-base font-medium leading-relaxed tracking-tight md:text-lg">
               Eight years building software that respects the people using it.
             </h2>
             <div className="mt-10 max-w-2xl space-y-6 text-base leading-relaxed text-muted-foreground">
