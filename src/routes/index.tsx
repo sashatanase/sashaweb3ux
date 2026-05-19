@@ -166,7 +166,8 @@ function Index() {
                       {p.role} · {p.year}
                     </div>
                   </div>
-                  <div className="col-span-12 md:col-span-4">
+                  <div className="col-span-12 md:col-span-6">
+
                     {p.description && (
                       <p className="text-sm leading-relaxed text-muted-foreground">
                         {p.description}
