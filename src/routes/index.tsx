@@ -11,42 +11,65 @@ const NAV = [
   { label: "Contact", href: "#contact" },
 ];
 
-const WORK = [
+type WorkItem = {
+  no: string;
+  year: string;
+  title: string;
+  role: string;
+  description?: string;
+  bullets?: string[];
+  tags: string[];
+};
+
+const WORK: WorkItem[] = [
   {
     no: "01",
-    year: "2025",
-    title: "Northwind Analytics Platform",
-    role: "Lead Product Engineer",
+    year: "2022 — 2025",
+    title: "Web3UX",
+    role: "Co-Founder",
     description:
-      "Rebuilt the reporting pipeline serving 40k daily users. Reduced query latency by 78% and shipped a new dashboard system used across four product teams.",
-    tags: ["TypeScript", "React", "PostgreSQL"],
+      "Co-founded Web3UX, a user testing platform built specifically for web3 native users. Created to solve one of the core problems in decentralized product development: access to the right research participants. The platform connected web3 projects with real users for usability testing, discovery research, and behavioral studies.",
+    tags: ["Founder", "Web3", "Research Ops"],
   },
   {
     no: "02",
-    year: "2024",
-    title: "Atlas Design System",
-    role: "Founding Designer",
-    description:
-      "Designed and maintained a cross-platform component library adopted by 12 internal products. Established tokens, accessibility standards, and contribution model.",
-    tags: ["Figma", "Storybook", "Design Ops"],
+    year: "2024 — 2025",
+    title: "Thesis*",
+    role: "Research Manager",
+    bullets: [
+      "Led research focused on PMF across Mezo Network, Acre, and the BitcoinFi Accelerator, including discovery, segmentation, and value-prop validation.",
+      "Guided product teams with actionable insights that shaped roadmap priorities.",
+      "Built and maintained the company-wide research repository, serving as the connective tissue between contracting researchers and internal teams.",
+      "Ran JTBD analyses, PMF surveys and interviews, and iterative discovery to identify high-fit user segments.",
+    ],
+    tags: ["PMF", "JTBD", "Research Ops"],
   },
   {
     no: "03",
-    year: "2023",
-    title: "Meridian Mobile App",
-    role: "Frontend Engineer",
-    description:
-      "Launched a React Native app from zero to 100k installs in six months. Owned animation, offline sync, and onboarding flow.",
-    tags: ["React Native", "Reanimated"],
+    year: "2024 — 2025",
+    title: "Mezo",
+    role: "Research Manager / Ops & Product Strategist",
+    bullets: [
+      "Led research with a focus on PMF: discovery, segmentation, and value-prop validation.",
+      "Guided product teams with insights that shaped roadmap priorities.",
+      "Coordinated cross-functional teams and built the insight repository used across the company.",
+      "Ran JTBD, PMF surveys and interviews, and iterative discovery to identify high-fit segments.",
+    ],
+    tags: ["Product Strategy", "PMF", "BitcoinFi"],
   },
   {
     no: "04",
-    year: "2022",
-    title: "Helix Internal Tools",
-    role: "Software Engineer",
-    description:
-      "Built operational tooling for the logistics team — saved an estimated 1,200 hours per quarter of manual coordination work.",
-    tags: ["Node.js", "Next.js"],
+    year: "2021 — 2024",
+    title: "Threshold Network",
+    role: "UX Research & Product Design Lead",
+    bullets: [
+      "Built staking and provider experiences end to end, aligning direction with PMF insights.",
+      "Validated flows through testing and user research, refining features by segment.",
+      "Improved developer experience by reducing integration friction on client code.",
+      "Drove alignment with stakeholders and prioritized the roadmap based on user value.",
+      "Led product work for the tBTC bridge from concept to iterative improvement.",
+    ],
+    tags: ["UX Research", "Product Design", "tBTC"],
   },
 ];
 
@@ -65,7 +88,7 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 items-center gap-6 px-6 py-5 md:px-10">
           <a href="#top" className="col-span-6 font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
-            Your Name
+            Sasha Luca
           </a>
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
             {NAV.map((n) => (
@@ -141,9 +164,23 @@ function Index() {
                       {p.role} · {p.year}
                     </div>
                   </div>
-                  <p className="col-span-12 text-sm leading-relaxed text-muted-foreground md:col-span-4">
-                    {p.description}
-                  </p>
+                  <div className="col-span-12 md:col-span-4">
+                    {p.description && (
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {p.description}
+                      </p>
+                    )}
+                    {p.bullets && (
+                      <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                        {p.bullets.map((b) => (
+                          <li key={b} className="flex gap-3">
+                            <span className="font-mono text-muted-foreground/60">—</span>
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                   <div className="col-span-12 flex flex-wrap items-start gap-2 md:col-span-2 md:justify-end">
                     {p.tags.map((t) => (
                       <span
@@ -270,7 +307,7 @@ function Index() {
 
       <footer className="border-t border-border">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6 px-6 py-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:px-10">
-          <div className="col-span-6 md:col-span-4">© {year} Your Name</div>
+          <div className="col-span-6 md:col-span-4">© {year} Sasha Luca</div>
           <div className="col-span-6 text-right md:col-span-4 md:text-center">Zürich · 47.3769° N</div>
           <div className="col-span-12 text-left md:col-span-4 md:text-right">Set in Inter &amp; JetBrains Mono</div>
         </div>
