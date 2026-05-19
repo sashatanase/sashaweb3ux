@@ -224,7 +224,7 @@ function Index() {
                 comfortable in Figma defining systems and motion.
               </p>
             </div>
-            <dl className="mt-12 grid max-w-[560px] grid-cols-1 grid-rows-3 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em] sm:grid-flow-col sm:grid-cols-2">
+            <dl className="mt-12 grid max-w-[560px] grid-cols-1 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em]">
               {[
                 ["Based in", "Zürich, CH"],
                 ["Tools", "React · TS · Figma"],
