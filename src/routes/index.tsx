@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import portrait from "@/assets/sasha-luca-portrait.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -207,7 +208,7 @@ function Index() {
               §03 / About
             </div>
           </div>
-          <div className="col-span-12 md:col-span-10">
+          <div className="col-span-12 md:col-span-7">
             <h2 className="max-w-[560px] text-3xl font-medium leading-tight tracking-tight md:text-5xl">
               Eight years building software that respects the people using it.
             </h2>
@@ -238,6 +239,14 @@ function Index() {
                 </div>
               ))}
             </dl>
+          </div>
+          <div className="col-span-12 md:col-span-3">
+            <img
+              src={portrait}
+              alt="Portrait of Sasha Luca"
+              className="w-full grayscale"
+              loading="lazy"
+            />
           </div>
         </section>
 
