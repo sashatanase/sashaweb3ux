@@ -174,7 +174,7 @@ function Index() {
                       <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
                         {p.bullets.map((b) => (
                           <li key={b} className="flex gap-3">
-                            <span className="font-mono text-muted-foreground/60">—</span>
+                            <span aria-hidden className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-accent" />
                             <span>{b}</span>
                           </li>
                         ))}
