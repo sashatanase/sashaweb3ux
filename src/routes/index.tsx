@@ -24,7 +24,7 @@ type WorkItem = {
 const WORK: WorkItem[] = [
   {
     no: "01",
-    year: "2022 — 2025",
+    year: "\n2022 — 2025",
     title: "Web3UX",
     role: "Co-Founder",
     bullets: [
