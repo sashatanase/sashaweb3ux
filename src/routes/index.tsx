@@ -208,24 +208,36 @@ function Index() {
               §03 / About
             </div>
           </div>
-          <div className="col-span-12 md:col-span-7">
-            <h2 className="max-w-[560px] text-3xl font-medium leading-tight tracking-tight md:text-5xl">
-              Eight years building software that respects the people using it.
-            </h2>
-            <div className="mt-10 max-w-[560px] space-y-6 text-base leading-relaxed text-muted-foreground">
-              <p>
-                I've worked across early-stage startups and established product
-                teams — most recently leading frontend at Northwind, where I
-                shipped the analytics platform now used by enterprise customers
-                across Europe.
-              </p>
-              <p>
-                My background sits between design and engineering. I'm fluent in
-                React, TypeScript, and the modern frontend stack, and equally
-                comfortable in Figma defining systems and motion.
-              </p>
+          <div className="col-span-12 md:col-span-10">
+            <div className="grid grid-cols-12 gap-6">
+              <div className="col-span-12 md:col-span-8">
+                <h2 className="max-w-[560px] text-3xl font-medium leading-tight tracking-tight md:text-5xl">
+                  Eight years building software that respects the people using it.
+                </h2>
+                <div className="mt-10 max-w-[560px] space-y-6 text-base leading-relaxed text-muted-foreground">
+                  <p>
+                    I've worked across early-stage startups and established product
+                    teams — most recently leading frontend at Northwind, where I
+                    shipped the analytics platform now used by enterprise customers
+                    across Europe.
+                  </p>
+                  <p>
+                    My background sits between design and engineering. I'm fluent in
+                    React, TypeScript, and the modern frontend stack, and equally
+                    comfortable in Figma defining systems and motion.
+                  </p>
+                </div>
+              </div>
+              <div className="col-span-12 md:col-span-4">
+                <img
+                  src={portrait}
+                  alt="Portrait of Sasha Luca"
+                  className="w-full grayscale"
+                  loading="lazy"
+                />
+              </div>
             </div>
-            <dl className="mt-12 grid max-w-[560px] grid-cols-1 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em]">
+            <dl className="mt-12 grid grid-cols-1 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em]">
               {[
                 ["Based in", "Zürich, CH"],
                 ["Tools", "React · TS · Figma"],
@@ -233,20 +245,12 @@ function Index() {
                 ["Years", "2017 — Present"],
                 ["Languages", "EN / DE / FR"],
               ].map(([k, v]) => (
-                <div key={k} className="grid grid-cols-2 gap-4">
+                <div key={k} className="grid max-w-[560px] grid-cols-2 gap-4">
                   <dt className="text-muted-foreground">{k}</dt>
                   <dd>{v}</dd>
                 </div>
               ))}
             </dl>
-          </div>
-          <div className="col-span-12 md:col-span-3">
-            <img
-              src={portrait}
-              alt="Portrait of Sasha Luca"
-              className="w-full grayscale"
-              loading="lazy"
-            />
           </div>
         </section>
 
