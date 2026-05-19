@@ -158,7 +158,7 @@ function Index() {
                   <div className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-1">
                     {p.no}
                   </div>
-                  <div className="col-span-10 md:col-span-5">
+                  <div className="col-span-10 md:col-span-3">
                     <div className="text-xl font-medium tracking-tight md:text-2xl">
                       {p.title}
                     </div>
