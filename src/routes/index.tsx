@@ -121,7 +121,7 @@ function Index() {
               based in <span className="text-accent">Zürich</span>.
             </h1>
             <div className="mt-12 grid grid-cols-12 gap-6">
-              <p className="col-span-12 max-w-2xl text-base leading-relaxed md:col-span-8 md:text-lg">
+              <p className="col-span-12 max-w-2xl text-base font-medium leading-relaxed tracking-tight md:col-span-8 md:text-2xl">
                 I build measured, useful products at the intersection of design
                 and engineering. Currently open to senior engineering and
                 design-engineering roles.
