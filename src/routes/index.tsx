@@ -207,11 +207,11 @@ function Index() {
               §03 / About
             </div>
           </div>
-          <div className="col-span-12 md:col-span-6">
+          <div className="col-span-12 md:col-span-10">
             <h2 className="text-3xl font-medium leading-tight tracking-tight md:text-5xl">
               Eight years building software that respects the people using it.
             </h2>
-            <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground">
+            <div className="mt-10 max-w-2xl space-y-6 text-base leading-relaxed text-muted-foreground">
               <p>
                 I've worked across early-stage startups and established product
                 teams — most recently leading frontend at Northwind, where I
@@ -224,9 +224,7 @@ function Index() {
                 comfortable in Figma defining systems and motion.
               </p>
             </div>
-          </div>
-          <div className="col-span-12 md:col-span-4">
-            <dl className="space-y-6 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em]">
+            <dl className="mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em] sm:grid-cols-2">
               {[
                 ["Based in", "Zürich, CH"],
                 ["Years", "2017 — Present"],
