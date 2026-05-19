@@ -35,9 +35,9 @@ const WORK: WorkItem[] = [
   },
   {
     no: "02",
-    year: "2024 — 2025",
+    year: "\n2021 — 2024",
     title: "Thesis*",
-    role: "Research Manager",
+    role: "UX Research & Product Design Lead",
     bullets: [
       "Led research focused on PMF across Mezo Network, Acre, and the BitcoinFi Accelerator, including discovery, segmentation, and value-prop validation.",
       "Guided product teams with actionable insights that shaped roadmap priorities.",
