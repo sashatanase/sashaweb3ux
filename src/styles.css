@@ -140,8 +140,19 @@
     border-color: var(--color-border);
   }
 
+  html {
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
   }
 }
