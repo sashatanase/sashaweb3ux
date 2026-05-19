@@ -61,7 +61,7 @@ const WORK: WorkItem[] = [
   },
   {
     no: "04",
-    year: "2021 — 2024",
+    year: "\n2021 — 2024",
     title: "Threshold Network",
     role: "UX Research & Product Design Lead",
     bullets: [
