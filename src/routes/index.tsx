@@ -162,7 +162,7 @@ function Index() {
                     <div className="text-xl font-medium tracking-tight md:text-2xl">
                       {p.title}
                     </div>
-                    <div className="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    <div className="mt-1 whitespace-pre-line font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
                       {p.role} · {p.year}
                     </div>
                   </div>
