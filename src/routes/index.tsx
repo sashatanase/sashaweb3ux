@@ -245,7 +245,7 @@ function Index() {
                 ["Years", "2017 — Present"],
                 ["Languages", "EN / DE / FR"],
               ].map(([k, v]) => (
-                <div key={k} className="grid max-w-[560px] grid-cols-2 gap-4">
+                <div key={k} className="grid max-w-[560px] grid-cols-2 gap-2">
                   <dt className="text-muted-foreground">{k}</dt>
                   <dd>{v}</dd>
                 </div>
