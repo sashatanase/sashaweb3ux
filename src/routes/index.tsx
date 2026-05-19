@@ -88,7 +88,7 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 items-center gap-6 px-6 py-5 md:px-10">
           <a href="#top" className="col-span-6 font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
-            Your Name
+            Sasha Luca
           </a>
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
             {NAV.map((n) => (
