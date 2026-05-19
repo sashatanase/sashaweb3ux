@@ -224,13 +224,13 @@ function Index() {
                 comfortable in Figma defining systems and motion.
               </p>
             </div>
-            <dl className="mt-12 grid max-w-[560px] grid-cols-1 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em] sm:grid-cols-2">
+            <dl className="mt-12 grid max-w-[560px] grid-cols-1 grid-rows-3 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em] sm:grid-flow-col sm:grid-cols-2">
               {[
                 ["Based in", "Zürich, CH"],
-                ["Years", "2017 — Present"],
                 ["Tools", "React · TS · Figma"],
-                ["Languages", "EN / DE / FR"],
                 ["Status", "Open to roles"],
+                ["Years", "2017 — Present"],
+                ["Languages", "EN / DE / FR"],
               ].map(([k, v]) => (
                 <div key={k} className="grid grid-cols-2 gap-4">
                   <dt className="text-muted-foreground">{k}</dt>
