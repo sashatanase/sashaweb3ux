@@ -244,9 +244,9 @@ function Index() {
                 ["Years", "2017 — Present"],
                 ["Status", "Open to roles"],
               ].map(([k, v]) => (
-                <div key={k} className="grid max-w-[560px] grid-cols-2 gap-2">
+                <div key={k} className="grid grid-cols-[160px_1fr] gap-2">
                   <dt className="text-muted-foreground">{k}</dt>
-                  <dd>{v}</dd>
+                  <dd className="whitespace-nowrap">{v}</dd>
                 </div>
               ))}
             </dl>
