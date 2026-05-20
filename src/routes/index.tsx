@@ -257,7 +257,7 @@ function Index() {
         <section id="writing" className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              §04 / Writing
+              §04 / Research & Talks
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
