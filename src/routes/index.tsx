@@ -321,7 +321,7 @@ function Index() {
       <footer className="border-t border-border">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6 px-6 py-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:px-10">
           <div className="col-span-6 md:col-span-4">© {year} Sasha Luca</div>
-          <div className="col-span-6 text-right md:col-span-4 md:text-center">Zürich · 47.3769° N</div>
+          <div className="col-span-6 text-right md:col-span-4 md:text-center">Bucharest · 44.4268° N</div>
           <div className="col-span-12 text-left md:col-span-4 md:text-right">Set in Inter &amp; JetBrains Mono</div>
         </div>
       </footer>
