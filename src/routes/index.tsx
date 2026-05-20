@@ -77,9 +77,9 @@ const WORK: WorkItem[] = [
 ];
 
 const WRITING = [
-  { date: "2025.03", title: "On building durable interfaces" },
-  { date: "2024.11", title: "Notes on type as infrastructure" },
-  { date: "2024.06", title: "Why I still write CSS by hand" },
+  { date: "2025.06", title: "Designing for Trust in Web3: Lessons from the User Research Field", url: "https://www.youtube.com/watch?v=Wndk1Ic5t8U" },
+  { date: "2024.11", title: "Notes on type as infrastructure", url: "#" },
+  { date: "2024.06", title: "Why I still write CSS by hand", url: "#" },
 ];
 
 function Index() {
@@ -266,17 +266,21 @@ function Index() {
             </h2>
             <ul className="border-t border-border">
               {WRITING.map((w) => (
-                <li
-                  key={w.title}
-                  className="grid grid-cols-12 items-baseline gap-6 border-b border-border py-6 transition-colors hover:text-accent"
-                >
-                  <div className="col-span-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-2">
-                    {w.date}
-                  </div>
-                  <div className="col-span-9 text-lg font-medium tracking-tight md:col-span-9 md:text-xl">
-                    {w.title}
-                  </div>
-                  <div className="col-span-12 text-right font-mono text-xs md:col-span-1">↗</div>
+                <li key={w.title}>
+                  <a
+                    href={w.url}
+                    target={w.url.startsWith('http') ? '_blank' : undefined}
+                    rel={w.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="grid grid-cols-12 items-baseline gap-6 border-b border-border py-6 transition-colors hover:text-accent"
+                  >
+                    <div className="col-span-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-2">
+                      {w.date}
+                    </div>
+                    <div className="col-span-9 text-lg font-medium tracking-tight md:col-span-9 md:text-xl">
+                      {w.title}
+                    </div>
+                    <div className="col-span-12 text-right font-mono text-xs md:col-span-1">↗</div>
+                  </a>
                 </li>
               ))}
             </ul>
