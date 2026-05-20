@@ -77,9 +77,9 @@ const WORK: WorkItem[] = [
 ];
 
 const WRITING = [
-  { date: "2025.03", title: "On building durable interfaces" },
-  { date: "2024.11", title: "Notes on type as infrastructure" },
-  { date: "2024.06", title: "Why I still write CSS by hand" },
+  { date: "2025.06", title: "Designing for Trust in Web3: Lessons from the User Research Field", url: "https://www.youtube.com/watch?v=Wndk1Ic5t8U" },
+  { date: "2024.11", title: "Notes on type as infrastructure", url: "#" },
+  { date: "2024.06", title: "Why I still write CSS by hand", url: "#" },
 ];
 
 function Index() {
