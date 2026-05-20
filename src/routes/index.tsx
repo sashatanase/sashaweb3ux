@@ -128,7 +128,7 @@ function Index() {
               </p>
               <div className="col-span-12 flex items-end justify-start gap-4 md:col-span-4 md:justify-end">
                 <a
-                  href="#contact"
+                  href="mailto:sasha@web3ux.org"
                   className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground"
                 >
                   Get in touch ↗
