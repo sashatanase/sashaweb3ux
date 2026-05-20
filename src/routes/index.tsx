@@ -236,7 +236,7 @@ function Index() {
                 />
               </div>
             </div>
-            <dl className="mt-12 grid grid-cols-1 grid-rows-3 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em] sm:grid-flow-col sm:grid-cols-2">
+            <dl className="mt-12 grid grid-cols-1 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em]">
               {[
                 ["Specialization", "Web3 / Crypto / Bitcoin · Ethereum"],
                 ["Methods", "Discovery · JTBD · PMF Validation · Usability Testing"],
