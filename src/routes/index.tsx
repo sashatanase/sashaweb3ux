@@ -305,13 +305,13 @@ function Index() {
               </a>
             </h2>
             <div className="mt-16 grid grid-cols-12 gap-6 border-t border-border pt-8 font-mono text-xs uppercase tracking-[0.18em]">
-              <a href="https://www.linkedin.com/in/sasha-tanase-luca/" className="col-span-6 hover:text-accent md:col-span-3">
+              <a href="https://www.linkedin.com/in/sasha-tanase-luca/" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
                 LinkedIn ↗
               </a>
-              <a href="https://github.com/sashatanase" className="col-span-6 hover:text-accent md:col-span-3">
+              <a href="https://github.com/sashatanase" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
                 GitHub ↗
               </a>
-              <a href="https://x.com/sasha_tanase" className="col-span-6 hover:text-accent md:col-span-3">
+              <a href="https://x.com/sasha_tanase" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
                 Twitter ↗
               </a>
               <a href="/resume.pdf" className="col-span-6 hover:text-accent md:col-span-3">
