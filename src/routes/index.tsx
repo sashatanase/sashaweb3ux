@@ -292,7 +292,7 @@ function Index() {
           </div>
           <div className="col-span-12 md:col-span-10">
             <h2 className="text-4xl font-medium leading-[1.05] tracking-tight md:text-7xl">
-              Let's work<br />together —{" "}
+              Let's talk —{" "}
               <a
                 href="mailto:hello@yourname.com"
                 className="text-accent underline decoration-1 underline-offset-[10px] hover:no-underline"
