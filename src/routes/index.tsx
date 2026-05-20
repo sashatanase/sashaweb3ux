@@ -215,15 +215,15 @@ function Index() {
                 </h2>
                 <div className="mt-10 max-w-[560px] space-y-6 text-base leading-relaxed text-muted-foreground">
                   <p>
-                    I've worked across early-stage startups and established product
-                    teams — most recently leading frontend at Northwind, where I
-                    shipped the analytics platform now used by enterprise customers
-                    across Europe.
+                    I've worked across fast-moving web3 startups and decentralized
+                    protocols — most recently at Mezo Network, where I built the
+                    insight repository that became the single source of truth for
+                    15+ stakeholders.
                   </p>
                   <p>
-                    My background sits between design and engineering. I'm fluent in
-                    React, TypeScript, and the modern frontend stack, and equally
-                    comfortable in Figma defining systems and motion.
+                    My background sits between research and product. I'm fluent in
+                    discovery, JTBD, and usability testing, and equally comfortable
+                    shaping roadmaps and aligning the people who build from them.
                   </p>
                 </div>
               </div>
