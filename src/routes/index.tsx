@@ -78,8 +78,8 @@ const WORK: WorkItem[] = [
 
 const WRITING = [
   { date: "2025.06", title: "Designing for Trust in Web3: Lessons from the User Research Field", url: "https://www.youtube.com/watch?v=Wndk1Ic5t8U" },
-  { date: "2024.11", title: "Notes on type as infrastructure", url: "#" },
-  { date: "2024.06", title: "Why I still write CSS by hand", url: "#" },
+  { date: "2023.07", title: "Elevating Developer Experience (DX) in web3 - a framework", url: "https://www.youtube.com/watch?v=ZPoqwAbMWTE" },
+  { date: "2022.10", title: "The Future of Web3UX - a Paradigm Shift for a Better Collaboration between Design and Development", url: "https://www.youtube.com/watch?v=gOiHwmL0VUg" },
 ];
 
 function Index() {
