@@ -240,7 +240,7 @@ function Index() {
               {[
                 ["Specialization", "Web3 / Crypto / Bitcoin · Ethereum"],
                 ["Methods", "Discovery · JTBD · PMF Validation · Usability Testing"],
-                ["Roles", "UXR · PM"],
+                ["Roles", "UX Researcher · Product Manager"],
                 ["Years", "2017 — Present"],
                 ["Status", "Open to roles"],
               ].map(([k, v]) => (
