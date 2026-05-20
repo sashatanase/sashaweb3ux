@@ -115,7 +115,7 @@ function Index() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h1 className="text-5xl font-medium leading-[1.02] tracking-tight md:text-7xl lg:text-[8rem]">
+            <h1 className="text-5xl font-medium leading-[1.02] tracking-tight md:text-7xl lg:text-4xl">
               UX researcher<br />
               <span className="text-muted-foreground">who turns user chaos</span>
               <br />
