@@ -239,7 +239,7 @@ function Index() {
             <dl className="mt-12 grid grid-cols-1 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em]">
               {[
                 ["Specialization", "Web3 / Crypto / Bitcoin · Ethereum"],
-                ["Methods", "Discovery · JTBD · PMF Validation · Usability Testing"],
+                ["Methods", "Discovery · JTBD · PMF Validation · Usability Testing · Qualitative Research · Stakeholder Alignment"],
                 ["Roles", "UX Researcher · Product Manager"],
                 ["Years", "2017 — Present"],
                 ["Status", "Open to roles"],
