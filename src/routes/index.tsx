@@ -298,10 +298,10 @@ function Index() {
             <h2 className="text-4xl font-medium leading-[1.05] tracking-tight md:text-7xl">
               Let's talk —{" "}
               <a
-                href="mailto:hello@yourname.com"
+                href="mailto:sasha@web3ux.org"
                 className="text-accent underline decoration-1 underline-offset-[10px] hover:no-underline"
               >
-                hello@yourname.com
+                sasha@web3ux.org
               </a>
             </h2>
             <div className="mt-16 grid grid-cols-12 gap-6 border-t border-border pt-8 font-mono text-xs uppercase tracking-[0.18em]">
