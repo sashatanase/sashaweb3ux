@@ -49,9 +49,9 @@ const WORK: WorkItem[] = [
   },
   {
     no: "03",
-    year: "\n2022 — 2025",
+    year: "\n2024 — 2025",
     title: "Mezo",
-    role: "Co-Founder",
+    role: "UX Research & Product Strategist",
     bullets: [
       "Led research with a focus on PMF: discovery, segmentation, and value-prop validation.",
       "Guided product teams with insights that shaped roadmap priorities.",
