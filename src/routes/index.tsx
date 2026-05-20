@@ -266,17 +266,21 @@ function Index() {
             </h2>
             <ul className="border-t border-border">
               {WRITING.map((w) => (
-                <li
-                  key={w.title}
-                  className="grid grid-cols-12 items-baseline gap-6 border-b border-border py-6 transition-colors hover:text-accent"
-                >
-                  <div className="col-span-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-2">
-                    {w.date}
-                  </div>
-                  <div className="col-span-9 text-lg font-medium tracking-tight md:col-span-9 md:text-xl">
-                    {w.title}
-                  </div>
-                  <div className="col-span-12 text-right font-mono text-xs md:col-span-1">↗</div>
+                <li key={w.title}>
+                  <a
+                    href={w.url}
+                    target={w.url.startsWith('http') ? '_blank' : undefined}
+                    rel={w.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="grid grid-cols-12 items-baseline gap-6 border-b border-border py-6 transition-colors hover:text-accent"
+                  >
+                    <div className="col-span-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-2">
+                      {w.date}
+                    </div>
+                    <div className="col-span-9 text-lg font-medium tracking-tight md:col-span-9 md:text-xl">
+                      {w.title}
+                    </div>
+                    <div className="col-span-12 text-right font-mono text-xs md:col-span-1">↗</div>
+                  </a>
                 </li>
               ))}
             </ul>
