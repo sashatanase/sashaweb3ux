@@ -238,11 +238,11 @@ function Index() {
             </div>
             <dl className="mt-12 grid grid-cols-1 grid-rows-3 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em] sm:grid-flow-col sm:grid-cols-2">
               {[
-                ["Based in", "Zürich, CH"],
-                ["Tools", "React · TS · Figma"],
-                ["Status", "Open to roles"],
+                ["Specialization", "Web3 / Crypto / Bitcoin · Ethereum"],
+                ["Methods", "Discovery · JTBD · PMF Validation · Usability Testing"],
+                ["Roles", "UXR · PM"],
                 ["Years", "2017 — Present"],
-                ["Languages", "EN / DE / FR"],
+                ["Status", "Open to roles"],
               ].map(([k, v]) => (
                 <div key={k} className="grid max-w-[560px] grid-cols-2 gap-2">
                   <dt className="text-muted-foreground">{k}</dt>
