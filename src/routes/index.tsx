@@ -216,7 +216,7 @@ function Index() {
                 <div className="mt-10 max-w-[560px] space-y-6 text-base leading-relaxed text-muted-foreground">
                   <p>
                     I've worked across fast-moving web3 startups and decentralized
-                    protocols — most recently at Mezo Network, where I built the
+                    protocols, most recently at Mezo Network, where I built the
                     insight repository that became the single source of truth for
                     15+ stakeholders.
                   </p>
