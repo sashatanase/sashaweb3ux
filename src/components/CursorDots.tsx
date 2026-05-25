@@ -75,13 +75,19 @@ export function CursorDots() {
           const dy = y - cy;
           const d2 = dx * dx + dy * dy;
 
-          if (d2 < r2 * 4) {
-            const d = Math.sqrt(d2) || 0.0001;
-            // gaussian falloff for smooth lens
-            const falloff = Math.exp(-d2 / (2 * r2 * 0.35));
-            const push = WARP_STRENGTH * falloff;
-            px = x + (dx / d) * push;
-            py = y + (dy / d) * push;
+          if (d2 < r2) {
+            const d = Math.sqrt(d2);
+            const t = d / WARP_RADIUS; // 0 at center, 1 at edge
+            // spherical bulge: scale radial distance outward, smooth at edge
+            const k = 0.9; // bulge intensity
+            const falloff = (1 - t) * (1 - t) * (1 - t); // cubic ease-out to 0 at edge
+            const scale = 1 + k * falloff;
+            const nd = d * scale;
+            // direction (avoid div by zero at exact center)
+            const ux = d > 0.0001 ? dx / d : 0;
+            const uy = d > 0.0001 ? dy / d : 0;
+            px = cx + ux * nd;
+            py = cy + uy * nd;
           }
 
           ctx.beginPath();
