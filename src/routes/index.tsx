@@ -87,7 +87,7 @@ function Index() {
   const year = new Date().getFullYear();
 
   return (
-    <div className="min-h-screen bg-background bg-dot-grid text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <CursorDots />
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
