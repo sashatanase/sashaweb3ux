@@ -159,7 +159,7 @@
   .bg-dot-grid {
     background-image: radial-gradient(
       circle,
-      color-mix(in oklch, var(--foreground) 8%, transparent) 1px,
+      color-mix(in oklch, var(--foreground) 14%, transparent) 1px,
       transparent 1px
     );
     background-size: 32px 32px;
