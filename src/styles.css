@@ -164,4 +164,31 @@
     );
     background-size: 32px 32px;
   }
+
+  .cursor-dots {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 400ms ease;
+    background-image: radial-gradient(
+      circle,
+      color-mix(in oklch, var(--foreground) 55%, transparent) 1.8px,
+      transparent 2.2px
+    );
+    background-size: 32px 32px;
+    -webkit-mask-image: radial-gradient(
+      circle 220px at var(--mx, 50%) var(--my, 50%),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.7) 35%,
+      rgba(0, 0, 0, 0) 75%
+    );
+    mask-image: radial-gradient(
+      circle 220px at var(--mx, 50%) var(--my, 50%),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.7) 35%,
+      rgba(0, 0, 0, 0) 75%
+    );
+  }
 }
