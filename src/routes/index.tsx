@@ -78,6 +78,7 @@ const WORK: WorkItem[] = [
 ];
 
 const WRITING = [
+  { date: "2026.05", title: "From Fear to Empowerment: How to Supercharge UX Research with AI — a framework", url: "https://medium.com/@sashagabrielatanase/from-fear-to-empowerment-how-to-supercharge-ux-research-with-ai-a-framework-d576e39d1774" },
   { date: "2025.06", title: "Designing for Trust in Web3: Lessons from the User Research Field", url: "https://www.youtube.com/watch?v=Wndk1Ic5t8U" },
   { date: "2023.07", title: "Elevating Developer Experience (DX) in web3 - a framework", url: "https://www.youtube.com/watch?v=ZPoqwAbMWTE" },
   { date: "2022.10", title: "The Future of Web3UX - a Paradigm Shift for a Better Collaboration between Design and Development", url: "https://www.youtube.com/watch?v=gOiHwmL0VUg" },
