@@ -317,7 +317,7 @@ function Index() {
               <a href="https://x.com/sasha_tanase" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
                 Twitter ↗
               </a>
-              <a href="https://drive.google.com/file/d/1UkBsRFzwd-2MpWJJn5T9voY9jsfZJnwO/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
+              <a href="https://drive.google.com/file/d/1dwxhms7avoF2JK7m2HlosJbucTJwrexY/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
                 Résumé (PDF) ↗
               </a>
             </div>
