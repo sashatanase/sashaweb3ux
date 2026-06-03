@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import portrait from "@/assets/sasha-luca-portrait.png";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { CursorDots } from "@/components/CursorDots";
 
 export const Route = createFileRoute("/")({
@@ -317,7 +318,7 @@ function Index() {
               <a href="https://x.com/sasha_tanase" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
                 Twitter ↗
               </a>
-              <a href="https://drive.google.com/file/d/1dwxhms7avoF2JK7m2HlosJbucTJwrexY/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
+              <a href={resumeAsset.url} target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
                 Résumé (PDF) ↗
               </a>
             </div>
