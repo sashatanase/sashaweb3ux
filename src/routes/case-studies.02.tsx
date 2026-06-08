@@ -85,15 +85,24 @@ function CaseStudy02() {
         <p><strong>Modal Framework Expansion:</strong> Redesigned cramped modal steps into expansive, layout-driven review pages to expose fee transparency and interest rules without forcing users through excessive vertical scrolling.</p>
         <p><strong>Utility Onboarding Pathways:</strong> Integrated direct links to integrated DEX/CEX liquidity pairs, fiat off-ramps, and active proof-of-reserves verification right into the dashboard to soothe historical counterparty scars.</p>
 
-        <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">Impact & Outcomes</h3>
+      </CaseStudySection>
 
-        <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">Research Outcomes</h3>
+      <CaseStudySection number="05" title="Impact & Outcomes">
+        <h3 className="mt-2 mb-4 text-base font-semibold text-foreground">Research Outcomes</h3>
         <p><strong>Audience Reframing:</strong> The discovery of these distinct behavioral personas fundamentally altered Mezo's product roadmap, forcing a transition away from generic, one-size-fits-all DeFi messaging to deeply targeted user flows that directly address either the hyper-utility needs of the Maximizer or the extreme security demands of the Gold Maxi.</p>
         <p><strong>Transparency as a Feature:</strong> Recognizing the intense skepticism of the Digital Gold Maxis pivoted the team's priorities; product management immediately bumped public proof-of-reserves calculators, 1-for-1 backing data, and third-party security audits to the top of the launch roadmap to build programmatic trust.</p>
         <p><strong>Resilient Value Proposition:</strong> Despite initial interface friction with complex collateral math, the fundamental value proposition of unlocking liquidity while keeping native BTC upside landed strongly across all target personas, proving market demand once the educational gaps are resolved.</p>
 
         <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">Broader Outcomes</h3>
         <p>Following the research, Mezo prioritized clarity upgrades around liquidation parameters and asset transparency to resolve the psychological barriers left by past protocol failures. In the subsequent testnet iterations, user navigation errors during loan creation dropped significantly, enabling every single participant to complete the borrowing flow successfully on their first attempt. While several systemic factors contribute to platform onboarding, this smooth progression closely aligned with the layout hierarchy improvements recommended by the research.</p>
+
+        <div className="mt-10">
+          <Button asChild>
+            <a href={reportAsset.url} target="_blank" rel="noopener noreferrer">
+              Read full report
+            </a>
+          </Button>
+        </div>
       </CaseStudySection>
     </CaseStudyLayout>
   );
