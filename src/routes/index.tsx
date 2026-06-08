@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portrait from "@/assets/sasha-luca-portrait.png";
+import portraitAsset from "@/assets/sasha-luca-portrait.png.asset.json";
+
+const portrait = portraitAsset.url;
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { CursorDots } from "@/components/CursorDots";
 
