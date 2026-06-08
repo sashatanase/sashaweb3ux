@@ -51,18 +51,18 @@ const CASE_STUDIES: CaseStudy[] = [
   {
     no: "02",
     kicker: "Case Study 2",
-    year: "2024",
-    title: <>Case study title two.</>,
+    year: "2025",
+    title: <>Mezo Borrow and mUSD: Optimizing the Bitcoin Liquidity Portal</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
     href: "/case-studies/02",
     meta: [
-      { label: "Client", value: "Client name" },
-      { label: "Sector", value: "Sector" },
-      { label: "Year", value: "2024" },
-      { label: "Method", value: "Method" },
-      { label: "Sample", value: "Sample" },
-      { label: "Role", value: "Role" },
+      { label: "Client", value: "Mezo" },
+      { label: "Sector", value: "Bitcoin DeFi" },
+      { label: "Year", value: "2025" },
+      { label: "Method", value: "Interviews & Usability Testing" },
+      { label: "Sample", value: "8 participants" },
+      { label: "Role", value: "Researcher Lead" },
     ],
   },
   {
