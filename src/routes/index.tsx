@@ -113,11 +113,22 @@ function Index() {
             Sasha Luca
           </a>
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
-            {NAV.map((n) => (
-              <a key={n.href} href={n.href} className="hover:text-accent transition-colors">
-                {n.label}
-              </a>
-            ))}
+            <a href="#work" className="hover:text-accent transition-colors">Work</a>
+            <a href="#about" className="hover:text-accent transition-colors">About</a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="inline-flex items-center gap-1 bg-transparent hover:text-accent transition-colors focus:outline-none cursor-pointer">
+                Case Studies <ChevronDown className="h-3 w-3" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="font-mono text-xs uppercase tracking-[0.18em]">
+                {CASE_STUDIES.map((cs) => (
+                  <DropdownMenuItem key={cs.href} asChild>
+                    <a href={cs.href} className="cursor-pointer">{cs.title}</a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <a href="#writing" className="hover:text-accent transition-colors">Articles & Talks</a>
+            <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
           </nav>
           <div className="col-span-6 text-right font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
             Available · {year}
