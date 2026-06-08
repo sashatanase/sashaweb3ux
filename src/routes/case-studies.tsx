@@ -169,7 +169,13 @@ function CaseStudiesPage() {
                       </div>
 
                       <h2 className="mt-6 text-3xl font-medium leading-[1.05] tracking-tight md:text-5xl">
-                        {cs.title}
+                        <Link
+                          to="/case-studies/$id"
+                          params={{ id: cs.no }}
+                          className="transition-colors hover:text-accent"
+                        >
+                          {cs.title}
+                        </Link>
                       </h2>
 
                       <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
