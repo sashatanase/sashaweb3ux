@@ -1,14 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import portrait from "@/assets/sasha-luca-portrait.png";
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { CursorDots } from "@/components/CursorDots";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -115,18 +108,7 @@ function Index() {
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
             <a href="#work" className="hover:text-accent transition-colors">Work</a>
             <a href="#about" className="hover:text-accent transition-colors">About</a>
-            <DropdownMenu>
-              <DropdownMenuTrigger className="inline-flex items-center gap-1 bg-transparent font-mono text-xs tracking-[0.18em] hover:text-accent transition-colors focus:outline-none cursor-pointer">
-                Case Studies <ChevronDown className="h-3 w-3" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="font-mono text-xs tracking-[0.18em]">
-                {CASE_STUDIES.map((cs) => (
-                  <DropdownMenuItem key={cs.href} asChild>
-                    <a href={cs.href} className="cursor-pointer">{cs.title}</a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Link to="/case-studies" className="hover:text-accent transition-colors">Case Studies</Link>
             <a href="#writing" className="hover:text-accent transition-colors">Articles & Talks</a>
             <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
           </nav>
