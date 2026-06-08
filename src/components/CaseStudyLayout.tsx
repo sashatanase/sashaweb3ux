@@ -112,17 +112,20 @@ export function CaseStudyLayout({
 
 export function CaseStudySection({
   number,
+  label,
   title,
   children,
 }: {
-  number: string;
+  number?: string;
+  label?: string;
   title: string;
   children: ReactNode;
 }) {
+  const tag = number ?? label ?? "";
   return (
     <section className="pt-20 first:pt-0">
       <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-        § {number}
+        § {tag}
       </div>
       <h2 className="font-serif mt-4 text-5xl font-normal leading-[1.02] tracking-[-0.01em] md:text-6xl">
         {title}
