@@ -5,6 +5,7 @@ import {
   CaseStudyQuote,
   CaseStudySubhead,
 } from "@/components/CaseStudyLayout";
+import reportAsset from "@/assets/tbtc-diary-study.pdf.asset.json";
 
 const TITLE_PLAIN = "Diary of a Node Operator: Redesigning the tBTC Setup Experience";
 const SYNOPSIS_PLAIN =
@@ -164,6 +165,16 @@ function CaseStudy01() {
             differentiate between user-level and network-level failures.
           </li>
         </ul>
+        <div className="mt-12">
+          <a
+            href={reportAsset.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full border border-foreground bg-foreground px-8 py-4 text-base font-medium text-background transition-colors hover:bg-background hover:text-foreground"
+          >
+            Read the full report
+          </a>
+        </div>
       </CaseStudySection>
     </CaseStudyLayout>
   );
