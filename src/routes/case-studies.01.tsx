@@ -9,7 +9,7 @@ import reportAsset from "@/assets/tbtc-diary-study.pdf.asset.json";
 
 const TITLE_PLAIN = "Diary of a Node Operator: Redesigning the tBTC Setup Experience";
 const SYNOPSIS_PLAIN =
-  "Usability research on a Web3 node setup client, from stakeholder-assumed journey maps to an optimized developer experience launch.";
+  "Diary study on a Web3 node client setup, testing complex cryptographic infrastructure against the operational realities of node operators.";
 
 export const Route = createFileRoute("/case-studies/01")({
   head: () => ({
@@ -31,9 +31,9 @@ function CaseStudy01() {
       title="Diary of a Node Operator: Redesigning the tBTC Setup Experience"
       synopsis={
         <>
-          Usability research on a Web3 node setup client, from
-          stakeholder-assumed journey maps to an optimized developer
-          experience launch.
+          Diary study on a Web3 node client setup, testing complex
+          cryptographic infrastructure against the operational realities
+          of node operators.
         </>
       }
       meta={[
