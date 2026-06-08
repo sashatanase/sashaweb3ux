@@ -31,7 +31,7 @@ function CaseStudy02() {
         { label: "Year", value: "2025" },
         { label: "Method", value: "Interviews & Usability Testing" },
         { label: "Sample", value: "8 participants" },
-        { label: "Role", value: "Researcher Lead" },
+        { label: "Role", value: "Lead Researcher" },
       ]}
     >
       <CaseStudySection number="01" title="The Challenge: Uncovering the Reality of the BTC Stack">
