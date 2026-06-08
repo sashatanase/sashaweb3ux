@@ -38,7 +38,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>tBTC and Random Beacon Client Code Diary Study.</>,
     description:
       "This 6-day Diary Study evaluated how DevOps engineers configure tBTC nodes. While usability scored an above-average 73.125 (SUS), the research uncovered critical blind spots including misleading success cues, cryptic logs, and a high risk of users downgrading their hardware, which would trigger financial slashing. These insights provided the development team with an immediate blueprint to overhaul the product with a \"Default vs. Expert\" staking UI, better error diagnostics, and mandatory monitoring documentation.",
-    href: "/case-studies/1",
+    href: "/case-studies/01",
     meta: [
       { label: "Client", value: "Threshold Network" },
       { label: "Sector", value: "Network Infrastructure" },
@@ -55,7 +55,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>Case study title two.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
-    href: "/case-studies/2",
+    href: "/case-studies/02",
     meta: [
       { label: "Client", value: "Client name" },
       { label: "Sector", value: "Sector" },
@@ -72,7 +72,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>Case study title three.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
-    href: "/case-studies/3",
+    href: "/case-studies/03",
     meta: [
       { label: "Client", value: "Client name" },
       { label: "Sector", value: "Sector" },
@@ -89,7 +89,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>Case study title four.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
-    href: "/case-studies/4",
+    href: "/case-studies/04",
     meta: [
       { label: "Client", value: "Client name" },
       { label: "Sector", value: "Sector" },
@@ -106,7 +106,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>Case study title five.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
-    href: "/case-studies/5",
+    href: "/case-studies/05",
     meta: [
       { label: "Client", value: "Client name" },
       { label: "Sector", value: "Sector" },
