@@ -1,14 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import portrait from "@/assets/sasha-luca-portrait.png";
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { CursorDots } from "@/components/CursorDots";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
