@@ -97,11 +97,15 @@ function CaseStudy02() {
         <p>Following the research, Mezo prioritized clarity upgrades around liquidation parameters and asset transparency to resolve the psychological barriers left by past protocol failures. In the subsequent testnet iterations, user navigation errors during loan creation dropped significantly, enabling every single participant to complete the borrowing flow successfully on their first attempt. While several systemic factors contribute to platform onboarding, this smooth progression closely aligned with the layout hierarchy improvements recommended by the research.</p>
 
         <div className="mt-10">
-          <Button asChild>
-            <a href={reportAsset.url} target="_blank" rel="noopener noreferrer">
-              Read full report
-            </a>
-          </Button>
+          <a
+            href={reportAsset.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-black px-6 py-4 font-mono text-xs uppercase tracking-[0.22em] text-white transition-transform hover:-translate-y-0.5"
+          >
+            Read the full report
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </CaseStudySection>
     </CaseStudyLayout>
