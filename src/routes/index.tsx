@@ -291,9 +291,23 @@ function Index() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h2 className="text-3xl font-medium tracking-tight md:text-4xl">
+            <h2 className="mb-12 text-3xl font-medium tracking-tight md:text-4xl">
               Case studies
             </h2>
+            <ul className="border-t border-border">
+              {CASE_STUDIES.map((cs) => (
+                <li key={cs.no} className="border-b border-border py-6">
+                  <a href={cs.href} className="grid grid-cols-12 items-baseline gap-6 transition-colors hover:text-accent">
+                    <div className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                      {cs.no}
+                    </div>
+                    <div className="col-span-10 text-lg font-medium tracking-tight md:text-xl">
+                      {cs.title}
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
