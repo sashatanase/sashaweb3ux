@@ -10,6 +10,7 @@ export type CaseStudyLayoutProps = {
   title: ReactNode;
   synopsis: ReactNode;
   meta: CaseStudyMeta[];
+  kicker?: string;
   children?: ReactNode;
 };
 
