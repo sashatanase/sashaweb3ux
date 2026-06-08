@@ -50,7 +50,7 @@ const CASE_STUDIES: CaseStudy[] = [
   },
   {
     no: "02",
-    kicker: "Case Study 2",
+    kicker: "Mezo Borrow and mUSD: Optimizing the Bitcoin Liquidity Portal",
     year: "2025",
       title: <>Mezo Borrow and mUSD: Optimizing the Bitcoin Liquidity Portal</>,
     description:
