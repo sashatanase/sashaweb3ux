@@ -168,7 +168,7 @@ function CaseStudiesPage() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h1 className="text-5xl font-medium leading-[1.02] tracking-tight md:text-7xl">
+            <h1 className="text-4xl font-medium leading-[1.02] tracking-tight sm:text-5xl md:text-7xl">
               Case studies.
             </h1>
             <p className="mt-8 max-w-2xl text-base font-medium leading-relaxed tracking-tight text-muted-foreground md:text-xl">
@@ -181,19 +181,19 @@ function CaseStudiesPage() {
           <ul className="flex flex-col gap-8">
             {CASE_STUDIES.map((cs) => (
               <li key={cs.no}>
-                <article className="group border border-border bg-background p-8 transition-colors hover:border-foreground/40 md:p-12">
+                <article className="group border border-border bg-background p-6 transition-colors hover:border-foreground/40 sm:p-8 md:p-12">
                   <div className="grid grid-cols-12 gap-8">
                     {/* Left: title + description */}
-                    <div className="col-span-12 md:col-span-8">
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    <div className="col-span-12 min-w-0 md:col-span-8">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">
                         <span className="text-foreground">{cs.no}</span>
                         <span>·</span>
-                        <span>{cs.kicker}</span>
+                        <span className="break-words">{cs.kicker}</span>
                         <span>·</span>
                         <span>{cs.year}</span>
                       </div>
 
-                      <h2 className="mt-6 text-3xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+                      <h2 className="mt-6 text-xl font-medium leading-[1.15] tracking-tight break-words sm:text-3xl md:text-4xl lg:text-5xl">
                         <Link
                           to={cs.href}
                           className="transition-colors hover:text-accent"
@@ -218,15 +218,15 @@ function CaseStudiesPage() {
                     </div>
 
                     {/* Right: meta grid */}
-                    <div className="col-span-12 md:col-span-4">
+                    <div className="col-span-12 min-w-0 md:col-span-4">
                       <div className="border-t border-border pt-6 md:border-t-0 md:pt-0">
-                        <dl className="grid grid-cols-3 gap-x-4 gap-y-10">
+                        <dl className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 sm:gap-y-10">
                           {cs.meta.map((m) => (
-                            <div key={m.label}>
-                              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                            <div key={m.label} className="min-w-0">
+                              <dt className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
                                 {m.label}
                               </dt>
-                              <dd className="mt-2 font-mono text-xs uppercase tracking-[0.18em]">
+                              <dd className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] break-words">
                                 {m.value}
                               </dd>
                             </div>

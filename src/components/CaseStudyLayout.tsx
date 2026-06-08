@@ -47,9 +47,9 @@ export function CaseStudyLayout({
 
       <main className="mx-auto max-w-[1280px] px-6 md:px-16">
         {/* Hero */}
-        <section className="pt-20 pb-16 md:pt-32 md:pb-24">
+        <section className="pt-16 pb-12 md:pt-32 md:pb-24">
           <div className="mx-auto max-w-[960px]">
-            <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:tracking-[0.22em]">
               <span className="inline-block h-px w-8 bg-foreground/60" />
               <span className="text-foreground">{no}</span>
               <span>·</span>
@@ -58,24 +58,24 @@ export function CaseStudyLayout({
               <span>{year}</span>
             </div>
 
-            <h1 className="mt-10 text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+            <h1 className="mt-8 text-3xl font-medium leading-[1.05] tracking-tight break-words sm:text-4xl md:text-6xl lg:text-7xl">
               {title}
             </h1>
 
-            <p className="mt-12 max-w-2xl text-xl font-medium leading-relaxed tracking-tight text-foreground md:text-2xl">
+            <p className="mt-8 max-w-2xl text-lg font-medium leading-relaxed tracking-tight text-foreground sm:text-xl md:mt-12 md:text-2xl">
               {synopsis}
             </p>
           </div>
 
           {/* Meta row */}
-          <div className="mt-24 border-t border-foreground/30 pt-6">
-            <dl className="grid grid-cols-2 gap-y-6 sm:grid-cols-3 md:grid-cols-6">
+          <div className="mt-16 border-t border-foreground/30 pt-6 md:mt-24">
+            <dl className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 md:grid-cols-6">
               {meta.map((m) => (
-                <div key={m.label}>
-                  <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                <div key={m.label} className="min-w-0">
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground sm:tracking-[0.22em]">
                     {m.label}
                   </dt>
-                  <dd className="mt-3 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground">
+                  <dd className="mt-3 font-mono text-[11px] uppercase tracking-[0.14em] text-foreground break-words sm:tracking-[0.18em]">
                     {m.value}
                   </dd>
                 </div>
@@ -127,7 +127,7 @@ export function CaseStudySection({
       <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
         § {tag}
       </div>
-      <h2 className="mt-4 text-2xl font-medium tracking-tight md:text-3xl">
+      <h2 className="mt-4 text-xl font-medium tracking-tight break-words sm:text-2xl md:text-3xl">
         {title}
       </h2>
       <div className="mt-10 space-y-6 text-base leading-[1.7] text-foreground md:text-[17px]">

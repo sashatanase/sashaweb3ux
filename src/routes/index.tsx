@@ -130,7 +130,7 @@ function Index() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h1 className="text-5xl font-medium leading-[1.02] tracking-tight md:text-7xl lg:text-[8rem]">
+            <h1 className="text-4xl font-medium leading-[1.02] tracking-tight sm:text-5xl md:text-7xl lg:text-[8rem]">
               UX researcher<br />
               <span className="text-muted-foreground">who makes products</span>
               <br />
@@ -265,9 +265,9 @@ function Index() {
                 ["Years", "2017 — Present"],
                 ["Status", "Open to roles"],
               ].map(([k, v]) => (
-                <div key={k} className="grid grid-cols-[160px_1fr] gap-2">
+                <div key={k} className="grid grid-cols-1 gap-1 sm:grid-cols-[160px_1fr] sm:gap-2">
                   <dt className="text-muted-foreground">{k}</dt>
-                  <dd className="whitespace-nowrap">{v}</dd>
+                  <dd>{v}</dd>
                 </div>
               ))}
             </dl>
@@ -344,7 +344,7 @@ function Index() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h2 className="text-4xl font-medium leading-[1.05] tracking-tight md:text-7xl">
+            <h2 className="text-3xl font-medium leading-[1.05] tracking-tight break-words sm:text-4xl md:text-6xl lg:text-7xl">
               Let's talk —{" "}
               <a
                 href="mailto:sasha@web3ux.org"
