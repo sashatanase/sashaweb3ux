@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudyLayout, CaseStudySection, CaseStudySubhead } from "@/components/CaseStudyLayout";
+import reportAsset from "@/assets/tbtc-generative-user-research.pdf.asset.json";
 
 const TITLE = "tBTC Bridge: Bridged/Wrapped BTC Holder User Study";
 const SYNOPSIS =
@@ -36,7 +37,7 @@ function CaseStudy04() {
     >
       <CaseStudySection label="01" title="The Challenge: Piercing the Black Box of Cross-Chain Fear">
         <p>
-          To a native cryptocurrency holder, the Bitcoin network represents an immutable, exploit-free storage vault. Crossing the chasm into decentralized finance requires wrapping or bridging that capital over to Ethereum—an environment users view as inherently fraught with smart contract vulnerabilities. In the minds of Web3 investors, cross-chain bridges are categorized as the most dangerous infrastructure in the space; a single public exploit permanently ruins a bridge's reputation beyond redemption.
+          To a native cryptocurrency holder, the Bitcoin network represents an immutable, exploit-free storage vault. Crossing the chasm into decentralized finance requires wrapping or bridging that capital over to Ethereum, an environment users view as inherently fraught with smart contract vulnerabilities. In the minds of Web3 investors, cross-chain bridges are categorized as the most dangerous infrastructure in the space; a single public exploit permanently ruins a bridge's reputation beyond redemption.
         </p>
         <p>
           Following an Assumption Mapping workshop to isolate team blind spots, the Threshold Network needed to understand the foundational behavioral archetypes of non-maximalist Bitcoin holders. The core mission was to evaluate whether users genuinely cared about non-custodial, permissionless decentralization, or if the convenience and "too big to fail" market dominance of centralized wrapped alternatives had completely captured the market.
@@ -155,6 +156,18 @@ function CaseStudy04() {
         <p>
           By establishing these user behavioral guardrails early in the design cycle, subsequent product iterations successfully targeted the exact informational gaps that caused previous legacy bridge users to abandon the v1 platform. The structural shift toward continuous interface feedback directly lowered user entry barriers, creating a measurable foundation of trust that helped convert cautious cold-storage holders into active cross-chain participants.
         </p>
+
+        <div className="mt-10">
+          <a
+            href={reportAsset.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-black px-6 py-4 font-mono text-xs uppercase tracking-[0.22em] text-white transition-transform hover:-translate-y-0.5"
+          >
+            Read the full report
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </CaseStudySection>
     </CaseStudyLayout>
   );
