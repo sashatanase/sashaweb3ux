@@ -3,7 +3,7 @@ import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout"
 
 const TITLE = "tBTC Bridge: Bridged/Wrapped BTC Holder User Study";
 const SYNOPSIS =
-  "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.";
+  "Explorative user research on Bitcoin-to-Ethereum asset holders, mapping structural behavioral traits, systemic bridge anxieties, and the trade-offs of decentralized utility.";
 
 export const Route = createFileRoute("/case-studies/04")({
   head: () => ({
