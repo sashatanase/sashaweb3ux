@@ -6,17 +6,16 @@ export type CaseStudyMeta = { label: string; value: string };
 
 export type CaseStudyLayoutProps = {
   no: string;
-  kicker: string;
   year: string;
-  title: string;
-  synopsis: string;
+  title: ReactNode;
+  synopsis: ReactNode;
   meta: CaseStudyMeta[];
+  kicker?: string;
   children?: ReactNode;
 };
 
 export function CaseStudyLayout({
   no,
-  kicker,
   year,
   title,
   synopsis,
@@ -46,55 +45,50 @@ export function CaseStudyLayout({
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1400px] px-6 md:px-10">
-        <section className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
-          <div className="col-span-12 md:col-span-2">
-            <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              § / {kicker}
-            </div>
-          </div>
-          <div className="col-span-12 md:col-span-10">
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+      <main className="mx-auto max-w-[1280px] px-6 md:px-16">
+        {/* Hero */}
+        <section className="pt-20 pb-16 md:pt-32 md:pb-24">
+          <div className="mx-auto max-w-[960px]">
+            <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+              <span className="inline-block h-px w-8 bg-foreground/60" />
               <span className="text-foreground">{no}</span>
+              <span>·</span>
+              <span>Case Study</span>
               <span>·</span>
               <span>{year}</span>
             </div>
-            <h1 className="mt-6 text-4xl font-medium leading-[1.02] tracking-tight md:text-6xl">
+
+            <h1 className="font-serif mt-10 text-[15vw] font-normal leading-[0.95] tracking-[-0.02em] md:text-[8.5rem]">
               {title}
             </h1>
-          </div>
-        </section>
 
-        <section className="grid grid-cols-12 gap-8 py-16 md:py-24">
-          <div className="col-span-12 md:col-span-8">
-            <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Synopsis
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+            <p className="font-serif italic mt-12 max-w-2xl text-3xl leading-[1.15] text-foreground md:text-4xl">
               {synopsis}
             </p>
           </div>
-          <div className="col-span-12 md:col-span-4">
-            <div className="border-t border-border pt-6">
-              <dl className="grid grid-cols-2 gap-x-4 gap-y-10">
-                {meta.map((m) => (
-                  <div key={m.label}>
-                    <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                      {m.label}
-                    </dt>
-                    <dd className="mt-2 font-mono text-xs uppercase tracking-[0.18em]">
-                      {m.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
+
+          {/* Meta row */}
+          <div className="mt-24 border-t border-foreground/30 pt-6">
+            <dl className="grid grid-cols-2 gap-y-6 sm:grid-cols-3 md:grid-cols-6">
+              {meta.map((m) => (
+                <div key={m.label}>
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                    {m.label}
+                  </dt>
+                  <dd className="mt-3 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground">
+                    {m.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 
-        {children}
+        <div className="mx-auto max-w-[760px] pb-24">
+          {children}
+        </div>
 
-        <section className="border-t border-border py-16">
+        <section className="mx-auto max-w-[760px] border-t border-border py-16">
           <Link
             to="/case-studies"
             className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm tracking-tight transition-colors hover:text-accent hover:border-accent"
@@ -117,29 +111,42 @@ export function CaseStudyLayout({
 }
 
 export function CaseStudySection({
+  number,
   label,
   title,
   children,
 }: {
-  label: string;
+  number?: string;
+  label?: string;
   title: string;
   children: ReactNode;
 }) {
+  const tag = number ?? label ?? "";
   return (
-    <section className="grid grid-cols-12 gap-8 border-t border-border py-16 md:py-20">
-      <div className="col-span-12 md:col-span-4">
-        <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-          {label}
-        </div>
-        <h2 className="mt-4 text-2xl font-medium leading-tight tracking-tight md:text-3xl">
-          {title}
-        </h2>
+    <section className="pt-20 first:pt-0">
+      <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+        § {tag}
       </div>
-      <div className="col-span-12 md:col-span-8">
-        <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-          {children}
-        </div>
+      <h2 className="font-serif mt-4 text-5xl font-normal leading-[1.02] tracking-[-0.01em] md:text-6xl">
+        {title}
+      </h2>
+      <div className="mt-10 space-y-6 text-base leading-[1.7] text-foreground md:text-[17px]">
+        {children}
       </div>
     </section>
+  );
+}
+
+export function CaseStudyQuote({ children }: { children: ReactNode }) {
+  return (
+    <blockquote className="my-10 border-l border-foreground pl-6 text-[15px] leading-[1.7] text-foreground md:text-base">
+      {children}
+    </blockquote>
+  );
+}
+
+export function CaseStudySubhead({ children }: { children: ReactNode }) {
+  return (
+    <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">{children}</h3>
   );
 }
