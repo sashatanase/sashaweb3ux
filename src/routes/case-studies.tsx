@@ -30,7 +30,7 @@ const CASE_STUDIES: CaseStudy[] = [
     year: "2024",
     title: <>tBTC and Random Beacon Client Code Diary Study.</>,
     description:
-      "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
+      "This 6-day Diary Study evaluated how DevOps engineers configure tBTC nodes. While usability scored an above-average 73.125 (SUS), the research uncovered critical blind spots including misleading success cues, cryptic logs, and a high risk of users downgrading their hardware, which would trigger financial slashing. These insights provided the development team with an immediate blueprint to overhaul the product with a \"Default vs. Expert\" staking UI, better error diagnostics, and mandatory monitoring documentation.",
     href: "/case-studies/1",
     meta: [
       { label: "Client", value: "Client name" },
