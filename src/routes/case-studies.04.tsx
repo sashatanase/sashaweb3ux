@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout";
 
-const TITLE = "Case study title four.";
+const TITLE = "tBTC Bridge: Bridged/Wrapped BTC Holder User Study";
 const SYNOPSIS =
   "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.";
 
