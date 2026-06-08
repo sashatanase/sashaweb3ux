@@ -344,7 +344,7 @@ function Index() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h2 className="text-4xl font-medium leading-[1.05] tracking-tight md:text-7xl">
+            <h2 className="text-3xl font-medium leading-[1.05] tracking-tight break-words sm:text-4xl md:text-6xl lg:text-7xl">
               Let's talk —{" "}
               <a
                 href="mailto:sasha@web3ux.org"
