@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout";
+import { Button } from "@/components/ui/button";
+import reportAsset from "@/assets/mezo-borrow-study.pdf.asset.json";
 
 const TITLE = "Mezo Borrow and mUSD: Optimizing the Bitcoin Liquidity Portal";
 const SYNOPSIS =
