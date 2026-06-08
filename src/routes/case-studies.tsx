@@ -45,7 +45,7 @@ const CASE_STUDIES: CaseStudy[] = [
     no: "02",
     kicker: "Case Study 2",
     year: "2024",
-    title: <>Case study <em className="font-serif italic">title two</em>.</>,
+    title: <>Case study title two.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
     href: "/case-studies/2",
@@ -62,7 +62,7 @@ const CASE_STUDIES: CaseStudy[] = [
     no: "03",
     kicker: "Case Study 3",
     year: "2023",
-    title: <>Case study <em className="font-serif italic">title three</em>.</>,
+    title: <>Case study title three.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
     href: "/case-studies/3",
@@ -79,7 +79,7 @@ const CASE_STUDIES: CaseStudy[] = [
     no: "04",
     kicker: "Case Study 4",
     year: "2023",
-    title: <>Case study <em className="font-serif italic">title four</em>.</>,
+    title: <>Case study title four.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
     href: "/case-studies/4",
@@ -96,7 +96,7 @@ const CASE_STUDIES: CaseStudy[] = [
     no: "05",
     kicker: "Case Study 5",
     year: "2022",
-    title: <>Case study <em className="font-serif italic">title five</em>.</>,
+    title: <>Case study title five.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
     href: "/case-studies/5",
