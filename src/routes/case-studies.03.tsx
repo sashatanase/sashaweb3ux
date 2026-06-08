@@ -26,12 +26,12 @@ function CaseStudy03() {
       title={TITLE}
       synopsis={SYNOPSIS}
       meta={[
-        { label: "Client", value: "Client name" },
-        { label: "Sector", value: "Sector" },
+        { label: "Client", value: "Threshold Network" },
+        { label: "Sector", value: "Cross-Chain Bridge" },
         { label: "Year", value: "2023" },
-        { label: "Method", value: "Method" },
-        { label: "Sample", value: "Sample" },
-        { label: "Role", value: "Role" },
+        { label: "Method", value: "Qualitative Usability Testing & Deep-Dive Interviews" },
+        { label: "Sample", value: "6 participants" },
+        { label: "Role", value: "Sole Researcher" },
       ]}
     >
       <CaseStudySection label="Context" title="Project background.">
