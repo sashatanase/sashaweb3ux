@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout";
 import reportAsset from "@/assets/tbtc-iterative-study.pdf.asset.json";
 
-const TITLE = "tBTC v2: Bridged/Wrapped BTC Asset User Study";
+const TITLE = "tBTC Bridge: Redesigning the Cross-Chain Flow";
 const SYNOPSIS =
   "Bridging native Bitcoin to Ethereum triggers severe user anxiety due to a industry-wide history of smart contract exploits and protocol hacks. To de-risk this environment, I led an iterative usability study with 6 veteran cross-chain users to trace real-time interaction loops across minting and unminting workflows. By uncovering deep friction points such as intimidating recovery warnings and automated protocol labels mistaken for centralized human intermediaries. I provided a direct structural roadmap to transition technical jargon into an intuitive, privacy-preserving, and trust-building bridging experience.";
 
