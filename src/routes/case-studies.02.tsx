@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout";
 
-const TITLE = "Case study title two.";
+const TITLE = "Mezo Borrow and mUSD: Optimizing the Bitcoin Liquidity Portal";
 const SYNOPSIS =
   "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.";
 
@@ -22,16 +22,16 @@ function CaseStudy02() {
     <CaseStudyLayout
       no="02"
       kicker="Case Study 2"
-      year="2024"
+      year="2025"
       title={TITLE}
       synopsis={SYNOPSIS}
       meta={[
-        { label: "Client", value: "Client name" },
-        { label: "Sector", value: "Sector" },
-        { label: "Year", value: "2024" },
-        { label: "Method", value: "Method" },
-        { label: "Sample", value: "Sample" },
-        { label: "Role", value: "Role" },
+        { label: "Client", value: "Mezo" },
+        { label: "Sector", value: "Bitcoin DeFi" },
+        { label: "Year", value: "2025" },
+        { label: "Method", value: "Interviews & Usability Testing" },
+        { label: "Sample", value: "8 participants" },
+        { label: "Role", value: "Researcher Lead" },
       ]}
     >
       <CaseStudySection label="Context" title="Project background.">
