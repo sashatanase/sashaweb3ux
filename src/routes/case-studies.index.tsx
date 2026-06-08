@@ -193,7 +193,7 @@ function CaseStudiesPage() {
                         <span>{cs.year}</span>
                       </div>
 
-                      <h2 className="mt-6 text-xl font-medium leading-[1.15] tracking-tight break-words sm:text-3xl md:text-4xl lg:text-5xl">
+                      <h2 className="mt-6 text-lg font-medium leading-[1.2] tracking-tight break-words sm:text-3xl md:text-4xl lg:text-5xl">
                         <Link
                           to={cs.href}
                           className="transition-colors hover:text-accent"
