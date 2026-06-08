@@ -41,7 +41,7 @@ const CASE_STUDIES: CaseStudy[] = [
     href: "/case-studies/01",
     meta: [
       { label: "Client", value: "Threshold Network" },
-      { label: "Sector", value: "Network Infrastructure" },
+      { label: "Sector", value: "Network Infra" },
       { label: "Year", value: "2023" },
       { label: "Method", value: "Diary Study" },
       { label: "Sample", value: "5" },
