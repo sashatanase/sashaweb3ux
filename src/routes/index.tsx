@@ -116,7 +116,7 @@ function Index() {
             <a href="#work" className="hover:text-accent transition-colors">Work</a>
             <a href="#about" className="hover:text-accent transition-colors">About</a>
             <DropdownMenu>
-              <DropdownMenuTrigger className="inline-flex items-center gap-1 bg-transparent font-mono text-xs uppercase tracking-[0.18em] hover:text-accent transition-colors focus:outline-none cursor-pointer">
+              <DropdownMenuTrigger className="inline-flex items-center gap-1 bg-transparent font-mono text-xs tracking-[0.18em] hover:text-accent transition-colors focus:outline-none cursor-pointer">
                 Case Studies <ChevronDown className="h-3 w-3" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="font-mono text-xs uppercase tracking-[0.18em]">
