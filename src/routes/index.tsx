@@ -152,7 +152,7 @@ function Index() {
                   to="/case-studies"
                   className="inline-flex items-center gap-2 border border-foreground bg-transparent px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground hover:text-background"
                 >
-                  Read Case Studies →
+                  Case Studies →
                 </Link>
               </div>
             </div>
