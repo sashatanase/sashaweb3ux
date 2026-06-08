@@ -1,0 +1,54 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout";
+
+const TITLE = "Keep Network Coverage Pool: Redesigning the Decentralized Insurance Experience";
+const SYNOPSIS =
+  "Usability research on a decentralized network insurance layer, tracking complex yield mechanics, lockup timelines, and asset-wrapping paradigms against elite DeFi operators.";
+
+export const Route = createFileRoute("/case-studies/06")({
+  head: () => ({
+    meta: [
+      { title: `${TITLE} — Sasha Luca` },
+      { name: "description", content: SYNOPSIS },
+      { property: "og:title", content: `${TITLE} — Sasha Luca` },
+      { property: "og:description", content: SYNOPSIS },
+    ],
+  }),
+  component: CaseStudy06,
+});
+
+function CaseStudy06() {
+  return (
+    <CaseStudyLayout
+      no="06"
+      kicker="Case Study 6"
+      year="2021"
+      title={TITLE}
+      synopsis={SYNOPSIS}
+      meta={[
+        { label: "Client", value: "Keep Network" },
+        { label: "Sector", value: "DeFi Infra, Underwriting" },
+        { label: "Year", value: "2021" },
+        { label: "Method", value: "Qualitative Usability Testing, 5 Second Test, SEQ" },
+        { label: "Sample", value: "8 participants" },
+        { label: "Role", value: "Sole Researcher" },
+      ]}
+    >
+      <CaseStudySection label="Context" title="Project background.">
+        <p>Replace this placeholder with the real context for this case study.</p>
+      </CaseStudySection>
+      <CaseStudySection label="Challenge" title="What we set out to learn.">
+        <p>Describe the research questions and the decisions the work informed.</p>
+      </CaseStudySection>
+      <CaseStudySection label="Approach" title="How the research was run.">
+        <p>Outline the method, recruitment, and how data was collected and analyzed.</p>
+      </CaseStudySection>
+      <CaseStudySection label="Findings" title="Key insights.">
+        <p>Document the most important insights surfaced by the study.</p>
+      </CaseStudySection>
+      <CaseStudySection label="Outcome" title="What changed.">
+        <p>Summarize the recommendations and the impact on the product.</p>
+      </CaseStudySection>
+    </CaseStudyLayout>
+  );
+}
