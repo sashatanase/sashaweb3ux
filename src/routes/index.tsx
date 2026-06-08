@@ -120,7 +120,7 @@ function Index() {
 
       <main id="top" className="mx-auto max-w-[1400px] px-6 md:px-10">
         {/* Hero */}
-        <section className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-32">
+        <section className="grid grid-cols-12 gap-6 py-20 md:py-32">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               §01 / Index
@@ -151,7 +151,7 @@ function Index() {
         </section>
 
         {/* Selected Work */}
-        <section id="work" className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
+        <section id="work" className="grid grid-cols-12 gap-6 py-20 md:py-28">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               §02 / Work
@@ -213,7 +213,7 @@ function Index() {
         </section>
 
         {/* About */}
-        <section id="about" className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
+        <section id="about" className="grid grid-cols-12 gap-6 py-20 md:py-28">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               §03 / About
@@ -266,7 +266,7 @@ function Index() {
         </section>
 
         {/* Case Studies */}
-        <section id="case-studies" className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
+        <section id="case-studies" className="grid grid-cols-12 gap-6 py-20 md:py-28">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               §04 / Case Studies
@@ -294,7 +294,7 @@ function Index() {
         </section>
 
         {/* Writing */}
-        <section id="writing" className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
+        <section id="writing" className="grid grid-cols-12 gap-6 py-20 md:py-28">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               §05 / Articles & Talks
