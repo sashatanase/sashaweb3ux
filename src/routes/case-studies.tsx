@@ -28,7 +28,7 @@ const CASE_STUDIES: CaseStudy[] = [
     no: "01",
     kicker: "Case Study 1",
     year: "2024",
-    title: <>Case study <em className="font-serif italic">title one</em>.</>,
+    title: <>Case study title one.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
     href: "/case-studies/1",
