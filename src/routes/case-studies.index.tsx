@@ -102,18 +102,18 @@ const CASE_STUDIES: CaseStudy[] = [
   {
     no: "05",
     kicker: "Keep Network: Node Operators Explorative User Study",
-    year: "2022",
+    year: "2021",
     title: <>Keep Network: Node Operators Explorative User Study</>,
     description:
       "Exploratory user research on decentralized node operators, evaluating the operational balance between heavy technical workloads and financial liquidation risks.",
     href: "/case-studies/05",
     meta: [
-      { label: "Client", value: "Client name" },
-      { label: "Sector", value: "Sector" },
-      { label: "Year", value: "2022" },
-      { label: "Method", value: "Method" },
-      { label: "Sample", value: "Sample" },
-      { label: "Role", value: "Role" },
+      { label: "Client", value: "Keep Network" },
+      { label: "Sector", value: "Node Infra & Staking" },
+      { label: "Year", value: "2021" },
+      { label: "Method", value: "Exploratory Interviews & Persona Mapping" },
+      { label: "Sample", value: "8 participants" },
+      { label: "Role", value: "Sole Researcher" },
     ],
   },
 ];

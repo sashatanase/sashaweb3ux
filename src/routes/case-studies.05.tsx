@@ -22,16 +22,16 @@ function CaseStudy05() {
     <CaseStudyLayout
       no="05"
       kicker="Case Study 5"
-      year="2022"
+      year="2021"
       title={TITLE}
       synopsis={SYNOPSIS}
       meta={[
-        { label: "Client", value: "Client name" },
-        { label: "Sector", value: "Sector" },
-        { label: "Year", value: "2022" },
-        { label: "Method", value: "Method" },
-        { label: "Sample", value: "Sample" },
-        { label: "Role", value: "Role" },
+        { label: "Client", value: "Keep Network" },
+        { label: "Sector", value: "Node Infra & Staking" },
+        { label: "Year", value: "2021" },
+        { label: "Method", value: "Exploratory Interviews & Persona Mapping" },
+        { label: "Sample", value: "8 participants" },
+        { label: "Role", value: "Sole Researcher" },
       ]}
     >
       <CaseStudySection label="Context" title="Project background.">
