@@ -6,7 +6,7 @@ import {
   CaseStudySubhead,
 } from "@/components/CaseStudyLayout";
 
-const TITLE_PLAIN = "Optimizing the tBTC Node Setup Experience";
+const TITLE_PLAIN = "Diary of a Node Operator: Redesigning the tBTC Setup Experience";
 const SYNOPSIS_PLAIN =
   "Usability research on a Web3 node setup client, from stakeholder-assumed journey maps to an optimized developer experience launch.";
 
