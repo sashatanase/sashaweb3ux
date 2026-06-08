@@ -2,6 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import portrait from "@/assets/sasha-luca-portrait.png";
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { CursorDots } from "@/components/CursorDots";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -10,9 +17,16 @@ export const Route = createFileRoute("/")({
 const NAV = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Case Studies", href: "#case-studies" },
   { label: "Articles & Talks", href: "#writing" },
   { label: "Contact", href: "#contact" },
+];
+
+const CASE_STUDIES = [
+  { no: "01", title: "Case Study 1", href: "#case-study-1" },
+  { no: "02", title: "Case Study 2", href: "#case-study-2" },
+  { no: "03", title: "Case Study 3", href: "#case-study-3" },
+  { no: "04", title: "Case Study 4", href: "#case-study-4" },
+  { no: "05", title: "Case Study 5", href: "#case-study-5" },
 ];
 
 type WorkItem = {
@@ -99,11 +113,22 @@ function Index() {
             Sasha Luca
           </a>
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
-            {NAV.map((n) => (
-              <a key={n.href} href={n.href} className="hover:text-accent transition-colors">
-                {n.label}
-              </a>
-            ))}
+            <a href="#work" className="hover:text-accent transition-colors">Work</a>
+            <a href="#about" className="hover:text-accent transition-colors">About</a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="inline-flex items-center gap-1 bg-transparent hover:text-accent transition-colors focus:outline-none cursor-pointer">
+                Case Studies <ChevronDown className="h-3 w-3" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="font-mono text-xs uppercase tracking-[0.18em]">
+                {CASE_STUDIES.map((cs) => (
+                  <DropdownMenuItem key={cs.href} asChild>
+                    <a href={cs.href} className="cursor-pointer">{cs.title}</a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <a href="#writing" className="hover:text-accent transition-colors">Articles & Talks</a>
+            <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
           </nav>
           <div className="col-span-6 text-right font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
             Available · {year}
@@ -266,9 +291,23 @@ function Index() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h2 className="text-3xl font-medium tracking-tight md:text-4xl">
+            <h2 className="mb-12 text-3xl font-medium tracking-tight md:text-4xl">
               Case studies
             </h2>
+            <ul className="border-t border-border">
+              {CASE_STUDIES.map((cs) => (
+                <li key={cs.no} className="border-b border-border py-6">
+                  <a href={cs.href} className="grid grid-cols-12 items-baseline gap-6 transition-colors hover:text-accent">
+                    <div className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                      {cs.no}
+                    </div>
+                    <div className="col-span-10 text-lg font-medium tracking-tight md:text-xl">
+                      {cs.title}
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
