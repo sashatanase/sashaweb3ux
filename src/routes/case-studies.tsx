@@ -177,8 +177,7 @@ function CaseStudiesPage() {
 
                       <h2 className="mt-6 text-3xl font-medium leading-[1.05] tracking-tight md:text-5xl">
                         <Link
-                          to="/case-studies/$id"
-                          params={{ id: cs.no }}
+                          to={cs.href}
                           className="transition-colors hover:text-accent"
                         >
                           {cs.title}
