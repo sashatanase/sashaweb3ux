@@ -13,12 +13,102 @@ export const Route = createFileRoute("/case-studies")({
   component: CaseStudiesPage,
 });
 
-const CASE_STUDIES = [
-  { no: "01", title: "Case Study 1", href: "/case-studies/1" },
-  { no: "02", title: "Case Study 2", href: "/case-studies/2" },
-  { no: "03", title: "Case Study 3", href: "/case-studies/3" },
-  { no: "04", title: "Case Study 4", href: "/case-studies/4" },
-  { no: "05", title: "Case Study 5", href: "/case-studies/5" },
+type CaseStudy = {
+  no: string;
+  kicker: string;
+  year: string;
+  title: React.ReactNode;
+  description: string;
+  href: string;
+  meta: { label: string; value: string }[];
+};
+
+const CASE_STUDIES: CaseStudy[] = [
+  {
+    no: "01",
+    kicker: "Case Study 1",
+    year: "2024",
+    title: <>Case study <em className="font-serif italic">title one</em>.</>,
+    description:
+      "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
+    href: "/case-studies/1",
+    meta: [
+      { label: "Client", value: "Client name" },
+      { label: "Sector", value: "Sector" },
+      { label: "Year", value: "2024" },
+      { label: "Method", value: "Method" },
+      { label: "Sample", value: "Sample" },
+      { label: "Role", value: "Role" },
+    ],
+  },
+  {
+    no: "02",
+    kicker: "Case Study 2",
+    year: "2024",
+    title: <>Case study <em className="font-serif italic">title two</em>.</>,
+    description:
+      "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
+    href: "/case-studies/2",
+    meta: [
+      { label: "Client", value: "Client name" },
+      { label: "Sector", value: "Sector" },
+      { label: "Year", value: "2024" },
+      { label: "Method", value: "Method" },
+      { label: "Sample", value: "Sample" },
+      { label: "Role", value: "Role" },
+    ],
+  },
+  {
+    no: "03",
+    kicker: "Case Study 3",
+    year: "2023",
+    title: <>Case study <em className="font-serif italic">title three</em>.</>,
+    description:
+      "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
+    href: "/case-studies/3",
+    meta: [
+      { label: "Client", value: "Client name" },
+      { label: "Sector", value: "Sector" },
+      { label: "Year", value: "2023" },
+      { label: "Method", value: "Method" },
+      { label: "Sample", value: "Sample" },
+      { label: "Role", value: "Role" },
+    ],
+  },
+  {
+    no: "04",
+    kicker: "Case Study 4",
+    year: "2023",
+    title: <>Case study <em className="font-serif italic">title four</em>.</>,
+    description:
+      "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
+    href: "/case-studies/4",
+    meta: [
+      { label: "Client", value: "Client name" },
+      { label: "Sector", value: "Sector" },
+      { label: "Year", value: "2023" },
+      { label: "Method", value: "Method" },
+      { label: "Sample", value: "Sample" },
+      { label: "Role", value: "Role" },
+    ],
+  },
+  {
+    no: "05",
+    kicker: "Case Study 5",
+    year: "2022",
+    title: <>Case study <em className="font-serif italic">title five</em>.</>,
+    description:
+      "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
+    href: "/case-studies/5",
+    meta: [
+      { label: "Client", value: "Client name" },
+      { label: "Sector", value: "Sector" },
+      { label: "Year", value: "2022" },
+      { label: "Method", value: "Method" },
+      { label: "Sample", value: "Sample" },
+      { label: "Role", value: "Role" },
+    ],
+  },
 ];
 
 function CaseStudiesPage() {
@@ -46,7 +136,7 @@ function CaseStudiesPage() {
       </header>
 
       <main className="mx-auto max-w-[1400px] px-6 md:px-10">
-        <section className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-32">
+        <section className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               § / Case Studies
@@ -62,28 +152,63 @@ function CaseStudiesPage() {
           </div>
         </section>
 
-        <section className="grid grid-cols-12 gap-6 py-20 md:py-28">
-          <div className="col-span-12 md:col-span-2">
-            <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Index
-            </div>
-          </div>
-          <div className="col-span-12 md:col-span-10">
-            <ul className="border-t border-border">
-              {CASE_STUDIES.map((cs) => (
-                <li key={cs.no} className="border-b border-border py-6">
-                  <a href={cs.href} className="grid grid-cols-12 items-baseline gap-6 transition-colors hover:text-accent">
-                    <span className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-1">
-                      {cs.no}
-                    </span>
-                    <span className="col-span-10 text-xl font-medium tracking-tight md:col-span-11 md:text-2xl">
-                      {cs.title}
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <section className="py-16 md:py-24">
+          <ul className="flex flex-col gap-8">
+            {CASE_STUDIES.map((cs) => (
+              <li key={cs.no}>
+                <article className="group border border-border bg-background p-8 transition-colors hover:border-foreground/40 md:p-12">
+                  <div className="grid grid-cols-12 gap-8">
+                    {/* Left: title + description */}
+                    <div className="col-span-12 md:col-span-8">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                        <span className="text-foreground">{cs.no}</span>
+                        <span>·</span>
+                        <span>{cs.kicker}</span>
+                        <span>·</span>
+                        <span>{cs.year}</span>
+                      </div>
+
+                      <h2 className="mt-6 text-3xl font-medium leading-[1.05] tracking-tight md:text-5xl">
+                        {cs.title}
+                      </h2>
+
+                      <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+                        {cs.description}
+                      </p>
+
+                      <div className="mt-10">
+                        <Link
+                          to="/case-studies"
+                          className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm tracking-tight transition-colors hover:text-accent hover:border-accent"
+                        >
+                          Read the <span className="text-accent">full case study</span>
+                          <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Right: meta grid */}
+                    <div className="col-span-12 md:col-span-4">
+                      <div className="border-t border-border pt-6 md:border-t-0 md:pt-0">
+                        <dl className="grid grid-cols-3 gap-x-4 gap-y-10">
+                          {cs.meta.map((m) => (
+                            <div key={m.label}>
+                              <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                                {m.label}
+                              </dt>
+                              <dd className="mt-2 font-mono text-xs uppercase tracking-[0.18em]">
+                                {m.value}
+                              </dd>
+                            </div>
+                          ))}
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+            ))}
+          </ul>
         </section>
       </main>
 
