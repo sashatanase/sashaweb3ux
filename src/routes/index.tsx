@@ -141,13 +141,19 @@ function Index() {
                 I help teams figure out who they're building for and why.
                 Currently open to UXR and PM roles, full-time or contract.
               </p>
-              <div className="col-span-12 flex items-end justify-start gap-4 md:col-span-4 md:justify-end">
+              <div className="col-span-12 flex flex-col items-start gap-3 md:col-span-4 md:items-end">
                 <a
                   href="mailto:sasha@web3ux.org"
                   className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground"
                 >
                   Get in touch ↗
                 </a>
+                <Link
+                  to="/case-studies"
+                  className="inline-flex items-center gap-2 border border-foreground bg-transparent px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground hover:text-background"
+                >
+                  Read Case Studies →
+                </Link>
               </div>
             </div>
           </div>
