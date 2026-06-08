@@ -16,10 +16,11 @@ const NAV = [
 
 const CASE_STUDIES = [
   { no: "01", title: "Diary of a Node Operator: Redesigning the tBTC Setup Experience", href: "/case-studies/01" },
-  { no: "02", title: "Mezo Borrow & mUSD: Optimizing the Bitcoin Liquidity Portal", href: "#case-study-2" },
-  { no: "03", title: "Case Study 3", href: "#case-study-3" },
-  { no: "04", title: "Case Study 4", href: "#case-study-4" },
-  { no: "05", title: "Case Study 5", href: "#case-study-5" },
+  { no: "02", title: "Mezo Borrow & mUSD: Optimizing the Bitcoin Liquidity Portal", href: "/case-studies/02" },
+  { no: "03", title: "tBTC Bridge: Redesigning the Cross-Chain Flow", href: "/case-studies/03" },
+  { no: "04", title: "tBTC Bridge: Bridged/Wrapped BTC Holder User Study", href: "/case-studies/04" },
+  { no: "05", title: "Keep Network: Node Operators Explorative User Study", href: "/case-studies/05" },
+  { no: "06", title: "Keep Network Coverage Pool: Redesigning the Underwriting Experience", href: "/case-studies/06" },
 ];
 
 type WorkItem = {
