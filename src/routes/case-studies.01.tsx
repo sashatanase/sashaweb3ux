@@ -6,9 +6,9 @@ import {
   CaseStudySubhead,
 } from "@/components/CaseStudyLayout";
 
-const TITLE_PLAIN = "Tone of Voice App";
+const TITLE_PLAIN = "Optimizing the tBTC Node Setup Experience";
 const SYNOPSIS_PLAIN =
-  "Usability research on an AI brand voice generator, from Notion prototype to standalone product launch.";
+  "Usability research on a Web3 node setup client, from stakeholder-assumed journey maps to an optimized developer experience launch.";
 
 export const Route = createFileRoute("/case-studies/01")({
   head: () => ({
@@ -26,85 +26,88 @@ function CaseStudy01() {
   return (
     <CaseStudyLayout
       no="01"
-      year="2024"
-      title="Tone of Voice App"
+      year="2023"
+      title="Optimizing the tBTC Node Setup Experience"
       synopsis={
         <>
-          Usability research on an AI brand voice generator, from Notion
-          prototype to standalone product launch.
+          Usability research on a Web3 node setup client, from
+          stakeholder-assumed journey maps to an optimized developer
+          experience launch.
         </>
       }
       meta={[
-        { label: "Client", value: "toneofvoice.app" },
-        { label: "Sector", value: "AI / Branding" },
-        { label: "Year", value: "2024" },
-        { label: "Method", value: "Moderated Usability" },
-        { label: "Sample", value: "6 Participants" },
+        { label: "Client", value: "Threshold Network" },
+        { label: "Sector", value: "Network Infra" },
+        { label: "Year", value: "2023" },
+        { label: "Method", value: "Diary Study, Interview, SUS" },
+        { label: "Sample", value: "5 participants" },
         { label: "Role", value: "Sole Researcher" },
       ]}
     >
       <CaseStudySection number="01" title="Introduction">
         <p>
-          Tone of Voice App is a tool for startups, small businesses and
-          marketing teams to establish their brand tone of voice and in-house
-          writing style. The app uses AI to create a tailored brand voice and
-          writing guidelines in minutes, instead of days or weeks.
+          tBTC is a decentralized Bitcoin bridge that lets users deposit and
+          redeem BTC on Ethereum without relying on intermediaries. The Threshold
+          Network runs the nodes that power this bridge, and node operators earn
+          rewards for keeping the network secure.
         </p>
         <p>
-          The tool was created by Tahi Gichigi, a UX writer and tone-of-voice
-          expert with 15 years of industry experience. He had built the tool as
-          a Notion template and needed answers to three questions before
-          committing to a standalone product: could people navigate the tool
-          independently, did the generated content feel useful and specific
-          enough, and where was friction slowing people down or causing them to
-          disengage?
+          Setting up a tBTC node was notoriously complex. The documentation
+          assumed deep technical knowledge, the CLI commands were opaque, and
+          operators frequently got stuck at configuration steps. The Threshold
+          team had built journey maps based on stakeholder assumptions, but
+          real-world behavior didn't match. They needed to understand where
+          operators were actually dropping off and why.
         </p>
         <p>
-          I was brought in to plan and lead the usability research end to end,
-          from the research plan to the final insights, so the founder had
-          evidence-based direction for the product roadmap. I facilitated all
-          six in-person usability sessions, analysed qualitative data,
-          identified key themes, and delivered findings and actionable
-          recommendations. Since we were tapping into the founder's network, we
-          decided it was better for him to recruit users.
+          I was brought in to run a mixed-methods study: a two-week diary study
+          to capture pain points in the wild, followed by in-depth interviews
+          and a System Usability Scale (SUS) survey to quantify the experience.
+          I recruited five active and aspiring node operators, facilitated all
+          sessions, analyzed qualitative and quantitative data, and delivered
+          actionable recommendations that shaped the next iteration of the setup
+          flow.
         </p>
       </CaseStudySection>
 
       <CaseStudySection number="02" title="User needs">
         <CaseStudyQuote>
-          <span className="text-muted-foreground">As a</span> startup founder
-          or marketing lead without a dedicated brand team
+          <span className="text-muted-foreground">As a</span> node operator
+          or aspiring staker in the Threshold Network
           <br />
-          <span className="text-muted-foreground">I want to</span> quickly
-          generate a brand voice and style guide tailored to my business
+          <span className="text-muted-foreground">I want to</span> set up
+          and maintain a tBTC node without needing a DevOps background
           <br />
           <span className="text-muted-foreground">so that I can</span>{" "}
-          communicate consistently across all channels without hiring a
-          specialist
+          earn rewards and contribute to network security without spending
+          days troubleshooting
         </CaseStudyQuote>
       </CaseStudySection>
 
       <CaseStudySection number="03" title="Research approach">
         <CaseStudySubhead>Planning and method selection</CaseStudySubhead>
         <p>
-          I chose 1:1 moderated usability testing after ruling out two
-          alternatives:
+          I designed a three-phase study to balance breadth and depth:
         </p>
         <ul className="ml-5 list-disc space-y-4 marker:text-muted-foreground">
           <li>
-            <strong className="font-semibold">Surveys</strong> would have given
-            broader reach, but the tool was a new concept with nuanced
-            interaction patterns. We needed to observe real behaviour, not
-            self-reported impressions. A survey wouldn't reveal why users were
-            getting confused.
+            <strong className="font-semibold">Diary Study</strong> gave us
+            a continuous view of the setup process as it happened. Operators
+            logged screenshots, error messages, and mood ratings over two weeks.
+            This captured friction that would have been forgotten in a retrospective
+            interview.
           </li>
           <li>
-            <strong className="font-semibold">Unmoderated testing</strong>{" "}
-            wasn't appropriate because the Notion prototype had quirks that
-            required real-time management. The editable interface meant
-            participants could accidentally delete parts of the UI, and the
-            visible AI prompts caused confusion that needed in-the-moment
-            intervention. Without a moderator, sessions would have broken down.
+            <strong className="font-semibold">In-depth Interviews</strong>{" "}
+            followed the diary period. I probed on the most severe pain points
+            and validated assumptions from the stakeholder journey maps.
+            Operators walked me through their actual workflows, not idealized ones.
+          </li>
+          <li>
+            <strong className="font-semibold">System Usability Scale (SUS)</strong>{" "}
+            provided a benchmark score for the existing setup experience and
+            a metric to measure improvement after redesign. The baseline SUS
+            score was well below industry average, confirming qualitative findings.
           </li>
         </ul>
       </CaseStudySection>
