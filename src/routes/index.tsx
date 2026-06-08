@@ -274,7 +274,7 @@ function Index() {
           </div>
           <div className="col-span-12 md:col-span-10">
             <h2 className="mb-12 text-3xl font-medium tracking-tight md:text-4xl">
-              Case studies
+              Selected case studies
             </h2>
             <ul className="border-t border-border">
               {CASE_STUDIES.map((cs) => (
