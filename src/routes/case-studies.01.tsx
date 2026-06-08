@@ -1,17 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout";
+import {
+  CaseStudyLayout,
+  CaseStudySection,
+  CaseStudyQuote,
+  CaseStudySubhead,
+} from "@/components/CaseStudyLayout";
 
-const TITLE = "tBTC and Random Beacon Client Code Diary Study.";
-const SYNOPSIS =
-  "This 6-day Diary Study evaluated how DevOps engineers configure tBTC nodes. While usability scored an above-average 73.125 (SUS), the research uncovered critical blind spots including misleading success cues, cryptic logs, and a high risk of users downgrading their hardware, which would trigger financial slashing. These insights provided the development team with an immediate blueprint to overhaul the product with a \"Default vs. Expert\" staking UI, better error diagnostics, and mandatory monitoring documentation.";
+const TITLE_PLAIN = "Tone of Voice App";
+const SYNOPSIS_PLAIN =
+  "Usability research on an AI brand voice generator, from Notion prototype to standalone product launch.";
 
 export const Route = createFileRoute("/case-studies/01")({
   head: () => ({
     meta: [
-      { title: `${TITLE} — Sasha Luca` },
-      { name: "description", content: SYNOPSIS },
-      { property: "og:title", content: `${TITLE} — Sasha Luca` },
-      { property: "og:description", content: SYNOPSIS },
+      { title: `${TITLE_PLAIN} — Sasha Luca` },
+      { name: "description", content: SYNOPSIS_PLAIN },
+      { property: "og:title", content: `${TITLE_PLAIN} — Sasha Luca` },
+      { property: "og:description", content: SYNOPSIS_PLAIN },
     ],
   }),
   component: CaseStudy01,
@@ -21,53 +26,91 @@ function CaseStudy01() {
   return (
     <CaseStudyLayout
       no="01"
-      kicker="Case Study 1"
-      year="2023"
-      title={TITLE}
-      synopsis={SYNOPSIS}
+      year="2024"
+      title={
+        <>
+          Tone <em className="italic">of</em> Voice App
+        </>
+      }
+      synopsis={
+        <>
+          Usability research on an AI brand voice generator, from Notion
+          prototype to standalone product launch.
+        </>
+      }
       meta={[
-        { label: "Client", value: "Threshold Network" },
-        { label: "Sector", value: "Network Infrastructure" },
-        { label: "Year", value: "2023" },
-        { label: "Method", value: "Diary Study" },
-        { label: "Sample", value: "5" },
+        { label: "Client", value: "toneofvoice.app" },
+        { label: "Sector", value: "AI / Branding" },
+        { label: "Year", value: "2024" },
+        { label: "Method", value: "Moderated Usability" },
+        { label: "Sample", value: "6 Participants" },
         { label: "Role", value: "Sole Researcher" },
       ]}
     >
-      <CaseStudySection label="Context" title="The product and the people behind it.">
+      <CaseStudySection number="01" title="Introduction">
         <p>
-          Add background on the Threshold Network, the tBTC product, and the DevOps
-          engineers responsible for running nodes. Replace this placeholder with the real
-          context when ready.
+          Tone of Voice App is a tool for startups, small businesses and
+          marketing teams to establish their brand tone of voice and in-house
+          writing style. The app uses AI to create a tailored brand voice and
+          writing guidelines in minutes, instead of days or weeks.
+        </p>
+        <p>
+          The tool was created by Tahi Gichigi, a UX writer and tone-of-voice
+          expert with 15 years of industry experience. He had built the tool as
+          a Notion template and needed answers to three questions before
+          committing to a standalone product: could people navigate the tool
+          independently, did the generated content feel useful and specific
+          enough, and where was friction slowing people down or causing them to
+          disengage?
+        </p>
+        <p>
+          I was brought in to plan and lead the usability research end to end,
+          from the research plan to the final insights, so the founder had
+          evidence-based direction for the product roadmap. I facilitated all
+          six in-person usability sessions, analysed qualitative data,
+          identified key themes, and delivered findings and actionable
+          recommendations. Since we were tapping into the founder's network, we
+          decided it was better for him to recruit users.
         </p>
       </CaseStudySection>
 
-      <CaseStudySection label="Challenge" title="What we set out to learn.">
-        <p>
-          Describe the research questions, the risks the team was worried about, and the
-          decisions the study needed to inform.
-        </p>
+      <CaseStudySection number="02" title="User needs">
+        <CaseStudyQuote>
+          <span className="text-muted-foreground">As a</span> startup founder
+          or marketing lead without a dedicated brand team
+          <br />
+          <span className="text-muted-foreground">I want to</span> quickly
+          generate a brand voice and style guide tailored to my business
+          <br />
+          <span className="text-muted-foreground">so that I can</span>{" "}
+          communicate consistently across all channels without hiring a
+          specialist
+        </CaseStudyQuote>
       </CaseStudySection>
 
-      <CaseStudySection label="Approach" title="A 6-day Diary Study with 5 operators.">
+      <CaseStudySection number="03" title="Research approach">
+        <CaseStudySubhead>Planning and method selection</CaseStudySubhead>
         <p>
-          Outline the method, recruitment, study materials, and how data was captured day
-          by day across the diary.
+          I chose 1:1 moderated usability testing after ruling out two
+          alternatives:
         </p>
-      </CaseStudySection>
-
-      <CaseStudySection label="Findings" title="Above-average SUS — with critical blind spots.">
-        <p>
-          Document the 73.125 SUS score, misleading success cues, cryptic logs, and the
-          hardware-downgrade slashing risk uncovered in the study.
-        </p>
-      </CaseStudySection>
-
-      <CaseStudySection label="Outcome" title="A blueprint for the next release.">
-        <p>
-          Summarize the recommendations adopted by the team: the Default vs. Expert
-          staking UI, improved error diagnostics, and mandatory monitoring documentation.
-        </p>
+        <ul className="ml-5 list-disc space-y-4 marker:text-muted-foreground">
+          <li>
+            <strong className="font-semibold">Surveys</strong> would have given
+            broader reach, but the tool was a new concept with nuanced
+            interaction patterns. We needed to observe real behaviour, not
+            self-reported impressions. A survey wouldn't reveal why users were
+            getting confused.
+          </li>
+          <li>
+            <strong className="font-semibold">Unmoderated testing</strong>{" "}
+            wasn't appropriate because the Notion prototype had quirks that
+            required real-time management. The editable interface meant
+            participants could accidentally delete parts of the UI, and the
+            visible AI prompts caused confusion that needed in-the-moment
+            intervention. Without a moderator, sessions would have broken down.
+          </li>
+        </ul>
       </CaseStudySection>
     </CaseStudyLayout>
   );
