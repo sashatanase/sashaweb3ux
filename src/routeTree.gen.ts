@@ -9,22 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as CaseStudies05RouteImport } from './routes/case-studies.05'
 import { Route as CaseStudies04RouteImport } from './routes/case-studies.04'
 import { Route as CaseStudies03RouteImport } from './routes/case-studies.03'
 import { Route as CaseStudies02RouteImport } from './routes/case-studies.02'
 import { Route as CaseStudies01RouteImport } from './routes/case-studies.01'
 
-const CaseStudiesRoute = CaseStudiesRouteImport.update({
-  id: '/case-studies',
-  path: '/case-studies',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
+  id: '/case-studies/',
+  path: '/case-studies/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaseStudies05Route = CaseStudies05RouteImport.update({
@@ -55,81 +55,81 @@ const CaseStudies01Route = CaseStudies01RouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/case-studies': typeof CaseStudiesRouteWithChildren
   '/case-studies/01': typeof CaseStudies01Route
   '/case-studies/02': typeof CaseStudies02Route
   '/case-studies/03': typeof CaseStudies03Route
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
+  '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/case-studies': typeof CaseStudiesRouteWithChildren
   '/case-studies/01': typeof CaseStudies01Route
   '/case-studies/02': typeof CaseStudies02Route
   '/case-studies/03': typeof CaseStudies03Route
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
+  '/case-studies': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/case-studies': typeof CaseStudiesRouteWithChildren
   '/case-studies/01': typeof CaseStudies01Route
   '/case-studies/02': typeof CaseStudies02Route
   '/case-studies/03': typeof CaseStudies03Route
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
+  '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/case-studies'
     | '/case-studies/01'
     | '/case-studies/02'
     | '/case-studies/03'
     | '/case-studies/04'
     | '/case-studies/05'
+    | '/case-studies/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/case-studies'
     | '/case-studies/01'
     | '/case-studies/02'
     | '/case-studies/03'
     | '/case-studies/04'
     | '/case-studies/05'
+    | '/case-studies'
   id:
     | '__root__'
     | '/'
-    | '/case-studies'
     | '/case-studies/01'
     | '/case-studies/02'
     | '/case-studies/03'
     | '/case-studies/04'
     | '/case-studies/05'
+    | '/case-studies/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CaseStudiesRoute: typeof CaseStudiesRouteWithChildren
+  CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/case-studies': {
-      id: '/case-studies'
-      path: '/case-studies'
-      fullPath: '/case-studies'
-      preLoaderRoute: typeof CaseStudiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies/': {
+      id: '/case-studies/'
+      path: '/case-studies'
+      fullPath: '/case-studies/'
+      preLoaderRoute: typeof CaseStudiesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/case-studies/05': {
@@ -170,30 +170,20 @@ declare module '@tanstack/react-router' {
   }
 }
 
-interface CaseStudiesRouteChildren {
-  CaseStudies01Route: typeof CaseStudies01Route
-  CaseStudies02Route: typeof CaseStudies02Route
-  CaseStudies03Route: typeof CaseStudies03Route
-  CaseStudies04Route: typeof CaseStudies04Route
-  CaseStudies05Route: typeof CaseStudies05Route
-}
-
-const CaseStudiesRouteChildren: CaseStudiesRouteChildren = {
-  CaseStudies01Route: CaseStudies01Route,
-  CaseStudies02Route: CaseStudies02Route,
-  CaseStudies03Route: CaseStudies03Route,
-  CaseStudies04Route: CaseStudies04Route,
-  CaseStudies05Route: CaseStudies05Route,
-}
-
-const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
-  CaseStudiesRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CaseStudiesRoute: CaseStudiesRouteWithChildren,
+  CaseStudiesIndexRoute: CaseStudiesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
