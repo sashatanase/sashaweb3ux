@@ -58,11 +58,11 @@ export function CaseStudyLayout({
               <span>{year}</span>
             </div>
 
-            <h1 className="font-serif mt-10 text-[15vw] font-normal leading-[0.95] tracking-[-0.02em] md:text-[8.5rem]">
+            <h1 className="mt-10 text-5xl font-medium leading-[1.02] tracking-tight md:text-7xl lg:text-[8rem]">
               {title}
             </h1>
 
-            <p className="font-serif italic mt-12 max-w-2xl text-3xl leading-[1.15] text-foreground md:text-4xl">
+            <p className="mt-12 max-w-2xl text-xl font-medium leading-relaxed tracking-tight text-foreground md:text-2xl">
               {synopsis}
             </p>
           </div>
@@ -127,7 +127,7 @@ export function CaseStudySection({
       <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
         § {tag}
       </div>
-      <h2 className="font-serif mt-4 text-5xl font-normal leading-[1.02] tracking-[-0.01em] md:text-6xl">
+      <h2 className="mt-4 text-3xl font-medium tracking-tight md:text-5xl">
         {title}
       </h2>
       <div className="mt-10 space-y-6 text-base leading-[1.7] text-foreground md:text-[17px]">

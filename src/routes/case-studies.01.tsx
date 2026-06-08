@@ -27,11 +27,7 @@ function CaseStudy01() {
     <CaseStudyLayout
       no="01"
       year="2024"
-      title={
-        <>
-          Tone <em className="italic">of</em> Voice App
-        </>
-      }
+      title="Tone of Voice App"
       synopsis={
         <>
           Usability research on an AI brand voice generator, from Notion
