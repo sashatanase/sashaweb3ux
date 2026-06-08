@@ -58,7 +58,7 @@ export function CaseStudyLayout({
               <span>{year}</span>
             </div>
 
-            <h1 className="mt-10 text-5xl font-medium leading-[1.02] tracking-tight md:text-7xl lg:text-[8rem]">
+            <h1 className="mt-10 text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
               {title}
             </h1>
 
