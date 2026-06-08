@@ -10,7 +10,8 @@ export const Route = createFileRoute("/")({
 const NAV = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Research & Talks", href: "#writing" },
+  { label: "Case Studies", href: "#case-studies" },
+  { label: "Articles & Talks", href: "#writing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -257,11 +258,25 @@ function Index() {
           </div>
         </section>
 
+        {/* Case Studies */}
+        <section id="case-studies" className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
+          <div className="col-span-12 md:col-span-2">
+            <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              §04 / Case Studies
+            </div>
+          </div>
+          <div className="col-span-12 md:col-span-10">
+            <h2 className="text-3xl font-medium tracking-tight md:text-4xl">
+              Case studies
+            </h2>
+          </div>
+        </section>
+
         {/* Writing */}
         <section id="writing" className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              §04 / Research & Talks
+              §05 / Articles & Talks
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
@@ -295,7 +310,7 @@ function Index() {
         <section id="contact" className="grid grid-cols-12 gap-6 py-20 md:py-32">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              §05 / Contact
+              §06 / Contact
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
