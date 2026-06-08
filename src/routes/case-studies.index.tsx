@@ -52,9 +52,9 @@ const CASE_STUDIES: CaseStudy[] = [
     no: "02",
     kicker: "Case Study 2",
     year: "2025",
-    title: <>Mezo Borrow and mUSD: Optimizing the Bitcoin Liquidity Portal</>,
+      title: <>Mezo Borrow and mUSD: Optimizing the Bitcoin Liquidity Portal</>,
     description:
-      "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
+      "Long-term Bitcoin holders frequently regret selling native BTC for real-world expenses, yet navigating Web3 borrowing platforms triggers heavy cognitive strain and liquidation anxiety. To solve this, I conducted a usability study with 8 tech-savvy investors to analyze live interaction with collateral ratios and stablecoin mechanics. By replacing qualitative friction with concrete product upgrades, including dual USD pricing tags and primary-screen liquidation alerts, we re-engineered the loan loop to build verified user trust and confidence.",
     href: "/case-studies/02",
     meta: [
       { label: "Client", value: "Mezo" },
