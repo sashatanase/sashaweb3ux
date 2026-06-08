@@ -156,6 +156,18 @@ function CaseStudy04() {
         <p>
           By establishing these user behavioral guardrails early in the design cycle, subsequent product iterations successfully targeted the exact informational gaps that caused previous legacy bridge users to abandon the v1 platform. The structural shift toward continuous interface feedback directly lowered user entry barriers, creating a measurable foundation of trust that helped convert cautious cold-storage holders into active cross-chain participants.
         </p>
+
+        <div className="mt-10">
+          <a
+            href={reportAsset.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-black px-6 py-4 font-mono text-xs uppercase tracking-[0.22em] text-white transition-transform hover:-translate-y-0.5"
+          >
+            Read the full report
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </CaseStudySection>
     </CaseStudyLayout>
   );
