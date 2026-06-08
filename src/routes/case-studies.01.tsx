@@ -6,7 +6,7 @@ import {
   CaseStudySubhead,
 } from "@/components/CaseStudyLayout";
 
-const TITLE_PLAIN = "Optimizing the tBTC Node Setup Experience";
+const TITLE_PLAIN = "Diary of a Node Operator: Redesigning the tBTC Setup Experience";
 const SYNOPSIS_PLAIN =
   "Usability research on a Web3 node setup client, from stakeholder-assumed journey maps to an optimized developer experience launch.";
 
@@ -27,7 +27,7 @@ function CaseStudy01() {
     <CaseStudyLayout
       no="01"
       year="2023"
-      title="Optimizing the tBTC Node Setup Experience"
+      title="Diary of a Node Operator: Redesigning the tBTC Setup Experience"
       synopsis={
         <>
           Usability research on a Web3 node setup client, from
