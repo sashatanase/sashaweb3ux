@@ -23,7 +23,7 @@ function CaseStudy02() {
   return (
     <CaseStudyLayout
       no="02"
-      kicker="Case Study 2"
+      kicker="Mezo Borrow and mUSD: Optimizing the Bitcoin Liquidity Portal"
       year="2025"
       title={TITLE}
       synopsis={SYNOPSIS}
