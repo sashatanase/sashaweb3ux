@@ -16,7 +16,7 @@ const NAV = [
 
 const CASE_STUDIES = [
   { no: "01", title: "Diary of a Node Operator: Redesigning the tBTC Setup Experience", href: "/case-studies/01" },
-  { no: "02", title: "Case Study 2", href: "#case-study-2" },
+  { no: "02", title: "Mezo Borrow & mUSD: Optimizing the Bitcoin Liquidity Portal", href: "#case-study-2" },
   { no: "03", title: "Case Study 3", href: "#case-study-3" },
   { no: "04", title: "Case Study 4", href: "#case-study-4" },
   { no: "05", title: "Case Study 5", href: "#case-study-5" },
