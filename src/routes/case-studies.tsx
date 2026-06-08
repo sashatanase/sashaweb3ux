@@ -13,13 +13,20 @@ export const Route = createFileRoute("/case-studies")({
   component: CaseStudiesPage,
 });
 
+type CaseStudyHref =
+  | "/case-studies/01"
+  | "/case-studies/02"
+  | "/case-studies/03"
+  | "/case-studies/04"
+  | "/case-studies/05";
+
 type CaseStudy = {
   no: string;
   kicker: string;
   year: string;
   title: React.ReactNode;
   description: string;
-  href: string;
+  href: CaseStudyHref;
   meta: { label: string; value: string }[];
 };
 
