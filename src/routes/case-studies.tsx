@@ -184,7 +184,8 @@ function CaseStudiesPage() {
 
                       <div className="mt-10">
                         <Link
-                          to="/case-studies"
+                          to="/case-studies/$id"
+                          params={{ id: cs.no }}
                           className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm tracking-tight transition-colors hover:text-accent hover:border-accent"
                         >
                           Read the <span className="text-accent">full case study</span>
