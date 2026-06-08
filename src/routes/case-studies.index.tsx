@@ -84,9 +84,9 @@ const CASE_STUDIES: CaseStudy[] = [
   },
   {
     no: "04",
-    kicker: "Case Study 4",
+    kicker: "tBTC Bridge: Bridged/Wrapped BTC Holder User Study",
     year: "2023",
-    title: <>Case study title four.</>,
+    title: <>tBTC Bridge: Bridged/Wrapped BTC Holder User Study</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
     href: "/case-studies/04",
