@@ -190,7 +190,7 @@ function CaseStudyPage() {
           <div className="col-span-12 md:col-span-4">
             <div className="border-t border-border pt-6">
               <dl className="grid grid-cols-2 gap-x-4 gap-y-10">
-                {cs.meta.map((m) => (
+                {cs.meta.map((m: { label: string; value: string }) => (
                   <div key={m.label}>
                     <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                       {m.label}
