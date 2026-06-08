@@ -157,6 +157,11 @@
     font-family: var(--font-mono);
   }
 
+  .font-serif {
+    font-family: var(--font-serif);
+    font-feature-settings: "liga", "dlig";
+  }
+
   .bg-dot-grid {
     background-image: radial-gradient(
       circle,
