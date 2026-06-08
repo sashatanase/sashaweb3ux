@@ -119,9 +119,9 @@ const CASE_STUDIES: CaseStudy[] = [
   },
   {
     no: "06",
-    kicker: "Keep Network Coverage Pool: Redesigning the Decentralized Insurance Experience",
+    kicker: "Keep Network Coverage Pool: Redesigning the Underwriting Experience",
     year: "2021",
-    title: <>Keep Network Coverage Pool: Redesigning the Decentralized Insurance Experience</>,
+    title: <>Keep Network Coverage Pool: Redesigning the Underwriting Experience</>,
     description:
       "Usability research on a decentralized network insurance layer, tracking complex yield mechanics, lockup timelines, and asset-wrapping paradigms against elite DeFi operators.",
     href: "/case-studies/06",

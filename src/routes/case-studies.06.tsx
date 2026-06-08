@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudyLayout, CaseStudySection, CaseStudySubhead } from "@/components/CaseStudyLayout";
 import reportAsset from "@/assets/keep-coverage-pools-usability-round-2.pdf.asset.json";
 
-const TITLE = "Keep Network Coverage Pool: Redesigning the Decentralized Insurance Experience";
+const TITLE = "Keep Network Coverage Pool: Redesigning the Underwriting Experience";
 const SYNOPSIS =
   "Usability research on a decentralized network insurance layer, tracking complex yield mechanics, lockup timelines, and asset-wrapping paradigms against elite DeFi operators.";
 
