@@ -101,11 +101,11 @@ const CASE_STUDIES: CaseStudy[] = [
   },
   {
     no: "05",
-    kicker: "Case Study 5",
+    kicker: "Keep Network: Node Operators Explorative User Study",
     year: "2022",
-    title: <>Case study title five.</>,
+    title: <>Keep Network: Node Operators Explorative User Study</>,
     description:
-      "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
+      "Exploratory user research on decentralized node operators, evaluating the operational balance between heavy technical workloads and financial liquidation risks.",
     href: "/case-studies/05",
     meta: [
       { label: "Client", value: "Client name" },
