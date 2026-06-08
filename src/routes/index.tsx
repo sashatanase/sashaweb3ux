@@ -310,7 +310,7 @@ function Index() {
         <section id="contact" className="grid grid-cols-12 gap-6 py-20 md:py-32">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              §05 / Contact
+              §06 / Contact
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
