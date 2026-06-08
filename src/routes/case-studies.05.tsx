@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout";
 
-const TITLE = "Case study title five.";
+const TITLE = "Keep Network: Node Operators Explorative User Study";
 const SYNOPSIS =
-  "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.";
+  "Exploratory user research on decentralized node operators, evaluating the operational balance between heavy technical workloads and financial liquidation risks.";
 
 export const Route = createFileRoute("/case-studies/05")({
   head: () => ({
