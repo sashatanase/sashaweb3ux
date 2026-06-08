@@ -54,7 +54,7 @@ const CASE_STUDIES: CaseStudy[] = [
     year: "2025",
       title: <>Mezo Borrow and mUSD: Optimizing the Bitcoin Liquidity Portal</>,
     description:
-      "Long-term Bitcoin holders frequently regret selling native BTC for real-world expenses, yet navigating Web3 borrowing platforms triggers heavy cognitive strain and liquidation anxiety. To solve this, I conducted a usability study with 8 tech-savvy investors to analyze live interaction with collateral ratios and stablecoin mechanics. By replacing qualitative friction with concrete product upgrades, including dual USD pricing tags and primary-screen liquidation alerts, we re-engineered the loan loop to build verified user trust and confidence.",
+      "Usability research on a native Bitcoin borrowing protocol, testing real-world liquidity management against deep-seated counterparty anxiety.",
     href: "/case-studies/02",
     meta: [
       { label: "Client", value: "Mezo" },
@@ -71,7 +71,7 @@ const CASE_STUDIES: CaseStudy[] = [
     year: "2023",
     title: <>tBTC Bridge: Redesigning the Cross-Chain Flow</>,
     description:
-      "Bridging native Bitcoin to Ethereum triggers severe user anxiety due to a industry-wide history of smart contract exploits and protocol hacks. To de-risk this environment, I led an iterative usability study with 6 veteran cross-chain users to trace real-time interaction loops across minting and unminting workflows. By uncovering deep friction points such as intimidating recovery warnings and automated protocol labels mistaken for centralized human intermediaries. I provided a direct structural roadmap to transition technical jargon into an intuitive, privacy-preserving, and trust-building bridging experience.",
+      "Usability research on a non-custodial Bitcoin bridge, evaluating complex cryptographic safeguards against traditional user mental models and \"bridge anxiety\".",
     href: "/case-studies/03",
     meta: [
       { label: "Client", value: "Threshold Network" },
@@ -88,7 +88,7 @@ const CASE_STUDIES: CaseStudy[] = [
     year: "2023",
     title: <>tBTC Bridge: Bridged/Wrapped BTC Holder User Study</>,
     description:
-      "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
+      "Explorative user research on Bitcoin-to-Ethereum asset holders, mapping structural behavioral traits, systemic bridge anxieties, and the trade-offs of decentralized utility.",
     href: "/case-studies/04",
     meta: [
       { label: "Client", value: "Client name" },
