@@ -184,7 +184,7 @@ function CaseStudiesPage() {
                 <article className="group border border-border bg-background p-6 transition-colors hover:border-foreground/40 sm:p-8 md:p-12">
                   <div className="grid grid-cols-12 gap-8">
                     {/* Left: title + description */}
-                    <div className="col-span-12 md:col-span-8">
+                    <div className="col-span-12 min-w-0 md:col-span-8">
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground sm:text-xs sm:tracking-[0.18em]">
                         <span className="text-foreground">{cs.no}</span>
                         <span>·</span>
