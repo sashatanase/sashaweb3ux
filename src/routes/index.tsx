@@ -17,9 +17,16 @@ export const Route = createFileRoute("/")({
 const NAV = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Case Studies", href: "#case-studies" },
   { label: "Articles & Talks", href: "#writing" },
   { label: "Contact", href: "#contact" },
+];
+
+const CASE_STUDIES = [
+  { no: "01", title: "Case Study 1", href: "#case-study-1" },
+  { no: "02", title: "Case Study 2", href: "#case-study-2" },
+  { no: "03", title: "Case Study 3", href: "#case-study-3" },
+  { no: "04", title: "Case Study 4", href: "#case-study-4" },
+  { no: "05", title: "Case Study 5", href: "#case-study-5" },
 ];
 
 type WorkItem = {
