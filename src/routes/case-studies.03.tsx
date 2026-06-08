@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout";
 
-const TITLE = "Case study title three.";
+const TITLE = "tBTC Bridge: Redesigning the Cross-Chain Flow";
 const SYNOPSIS =
-  "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.";
+  "Bridging native Bitcoin to Ethereum triggers severe user anxiety due to a industry-wide history of smart contract exploits and protocol hacks. To de-risk this environment, I led an iterative usability study with 6 veteran cross-chain users to trace real-time interaction loops across minting and unminting workflows. By uncovering deep friction points such as intimidating recovery warnings and automated protocol labels mistaken for centralized human intermediaries. I provided a direct structural roadmap to transition technical jargon into an intuitive, privacy-preserving, and trust-building bridging experience.";
 
 export const Route = createFileRoute("/case-studies/03")({
   head: () => ({
