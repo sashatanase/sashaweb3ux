@@ -13,13 +13,20 @@ export const Route = createFileRoute("/case-studies")({
   component: CaseStudiesPage,
 });
 
+type CaseStudyHref =
+  | "/case-studies/01"
+  | "/case-studies/02"
+  | "/case-studies/03"
+  | "/case-studies/04"
+  | "/case-studies/05";
+
 type CaseStudy = {
   no: string;
   kicker: string;
   year: string;
   title: React.ReactNode;
   description: string;
-  href: string;
+  href: CaseStudyHref;
   meta: { label: string; value: string }[];
 };
 
@@ -31,7 +38,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>tBTC and Random Beacon Client Code Diary Study.</>,
     description:
       "This 6-day Diary Study evaluated how DevOps engineers configure tBTC nodes. While usability scored an above-average 73.125 (SUS), the research uncovered critical blind spots including misleading success cues, cryptic logs, and a high risk of users downgrading their hardware, which would trigger financial slashing. These insights provided the development team with an immediate blueprint to overhaul the product with a \"Default vs. Expert\" staking UI, better error diagnostics, and mandatory monitoring documentation.",
-    href: "/case-studies/1",
+    href: "/case-studies/01",
     meta: [
       { label: "Client", value: "Threshold Network" },
       { label: "Sector", value: "Network Infrastructure" },
@@ -48,7 +55,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>Case study title two.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
-    href: "/case-studies/2",
+    href: "/case-studies/02",
     meta: [
       { label: "Client", value: "Client name" },
       { label: "Sector", value: "Sector" },
@@ -65,7 +72,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>Case study title three.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
-    href: "/case-studies/3",
+    href: "/case-studies/03",
     meta: [
       { label: "Client", value: "Client name" },
       { label: "Sector", value: "Sector" },
@@ -82,7 +89,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>Case study title four.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
-    href: "/case-studies/4",
+    href: "/case-studies/04",
     meta: [
       { label: "Client", value: "Client name" },
       { label: "Sector", value: "Sector" },
@@ -99,7 +106,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: <>Case study title five.</>,
     description:
       "A short synopsis of the project — the problem, the research approach, and the outcome. Replace this placeholder with the real summary when the case study is ready.",
-    href: "/case-studies/5",
+    href: "/case-studies/05",
     meta: [
       { label: "Client", value: "Client name" },
       { label: "Sector", value: "Sector" },
@@ -170,8 +177,7 @@ function CaseStudiesPage() {
 
                       <h2 className="mt-6 text-3xl font-medium leading-[1.05] tracking-tight md:text-5xl">
                         <Link
-                          to="/case-studies/$id"
-                          params={{ id: cs.no }}
+                          to={cs.href}
                           className="transition-colors hover:text-accent"
                         >
                           {cs.title}
@@ -184,8 +190,7 @@ function CaseStudiesPage() {
 
                       <div className="mt-10">
                         <Link
-                          to="/case-studies/$id"
-                          params={{ id: cs.no }}
+                          to={cs.href}
                           className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm tracking-tight transition-colors hover:text-accent hover:border-accent"
                         >
                           Read the <span className="text-accent">full case study</span>
