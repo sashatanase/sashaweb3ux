@@ -27,7 +27,7 @@ function CaseStudy01() {
   return (
     <CaseStudyLayout
       no="01"
-      year="2023"
+      year="2022"
       title="Diary of a Node Operator: Redesigning the tBTC Setup Experience"
       synopsis={
         <>
@@ -39,7 +39,7 @@ function CaseStudy01() {
       meta={[
         { label: "Client", value: "Threshold Network" },
         { label: "Sector", value: "Network Infra" },
-        { label: "Year", value: "2023" },
+        { label: "Year", value: "2022" },
         { label: "Method", value: "Diary Study, Interview, SUS" },
         { label: "Sample", value: "5 participants" },
         { label: "Role", value: "Sole Researcher" },
