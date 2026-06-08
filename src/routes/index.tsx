@@ -119,7 +119,7 @@ function Index() {
               <DropdownMenuTrigger className="inline-flex items-center gap-1 bg-transparent font-mono text-xs tracking-[0.18em] hover:text-accent transition-colors focus:outline-none cursor-pointer">
                 Case Studies <ChevronDown className="h-3 w-3" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="font-mono text-xs uppercase tracking-[0.18em]">
+              <DropdownMenuContent align="start" className="font-mono text-xs tracking-[0.18em]">
                 {CASE_STUDIES.map((cs) => (
                   <DropdownMenuItem key={cs.href} asChild>
                     <a href={cs.href} className="cursor-pointer">{cs.title}</a>
