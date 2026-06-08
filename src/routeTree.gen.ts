@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
+import { Route as CaseStudies06RouteImport } from './routes/case-studies.06'
 import { Route as CaseStudies05RouteImport } from './routes/case-studies.05'
 import { Route as CaseStudies04RouteImport } from './routes/case-studies.04'
 import { Route as CaseStudies03RouteImport } from './routes/case-studies.03'
@@ -31,6 +32,11 @@ const IndexRoute = IndexRouteImport.update({
 const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => CaseStudiesRoute,
+} as any)
+const CaseStudies06Route = CaseStudies06RouteImport.update({
+  id: '/06',
+  path: '/06',
   getParentRoute: () => CaseStudiesRoute,
 } as any)
 const CaseStudies05Route = CaseStudies05RouteImport.update({
@@ -67,6 +73,7 @@ export interface FileRoutesByFullPath {
   '/case-studies/03': typeof CaseStudies03Route
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
+  '/case-studies/06': typeof CaseStudies06Route
   '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -76,6 +83,7 @@ export interface FileRoutesByTo {
   '/case-studies/03': typeof CaseStudies03Route
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
+  '/case-studies/06': typeof CaseStudies06Route
   '/case-studies': typeof CaseStudiesIndexRoute
 }
 export interface FileRoutesById {
@@ -87,6 +95,7 @@ export interface FileRoutesById {
   '/case-studies/03': typeof CaseStudies03Route
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
+  '/case-studies/06': typeof CaseStudies06Route
   '/case-studies/': typeof CaseStudiesIndexRoute
 }
 export interface FileRouteTypes {
@@ -99,6 +108,7 @@ export interface FileRouteTypes {
     | '/case-studies/03'
     | '/case-studies/04'
     | '/case-studies/05'
+    | '/case-studies/06'
     | '/case-studies/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/case-studies/03'
     | '/case-studies/04'
     | '/case-studies/05'
+    | '/case-studies/06'
     | '/case-studies'
   id:
     | '__root__'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/case-studies/03'
     | '/case-studies/04'
     | '/case-studies/05'
+    | '/case-studies/06'
     | '/case-studies/'
   fileRoutesById: FileRoutesById
 }
@@ -147,6 +159,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/case-studies/'
       preLoaderRoute: typeof CaseStudiesIndexRouteImport
+      parentRoute: typeof CaseStudiesRoute
+    }
+    '/case-studies/06': {
+      id: '/case-studies/06'
+      path: '/06'
+      fullPath: '/case-studies/06'
+      preLoaderRoute: typeof CaseStudies06RouteImport
       parentRoute: typeof CaseStudiesRoute
     }
     '/case-studies/05': {
@@ -193,6 +212,7 @@ interface CaseStudiesRouteChildren {
   CaseStudies03Route: typeof CaseStudies03Route
   CaseStudies04Route: typeof CaseStudies04Route
   CaseStudies05Route: typeof CaseStudies05Route
+  CaseStudies06Route: typeof CaseStudies06Route
   CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
 }
 
@@ -202,6 +222,7 @@ const CaseStudiesRouteChildren: CaseStudiesRouteChildren = {
   CaseStudies03Route: CaseStudies03Route,
   CaseStudies04Route: CaseStudies04Route,
   CaseStudies05Route: CaseStudies05Route,
+  CaseStudies06Route: CaseStudies06Route,
   CaseStudiesIndexRoute: CaseStudiesIndexRoute,
 }
 
@@ -216,3 +237,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

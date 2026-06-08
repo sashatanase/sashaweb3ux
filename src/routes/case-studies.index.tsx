@@ -18,7 +18,8 @@ type CaseStudyHref =
   | "/case-studies/02"
   | "/case-studies/03"
   | "/case-studies/04"
-  | "/case-studies/05";
+  | "/case-studies/05"
+  | "/case-studies/06";
 
 type CaseStudy = {
   no: string;
@@ -112,6 +113,23 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Sector", value: "Node Infra & Staking" },
       { label: "Year", value: "2021" },
       { label: "Method", value: "Exploratory Interviews & Persona Mapping" },
+      { label: "Sample", value: "8 participants" },
+      { label: "Role", value: "Sole Researcher" },
+    ],
+  },
+  {
+    no: "06",
+    kicker: "Keep Network Coverage Pool: Redesigning the Decentralized Insurance Experience",
+    year: "2021",
+    title: <>Keep Network Coverage Pool: Redesigning the Decentralized Insurance Experience</>,
+    description:
+      "Usability research on a decentralized network insurance layer, tracking complex yield mechanics, lockup timelines, and asset-wrapping paradigms against elite DeFi operators.",
+    href: "/case-studies/06",
+    meta: [
+      { label: "Client", value: "Keep Network" },
+      { label: "Sector", value: "DeFi Infra, Underwriting" },
+      { label: "Year", value: "2021" },
+      { label: "Method", value: "Qualitative Usability Testing, 5 Second Test, SEQ" },
       { label: "Sample", value: "8 participants" },
       { label: "Role", value: "Sole Researcher" },
     ],
