@@ -168,7 +168,7 @@ function CaseStudiesPage() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h1 className="text-5xl font-medium leading-[1.02] tracking-tight md:text-7xl">
+            <h1 className="text-4xl font-medium leading-[1.02] tracking-tight sm:text-5xl md:text-7xl">
               Case studies.
             </h1>
             <p className="mt-8 max-w-2xl text-base font-medium leading-relaxed tracking-tight text-muted-foreground md:text-xl">
