@@ -85,18 +85,18 @@ const CASE_STUDIES: CaseStudy[] = [
   {
     no: "04",
     kicker: "tBTC Bridge: Bridged/Wrapped BTC Holder User Study",
-    year: "2023",
+    year: "2022",
     title: <>tBTC Bridge: Bridged/Wrapped BTC Holder User Study</>,
     description:
       "Explorative user research on Bitcoin-to-Ethereum asset holders, mapping structural behavioral traits, systemic bridge anxieties, and the trade-offs of decentralized utility.",
     href: "/case-studies/04",
     meta: [
-      { label: "Client", value: "Client name" },
-      { label: "Sector", value: "Sector" },
-      { label: "Year", value: "2023" },
-      { label: "Method", value: "Method" },
-      { label: "Sample", value: "Sample" },
-      { label: "Role", value: "Role" },
+      { label: "Client", value: "Threshold Network" },
+      { label: "Sector", value: "Cross-Chain Bridge" },
+      { label: "Year", value: "2022" },
+      { label: "Method", value: "Exploratory In-Depth Interviews" },
+      { label: "Sample", value: "12 participants" },
+      { label: "Role", value: "Sole Researcher" },
     ],
   },
   {
