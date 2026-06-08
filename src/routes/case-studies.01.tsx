@@ -170,9 +170,9 @@ function CaseStudy01() {
             href={reportAsset.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full border border-foreground bg-foreground px-8 py-4 text-base font-medium text-background transition-colors hover:bg-background hover:text-foreground"
+            className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground"
           >
-            Read the full report
+            Read the full report ↗
           </a>
         </div>
       </CaseStudySection>
