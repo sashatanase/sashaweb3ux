@@ -21,6 +21,7 @@ type CaseStudyHref =
   | "/case-studies/05"
   | "/case-studies/06";
 
+type MetaItem = { label: string; value: string; parent?: string };
 type CaseStudy = {
   no: string;
   kicker: string;
@@ -28,7 +29,7 @@ type CaseStudy = {
   title: React.ReactNode;
   description: string;
   href: CaseStudyHref;
-  meta: { label: string; value: string }[];
+  meta: MetaItem[];
 };
 
 const CASE_STUDIES: CaseStudy[] = [
@@ -41,7 +42,7 @@ const CASE_STUDIES: CaseStudy[] = [
       "Diary study on a Web3 node client setup, testing complex cryptographic infrastructure against the operational realities of node operators.",
     href: "/case-studies/01",
     meta: [
-      { label: "Client", value: "Threshold Network" },
+      { label: "Client", value: "Threshold Network", parent: "Thesis*" },
       { label: "Sector", value: "Network Infra" },
       { label: "Year", value: "2022" },
       { label: "Method", value: "Diary Study" },
@@ -58,7 +59,7 @@ const CASE_STUDIES: CaseStudy[] = [
       "Usability research on a native Bitcoin borrowing protocol, testing real-world liquidity management against deep-seated counterparty anxiety.",
     href: "/case-studies/02",
     meta: [
-      { label: "Client", value: "Mezo" },
+      { label: "Client", value: "Mezo", parent: "Thesis*" },
       { label: "Sector", value: "Bitcoin DeFi" },
       { label: "Year", value: "2025" },
       { label: "Method", value: "Interviews & Usability Testing" },
@@ -75,7 +76,7 @@ const CASE_STUDIES: CaseStudy[] = [
       "Usability research on a non-custodial Bitcoin bridge, evaluating complex cryptographic safeguards against traditional user mental models and \"bridge anxiety\".",
     href: "/case-studies/03",
     meta: [
-      { label: "Client", value: "Threshold Network" },
+      { label: "Client", value: "Threshold Network", parent: "Thesis*" },
       { label: "Sector", value: "Cross-Chain Bridge" },
       { label: "Year", value: "2023" },
       { label: "Method", value: "Qualitative Usability Testing & Deep-Dive Interviews" },
@@ -92,7 +93,7 @@ const CASE_STUDIES: CaseStudy[] = [
       "Explorative user research on Bitcoin-to-Ethereum asset holders, mapping structural behavioral traits, systemic bridge anxieties, and the trade-offs of decentralized utility.",
     href: "/case-studies/04",
     meta: [
-      { label: "Client", value: "Threshold Network" },
+      { label: "Client", value: "Threshold Network", parent: "Thesis*" },
       { label: "Sector", value: "Cross-Chain Bridge" },
       { label: "Year", value: "2022" },
       { label: "Method", value: "Exploratory In-Depth Interviews" },
@@ -109,7 +110,7 @@ const CASE_STUDIES: CaseStudy[] = [
       "Exploratory user research on decentralized node operators, evaluating the operational balance between heavy technical workloads and financial liquidation risks.",
     href: "/case-studies/05",
     meta: [
-      { label: "Client", value: "Keep Network" },
+      { label: "Client", value: "Keep Network", parent: "Thesis*" },
       { label: "Sector", value: "Node Infra & Staking" },
       { label: "Year", value: "2021" },
       { label: "Method", value: "Exploratory Interviews & Persona Mapping" },
@@ -126,7 +127,7 @@ const CASE_STUDIES: CaseStudy[] = [
       "Usability research on a decentralized network insurance layer, tracking complex yield mechanics, lockup timelines, and asset-wrapping paradigms against elite DeFi operators.",
     href: "/case-studies/06",
     meta: [
-      { label: "Client", value: "Keep Network" },
+      { label: "Client", value: "Keep Network", parent: "Thesis*" },
       { label: "Sector", value: "DeFi Infra, Underwriting" },
       { label: "Year", value: "2021" },
       { label: "Method", value: "Qualitative Usability Testing, 5 Second Test, SEQ" },
@@ -226,9 +227,18 @@ function CaseStudiesPage() {
                               <dt className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
                                 {m.label}
                               </dt>
-                              <dd className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] break-words">
-                                {m.value}
-                              </dd>
+                              {m.parent ? (
+                                <dd className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] break-words leading-tight">
+                                  <span className="block text-accent">{m.parent}</span>
+                                  <span className="mt-0.5 block text-muted-foreground/80 text-[9px] tracking-[0.18em]">
+                                    ↳ {m.value}
+                                  </span>
+                                </dd>
+                              ) : (
+                                <dd className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] break-words">
+                                  {m.value}
+                                </dd>
+                              )}
                             </div>
                           ))}
                         </dl>

@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { CursorDots } from "@/components/CursorDots";
 import type { ReactNode } from "react";
 
-export type CaseStudyMeta = { label: string; value: string };
+export type CaseStudyMeta = { label: string; value: string; parent?: string };
 
 export type CaseStudyLayoutProps = {
   no: string;
@@ -75,9 +75,20 @@ export function CaseStudyLayout({
                   <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground sm:tracking-[0.22em]">
                     {m.label}
                   </dt>
-                  <dd className="mt-3 font-mono text-[11px] uppercase tracking-[0.14em] text-foreground break-words sm:tracking-[0.18em]">
-                    {m.value}
-                  </dd>
+                  {m.parent ? (
+                    <dd className="mt-3 font-mono uppercase break-words leading-tight">
+                      <span className="block text-[11px] tracking-[0.14em] text-accent sm:tracking-[0.18em]">
+                        {m.parent}
+                      </span>
+                      <span className="mt-1 block text-[10px] tracking-[0.18em] text-muted-foreground/80">
+                        ↳ {m.value}
+                      </span>
+                    </dd>
+                  ) : (
+                    <dd className="mt-3 font-mono text-[11px] uppercase tracking-[0.14em] text-foreground break-words sm:tracking-[0.18em]">
+                      {m.value}
+                    </dd>
+                  )}
                 </div>
               ))}
             </dl>
