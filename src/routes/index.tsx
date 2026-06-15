@@ -178,52 +178,39 @@ function Index() {
               Selected work
             </h2>
             <ul className="border-t border-border">
-              {WORK.map((p) => (
-                <li
-                  key={p.no}
-                  className="group grid grid-cols-12 gap-6 border-b border-border py-8 transition-colors hover:bg-secondary/40"
-                >
-                  <div className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-1">
-                    {p.no}
-                  </div>
-                  <div className="col-span-10 md:col-span-3">
-                    <div className="text-xl font-medium tracking-tight md:text-2xl">
-                      {p.title}
-                    </div>
-                    <div className="mt-1 whitespace-pre-line font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                      {p.role} · {p.year}
-                    </div>
-                  </div>
-                  <div className="col-span-12 md:col-span-6">
-
-                    {p.description && (
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        {p.description}
-                      </p>
+              {WORK.map((p) => {
+                const hasChildren = !!p.children?.length;
+                return (
+                  <li key={p.no} className="border-b border-border">
+                    <WorkRow item={p} />
+                    {hasChildren && (
+                      <div className="grid grid-cols-12 gap-6 pb-8">
+                        <div className="col-span-12 md:col-span-1" />
+                        <div className="col-span-12 md:col-span-11">
+                          <div className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                            <span aria-hidden className="h-px w-6 bg-border" />
+                            Studio products under {p.title}
+                          </div>
+                          <ul className="relative border-l border-dashed border-border pl-4 md:pl-6">
+                            {p.children!.map((child, idx) => (
+                              <li
+                                key={child.no}
+                                className={`relative ${idx === 0 ? "pt-0" : "pt-6"} pb-2`}
+                              >
+                                <span
+                                  aria-hidden
+                                  className="absolute left-0 top-[1.6rem] hidden h-px w-3 bg-border md:block -translate-x-4 md:-translate-x-6"
+                                />
+                                <WorkRow item={child} nested />
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
                     )}
-                    {p.bullets && (
-                      <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
-                        {p.bullets.map((b) => (
-                          <li key={b} className="flex gap-3">
-                            <span aria-hidden className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-accent" />
-                            <span>{b}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                  <div className="col-span-12 flex flex-wrap items-start gap-2 md:col-span-2 md:justify-end">
-                    {p.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.12em]"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
