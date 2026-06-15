@@ -37,7 +37,7 @@ function CaseStudy01() {
         </>
       }
       meta={[
-        { label: "Client", value: "Threshold Network" },
+        { label: "Client", value: "Threshold Network", parent: "Thesis*" },
         { label: "Sector", value: "Network Infra" },
         { label: "Year", value: "2022" },
         { label: "Method", value: "Diary Study, Interview, SUS" },
