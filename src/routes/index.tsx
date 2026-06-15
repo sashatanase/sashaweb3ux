@@ -33,6 +33,8 @@ type WorkItem = {
   description?: string;
   bullets?: string[];
   tags: string[];
+  kind?: "studio" | "product";
+  children?: WorkItem[];
 };
 
 const WORK: WorkItem[] = [
@@ -49,9 +51,10 @@ const WORK: WorkItem[] = [
   },
   {
     no: "02",
-    year: "\n2021 — 2024",
+    year: "\n2021 — 2025",
     title: "Thesis*",
-    role: "UX Research & Product Design Lead",
+    role: "Venture Studio · UX Research & Product Design Lead",
+    kind: "studio",
     bullets: [
       "Led research focused on PMF across Mezo Network, Acre, and the BitcoinFi Accelerator, including discovery, segmentation, and value-prop validation.",
       "Guided product teams with actionable insights that shaped roadmap priorities.",
@@ -59,33 +62,37 @@ const WORK: WorkItem[] = [
       "Ran JTBD analyses, PMF surveys and interviews, and iterative discovery to identify high-fit user segments.",
     ],
     tags: ["PMF", "JTBD", "Research Ops"],
-  },
-  {
-    no: "03",
-    year: "\n2024 — 2025",
-    title: "Mezo",
-    role: "UX Research & Product Strategist",
-    bullets: [
-      "Led research with a focus on PMF: discovery, segmentation, and value-prop validation.",
-      "Guided product teams with insights that shaped roadmap priorities.",
-      "Coordinated cross-functional teams and built the insight repository used across the company.",
-      "Ran JTBD, PMF surveys and interviews, and iterative discovery to identify high-fit segments.",
+    children: [
+      {
+        no: "02.1",
+        year: "\n2024 — 2025",
+        title: "Mezo",
+        role: "UX Research & Product Strategist",
+        kind: "product",
+        bullets: [
+          "Led research with a focus on PMF: discovery, segmentation, and value-prop validation.",
+          "Guided product teams with insights that shaped roadmap priorities.",
+          "Coordinated cross-functional teams and built the insight repository used across the company.",
+          "Ran JTBD, PMF surveys and interviews, and iterative discovery to identify high-fit segments.",
+        ],
+        tags: ["Product Strategy", "PMF", "BitcoinFi"],
+      },
+      {
+        no: "02.2",
+        year: "\n2021 — 2024",
+        title: "Threshold Network",
+        role: "UX Research & Product Design Lead",
+        kind: "product",
+        bullets: [
+          "Built staking and provider experiences end to end, aligning direction with PMF insights.",
+          "Validated flows through testing and user research, refining features by segment.",
+          "Improved developer experience by reducing integration friction on client code.",
+          "Drove alignment with stakeholders and prioritized the roadmap based on user value.",
+          "Led product work for the tBTC bridge from concept to iterative improvement.",
+        ],
+        tags: ["UX Research", "Product Design", "tBTC"],
+      },
     ],
-    tags: ["Product Strategy", "PMF", "BitcoinFi"],
-  },
-  {
-    no: "04",
-    year: "\n2021 — 2024",
-    title: "Threshold Network",
-    role: "UX Research & Product Design Lead",
-    bullets: [
-      "Built staking and provider experiences end to end, aligning direction with PMF insights.",
-      "Validated flows through testing and user research, refining features by segment.",
-      "Improved developer experience by reducing integration friction on client code.",
-      "Drove alignment with stakeholders and prioritized the roadmap based on user value.",
-      "Led product work for the tBTC bridge from concept to iterative improvement.",
-    ],
-    tags: ["UX Research", "Product Design", "tBTC"],
   },
 ];
 
@@ -95,6 +102,62 @@ const WRITING = [
   { date: "2023.07", title: "Elevating Developer Experience (DX) in web3 - a framework", url: "https://www.youtube.com/watch?v=ZPoqwAbMWTE" },
   { date: "2022.10", title: "The Future of Web3UX - a Paradigm Shift for a Better Collaboration between Design and Development", url: "https://www.youtube.com/watch?v=gOiHwmL0VUg" },
 ];
+
+function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean }) {
+  const isStudio = item.kind === "studio";
+  return (
+    <div className="group grid grid-cols-12 gap-6 py-8 transition-colors hover:bg-secondary/40">
+      <div className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-1">
+        {item.no}
+      </div>
+      <div className="col-span-10 md:col-span-3">
+        {isStudio && (
+          <div className="mb-2 inline-flex items-center gap-2 border border-accent/40 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent">
+            <span aria-hidden className="h-1 w-1 rounded-full bg-accent" />
+            Venture Studio
+          </div>
+        )}
+        {nested && (
+          <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            ↳ Studio product · Thesis*
+          </div>
+        )}
+        <div className={`font-medium tracking-tight ${nested ? "text-lg md:text-xl" : "text-xl md:text-2xl"}`}>
+          {item.title}
+        </div>
+        <div className="mt-1 whitespace-pre-line font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          {item.role} · {item.year}
+        </div>
+      </div>
+      <div className="col-span-12 md:col-span-6">
+        {item.description && (
+          <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+        )}
+        {item.bullets && (
+          <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+            {item.bullets.map((b) => (
+              <li key={b} className="flex gap-3">
+                <span aria-hidden className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-accent" />
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <div className="col-span-12 flex flex-wrap items-start gap-2 md:col-span-2 md:justify-end">
+        {item.tags.map((t) => (
+          <span
+            key={t}
+            className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.12em]"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 
 function Index() {
   const year = new Date().getFullYear();
@@ -171,52 +234,39 @@ function Index() {
               Selected work
             </h2>
             <ul className="border-t border-border">
-              {WORK.map((p) => (
-                <li
-                  key={p.no}
-                  className="group grid grid-cols-12 gap-6 border-b border-border py-8 transition-colors hover:bg-secondary/40"
-                >
-                  <div className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-1">
-                    {p.no}
-                  </div>
-                  <div className="col-span-10 md:col-span-3">
-                    <div className="text-xl font-medium tracking-tight md:text-2xl">
-                      {p.title}
-                    </div>
-                    <div className="mt-1 whitespace-pre-line font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                      {p.role} · {p.year}
-                    </div>
-                  </div>
-                  <div className="col-span-12 md:col-span-6">
-
-                    {p.description && (
-                      <p className="text-sm leading-relaxed text-muted-foreground">
-                        {p.description}
-                      </p>
+              {WORK.map((p) => {
+                const hasChildren = !!p.children?.length;
+                return (
+                  <li key={p.no} className="border-b border-border">
+                    <WorkRow item={p} />
+                    {hasChildren && (
+                      <div className="grid grid-cols-12 gap-6 pb-8">
+                        <div className="col-span-12 md:col-span-1" />
+                        <div className="col-span-12 md:col-span-11">
+                          <div className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                            <span aria-hidden className="h-px w-6 bg-border" />
+                            Studio products under {p.title}
+                          </div>
+                          <ul className="relative border-l border-dashed border-border pl-4 md:pl-6">
+                            {p.children!.map((child, idx) => (
+                              <li
+                                key={child.no}
+                                className={`relative ${idx === 0 ? "pt-0" : "pt-6"} pb-2`}
+                              >
+                                <span
+                                  aria-hidden
+                                  className="absolute left-0 top-[1.6rem] hidden h-px w-3 bg-border md:block -translate-x-4 md:-translate-x-6"
+                                />
+                                <WorkRow item={child} nested />
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
                     )}
-                    {p.bullets && (
-                      <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
-                        {p.bullets.map((b) => (
-                          <li key={b} className="flex gap-3">
-                            <span aria-hidden className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-accent" />
-                            <span>{b}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                  <div className="col-span-12 flex flex-wrap items-start gap-2 md:col-span-2 md:justify-end">
-                    {p.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.12em]"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
