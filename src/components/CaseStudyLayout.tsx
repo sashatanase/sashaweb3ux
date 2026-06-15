@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { CursorDots } from "@/components/CursorDots";
 import type { ReactNode } from "react";
 
-export type CaseStudyMeta = { label: string; value: string };
+export type CaseStudyMeta = { label: string; value: string; parent?: string };
 
 export type CaseStudyLayoutProps = {
   no: string;
