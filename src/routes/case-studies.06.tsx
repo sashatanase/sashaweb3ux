@@ -27,7 +27,7 @@ function CaseStudy06() {
       title={TITLE}
       synopsis={SYNOPSIS}
       meta={[
-        { label: "Client", value: "Keep Network", parent: "Thesis*" },
+        { label: "Client", value: "Keep Network" },
         { label: "Sector", value: "DeFi Infra, Underwriting" },
         { label: "Year", value: "2021" },
         { label: "Method", value: "Qualitative Usability Testing, 5 Second Test, SEQ" },

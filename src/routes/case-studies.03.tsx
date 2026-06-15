@@ -27,7 +27,7 @@ function CaseStudy03() {
       title={TITLE}
       synopsis={SYNOPSIS}
       meta={[
-        { label: "Client", value: "Threshold Network", parent: "Thesis*" },
+        { label: "Client", value: "Threshold Network" },
         { label: "Sector", value: "Cross-Chain Bridge" },
         { label: "Year", value: "2023" },
         { label: "Method", value: "Qualitative Usability Testing & Deep-Dive Interviews" },

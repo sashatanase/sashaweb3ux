@@ -27,7 +27,7 @@ function CaseStudy05() {
       title={TITLE}
       synopsis={SYNOPSIS}
       meta={[
-        { label: "Client", value: "Keep Network", parent: "Thesis*" },
+        { label: "Client", value: "Keep Network" },
         { label: "Sector", value: "Node Infra & Staking" },
         { label: "Year", value: "2021" },
         { label: "Method", value: "Exploratory Interviews & Persona Mapping" },

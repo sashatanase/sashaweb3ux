@@ -27,7 +27,7 @@ function CaseStudy04() {
       title={TITLE}
       synopsis={SYNOPSIS}
       meta={[
-        { label: "Client", value: "Threshold Network", parent: "Thesis*" },
+        { label: "Client", value: "Threshold Network" },
         { label: "Sector", value: "Cross-Chain Bridge" },
         { label: "Year", value: "2022" },
         { label: "Method", value: "Exploratory In-Depth Interviews" },

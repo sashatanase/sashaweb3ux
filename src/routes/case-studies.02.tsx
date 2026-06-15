@@ -28,7 +28,7 @@ function CaseStudy02() {
       title={TITLE}
       synopsis={SYNOPSIS}
       meta={[
-        { label: "Client", value: "Mezo", parent: "Thesis*" },
+        { label: "Client", value: "Mezo" },
         { label: "Sector", value: "Bitcoin DeFi" },
         { label: "Year", value: "2025" },
         { label: "Method", value: "Interviews & Usability Testing" },
