@@ -21,6 +21,7 @@ type CaseStudyHref =
   | "/case-studies/05"
   | "/case-studies/06";
 
+type MetaItem = { label: string; value: string; parent?: string };
 type CaseStudy = {
   no: string;
   kicker: string;
@@ -28,7 +29,7 @@ type CaseStudy = {
   title: React.ReactNode;
   description: string;
   href: CaseStudyHref;
-  meta: { label: string; value: string }[];
+  meta: MetaItem[];
 };
 
 const CASE_STUDIES: CaseStudy[] = [
