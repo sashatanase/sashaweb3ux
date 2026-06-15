@@ -45,7 +45,7 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Sector", value: "Network Infra" },
       { label: "Year", value: "2022" },
       { label: "Method", value: "Diary Study" },
-      { label: "Sample", value: "5" },
+      { label: "Sample", value: "5 participants" },
       { label: "Role", value: "Sole Researcher" },
     ],
   },
