@@ -34,9 +34,9 @@ type CaseStudy = {
 const CASE_STUDIES: CaseStudy[] = [
   {
     no: "01",
-    kicker: "Case Study 1",
+    kicker: "Diary of a Node Operator: Redesigning the tBTC Setup Experience",
     year: "2022",
-    title: <>tBTC and Random Beacon Client Code Diary Study.</>,
+    title: <>Diary of a Node Operator: Redesigning the tBTC Setup Experience</>,
     description:
       "Diary study on a Web3 node client setup, testing complex cryptographic infrastructure against the operational realities of node operators.",
     href: "/case-studies/01",
@@ -45,7 +45,7 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Sector", value: "Network Infra" },
       { label: "Year", value: "2022" },
       { label: "Method", value: "Diary Study" },
-      { label: "Sample", value: "5" },
+      { label: "Sample", value: "5 participants" },
       { label: "Role", value: "Sole Researcher" },
     ],
   },
@@ -63,7 +63,7 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Year", value: "2025" },
       { label: "Method", value: "Interviews & Usability Testing" },
       { label: "Sample", value: "8 participants" },
-      { label: "Role", value: "Researcher Lead" },
+      { label: "Role", value: "Research Lead" },
     ],
   },
   {
