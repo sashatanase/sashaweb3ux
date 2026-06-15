@@ -103,6 +103,62 @@ const WRITING = [
   { date: "2022.10", title: "The Future of Web3UX - a Paradigm Shift for a Better Collaboration between Design and Development", url: "https://www.youtube.com/watch?v=gOiHwmL0VUg" },
 ];
 
+function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean }) {
+  const isStudio = item.kind === "studio";
+  return (
+    <div className="group grid grid-cols-12 gap-6 py-8 transition-colors hover:bg-secondary/40">
+      <div className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-1">
+        {item.no}
+      </div>
+      <div className="col-span-10 md:col-span-3">
+        {isStudio && (
+          <div className="mb-2 inline-flex items-center gap-2 border border-accent/40 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent">
+            <span aria-hidden className="h-1 w-1 rounded-full bg-accent" />
+            Venture Studio
+          </div>
+        )}
+        {nested && (
+          <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            ↳ Studio product · Thesis*
+          </div>
+        )}
+        <div className={`font-medium tracking-tight ${nested ? "text-lg md:text-xl" : "text-xl md:text-2xl"}`}>
+          {item.title}
+        </div>
+        <div className="mt-1 whitespace-pre-line font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          {item.role} · {item.year}
+        </div>
+      </div>
+      <div className="col-span-12 md:col-span-6">
+        {item.description && (
+          <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+        )}
+        {item.bullets && (
+          <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+            {item.bullets.map((b) => (
+              <li key={b} className="flex gap-3">
+                <span aria-hidden className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-accent" />
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <div className="col-span-12 flex flex-wrap items-start gap-2 md:col-span-2 md:justify-end">
+        {item.tags.map((t) => (
+          <span
+            key={t}
+            className="border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.12em]"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
 function Index() {
   const year = new Date().getFullYear();
 
