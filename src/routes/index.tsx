@@ -25,6 +25,12 @@ const CASE_STUDIES = [
   { no: "06", title: "Keep Network Coverage Pool: Redesigning the Underwriting Experience", href: "/case-studies/06" },
 ];
 
+type WorkProduct = {
+  title: string;
+  year: string;
+  bullets: string[];
+};
+
 type WorkItem = {
   no: string;
   year: string;
@@ -32,6 +38,8 @@ type WorkItem = {
   role: string;
   description?: string;
   bullets?: string[];
+  products?: WorkProduct[];
+  note?: string;
   tags: string[];
 };
 
@@ -49,43 +57,41 @@ const WORK: WorkItem[] = [
   },
   {
     no: "02",
-    year: "\n2021 — 2024",
+    year: "\nApr 2021 — Jul 2025",
     title: "Thesis*",
     role: "UX Research & Product Design Lead",
-    bullets: [
-      "Led research focused on PMF across Mezo Network, Acre, and the BitcoinFi Accelerator, including discovery, segmentation, and value-prop validation.",
-      "Guided product teams with actionable insights that shaped roadmap priorities.",
-      "Built and maintained the company-wide research repository, serving as the connective tissue between contracting researchers and internal teams.",
-      "Ran JTBD analyses, PMF surveys and interviews, and iterative discovery to identify high-fit user segments.",
+    description:
+      "Thesis is a web3 venture studio that builds and incubates Bitcoin & Ethereum products. I led research and product design continuously across its portfolio, moving with the studio from one product to the next.",
+    products: [
+      {
+        title: "Mezo",
+        year: "2024 — 2025",
+        bullets: [
+          "Led PMF-focused research — discovery, segmentation, and value-prop validation — for Mezo Borrow, concentrating effort on the top 35–40% of likely adopters.",
+          "Partnered with PMs to translate findings into roadmap decisions, helping elevate Borrow into the flagship product driving early engagement.",
+          "Built the company's central insight repository, the single source of truth for 15+ stakeholders across Product, Design, Engineering, and Marketing.",
+        ],
+      },
+      {
+        title: "Threshold Network",
+        year: "2021 — 2024",
+        bullets: [
+          "Led post-merger discovery and stakeholder alignment after the Keep + NuCypher merge, producing Brand Personality Guidelines and Target User Profiles.",
+          "Owned end-to-end research and UX for the marketing website across three rounds of usability testing → 30% improvement in first-time task success.",
+          "Led discovery for the Network Dashboard and tBTC bridge v2, improving time-to-first-stake and bridge-completion rates.",
+        ],
+      },
+      {
+        title: "Keep Network",
+        year: "2021",
+        bullets: [
+          "Ran discovery on Node Operator behavior, uncovering a high-value Staking Providers (B2B) segment → 15% increase in active Node Operators.",
+          "Led end-to-end research for Coverage Pools, the first of its kind in Ethereum DeFi (pre-Aave) → locked 33% of total supply.",
+        ],
+      },
     ],
-    tags: ["PMF", "JTBD", "Research Ops"],
-  },
-  {
-    no: "03",
-    year: "\n2024 — 2025",
-    title: "Mezo",
-    role: "UX Research & Product Strategist",
-    bullets: [
-      "Led research with a focus on PMF: discovery, segmentation, and value-prop validation.",
-      "Guided product teams with insights that shaped roadmap priorities.",
-      "Coordinated cross-functional teams and built the insight repository used across the company.",
-      "Ran JTBD, PMF surveys and interviews, and iterative discovery to identify high-fit segments.",
-    ],
-    tags: ["Product Strategy", "PMF", "BitcoinFi"],
-  },
-  {
-    no: "04",
-    year: "\n2021 — 2024",
-    title: "Threshold Network",
-    role: "UX Research & Product Design Lead",
-    bullets: [
-      "Built staking and provider experiences end to end, aligning direction with PMF insights.",
-      "Validated flows through testing and user research, refining features by segment.",
-      "Improved developer experience by reducing integration friction on client code.",
-      "Drove alignment with stakeholders and prioritized the roadmap based on user value.",
-      "Led product work for the tBTC bridge from concept to iterative improvement.",
-    ],
-    tags: ["UX Research", "Product Design", "tBTC"],
+    note: "Also contributed research to Acre (Bitcoin liquid staking) and the BitcoinFi Accelerator.",
+    tags: ["PMF", "JTBD", "Research Ops", "tBTC"],
   },
 ];
 
@@ -203,6 +209,28 @@ function Index() {
                           </li>
                         ))}
                       </ul>
+                    )}
+                    {p.products && (
+                      <div className="mt-6 space-y-6">
+                        {p.products.map((prod) => (
+                          <div key={prod.title}>
+                            <div className="font-mono text-xs uppercase tracking-[0.18em] text-foreground">
+                              {prod.title} <span className="text-muted-foreground">· {prod.year}</span>
+                            </div>
+                            <ul className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground">
+                              {prod.bullets.map((b) => (
+                                <li key={b} className="flex gap-3">
+                                  <span aria-hidden className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-accent" />
+                                  <span>{b}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                        {p.note && (
+                          <p className="text-sm italic leading-relaxed text-muted-foreground">{p.note}</p>
+                        )}
+                      </div>
                     )}
                   </div>
                   <div className="col-span-12 flex flex-wrap items-start gap-2 md:col-span-2 md:justify-end">
