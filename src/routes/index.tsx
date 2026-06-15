@@ -233,10 +233,6 @@ function Index() {
                       <div className="grid grid-cols-12 gap-6 pb-8">
                         <div className="col-span-12 md:col-span-1" />
                         <div className="col-span-12 md:col-span-11">
-                          <div className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                            <span aria-hidden className="h-px w-6 bg-border" />
-                            Studio products under {p.title}
-                          </div>
                           <ul className="relative border-l border-dashed border-border pl-4 md:pl-6">
                             {p.children!.map((child, idx) => (
                               <li
