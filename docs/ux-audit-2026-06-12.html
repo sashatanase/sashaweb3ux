@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UX Audit — sasha.web3ux.org - Sasha Luca portfolio</title>
+<style>
+  :root {
+    --critical: #d32f2f; --critical-bg: #fdecea;
+    --high: #e65100;     --high-bg: #fff3e0;
+    --medium: #f9a825;   --medium-bg: #fffde7;
+    --low: #2e7d32;      --low-bg: #e8f5e9;
+    --ink: #1a1a2e; --muted: #5f6b7a; --line: #e3e8ee; --bg: #f6f8fa; --card: #ffffff;
+    --accent: #3b5bdb;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; }
+  header h1 { font-size: 28px; margin-bottom: 4px; }
+  header .meta { color: var(--muted); font-size: 14px; }
+  header .meta a { color: var(--accent); }
+  .section-title { font-size: 18px; margin: 36px 0 14px; }
+
+  .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 20px; }
+  .scard { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; border-top: 4px solid var(--line); }
+  .scard .num { font-size: 30px; font-weight: 700; }
+  .scard .lbl { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .scard.critical { border-top-color: var(--critical); } .scard.critical .num { color: var(--critical); }
+  .scard.high { border-top-color: var(--high); } .scard.high .num { color: var(--high); }
+  .scard.medium { border-top-color: var(--medium); } .scard.medium .num { color: var(--medium); }
+  .scard.low { border-top-color: var(--low); } .scard.low .num { color: var(--low); }
+
+  .exec { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; }
+  .exec p + p { margin-top: 10px; }
+
+  .scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .score { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .score .name { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+  .score .bar { background: var(--line); border-radius: 99px; height: 8px; overflow: hidden; }
+  .score .fill { height: 100%; border-radius: 99px; }
+  .score .val { font-weight: 700; margin-top: 6px; font-size: 14px; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; position: sticky; top: 0; background: var(--bg); padding: 12px 0; z-index: 5; }
+  .filters button { border: 1px solid var(--line); background: var(--card); border-radius: 99px; padding: 6px 14px; font-size: 13px; cursor: pointer; color: var(--ink); }
+  .filters button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .filters .sep { width: 1px; background: var(--line); margin: 4px 4px; }
+
+  .finding { background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 14px; overflow: hidden; }
+  .finding summary { list-style: none; cursor: pointer; padding: 16px 18px; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+  .finding summary::-webkit-details-marker { display: none; }
+  .finding summary:hover { background: #fafbfc; }
+  .fid { color: var(--muted); font-size: 13px; font-family: ui-monospace, monospace; }
+  .ftitle { font-weight: 600; flex: 1 1 300px; }
+  .badge { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; border-radius: 99px; padding: 3px 10px; white-space: nowrap; }
+  .badge.critical { color: var(--critical); background: var(--critical-bg); }
+  .badge.high { color: var(--high); background: var(--high-bg); }
+  .badge.medium { color: #8d6e00; background: var(--medium-bg); }
+  .badge.low { color: var(--low); background: var(--low-bg); }
+  .badge.cat { color: var(--muted); background: var(--bg); border: 1px solid var(--line); }
+  .fbody { padding: 0 18px 18px; border-top: 1px solid var(--line); }
+  .frow { margin-top: 14px; }
+  .frow .k { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: 3px; }
+  .frow.rec { background: #f0f4ff; border: 1px solid #d6e0ff; border-radius: 8px; padding: 12px 14px; }
+  .frow.rec .k { color: var(--accent); }
+  .fmeta { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 14px; font-size: 13px; color: var(--muted); }
+  .finding img { max-width: 100%; border: 1px solid var(--line); border-radius: 8px; margin-top: 8px; }
+  .empty { text-align: center; color: var(--muted); padding: 40px 0; display: none; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>UX Audit — sasha.web3ux.org - Sasha Luca portfolio</h1>
+    <div class="meta">
+      <a href="https://sasha.web3ux.org">https://sasha.web3ux.org</a> · Audited 12 June 2026 · Scope: Homepage, /case-studies listing, case-study detail page; desktop (~1440px and 958px) + mobile (~500px); link, focus, contrast and tap-target probes
+    </div>
+    <div class="summary-cards" id="summaryCards"></div>
+  </header>
+
+  <h2 class="section-title">Executive summary</h2>
+  <div class="exec"><p>This is a fundamentally healthy site — and that's not a given. The technical accessibility baseline that most portfolios fail is solidly in place: semantic landmarks, a correct heading hierarchy, language attribute, alt text, visible keyboard-focus styles, an active state in the navigation, and <strong>zero text-contrast failures</strong>. The writing is clear, confident, and consistent in voice, and the case-study content itself is excellent proof of craft.</p>
+<p>The one finding that matters most: <strong>on mobile, the navigation vanishes entirely</strong> — no hamburger, no menu. Recruiters opening this site from a LinkedIn message on their phone cannot reach Contact or Case Studies without scrolling to the footer, and on inner pages they're stranded. Second priority: the case-studies listing — the page doing the heaviest lifting for hiring — renders its metadata with words broken mid-syllable ('PARTICIP ANTS', 'THRESHOL D') at laptop widths, which reads as a bug on the exact page that should demonstrate polish.</p>
+<p>Everything else is small and cheap: one study has two different titles, footer tap targets are slim, and a couple of microcopy details could be tightened. Fixing the top two findings would take this from a good portfolio site to one with no visible flaws.</p></div>
+
+  <h2 class="section-title">Scores by lens</h2>
+  <div class="scores" id="scores"></div>
+
+  <h2 class="section-title">Findings</h2>
+  <div class="filters" id="filters"></div>
+  <div id="findings"></div>
+  <div class="empty" id="empty">No findings match the selected filters.</div>
+
+  <footer>Generated by the ux-audit skill · Priorities: Critical = blocks a core task or excludes users · High = significantly hinders core tasks · Medium = friction · Low = polish</footer>
+</div>
+
+<script>
+const SCORES = {"heuristics": 8, "usability": 6, "accessibility": 7, "writing": 8};
+const FINDINGS = [
+  {"id":"F-01","title":"Navigation disappears entirely on mobile — no menu button replaces it","category":"usability","priority":"high","effort":"medium","location":"Header, all pages, viewport ≤ ~500px","heuristic":"Mobile responsiveness / User control and freedom","evidence":"At a 500px viewport the header shows only 'SASHA LUCA' and 'AVAILABLE · 2026'. A DOM probe confirmed zero visible nav links and zero visible buttons — the nav is hidden with no hamburger menu. On /case-studies and case-study detail pages, the only way back is the footer 'Back home' link.","impact":"Mobile visitors — including recruiters opening your link from email or LinkedIn on their phone — cannot jump to Contact, Case Studies, or Articles. On inner pages they're effectively stranded mid-page with no navigation until they scroll to the footer.","recommendation":"Add a mobile menu: either a hamburger button revealing the five nav links, or keep a slim persistent bar with the two highest-value links ('Case studies', 'Contact'). Given the audience (recruiters skimming on phones), Contact must be one tap away from anywhere."},
+  {"id":"F-02","title":"Metadata columns break words mid-syllable: 'PARTICIP ANTS', 'THRESHOL D'","category":"usability","priority":"medium","effort":"low","location":"/case-studies listing cards (Client/Sector/Method/Sample/Role grid)","heuristic":"Aesthetic and minimalist design / Readability","evidence":"At a 958px viewport, every metadata cell wraps mid-word: 'THRESHOL D NETWORK', 'EXPLORAT ORY INTERVIE WS', 'USABILIT Y', 'PARTICIP ANTS', 'RESEARCH ER', 'UNDERWRI TING'. Measured cause: 11px uppercase text with 1.32px letter-spacing in 67px-wide columns combined with overflow-wrap: break-word.","impact":"The case-studies page is the portfolio's proof-of-work, and this makes its summary data look broken on every laptop-sized window. It reads as a rendering bug rather than a design choice.","recommendation":"Remove overflow-wrap: break-word from these cells and let columns size to content (or stack label/value pairs vertically at narrower widths). Alternatively shorten values ('8 people', 'Usability testing') and reduce letter-spacing on this component. Verify at 900–1100px widths where the 6-column grid is tightest."},
+  {"id":"F-03","title":"Case study 01 has two different titles in different places","category":"writing","priority":"medium","effort":"low","location":"Homepage §04 list vs /case-studies card vs detail page","heuristic":"Consistency and standards","evidence":"The homepage lists item 01 as 'Diary of a Node Operator: Redesigning the tBTC Setup Experience'. The /case-studies listing titles the same study (01 · 2022, same client/method) 'tBTC and Random Beacon Client Code Diary Study'. The detail page at /case-studies/01 uses the homepage title again.","impact":"A reader who notes a title on the homepage and then scans the listing can't find it — and may conclude there are more studies than there are, or that they clicked the wrong thing.","recommendation":"Pick one title per study and use it everywhere (the homepage/detail version 'Diary of a Node Operator: Redesigning the tBTC Setup Experience' is the stronger, more story-driven one). Audit all six studies for the same drift."},
+  {"id":"F-04","title":"Footer and header links are 16px tall — below comfortable tap size","category":"accessibility","priority":"medium","effort":"low","location":"Footer (LinkedIn, GitHub, Twitter, Résumé), header logo link","heuristic":"WCAG 2.5.8 Target Size (Minimum)","evidence":"Measured link boxes: 'LinkedIn ↗', 'GitHub ↗', 'Twitter ↗', 'Résumé (PDF) ↗' each 161×16px; the 'Sasha Luca' home link 198×16px — below the 24px minimum height.","impact":"On touch devices these are fiddly to hit — and the Résumé link is one of the most consequential taps on the site for your job search.","recommendation":"Add vertical padding so each link's hit area is at least 24px tall (e.g. padding: 8px 0; the visual design can stay identical). The links are far apart horizontally, so this is a small, safe change."},
+  {"id":"F-05","title":"'GET IN TOUCH ↗' opens the mail client but signals an external page","category":"writing","priority":"low","effort":"low","location":"Hero, homepage","heuristic":"Match between system and the real world / CTA clarity","evidence":"The primary hero button 'GET IN TOUCH ↗' is a mailto: link, but the ↗ glyph is used elsewhere on the site to mean 'opens external site in new tab' (LinkedIn ↗, article links ↗).","impact":"Users who avoid mailto links (no desktop mail client configured) get an unexpected app launch or a blank tab; the inconsistent ↗ semantics slightly erode the otherwise careful link language.","recommendation":"Reserve ↗ for external links. For the mail CTA, drop the glyph or use 'Get in touch →', and consider showing the address on hover/click as the §06 section already does — it gives copy-paste users a path."},
+  {"id":"F-06","title":"Micro-labels rendered at 10–11px","category":"accessibility","priority":"low","effort":"low","location":"Tag chips ('FOUNDER', 'PMF', 'JTBD'), case-study metadata labels","heuristic":"Readability / WCAG 1.4.4 (zoom resilience)","evidence":"Tag chips measure 10px and metadata values 11px with wide letter-spacing. Contrast itself passes (pixel-method check found no failures), but these sizes sit below the ~12px comfortable floor for uppercase microcopy.","impact":"Low-vision readers will lean on zoom for exactly the credibility details (methods, roles, sample sizes) the design wants to highlight.","recommendation":"Raise micro-labels to 12px minimum. Paired with the F-02 fix this also resolves most of the word-breaking pressure in the metadata grid."},
+  {"id":"F-07","title":"'AVAILABLE · 2026' is ambiguous","category":"writing","priority":"low","effort":"low","location":"Header, all pages","heuristic":"Clarity","evidence":"The header status chip reads 'AVAILABLE · 2026'. The hero says 'Currently open to UXR and PM roles'.","impact":"Read cold, '2026' could mean available starting 2026, available until 2026, or just a date stamp. A recruiter shouldn't have to guess whether you're available now.","recommendation":"Make the status self-evident: 'AVAILABLE NOW' or 'OPEN TO ROLES · 2026'. The hero copy already gets it right — mirror it."}
+];
+
+const PRIORITIES = ["critical", "high", "medium", "low"];
+const CAT_LABELS = { heuristics: "UX Heuristics", usability: "Usability", accessibility: "Accessibility", writing: "UX Writing" };
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Summary cards
+const counts = Object.fromEntries(PRIORITIES.map(p => [p, FINDINGS.filter(f => f.priority === p).length]));
+document.getElementById("summaryCards").innerHTML =
+  `<div class="scard"><div class="num">${FINDINGS.length}</div><div class="lbl">Total findings</div></div>` +
+  PRIORITIES.map(p => `<div class="scard ${p}"><div class="num">${counts[p]}</div><div class="lbl">${p}</div></div>`).join("");
+
+// Lens scores
+document.getElementById("scores").innerHTML = Object.entries(SCORES).map(([k, v]) => {
+  const color = v >= 8 ? "var(--low)" : v >= 6 ? "var(--medium)" : v >= 4 ? "var(--high)" : "var(--critical)";
+  return `<div class="score"><div class="name">${esc(CAT_LABELS[k] || k)}</div>
+    <div class="bar"><div class="fill" style="width:${v * 10}%;background:${color}"></div></div>
+    <div class="val">${v} / 10</div></div>`;
+}).join("");
+
+// Filters
+let activePriority = "all", activeCat = "all";
+const cats = [...new Set(FINDINGS.map(f => f.category))];
+const filtersEl = document.getElementById("filters");
+filtersEl.innerHTML =
+  `<button data-pri="all" class="active">All priorities</button>` +
+  PRIORITIES.filter(p => counts[p]).map(p => `<button data-pri="${p}">${p[0].toUpperCase() + p.slice(1)} (${counts[p]})</button>`).join("") +
+  `<div class="sep"></div><button data-cat="all" class="active">All lenses</button>` +
+  cats.map(c => `<button data-cat="${c}">${esc(CAT_LABELS[c] || c)}</button>`).join("");
+
+filtersEl.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.pri) { activePriority = b.dataset.pri; filtersEl.querySelectorAll("[data-pri]").forEach(x => x.classList.toggle("active", x === b)); }
+  if (b.dataset.cat) { activeCat = b.dataset.cat; filtersEl.querySelectorAll("[data-cat]").forEach(x => x.classList.toggle("active", x === b)); }
+  render();
+});
+
+// Findings
+const order = { critical: 0, high: 1, medium: 2, low: 3 };
+const effortOrder = { low: 0, medium: 1, high: 2 };
+FINDINGS.sort((a, b) => (order[a.priority] - order[b.priority]) || (effortOrder[a.effort] ?? 1) - (effortOrder[b.effort] ?? 1));
+
+function render() {
+  const shown = FINDINGS.filter(f =>
+    (activePriority === "all" || f.priority === activePriority) &&
+    (activeCat === "all" || f.category === activeCat));
+  document.getElementById("empty").style.display = shown.length ? "none" : "block";
+  document.getElementById("findings").innerHTML = shown.map(f => `
+    <details class="finding" ${f.priority === "critical" ? "open" : ""}>
+      <summary>
+        <span class="fid">${esc(f.id)}</span>
+        <span class="ftitle">${esc(f.title)}</span>
+        <span class="badge ${esc(f.priority)}">${esc(f.priority)}</span>
+        <span class="badge cat">${esc(CAT_LABELS[f.category] || f.category)}</span>
+      </summary>
+      <div class="fbody">
+        <div class="fmeta">
+          <span><b>Where:</b> ${esc(f.location)}</span>
+          <span><b>Principle:</b> ${esc(f.heuristic)}</span>
+          <span><b>Effort:</b> ${esc(f.effort)}</span>
+        </div>
+        <div class="frow"><div class="k">Evidence</div><div>${esc(f.evidence)}</div>
+          ${f.screenshot ? `<img src="${esc(f.screenshot)}" alt="Screenshot: ${esc(f.title)}" loading="lazy">` : ""}</div>
+        <div class="frow"><div class="k">Impact</div><div>${esc(f.impact)}</div></div>
+        <div class="frow rec"><div class="k">Recommendation</div><div>${esc(f.recommendation)}</div></div>
+      </div>
+    </details>`).join("");
+}
+render();
+</script>
+</body>
+</html>
