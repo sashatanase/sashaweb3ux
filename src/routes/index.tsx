@@ -111,17 +111,7 @@ function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean })
         {item.no}
       </div>
       <div className="col-span-10 md:col-span-3">
-        {isStudio && (
-          <div className="mb-2 inline-flex items-center gap-2 border border-accent/40 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent">
-            <span aria-hidden className="h-1 w-1 rounded-full bg-accent" />
-            Venture Studio
-          </div>
-        )}
-        {nested && (
-          <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            ↳ Studio product · Thesis*
-          </div>
-        )}
+
         <div className={`font-medium tracking-tight ${nested ? "text-lg md:text-xl" : "text-xl md:text-2xl"}`}>
           {item.title}
         </div>
@@ -243,10 +233,6 @@ function Index() {
                       <div className="grid grid-cols-12 gap-6 pb-8">
                         <div className="col-span-12 md:col-span-1" />
                         <div className="col-span-12 md:col-span-11">
-                          <div className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                            <span aria-hidden className="h-px w-6 bg-border" />
-                            Studio products under {p.title}
-                          </div>
                           <ul className="relative border-l border-dashed border-border pl-4 md:pl-6">
                             {p.children!.map((child, idx) => (
                               <li
