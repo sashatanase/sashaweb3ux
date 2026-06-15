@@ -34,9 +34,9 @@ type CaseStudy = {
 const CASE_STUDIES: CaseStudy[] = [
   {
     no: "01",
-    kicker: "Case Study 1",
+    kicker: "Diary of a Node Operator: Redesigning the tBTC Setup Experience",
     year: "2022",
-    title: <>tBTC and Random Beacon Client Code Diary Study.</>,
+    title: <>Diary of a Node Operator: Redesigning the tBTC Setup Experience</>,
     description:
       "Diary study on a Web3 node client setup, testing complex cryptographic infrastructure against the operational realities of node operators.",
     href: "/case-studies/01",
