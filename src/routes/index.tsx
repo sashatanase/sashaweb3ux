@@ -33,6 +33,8 @@ type WorkItem = {
   description?: string;
   bullets?: string[];
   tags: string[];
+  kind?: "studio" | "product";
+  children?: WorkItem[];
 };
 
 const WORK: WorkItem[] = [
@@ -49,9 +51,10 @@ const WORK: WorkItem[] = [
   },
   {
     no: "02",
-    year: "\n2021 — 2024",
+    year: "\n2021 — 2025",
     title: "Thesis*",
-    role: "UX Research & Product Design Lead",
+    role: "Venture Studio · UX Research & Product Design Lead",
+    kind: "studio",
     bullets: [
       "Led research focused on PMF across Mezo Network, Acre, and the BitcoinFi Accelerator, including discovery, segmentation, and value-prop validation.",
       "Guided product teams with actionable insights that shaped roadmap priorities.",
@@ -59,33 +62,37 @@ const WORK: WorkItem[] = [
       "Ran JTBD analyses, PMF surveys and interviews, and iterative discovery to identify high-fit user segments.",
     ],
     tags: ["PMF", "JTBD", "Research Ops"],
-  },
-  {
-    no: "03",
-    year: "\n2024 — 2025",
-    title: "Mezo",
-    role: "UX Research & Product Strategist",
-    bullets: [
-      "Led research with a focus on PMF: discovery, segmentation, and value-prop validation.",
-      "Guided product teams with insights that shaped roadmap priorities.",
-      "Coordinated cross-functional teams and built the insight repository used across the company.",
-      "Ran JTBD, PMF surveys and interviews, and iterative discovery to identify high-fit segments.",
+    children: [
+      {
+        no: "02.1",
+        year: "\n2024 — 2025",
+        title: "Mezo",
+        role: "UX Research & Product Strategist",
+        kind: "product",
+        bullets: [
+          "Led research with a focus on PMF: discovery, segmentation, and value-prop validation.",
+          "Guided product teams with insights that shaped roadmap priorities.",
+          "Coordinated cross-functional teams and built the insight repository used across the company.",
+          "Ran JTBD, PMF surveys and interviews, and iterative discovery to identify high-fit segments.",
+        ],
+        tags: ["Product Strategy", "PMF", "BitcoinFi"],
+      },
+      {
+        no: "02.2",
+        year: "\n2021 — 2024",
+        title: "Threshold Network",
+        role: "UX Research & Product Design Lead",
+        kind: "product",
+        bullets: [
+          "Built staking and provider experiences end to end, aligning direction with PMF insights.",
+          "Validated flows through testing and user research, refining features by segment.",
+          "Improved developer experience by reducing integration friction on client code.",
+          "Drove alignment with stakeholders and prioritized the roadmap based on user value.",
+          "Led product work for the tBTC bridge from concept to iterative improvement.",
+        ],
+        tags: ["UX Research", "Product Design", "tBTC"],
+      },
     ],
-    tags: ["Product Strategy", "PMF", "BitcoinFi"],
-  },
-  {
-    no: "04",
-    year: "\n2021 — 2024",
-    title: "Threshold Network",
-    role: "UX Research & Product Design Lead",
-    bullets: [
-      "Built staking and provider experiences end to end, aligning direction with PMF insights.",
-      "Validated flows through testing and user research, refining features by segment.",
-      "Improved developer experience by reducing integration friction on client code.",
-      "Drove alignment with stakeholders and prioritized the roadmap based on user value.",
-      "Led product work for the tBTC bridge from concept to iterative improvement.",
-    ],
-    tags: ["UX Research", "Product Design", "tBTC"],
   },
 ];
 
