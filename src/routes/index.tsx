@@ -40,9 +40,9 @@ type WorkItem = {
 const WORK: WorkItem[] = [
   {
     no: "01",
-    year: "\n2022 — 2025",
+    year: "\n2022 — Present",
     title: "Web3UX",
-    role: "Co-Founder",
+    role: "Co-Founder · Sole Owner",
     bullets: [
       "Co-founded Web3UX, a user testing platform built specifically for web3 native users.",
       "Created to solve one of the core problems in decentralized product development: access to the right research participants. The platform connected web3 projects with real users for usability testing, discovery research, and behavioral studies.",
