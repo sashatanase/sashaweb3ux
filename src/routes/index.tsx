@@ -111,17 +111,7 @@ function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean })
         {item.no}
       </div>
       <div className="col-span-10 md:col-span-3">
-        {isStudio && (
-          <div className="mb-2 inline-flex items-center gap-2 border border-accent/40 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent">
-            <span aria-hidden className="h-1 w-1 rounded-full bg-accent" />
-            Venture Studio
-          </div>
-        )}
-        {nested && (
-          <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            ↳ Studio product · Thesis*
-          </div>
-        )}
+
         <div className={`font-medium tracking-tight ${nested ? "text-lg md:text-xl" : "text-xl md:text-2xl"}`}>
           {item.title}
         </div>
