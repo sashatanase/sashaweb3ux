@@ -227,9 +227,18 @@ function CaseStudiesPage() {
                               <dt className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
                                 {m.label}
                               </dt>
-                              <dd className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] break-words">
-                                {m.value}
-                              </dd>
+                              {m.parent ? (
+                                <dd className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] break-words leading-tight">
+                                  <span className="block text-accent">{m.parent}</span>
+                                  <span className="mt-0.5 block text-muted-foreground/80 text-[9px] tracking-[0.18em]">
+                                    ↳ {m.value}
+                                  </span>
+                                </dd>
+                              ) : (
+                                <dd className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] break-words">
+                                  {m.value}
+                                </dd>
+                              )}
                             </div>
                           ))}
                         </dl>
