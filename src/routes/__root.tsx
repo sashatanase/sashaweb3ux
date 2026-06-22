@@ -73,15 +73,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Sasha Luca" },
-      { name: "description", content: "Senior UX researcher specializing in web3, discovery, and PMF validation. Turning user signals into product decisions that actually move things forward." },
+      {
+        name: "description",
+        content:
+          "Senior UX researcher specializing in web3, discovery, and PMF validation. Turning user signals into product decisions that actually move things forward.",
+      },
       { property: "og:title", content: "Sasha Luca" },
-      { property: "og:description", content: "Senior UX researcher specializing in web3, discovery, and PMF validation. Turning user signals into product decisions that actually move things forward." },
+      {
+        property: "og:description",
+        content:
+          "Senior UX researcher specializing in web3, discovery, and PMF validation. Turning user signals into product decisions that actually move things forward.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Sasha Luca" },
-      { name: "twitter:description", content: "Senior UX researcher specializing in web3, discovery, and PMF validation. Turning user signals into product decisions that actually move things forward." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/1b356d6a-3778-40ca-8184-d0150baeeaeb" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/1b356d6a-3778-40ca-8184-d0150baeeaeb" },
+      {
+        name: "twitter:description",
+        content:
+          "Senior UX researcher specializing in web3, discovery, and PMF validation. Turning user signals into product decisions that actually move things forward.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/1b356d6a-3778-40ca-8184-d0150baeeaeb",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/1b356d6a-3778-40ca-8184-d0150baeeaeb",
+      },
     ],
     links: [
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },

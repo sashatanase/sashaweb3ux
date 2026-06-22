@@ -42,7 +42,11 @@ const VIEWPORTS = [
   { name: "mobile", width: 390, height: 844 },
 ];
 
-const slug = (s) => s.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "").toLowerCase() || "page";
+const slug = (s) =>
+  s
+    .replace(/[^a-z0-9]+/gi, "-")
+    .replace(/^-|-$/g, "")
+    .toLowerCase() || "page";
 
 async function checkLink(url) {
   // HEAD first; some hosts reject HEAD, so fall back to a ranged GET.
@@ -82,7 +86,12 @@ async function main() {
     const internalPaths = new Set(ROUTES.map((r) => r.path));
 
     for (const route of ROUTES) {
-      const pageInfo = { name: route.name, path: route.path, consoleErrors: [], failedRequests: [] };
+      const pageInfo = {
+        name: route.name,
+        path: route.path,
+        consoleErrors: [],
+        failedRequests: [],
+      };
       for (const vp of VIEWPORTS) {
         const context = await browser.newContext({
           viewport: { width: vp.width, height: vp.height },
@@ -92,7 +101,9 @@ async function main() {
           if (msg.type() === "error") pageInfo.consoleErrors.push(msg.text());
         });
         page.on("requestfailed", (req) => {
-          pageInfo.failedRequests.push(`${req.method()} ${req.url()} — ${req.failure()?.errorText}`);
+          pageInfo.failedRequests.push(
+            `${req.method()} ${req.url()} — ${req.failure()?.errorText}`,
+          );
         });
         const target = SITE + route.path;
         try {
@@ -168,7 +179,9 @@ function renderMarkdown(report) {
     lines.push(`### ${p.name} — \`${p.path}\``);
     lines.push(`- HTTP status: ${p.httpStatus ?? "n/a"}`);
     lines.push(`- Title: ${p.title ?? "n/a"}`);
-    lines.push(`- Screenshots: \`screenshots/${p.name}-desktop.png\`, \`screenshots/${p.name}-mobile.png\``);
+    lines.push(
+      `- Screenshots: \`screenshots/${p.name}-desktop.png\`, \`screenshots/${p.name}-mobile.png\``,
+    );
     lines.push(`- Rendered text: \`text/${p.name}.txt\``);
     if (p.consoleErrors?.length) {
       lines.push(`- ⚠️ Console errors (${p.consoleErrors.length}):`);
@@ -195,7 +208,8 @@ function renderMarkdown(report) {
   if (broken.length) {
     lines.push("### ❌ Broken / unreachable");
     lines.push("");
-    for (const l of broken) lines.push(`- [${l.status || "ERR"}] ${l.url}${l.error ? ` (${l.error})` : ""}`);
+    for (const l of broken)
+      lines.push(`- [${l.status || "ERR"}] ${l.url}${l.error ? ` (${l.error})` : ""}`);
     lines.push("");
   } else {
     lines.push("All links reachable. ✅");

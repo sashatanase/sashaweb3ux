@@ -146,11 +146,21 @@
     font-feature-settings: "ss01", "cv11";
   }
 
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, p, dd, dt, li, a, span {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  dd,
+  dt,
+  li,
+  a,
+  span {
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
@@ -179,5 +189,4 @@
     );
     background-size: 32px 32px;
   }
-
 }
