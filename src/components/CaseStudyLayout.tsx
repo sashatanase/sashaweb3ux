@@ -29,15 +29,28 @@ export function CaseStudyLayout({
       <CursorDots />
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 items-center gap-6 px-6 py-5 md:px-10">
-          <Link to="/" className="col-span-6 font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
+          <Link
+            to="/"
+            className="col-span-6 font-mono text-xs uppercase tracking-[0.18em] md:col-span-3"
+          >
             Sasha Luca
           </Link>
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
-            <Link to="/" hash="work" className="hover:text-accent transition-colors">Work</Link>
-            <Link to="/" hash="about" className="hover:text-accent transition-colors">About</Link>
-            <Link to="/case-studies" className="hover:text-accent transition-colors">Case Studies</Link>
-            <Link to="/" hash="writing" className="hover:text-accent transition-colors">Articles & Talks</Link>
-            <Link to="/" hash="contact" className="hover:text-accent transition-colors">Contact</Link>
+            <Link to="/" hash="work" className="hover:text-accent transition-colors">
+              Work
+            </Link>
+            <Link to="/" hash="about" className="hover:text-accent transition-colors">
+              About
+            </Link>
+            <Link to="/case-studies" className="hover:text-accent transition-colors">
+              Case Studies
+            </Link>
+            <Link to="/" hash="writing" className="hover:text-accent transition-colors">
+              Articles & Talks
+            </Link>
+            <Link to="/" hash="contact" className="hover:text-accent transition-colors">
+              Contact
+            </Link>
           </nav>
           <div className="col-span-6 text-right font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
             Available · {currentYear}
@@ -84,9 +97,7 @@ export function CaseStudyLayout({
           </div>
         </section>
 
-        <div className="mx-auto max-w-[760px] pb-24">
-          {children}
-        </div>
+        <div className="mx-auto max-w-[760px] pb-24">{children}</div>
 
         <section className="mx-auto max-w-[760px] border-t border-border py-16">
           <Link
@@ -102,7 +113,9 @@ export function CaseStudyLayout({
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6 px-6 py-10 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:px-10">
           <div className="col-span-6 md:col-span-3">© {currentYear} Sasha Luca</div>
           <div className="col-span-6 text-right md:col-span-9">
-            <Link to="/" className="hover:text-accent transition-colors">← Back home</Link>
+            <Link to="/" className="hover:text-accent transition-colors">
+              ← Back home
+            </Link>
           </div>
         </div>
       </footer>
@@ -146,7 +159,5 @@ export function CaseStudyQuote({ children }: { children: ReactNode }) {
 }
 
 export function CaseStudySubhead({ children }: { children: ReactNode }) {
-  return (
-    <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">{children}</h3>
-  );
+  return <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">{children}</h3>;
 }

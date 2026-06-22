@@ -17,12 +17,32 @@ const NAV = [
 ];
 
 const CASE_STUDIES = [
-  { no: "01", title: "Diary of a Node Operator: Redesigning the tBTC Setup Experience", href: "/case-studies/01" },
-  { no: "02", title: "Mezo Borrow & mUSD: Optimizing the Bitcoin Liquidity Portal", href: "/case-studies/02" },
+  {
+    no: "01",
+    title: "Diary of a Node Operator: Redesigning the tBTC Setup Experience",
+    href: "/case-studies/01",
+  },
+  {
+    no: "02",
+    title: "Mezo Borrow & mUSD: Optimizing the Bitcoin Liquidity Portal",
+    href: "/case-studies/02",
+  },
   { no: "03", title: "tBTC Bridge: Redesigning the Cross-Chain Flow", href: "/case-studies/03" },
-  { no: "04", title: "tBTC Bridge: Bridged/Wrapped BTC Holder User Study", href: "/case-studies/04" },
-  { no: "05", title: "Keep Network: Node Operators Explorative User Study", href: "/case-studies/05" },
-  { no: "06", title: "Keep Network Coverage Pool: Redesigning the Underwriting Experience", href: "/case-studies/06" },
+  {
+    no: "04",
+    title: "tBTC Bridge: Bridged/Wrapped BTC Holder User Study",
+    href: "/case-studies/04",
+  },
+  {
+    no: "05",
+    title: "Keep Network: Node Operators Explorative User Study",
+    href: "/case-studies/05",
+  },
+  {
+    no: "06",
+    title: "Keep Network Coverage Pool: Redesigning the Underwriting Experience",
+    href: "/case-studies/06",
+  },
 ];
 
 type WorkItem = {
@@ -97,10 +117,27 @@ const WORK: WorkItem[] = [
 ];
 
 const WRITING = [
-  { date: "2026.05", title: "From Fear to Empowerment: How to Supercharge UX Research with AI — a framework", url: "https://medium.com/@sashagabrielatanase/from-fear-to-empowerment-how-to-supercharge-ux-research-with-ai-a-framework-d576e39d1774" },
-  { date: "2025.06", title: "Designing for Trust in Web3: Lessons from the User Research Field", url: "https://www.youtube.com/watch?v=Wndk1Ic5t8U" },
-  { date: "2023.07", title: "Elevating Developer Experience (DX) in web3 - a framework", url: "https://www.youtube.com/watch?v=ZPoqwAbMWTE" },
-  { date: "2022.10", title: "The Future of Web3UX - a Paradigm Shift for a Better Collaboration between Design and Development", url: "https://www.youtube.com/watch?v=gOiHwmL0VUg" },
+  {
+    date: "2026.05",
+    title: "From Fear to Empowerment: How to Supercharge UX Research with AI — a framework",
+    url: "https://medium.com/@sashagabrielatanase/from-fear-to-empowerment-how-to-supercharge-ux-research-with-ai-a-framework-d576e39d1774",
+  },
+  {
+    date: "2025.06",
+    title: "Designing for Trust in Web3: Lessons from the User Research Field",
+    url: "https://www.youtube.com/watch?v=Wndk1Ic5t8U",
+  },
+  {
+    date: "2023.07",
+    title: "Elevating Developer Experience (DX) in web3 - a framework",
+    url: "https://www.youtube.com/watch?v=ZPoqwAbMWTE",
+  },
+  {
+    date: "2022.10",
+    title:
+      "The Future of Web3UX - a Paradigm Shift for a Better Collaboration between Design and Development",
+    url: "https://www.youtube.com/watch?v=gOiHwmL0VUg",
+  },
 ];
 
 function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean }) {
@@ -111,8 +148,9 @@ function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean })
         {item.no}
       </div>
       <div className="col-span-10 md:col-span-3">
-
-        <div className={`font-medium tracking-tight ${nested ? "text-lg md:text-xl" : "text-xl md:text-2xl"}`}>
+        <div
+          className={`font-medium tracking-tight ${nested ? "text-lg md:text-xl" : "text-xl md:text-2xl"}`}
+        >
           {item.title}
         </div>
         <div className="mt-1 whitespace-pre-line font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
@@ -148,7 +186,6 @@ function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean })
   );
 }
 
-
 function Index() {
   const year = new Date().getFullYear();
 
@@ -158,15 +195,28 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 items-center gap-6 px-6 py-5 md:px-10">
-          <a href="#top" className="col-span-6 font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
+          <a
+            href="#top"
+            className="col-span-6 font-mono text-xs uppercase tracking-[0.18em] md:col-span-3"
+          >
             Sasha Luca
           </a>
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
-            <a href="#work" className="hover:text-accent transition-colors">Work</a>
-            <a href="#about" className="hover:text-accent transition-colors">About</a>
-            <Link to="/case-studies" className="hover:text-accent transition-colors">Case Studies</Link>
-            <a href="#writing" className="hover:text-accent transition-colors">Articles & Talks</a>
-            <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
+            <a href="#work" className="hover:text-accent transition-colors">
+              Work
+            </a>
+            <a href="#about" className="hover:text-accent transition-colors">
+              About
+            </a>
+            <Link to="/case-studies" className="hover:text-accent transition-colors">
+              Case Studies
+            </Link>
+            <a href="#writing" className="hover:text-accent transition-colors">
+              Articles & Talks
+            </a>
+            <a href="#contact" className="hover:text-accent transition-colors">
+              Contact
+            </a>
           </nav>
           <div className="col-span-6 text-right font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
             Available · {year}
@@ -184,15 +234,16 @@ function Index() {
           </div>
           <div className="col-span-12 md:col-span-10">
             <h1 className="text-4xl font-medium leading-[1.02] tracking-tight sm:text-5xl md:text-7xl lg:text-[8rem]">
-              UX researcher<br />
+              UX researcher
+              <br />
               <span className="text-muted-foreground">who makes products</span>
               <br />
               <span className="text-accent">make sense</span>.
             </h1>
             <div className="mt-12 grid grid-cols-12 gap-6">
               <p className="col-span-12 max-w-2xl text-base font-medium leading-relaxed tracking-tight md:col-span-8 md:text-2xl">
-                I help teams figure out who they're building for and why.
-                Currently open to UXR and PM roles, full-time or contract.
+                I help teams figure out who they're building for and why. Currently open to UXR and
+                PM roles, full-time or contract.
               </p>
               <div className="col-span-12 flex flex-col items-start gap-3 md:col-span-4 md:items-end">
                 <a
@@ -220,9 +271,7 @@ function Index() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h2 className="mb-12 text-3xl font-medium tracking-tight md:text-4xl">
-              Selected work
-            </h2>
+            <h2 className="mb-12 text-3xl font-medium tracking-tight md:text-4xl">Selected work</h2>
             <ul className="border-t border-border">
               {WORK.map((p) => {
                 const hasChildren = !!p.children?.length;
@@ -272,15 +321,14 @@ function Index() {
                 </h2>
                 <div className="mt-10 max-w-[560px] space-y-6 text-base leading-relaxed text-muted-foreground">
                   <p>
-                    I've worked across fast-moving web3 startups and decentralized
-                    protocols, most recently at Mezo Network, where I built the
-                    insight repository that became the single source of truth for
-                    15+ stakeholders.
+                    I've worked across fast-moving web3 startups and decentralized protocols, most
+                    recently at Mezo Network, where I built the insight repository that became the
+                    single source of truth for 15+ stakeholders.
                   </p>
                   <p>
-                    My background sits between research and product. I'm fluent in
-                    discovery, JTBD, and usability testing, and equally comfortable
-                    shaping roadmaps and aligning the people who build from them.
+                    My background sits between research and product. I'm fluent in discovery, JTBD,
+                    and usability testing, and equally comfortable shaping roadmaps and aligning the
+                    people who build from them.
                   </p>
                 </div>
               </div>
@@ -296,7 +344,10 @@ function Index() {
             <dl className="mt-12 grid grid-cols-1 gap-x-8 gap-y-4 border-t border-border pt-6 font-mono text-xs uppercase tracking-[0.18em]">
               {[
                 ["Specialization", "Web3 / Crypto / Bitcoin · Ethereum"],
-                ["Methods", "Discovery · JTBD · PMF Validation · Usability Testing · Qualitative Research · Stakeholder Alignment"],
+                [
+                  "Methods",
+                  "Discovery · JTBD · PMF Validation · Usability Testing · Qualitative Research · Stakeholder Alignment",
+                ],
                 ["Roles", "UX Researcher · Product Manager"],
                 ["Years", "2018 — Present"],
                 ["Status", "Open to roles"],
@@ -324,7 +375,10 @@ function Index() {
             <ul className="border-t border-border">
               {CASE_STUDIES.map((cs) => (
                 <li key={cs.no} className="border-b border-border py-6">
-                  <a href={cs.href} className="grid grid-cols-12 items-baseline gap-6 transition-colors hover:text-accent">
+                  <a
+                    href={cs.href}
+                    className="grid grid-cols-12 items-baseline gap-6 transition-colors hover:text-accent"
+                  >
                     <div className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
                       {cs.no}
                     </div>
@@ -354,8 +408,8 @@ function Index() {
                 <li key={w.title}>
                   <a
                     href={w.url}
-                    target={w.url.startsWith('http') ? '_blank' : undefined}
-                    rel={w.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    target={w.url.startsWith("http") ? "_blank" : undefined}
+                    rel={w.url.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="grid grid-cols-12 items-baseline gap-6 border-b border-border py-6 transition-colors hover:text-accent"
                   >
                     <div className="col-span-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-2">
@@ -390,16 +444,36 @@ function Index() {
               </a>
             </h2>
             <div className="mt-16 grid grid-cols-12 gap-6 border-t border-border pt-8 font-mono text-xs uppercase tracking-[0.18em]">
-              <a href="https://www.linkedin.com/in/sasha-tanase-luca/" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
+              <a
+                href="https://www.linkedin.com/in/sasha-tanase-luca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-6 hover:text-accent md:col-span-3"
+              >
                 LinkedIn ↗
               </a>
-              <a href="https://github.com/sashatanase" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
+              <a
+                href="https://github.com/sashatanase"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-6 hover:text-accent md:col-span-3"
+              >
                 GitHub ↗
               </a>
-              <a href="https://x.com/sasha_tanase" target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
+              <a
+                href="https://x.com/sasha_tanase"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-6 hover:text-accent md:col-span-3"
+              >
                 Twitter ↗
               </a>
-              <a href={resumeAsset.url} target="_blank" rel="noopener noreferrer" className="col-span-6 hover:text-accent md:col-span-3">
+              <a
+                href={resumeAsset.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-6 hover:text-accent md:col-span-3"
+              >
                 Résumé (PDF) ↗
               </a>
             </div>
@@ -410,8 +484,12 @@ function Index() {
       <footer className="border-t border-border">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6 px-6 py-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:px-10">
           <div className="col-span-6 md:col-span-4">© {year} Sasha Luca</div>
-          <div className="col-span-6 text-right md:col-span-4 md:text-center">Bucharest · 44.4268° N</div>
-          <div className="col-span-12 text-left md:col-span-4 md:text-right">AI-assisted, human-obsessed, coffee-fueled</div>
+          <div className="col-span-6 text-right md:col-span-4 md:text-center">
+            Bucharest · 44.4268° N
+          </div>
+          <div className="col-span-12 text-left md:col-span-4 md:text-right">
+            AI-assisted, human-obsessed, coffee-fueled
+          </div>
         </div>
       </footer>
     </div>

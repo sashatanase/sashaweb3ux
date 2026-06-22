@@ -17,13 +17,13 @@ Either way, it appends a dated verdict to `docs/recruiter-log/<YYYY-MM>.md`.
 ## The daily routine
 
 The workflow ([`.github/workflows/recruiter.yml`](../workflows/recruiter.yml))
-runs every day at **13:00 UTC** (and on demand via *Run workflow*):
+runs every day at **13:00 UTC** (and on demand via _Run workflow_):
 
 1. **Check out** the repo and install dependencies.
 2. **Validate:** `bun run lint`, the `test` script if one exists (there is none
    today — see AGENTS.md), and `bun run build`. A failing gate is itself a
    hireability red flag.
-3. **Install Playwright** (Chromium) transiently — it is *not* a project
+3. **Install Playwright** (Chromium) transiently — it is _not_ a project
    dependency, so the site's `package.json`/lockfile stay untouched.
 4. **Run the app locally:** serve the production build with `vite preview`
    (falling back to `vite dev` if preview doesn't come up under the
@@ -60,7 +60,7 @@ the things that actually decide whether a recruiter reaches out.
 - **Port / pages:** the port is the `PORT`/`RECRUITER_SITE_URL` env; the page
   list lives in `ROUTES` in `capture.mjs` (it also auto-discovers internal
   links).
-- **Run it now:** Actions → *Recruiter Agent* → *Run workflow*.
+- **Run it now:** Actions → _Recruiter Agent_ → _Run workflow_.
 
 ## Run the capture locally
 
