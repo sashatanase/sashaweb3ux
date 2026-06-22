@@ -1,0 +1,132 @@
+name: Recruiter Agent
+
+# A daily "recruiter" that reviews Sasha's portfolio site the way a real
+# sourcer would, then commits to ONE outcome:
+#   - CONTACT: opens an outreach issue (she made the cut), or
+#   - IMPROVE: opens a PR with concrete, implementable site improvements.
+#
+# Runs on a schedule and can be triggered manually for testing.
+
+on:
+  schedule:
+    # 13:00 UTC every day. Adjust the cron if you want a different time.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+    inputs:
+      force_contact_review:
+        description: "Just re-run today's review (ignores the once-per-day guard)"
+        type: boolean
+        default: false
+
+# Don't pile up runs; the latest review is the one that matters.
+concurrency:
+  group: recruiter-agent
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # commit improvement branches
+      pull-requests: write # open improvement PRs
+      issues: write # open the outreach issue
+      id-token: write
+      actions: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run the recruiter
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Bash lets it run the build/lint and the `gh` CLI to open issues/PRs.
+          claude_args: "--allowedTools Bash,Edit,Write,Read,Glob,Grep"
+          prompt: |
+            You are running unattended in CI as a daily recruiter agent for
+            Sasha Luca's portfolio site. The repository you are in IS the
+            website (TanStack Start + React; see AGENTS.md). Today is the date
+            of this workflow run.
+
+            STEP 1 — Get into character.
+            Read `.github/recruiter-agent/persona.md` in full and adopt that
+            persona and decision rubric. You are the recruiter, Morgan Vale.
+
+            STEP 2 — Review the site as a recruiter.
+            - Read the actual site content: src/routes/index.tsx (home),
+              src/routes/case-studies.*.tsx (case studies), and the meta in
+              src/routes/__root.tsx. Skim src/components for anything relevant.
+            - Confirm the site actually builds: run `bun run build` and
+              `bun run lint`. Broken build or lint errors are a hireability
+              red flag and should weigh on your decision.
+            - Note concrete strengths and concrete gaps, citing what you saw.
+
+            STEP 3 — Avoid duplicate / spammy output (idempotency).
+            Use the `gh` CLI (GITHUB_TOKEN is set in the environment).
+            - If an OPEN issue with the label `recruiter-outreach` already
+              exists, you have already decided to contact her — do NOT open
+              another. Add a brief comment only if there's meaningful new
+              signal, otherwise stop.
+            - If an OPEN PR with the label `recruiter-improvement` already
+              exists, do NOT open a competing one. Instead, push refinements to
+              that PR's branch if today's review surfaces something new, or stop
+              if nothing changed.
+            - Always append today's verdict to the daily log (STEP 5),
+              regardless of outcome.
+
+            STEP 4 — Commit to EXACTLY ONE outcome.
+
+            OUTCOME A — CONTACT (she made the cut):
+              Open a GitHub issue:
+                gh label create recruiter-outreach --color 1D76DB \
+                  --description "Recruiter decided to reach out" 2>/dev/null || true
+                gh issue create --label recruiter-outreach \
+                  --title "📬 [Recruiter] Outreach to Sasha — Senior UX Researcher (web3)" \
+                  --body-file <a file you write>
+              The issue body is a REAL outreach message from Morgan Vale:
+                - Personalized subject + greeting.
+                - 2–4 sentences on exactly why she's a fit, citing specific
+                  case studies / work you saw on the site.
+                - The role and why you thought of her for it.
+                - A clear, low-friction next step (call / reply / availability).
+                - Signed as Morgan Vale, with your firm.
+              Do NOT also open an improvement PR on a CONTACT day.
+
+            OUTCOME B — IMPROVE (not ready to reach out yet):
+              Make concrete, implementable improvements to the site that would
+              move your decision toward "contact". Examples: sharpen case-study
+              outcomes/impact, fix broken links/build/lint, improve
+              scannability, clarify the contact path, fix accessibility issues.
+              Then:
+                - Create a branch: recruiter/improvements-<run date YYYY-MM-DD>.
+                - Make the edits. Keep them focused, real, and in keeping with
+                  the existing code style (Tailwind tokens, shadcn patterns).
+                - Run `bun run lint` and `bun run build` again; both must pass.
+                - Run `bun run format`.
+                - Commit, push the branch, and open a PR:
+                    gh label create recruiter-improvement --color 0E8A16 \
+                      --description "Recruiter-suggested site improvements" 2>/dev/null || true
+                    gh pr create --label recruiter-improvement --title "..." --body-file <file>
+                - The PR description must be written AS the recruiter: lead with
+                  "Here's what's holding me back from reaching out, and exactly
+                  what I'd change," then a checklist of the changes you made and
+                  the reasoning. Be specific and kind but honest.
+
+            STEP 5 — Log the verdict.
+            Append a dated entry to `docs/recruiter-log/<YYYY-MM>.md` (create the
+            file with a heading if it doesn't exist). One entry per run:
+              - Date, decision (CONTACT or IMPROVE), a 2–3 line rationale, and a
+                link to the issue/PR you created. Commit this log entry directly
+                to the default branch (it is a record, not a change to the site).
+
+            Keep the bar high: a CONTACT should be earned. As the site improves
+            over days, the verdict should be able to flip from IMPROVE to
+            CONTACT — that progression is the entire point of this agent.
