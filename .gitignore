@@ -23,6 +23,9 @@ dist-ssr
 # Recruiter agent — ephemeral live-site capture (screenshots, rendered text)
 recruiter-capture/
 
+# Analytics agent — ephemeral GA4 pull (report.md/json, summary.json)
+analytics-capture/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
