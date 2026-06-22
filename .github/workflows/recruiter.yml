@@ -1,8 +1,8 @@
 name: Recruiter Agent
 
-# A daily "recruiter" that reviews Sasha's LIVE portfolio site
-# (https://sasha.web3ux.org/) the way a real sourcer would — by rendering it in
-# a real browser (Playwright) — then commits to ONE outcome:
+# A daily "recruiter" that BUILDS and RUNS Sasha's portfolio app locally, then
+# reviews it the way a real sourcer would — by rendering the running app in a
+# real browser (Playwright) — and commits to ONE outcome:
 #   - CONTACT: opens an outreach issue (she made the cut), or
 #   - IMPROVE: opens a PR with concrete, implementable site improvements.
 #
@@ -13,11 +13,6 @@ on:
     # 13:00 UTC every day. Adjust the cron if you want a different time.
     - cron: "0 13 * * *"
   workflow_dispatch:
-    inputs:
-      site_url:
-        description: "Override the site URL to review"
-        type: string
-        default: "https://sasha.web3ux.org/"
 
 # Don't pile up runs; the latest review is the one that matters.
 concurrency:
@@ -25,7 +20,9 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  RECRUITER_SITE_URL: ${{ github.event.inputs.site_url || 'https://sasha.web3ux.org/' }}
+  # Where the locally-served app is reviewed.
+  PORT: "4173"
+  RECRUITER_SITE_URL: "http://127.0.0.1:4173"
 
 jobs:
   review:
@@ -48,6 +45,22 @@ jobs:
       - name: Install project dependencies
         run: bun install
 
+      # --- Validation gates: lint, tests (if any), production build ---
+      - name: Lint
+        run: bun run lint
+
+      - name: Tests
+        run: |
+          if node -e "process.exit(require('./package.json').scripts?.test ? 0 : 1)"; then
+            echo "Running test script..."
+            bun run test
+          else
+            echo "No test script defined — skipping (see AGENTS.md: no test suite)."
+          fi
+
+      - name: Build
+        run: bun run build
+
       # Playwright is installed transiently (NOT a project dependency) so the
       # site's deps/lockfile stay untouched. capture.mjs resolves it from here.
       - name: Install Playwright (transient)
@@ -58,7 +71,40 @@ jobs:
           npm install playwright@latest
           npx playwright install --with-deps chromium
 
-      - name: Capture the live site
+      # --- Run the app locally ---
+      # Prefer `preview` (the production build); fall back to `dev` if it
+      # doesn't come up under the Cloudflare/Lovable Vite config.
+      - name: Serve the app locally
+        run: |
+          serve() {
+            nohup bun run "$1" -- --port "$PORT" --host 127.0.0.1 --strictPort \
+              > "$RUNNER_TEMP/serve-$1.log" 2>&1 &
+            SERVE_PID=$!
+            for i in $(seq 1 45); do
+              if curl -sf "$RECRUITER_SITE_URL/" >/dev/null; then return 0; fi
+              kill -0 "$SERVE_PID" 2>/dev/null || return 1  # process died early
+              sleep 2
+            done
+            return 1
+          }
+
+          if serve preview; then
+            echo "App is up via preview (production build)."
+          else
+            echo "preview did not serve; falling back to dev. preview log:"
+            cat "$RUNNER_TEMP/serve-preview.log" 2>/dev/null || true
+            kill "$SERVE_PID" 2>/dev/null || true
+            if serve dev; then
+              echo "App is up via dev."
+            else
+              echo "App did not start. dev log:"
+              cat "$RUNNER_TEMP/serve-dev.log" 2>/dev/null || true
+              exit 1
+            fi
+          fi
+          echo "PREVIEW_PID=$SERVE_PID" >> "$GITHUB_ENV"
+
+      - name: Capture the running app
         run: |
           PW_REQUIRE_BASE="$RUNNER_TEMP/pw/package.json" \
           RECRUITER_CAPTURE_DIR="$GITHUB_WORKSPACE/recruiter-capture" \
@@ -73,18 +119,18 @@ jobs:
           prompt: |
             You are running unattended in CI as a daily recruiter agent for
             Sasha Luca. The repository you are in is the SOURCE of her portfolio
-            site; the LIVE site you are reviewing is ${{ env.RECRUITER_SITE_URL }}
-            (see AGENTS.md for the stack). Today is the date of this workflow run.
-
-            A Playwright capture of the LIVE site has already been taken for you
-            in the `recruiter-capture/` directory. This is the recruiter's
-            primary evidence — what a human actually sees in the browser.
+            site (see AGENTS.md for the stack). The app has already been linted,
+            built, and is RUNNING LOCALLY at ${{ env.RECRUITER_SITE_URL }}; a
+            Playwright capture of that running app is waiting for you in the
+            `recruiter-capture/` directory. This is the recruiter's primary
+            evidence — what a human actually sees in the browser. Today is the
+            date of this workflow run.
 
             STEP 1 — Get into character.
             Read `.github/recruiter-agent/persona.md` in full and adopt that
             persona and decision rubric. You are the recruiter, Morgan Vale.
 
-            STEP 2 — Review the LIVE site (primary evidence).
+            STEP 2 — Review the running app (primary evidence).
             - Read `recruiter-capture/report.md` (pages, console errors, failed
               requests, and the broken-link report).
             - VIEW the screenshots in `recruiter-capture/screenshots/` — both
@@ -95,7 +141,7 @@ jobs:
             - Treat broken links, console errors, a missing/unreachable resume,
               or a broken mobile layout as real hireability red flags.
             - You MAY also read the source under `src/` for context, but base
-              your VERDICT on what's actually live.
+              your VERDICT on what's actually rendered.
 
             STEP 3 — Avoid duplicate / spammy output (idempotency).
             Use the `gh` CLI (GITHUB_TOKEN is set in the environment).
@@ -119,7 +165,7 @@ jobs:
               The issue body is a REAL outreach message from Morgan Vale:
                 - Personalized subject + greeting.
                 - 2–4 sentences on exactly why she's a fit, citing specific
-                  things you SAW on the live site (case studies, outcomes).
+                  things you SAW in the running app (case studies, outcomes).
                 - The role and why you thought of her for it.
                 - A clear, low-friction next step (call / reply / availability).
                 - Signed as Morgan Vale, with your firm.
@@ -128,7 +174,7 @@ jobs:
             OUTCOME B — IMPROVE (not ready to reach out yet):
               Make concrete, implementable improvements to the site source that
               would move your decision toward "contact" — driven by what you saw
-              live (e.g. fix the broken link/console error, sharpen a
+              running (e.g. fix the broken link/console error, sharpen a
               case-study's outcome, improve scannability or the mobile layout,
               clarify the contact path). Then:
                 - Create a branch: recruiter/improvements-<run date YYYY-MM-DD>.
@@ -144,15 +190,23 @@ jobs:
                 - Write the PR description AS the recruiter: lead with "Here's
                   what's holding me back from reaching out, and exactly what I'd
                   change," then a checklist of the changes and the reasoning.
-                  Reference the live evidence (screenshots/links) where relevant.
+                  Reference the rendered evidence (screenshots/links) where
+                  relevant.
 
             STEP 5 — Log the verdict.
             Append a dated entry to `docs/recruiter-log/<YYYY-MM>.md` (create the
             file with a heading if it doesn't exist). One entry per run: date,
             decision (CONTACT or IMPROVE), a 2–3 line rationale grounded in what
-            you saw live, and a link to the issue/PR. Commit this log entry
-            directly to the default branch (it is a record, not a site change).
+            you saw, and a link to the issue/PR. Commit this log entry directly
+            to the default branch (it is a record, not a site change).
 
-            Keep the bar high: a CONTACT should be earned. As the live site
-            improves over days, the verdict should be able to flip from IMPROVE
-            to CONTACT — that progression is the entire point of this agent.
+            Keep the bar high: a CONTACT should be earned. As the app improves
+            over days, the verdict should be able to flip from IMPROVE to
+            CONTACT — that progression is the entire point of this agent.
+
+      - name: Stop the local app
+        if: always()
+        run: |
+          if [ -n "${PREVIEW_PID:-}" ]; then
+            kill "$PREVIEW_PID" 2>/dev/null || true
+          fi

@@ -1,8 +1,9 @@
-// Recruiter Agent — live-site capture.
+// Recruiter Agent — local-app capture.
 //
-// Renders the REAL deployed site with Playwright (Chromium) so the recruiter
-// reviews what a human actually sees, not the source. Produces, under
-// recruiter-capture/:
+// Renders the LOCALLY-SERVED app with Playwright (Chromium) so the recruiter
+// reviews what a human actually sees, not the source. The workflow builds and
+// serves the app first, then points this script at the local server via
+// RECRUITER_SITE_URL. Produces, under recruiter-capture/:
 //   - screenshots/<route>-<viewport>.png   full-page desktop + mobile shots
 //   - text/<route>.txt                      rendered innerText of each page
 //   - report.json                           structured findings
@@ -20,7 +21,7 @@ const requireBase = process.env.PW_REQUIRE_BASE || path.join(process.cwd(), "pac
 const require = createRequire(path.resolve(requireBase));
 const { chromium } = require("playwright");
 
-const SITE = (process.env.RECRUITER_SITE_URL || "https://sasha.web3ux.org/").replace(/\/+$/, "");
+const SITE = (process.env.RECRUITER_SITE_URL || "http://127.0.0.1:4173").replace(/\/+$/, "");
 const OUT = process.env.RECRUITER_CAPTURE_DIR || path.join(process.cwd(), "recruiter-capture");
 
 // The known routes of the site. Discovered internal links are merged in too,
