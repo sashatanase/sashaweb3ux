@@ -338,6 +338,9 @@ function Index() {
                   alt="Portrait of Sasha Luca"
                   className="w-full grayscale"
                   loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
                 />
               </div>
             </div>
