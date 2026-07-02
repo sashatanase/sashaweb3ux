@@ -1,5 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CaseStudyLayout, CaseStudySection, CaseStudySubhead } from "@/components/CaseStudyLayout";
+import {
+  CaseStudyLayout,
+  CaseStudySection,
+  CaseStudyQuote,
+  CaseStudySubhead,
+} from "@/components/CaseStudyLayout";
 import reportAsset from "@/assets/tbtc-generative-user-research.pdf.asset.json";
 
 const TITLE = "tBTC Bridge: Bridged/Wrapped BTC Holder User Study";
@@ -40,19 +45,25 @@ function CaseStudy04() {
         title="The Challenge: Piercing the Black Box of Cross-Chain Fear"
       >
         <p>
-          To a native cryptocurrency holder, the Bitcoin network represents an immutable,
-          exploit-free storage vault. Crossing the chasm into decentralized finance requires
-          wrapping or bridging that capital over to Ethereum, an environment users view as
-          inherently fraught with smart contract vulnerabilities. In the minds of Web3 investors,
-          cross-chain bridges are categorized as the most dangerous infrastructure in the space; a
-          single public exploit permanently ruins a bridge's reputation beyond redemption.
+          To a Bitcoin holder, the native network is an immutable, exploit-free vault. Crossing over
+          into decentralized finance requires wrapping or bridging that capital to Ethereum, an
+          environment users view as inherently fraught with smart-contract vulnerabilities. In the
+          minds of Web3 investors, bridges sit in the most dangerous infrastructure category in the
+          space, and a single public exploit ruins a bridge's reputation beyond redemption.
         </p>
+        <CaseStudyQuote attribution="Participant 6">
+          "Everybody knows that bridges are the most dangerous and most vulnerable things on the
+          blockchain."
+        </CaseStudyQuote>
+        <CaseStudyQuote attribution="Participant 12">
+          "Bridging experience is a scary thing, any bridge is the most dangerous thing."
+        </CaseStudyQuote>
         <p>
-          Following an Assumption Mapping workshop to isolate team blind spots, the Threshold
-          Network needed to understand the foundational behavioral archetypes of non-maximalist
-          Bitcoin holders. The core mission was to evaluate whether users genuinely cared about
-          non-custodial, permissionless decentralization, or if the convenience and "too big to
-          fail" market dominance of centralized wrapped alternatives had completely captured the
+          Following an Assumption Mapping workshop that surfaced the team's blind spots, the
+          Threshold Network needed to understand the foundational behavioral archetypes of
+          non-maximalist Bitcoin holders. The core mission: find out whether users genuinely care
+          about non-custodial, permissionless decentralization, or whether the convenience and "too
+          big to fail" market dominance of centralized wrapped alternatives had already captured the
           market.
         </p>
       </CaseStudySection>
@@ -68,183 +79,209 @@ function CaseStudy04() {
 
         <CaseStudySubhead>The Methodology</CaseStudySubhead>
         <p>
-          I conducted 60-minute remote explorative interviews paired with comprehensive empathy
-          mapping. The sessions deliberately avoided theoretical future-casting, focusing instead on
-          users' historical asset decisions, exact workaround behaviors, and past friction points
-          across competing protocols like WBTC and Ren Bridge.
+          I conducted 60-minute remote explorative interviews paired with empathy mapping. The
+          sessions deliberately avoided theoretical future-casting, focusing instead on users'
+          historical asset decisions, exact workaround behaviors, and past friction points across
+          competing protocols like WBTC and Ren Bridge.
         </p>
 
         <CaseStudySubhead>The Participants</CaseStudySubhead>
         <p>
-          12 highly sophisticated to upper-intermediate blockchain users who either actively managed
-          Bitcoin-to-Ethereum bridges or intentionally swapped for wrapped assets on secondary
-          markets to circumvent native bridge interfaces. The sample consisted predominantly of
-          Ethereum-first DeFi participants.
+          12 sophisticated-to-upper-intermediate blockchain users who either actively used
+          Bitcoin-to-Ethereum bridges or deliberately swapped for wrapped assets on secondary
+          markets to avoid bridge interfaces. The sample consisted predominantly of Ethereum-first
+          DeFi participants.
         </p>
 
         <CaseStudySubhead>The Benchmark</CaseStudySubhead>
         <p>
-          The research exposed a stark "Value-Action Gap". While users heavily championed the ideals
-          of trustlessness, censorship resistance, and zero-KYC parameters, their actual capital
-          placement was dictated by commercial market features. This insight reframed the product
-          team's core benchmark: to achieve mass adoption, a decentralized bridge cannot merely be
-          programmatically secure; it must match or exceed the liquidity depth and protocol
-          convenience of centralized industry incumbents.
+          The research exposed a stark value-action gap. Users heavily championed the ideals of
+          trustlessness, censorship resistance, and zero-KYC, yet their actual capital placement was
+          dictated by liquidity and convenience. This reframed the product team's core benchmark: to
+          win adoption, a decentralized bridge cannot merely be programmatically secure, it must
+          match the liquidity depth and DeFi integrations of centralized incumbents.
         </p>
+        <CaseStudyQuote attribution="Participant 9">
+          "I don't trust bridges, this is why I chose WBTC. But if I were to use a bridge, I would
+          choose a decentralized solution even though I don't know what that means for a bridge. The
+          very first bridges were basically multisigs and I didn't like that, but I had no other
+          choice."
+        </CaseStudyQuote>
       </CaseStudySection>
 
       <CaseStudySection label="03" title="The Plot Twists: Assumptions vs. Reality">
         <p>
-          The qualitative interview data disrupted several historical narratives the core team held
-          regarding wrapped token selection and user risk mitigation.
+          The interview data disrupted several narratives the core team held about wrapped-token
+          selection and user risk mitigation.
         </p>
 
         <CaseStudySubhead>The Liquidity-Utility Blind Eye</CaseStudySubhead>
         <p>
           <strong>The Expectation:</strong> Web3 users would actively avoid centralized, multi-sig
-          wrapped assets like WBTC due to systemic censorship risks and custodial concerns.
+          wrapped assets like WBTC due to censorship risks and custodial concerns.
         </p>
         <p>
           <strong>The Reality:</strong> Users routinely turn a blind eye to centralized risks if an
           asset guarantees deep liquidity, proven longevity, and seamless integration across major
-          lending blue-chips like Aave and Compound. Because WBTC had survived historical market
-          cycles without a high-profile exploit, familiarity bias led users to categorize it as "too
-          big to fail," leaving newer, fully decentralized options stranded due to capital
-          isolation.
+          lending blue-chips like Aave and Compound. Because WBTC had survived market cycles without
+          a high-profile exploit, familiarity bias led users to categorize it as "an established and
+          reliable protocol", "too big to fail".
         </p>
+        <CaseStudyQuote attribution="Participant 1, asked whether he considered alternatives to WBTC">
+          "Not seriously. I'm not aware of anything that fulfills the need of both bridging larger
+          quantities of BTC safely, allowing the transfer back and forth to BTC, and having access
+          to lending, e.g. depositing WBTC on Aave, Compound etc."
+        </CaseStudyQuote>
+        <p>
+          The motivation underneath was consistent: dormant Bitcoin feels like wasted capital, and
+          holders want optionality more than ideology.
+        </p>
+        <CaseStudyQuote attribution="Participant 6">
+          "I like to put my Bitcoin to work."
+        </CaseStudyQuote>
 
         <CaseStudySubhead>The "Leap of Faith" Transfer Panic</CaseStudySubhead>
         <p>
-          <strong>The Expectation:</strong> Users are comfortable following automated dashboard
-          instructions directing them to send crypto to a newly generated deposit address.
+          <strong>The Expectation:</strong> Users are comfortable following dashboard instructions
+          directing them to send crypto to a newly generated deposit address.
         </p>
         <p>
           <strong>The Reality:</strong> Confronting a static, unfamiliar Bitcoin address triggers
-          immense friction and anxiety. Users described this step as a blind "leap of faith,"
-          plagued by the fear that a compromised frontend or interface hack could silently redirect
-          their life savings to a malicious actor's wallet.
+          immense anxiety. Users fear that a compromised frontend could silently redirect their
+          funds to a hacker's wallet, and they asked for explorer links, code-level explanations of
+          how the address is generated, and recovery methods as preconditions for trust.
         </p>
+        <CaseStudyQuote attribution="Participant 3">
+          "Sending your Bitcoin to an unknown address is a really scary thing, it's like a leap of
+          faith."
+        </CaseStudyQuote>
 
         <CaseStudySubhead>The Time-Locked Psychological Prison</CaseStudySubhead>
         <p>
-          <strong>The Expectation:</strong> Multi-hour settlement delays ("sweeping batch times")
-          are viewed simply as a minor technical limitation of native cross-chain settlement.
+          <strong>The Expectation:</strong> Multi-hour settlement windows are a minor technical
+          limitation users simply plan around.
         </p>
         <p>
-          <strong>The Reality:</strong> Long confirmation windows directly fuel active user panic.
-          The anxiety stems not from missing a rapid trading opportunity, but from the terrifying
-          unknown; if a transaction hangs for 3 to 6 hours without active UI feedback, users assume
-          the bridge has failed or suffered a live exploit. This constraint forced users to
-          sacrifice a full afternoon to sit frozen in front of their computers to shepherd a single
-          transaction through.
+          <strong>The Reality:</strong> Long confirmation windows actively fuel panic, not because
+          of missed trading opportunities, but because silence reads as failure. If a transaction
+          hangs for hours without UI feedback, users assume the bridge has been exploited. And when
+          a flow demands active participation, a chain of transactions to sign, it holds users
+          hostage at their desks.
         </p>
+        <CaseStudyQuote attribution="Participant 7, on tBTC v1">
+          "So you were forced to wait for sometimes hours for confirmations before you could leave.
+          Therefore you have to put aside an entire afternoon to make some deposits or redemptions."
+        </CaseStudyQuote>
 
         <CaseStudySubhead>The Regulatory Ignorance Loop</CaseStudySubhead>
         <p>
-          <strong>The Expectation:</strong> Strict cross-border crypto tax rules heavily dictate
-          real-time on-chain actions and portfolio reallocation.
+          <strong>The Expectation:</strong> Strict crypto tax rules heavily dictate on-chain actions
+          and portfolio reallocation in real time.
         </p>
         <p>
           <strong>The Reality:</strong> Tax implications are almost completely relegated to
-          hindsight. Even in strict jurisdictions (such as the US, UK, and France), users find the
-          lack of legal clarity so overwhelming that they execute actions first and worry about
-          tracking capital gains later with their personal accountants.
+          hindsight. Even in strict jurisdictions (the US, UK, and France), users find the lack of
+          legal clarity so overwhelming that they act first and reconcile capital gains later with
+          their accountants. One notable workaround surfaced: some users borrow against their
+          wrapped BTC instead of selling it, specifically to avoid triggering taxable events. KYC
+          followed the same pattern, disliked, accepted as a necessary evil, but with real fear
+          about data exposure.
         </p>
+        <CaseStudyQuote attribution="Participant 5, on KYC data exposure">
+          "I don't know if someone from Coinbase sees my portfolio and my address, and next thing I
+          know he comes to the same supermarket, sees my wife and my children, and threatens me to
+          give him my private keys. You never know who's looking over your data."
+        </CaseStudyQuote>
 
         <CaseStudySubhead>
           The Strategic Persona Shift: Recalibrating Product Alignment
         </CaseStudySubhead>
         <p>
-          Rather than viewing cross-chain users through a single narrative, the research
-          systematically divided the target user base into three core behavioral profiles:
+          Rather than viewing cross-chain users through a single narrative, the research divided the
+          target base into three core behavioral profiles:
         </p>
         <p>
-          <strong>The Yield-Chasing Pragmatist:</strong> This persona is entirely Ethereum-first and
-          views native Bitcoin as a dormant pool of capital that must be "put to work". They eagerly
-          hunt for the highest available staking rewards and easy pool participation. They will
-          happily choose convenience over technical decentralization, utilizing centralized
-          shortcuts—such as market-swapping for wrapped tokens directly on central exchanges—purely
-          to bypass long on-chain minting wait times.
+          <strong>The Yield-Chasing Pragmatist:</strong> Ethereum-first, views native Bitcoin as
+          dormant capital that must be put to work. Hunts the deepest liquidity and the best DeFi
+          integrations, and happily takes centralized shortcuts, like swapping WBTC for tBTC on a
+          DEX, purely to skip hours of on-chain minting time.
         </p>
         <p>
-          <strong>The Native Network Purist:</strong> This user describes themselves as a rational,
-          non-toxic Bitcoin maximalist. They view the Bitcoin network as the only true financial
-          safe haven and hold deep, unyielding skepticism toward external smart contracts. They will
-          execute a cross-chain deposit to capture high short-term yield, but their standard
-          behavior is to bridge back to native self-custody the absolute second their active yield
-          strategies conclude, refusing to leave wrapped assets exposed on foreign networks.
+          <strong>The Native Network Purist:</strong> A self-described rational, non-toxic Bitcoin
+          maximalist. Views the Bitcoin network as the only true safe haven and holds deep
+          skepticism toward external smart contracts. Will bridge for exceptional short-term yield,
+          but bridges back to native self-custody the moment the strategy concludes.
         </p>
         <p>
-          <strong>The Tactical Tax Arbitrageur:</strong> Spanning multiple geographical
-          jurisdictions, this user treats wrapped Bitcoin assets as sophisticated leverage tools.
-          They are deeply concerned about structural asset privacy and the security risks of data
-          exposure through centralized KYC processes. To avoid triggering massive capital gains tax
-          events, they intentionally use their bridged tokens as permanent collateral to borrow
-          liquidity against their stack, creating a protective loop to escape state asset
-          liquidation.
+          <strong>The Tactical Tax Arbitrageur:</strong> Treats wrapped Bitcoin as a leverage tool.
+          Deeply concerned with privacy and the security risks of KYC data exposure, and uses
+          bridged tokens as collateral to borrow against, unlocking liquidity without triggering
+          capital gains.
         </p>
       </CaseStudySection>
 
       <CaseStudySection label="04" title="The Impact: Re-Engineering the Trust Architecture">
         <p>
-          This generative study completely altered the design direction of tBTC v2, proving that
-          conquering bridge anxiety requires transforming the application from a technical "black
-          box" into a continuous feedback loop. I converted these user requirements into distinct
-          product and interface recommendations.
+          This generative study shaped the design direction of tBTC v2, proving that conquering
+          bridge anxiety requires transforming the application from a technical black box into a
+          continuous feedback loop. I converted the user requirements into distinct product and
+          interface recommendations.
         </p>
 
         <CaseStudySubhead>Visual Trust Triggers</CaseStudySubhead>
         <p>
-          Recommended integrating direct verification links to native Bitcoin blockchain explorers
-          directly on the deposit screen, accompanied by transparent, readable documentation
-          outlining the cryptographic math behind unique address generation.
+          Link the generated deposit address to a Bitcoin block explorer and publish a
+          plain-language (and code-snippet) explanation of how deposit addresses are generated,
+          converting the "leap of faith" into a verifiable step.
         </p>
 
         <CaseStudySubhead>UX Feedback Loops</CaseStudySubhead>
         <p>
-          Prioritized the inclusion of granular step-by-step status bars during the minting process,
-          providing constant visual reassurances to actively soothe user panic during multi-hour
-          transaction windows.
+          Provide constant, step-by-step system feedback during the multi-hour minting window,
+          explaining what is happening and why at every stage, so silence never gets interpreted as
+          catastrophe.
         </p>
 
         <CaseStudySubhead>The One-Click Architecture</CaseStudySubhead>
         <p>
-          Championed the development of a compressed, one-click minting flow that eliminates the
-          manual requirement of signing a exhausting chain of intermediate transactions, minimizing
-          gas overhead and user fatigue.
+          Compress the flow toward a seamless, one-click mint that eliminates the exhausting chain
+          of intermediate signatures, and support bridging large amounts in a single pass, since
+          fragmenting deposits multiplies both gas costs and anxiety.
         </p>
 
         <CaseStudySubhead>De-risking via "Test-Run" Patterns</CaseStudySubhead>
         <p>
-          Documented a universal user pattern where investors intentionally deploy miniature,
-          comfortable-to-lose sums to test a dApp's plumbing before committing serious volume,
-          directly justifying the need for a non-custodial sandbox environment.
+          Documented the universal pattern of deploying miniature, comfortable-to-lose sums to test
+          a dApp's plumbing before committing serious volume, evidence that later justified the
+          sandbox/demo concept validated in the follow-up usability study.
         </p>
       </CaseStudySection>
 
       <CaseStudySection label="05" title="Impact & Outcomes">
         <CaseStudySubhead>Research Outcomes</CaseStudySubhead>
         <p>
-          <strong>Strategic Roadmap Realignment:</strong> The discovery that users will prioritize
-          deep DeFi integration and composability over raw security shifted development goals,
-          forcing the team to focus heavily on external protocol integrations (like Curve pools) to
-          ensure immediate token utility post-launch.
+          <strong>Strategic Roadmap Realignment:</strong> The finding that users prioritize deep
+          DeFi integration and liquidity over raw decentralization shifted development goals toward
+          external protocol integrations, ensuring immediate token utility at launch rather than
+          treating it as a post-launch concern.
         </p>
         <p>
-          <strong>Marketing Message Overhaul:</strong> The insights allowed marketing to move past
-          generic "decentralization" slogans, pivoting instead toward communicating real-world
-          safety parameters: proven team historical behaviors, explicit contract auditing
-          transparency, and robust fund recovery methods.
+          <strong>Marketing Message Overhaul:</strong> The insights let marketing move past generic
+          "decentralization" slogans toward the trust parameters users actually vet: team track
+          record, audit transparency, hack history, and fund recovery methods.
+        </p>
+        <p>
+          <strong>Research Pipeline:</strong> Per the study's next steps, the findings fed directly
+          into the tBTC dApp clickable prototype and a follow-up usability study, the same prototype
+          tested in Case Study 03.
         </p>
 
-        <CaseStudySubhead>Broader Outcomes</CaseStudySubhead>
+        <CaseStudySubhead>Retrospective</CaseStudySubhead>
         <p>
-          By establishing these user behavioral guardrails early in the design cycle, subsequent
-          product iterations successfully targeted the exact informational gaps that caused previous
-          legacy bridge users to abandon the v1 platform. The structural shift toward continuous
-          interface feedback directly lowered user entry barriers, creating a measurable foundation
-          of trust that helped convert cautious cold-storage holders into active cross-chain
-          participants.
+          A known bias in this sample: several tBTC v1 users were also node operators invested in
+          the protocol's success, and they visibly softened their criticism of v1, even one who had
+          lost significant funds in it. I flagged this "primed cohort" effect in the report and
+          weighted the non-community participants' accounts accordingly.
         </p>
 
         <div className="mt-10">

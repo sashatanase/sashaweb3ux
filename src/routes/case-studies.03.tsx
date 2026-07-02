@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CaseStudyLayout, CaseStudySection } from "@/components/CaseStudyLayout";
+import { CaseStudyLayout, CaseStudySection, CaseStudyQuote } from "@/components/CaseStudyLayout";
 import reportAsset from "@/assets/tbtc-iterative-study.pdf.asset.json";
 
 const TITLE = "tBTC Bridge: Redesigning the Cross-Chain Flow";
@@ -47,44 +47,46 @@ function CaseStudy03() {
           in the eyes of the community.
         </p>
         <p>
-          The Threshold Network engineered tBTC v2 to provide a decentralized, permissionless
-          solution controlled entirely by mathematical cryptography rather than centralized
-          custodians. However, achieving this high security tier required a unique, multi-step flow,
-          including off-chain unique deposit address generation and manual recovery files. Our
-          challenge was to determine whether this security-maximal architecture could align
-          seamlessly with standard Web3 user behavior or if the added cognitive complexity was
-          alienating the target audience.
+          The Threshold Network engineered tBTC v2 to provide a decentralized, permissionless bridge
+          controlled by cryptography rather than centralized custodians. However, achieving this
+          security tier required a unique, multi-step flow, including per-user deposit address
+          generation and a manual recovery file. My challenge was to determine whether this
+          security-maximal architecture could align with standard Web3 user behavior, or whether the
+          added cognitive complexity was alienating the target audience.
         </p>
       </CaseStudySection>
 
       <CaseStudySection number="02" title="The Approach: Dissecting the Bridging Loop">
         <p>
           To understand the underlying fears and functional patterns of cross-chain users, we needed
-          a granular, step-by-step examination of the deposit and withdrawal interfaces.
+          a granular, step-by-step examination of the deposit and withdrawal flows.
         </p>
         <p>
-          <strong>The Methodology:</strong> I designed 60-minute moderated usability testing
-          sessions utilizing interactive, clickable Figma prototypes. Participants evaluated the
-          full end-to-end minting and unminting flows while utilizing the "think-out-loud" technique
-          to document real-time cognitive roadblocks.
+          <strong>The Methodology:</strong> I designed 60-minute moderated usability sessions using
+          interactive, clickable Figma prototypes. Participants walked through the full end-to-end
+          minting and unminting flows using the think-out-loud technique, preceded by a deep-dive
+          interview about their Bitcoin holdings, bridge history, and fears.
         </p>
         <p>
-          <strong>The Participants:</strong> 6 active crypto native users with a clear technical
-          background. All participants were validated Bitcoin holders with previous experience
-          handling cross-chain assets or wrapping tokens (such as WBTC, tBTC, or renBTC).
+          <strong>The Participants:</strong> 6 crypto-native Bitcoin holders with previous
+          experience using BTC-to-ETH bridges or holding wrapped assets such as WBTC, tBTC, or
+          renBTC. Notably, even in this qualified sample, familiarity with the category was shallow.
         </p>
+        <CaseStudyQuote attribution="Exchange from a usability session">
+          "Have you ever used any other wrapped BTC tokens other than WBTC?" (researcher) — "What?
+          Are there any others than WBTC?" (Participant 4)
+        </CaseStudyQuote>
         <p>
-          <strong>The Benchmarks:</strong> The qualitative findings revealed a stark contrast
-          between the two directions. The unminting loop was perceived as straightforward, achieving
-          an Average Experience Rating of 6 out of 7. Conversely, the unfamiliar patterns of the
-          minting process dropped its rating to a mediocre 4.75 out of 7, identifying a clear
+          <strong>The Benchmarks:</strong> The two directions of the bridge scored very differently.
+          Unminting was perceived as straightforward, rating 6 out of 7 on average. The unfamiliar
+          patterns of the minting flow dropped its average rating to 4.75 out of 7, exposing a clear
           educational and architectural gap.
         </p>
       </CaseStudySection>
 
       <CaseStudySection number="03" title="The Plot Twists: Assumptions vs. Reality">
         <p>
-          The user sessions revealed that the application's unique architectural safety nets were
+          The sessions revealed that the application's unique architectural safety nets were
           inadvertently operating as points of deep user confusion and psychological friction.
         </p>
 
@@ -94,10 +96,10 @@ function CaseStudy03() {
           tokens is synonymous with completing a bridge transaction.
         </p>
         <p>
-          <strong>The Reality:</strong> 4 out of 6 participants entirely failed to correlate the
-          developer-centric term "Mint" with the operational act of cross-chain bridging. Users
-          expected standard industry actions like "Deposit" or "Bridge," making the initial
-          interaction feel unfamiliar and steepening the platform's learning curve.
+          <strong>The Reality:</strong> 4 out of 6 participants failed to correlate the
+          developer-centric term "Mint" with the act of bridging. Users expected standard industry
+          actions like "Deposit" or "Bridge," making the very first interaction feel unfamiliar and
+          steepening the learning curve.
         </p>
 
         <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">
@@ -105,141 +107,124 @@ function CaseStudy03() {
         </h3>
         <p>
           <strong>The Expectation:</strong> Providing a downloadable .json recovery file gives users
-          ultimate peace of mind over fund safety in a worst-case scenario.
+          peace of mind over fund safety in a worst-case scenario.
         </p>
         <p>
-          <strong>The Reality:</strong> The explicit warning modal deeply frightened users,
-          triggering a "fight or flight" response rather than calming them. Reading complex
-          technical alerts regarding public keys and 9-month recovery timelocks made participants
-          highly uncomfortable, leading them to assume that protocol errors and fund losses occur
-          with regular frequency.
+          <strong>The Reality:</strong> 5 out of 6 participants were frightened by the recovery
+          message. Instead of calming them, the warning modal put them in a fight-or-flight state;
+          they were confused about why they needed to keep a receipt at all and inferred that fund
+          loss must be a regular occurrence. Bridges already carry a dark cloud of fear, and the
+          dApp's own copy was amplifying it.
         </p>
 
         <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">
           The Human Intermediary Illusion
         </h3>
         <p>
-          <strong>The Expectation:</strong> Exposing the system status breakdown ("Minters" and
-          "Guardians" verifying transactions) reinforces transparency and proof-of-security.
+          <strong>The Expectation:</strong> Exposing the system status breakdown, "Minters" and
+          "Guardians" verifying transactions, reinforces transparency and proof-of-security.
         </p>
         <p>
-          <strong>The Reality:</strong> Humanizing the protocol components backfired completely.
-          Multiple participants assumed that "Minters" and "Guardians" referred to centralized teams
-          of real people manually checking and approving their cross-chain transfers. This
-          presentation directly undermined the platform's core narrative of math-driven,
-          decentralized trust.
+          <strong>The Reality:</strong> Humanizing the protocol components backfired. Several
+          participants assumed Minters and Guardians were real people manually transferring tokens,
+          which read as a "manual bridge" and directly undermined the platform's core narrative of
+          math-driven, decentralized trust. Others simply tuned the information out.
         </p>
+        <CaseStudyQuote attribution="Study participant, on the Minters status panel">
+          "I don't know who these people are, but I don't really care about them."
+        </CaseStudyQuote>
 
         <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">
-          The Linear Flow Disruption
+          The Test-Small Instinct
         </h3>
         <p>
-          <strong>The Expectation:</strong> Users would intuitively follow a step-by-step timeline
-          indicating that they do not need to wait for full Bitcoin confirmations to proceed.
+          <strong>The Expectation:</strong> Convinced users would bridge their intended amount once
+          they understood the flow.
         </p>
         <p>
-          <strong>The Reality:</strong> The interface failed to match users' deep-rooted mental
-          models. Despite the instructions provided, participants routinely ignored timeline
-          elements and stated they would still rigidly wait for historical Bitcoin miner
-          confirmations before interacting with the destination chain, rendering the speed
-          advantages of optimistic minting invisible.
+          <strong>The Reality:</strong> As in my previous studies, every participant described the
+          same ritual when trying a new protocol: send a small, comfortable-to-lose amount first,
+          watch what happens, and only then commit. Interestingly, once trust was established, the
+          behavior inverted, users refused to fragment large deposits because of gas costs.
         </p>
+        <CaseStudyQuote attribution="Study participant, on the deposit duration warning">
+          "If I made it to here, it means that I believe in this product and I would not fragment my
+          deposit to pay a lot of gas."
+        </CaseStudyQuote>
 
         <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">
-          The Strategic Persona Shift: Fragmenting the Store of Value
+          The Store-of-Value Wall
         </h3>
         <p>
-          The research completely reframed how the team categorized its user base. Rather than
-          designing for a uniform class of Bitcoin holders, the study isolated three distinct
-          behavioral personas with completely separate goals, risk parameters, and product
-          alignment.
+          <strong>The Expectation:</strong> Bitcoin holders with DeFi experience are natural bridge
+          users.
         </p>
         <p>
-          <strong>The Cold-Storage Store of Value Maxi:</strong> This profile views Bitcoin strictly
-          as an untouchable, long-term retirement fund, their "grey pound". They are exceptionally
-          cautious, fiercely protective of their native assets, and view all alternative blockchains
-          as hotbeds for smart contract vulnerabilities. They heavily vet hack histories, team
-          backgrounds, and protocol backers. They state that almost nothing on the market is worth
-          the risk of touching their core stash, except for an extraordinarily high DeFi yield.
-        </p>
-        <p>
-          <strong>The Convenience CEX Swapper:</strong> This persona prefers holding assets in
-          environments where they can easily view all their multi-chain balances at a single glance.
-          They find traditional Web3 cross-chain bridges cumbersome and inherently unsafe. They
-          deliberately default to centralized exchanges (CEXs) to execute swaps, consciously and
-          willingly paying higher trading premiums simply as a tax for user convenience, rapid
-          execution, and avoiding technical friction.
-        </p>
-        <p>
-          <strong>The Borderless Daily Utility User:</strong> Operating outside the speculative
-          investor mindset, this user actively integrates Bitcoin into daily life transactions. They
-          rely on peer-to-peer digital money specifically to bypass legacy financial networks,
-          noting that traditional international bank wires are overly complicated, highly
-          bureaucratic, and take far too long to settle. They frequently use cross-chain assets for
-          practical real-world expenditures, such as paying living rent across international
-          borders.
+          <strong>The Reality:</strong> Every participant described their Bitcoin as a store of
+          value, their "grey pound", funds they are extremely cautious with and would not touch.
+          Most defaulted to swapping on centralized exchanges, knowingly paying higher fees as the
+          price of ease of use, and considered the 2–3 hour bridging window itself a red flag: the
+          longer a transaction hangs, the longer they live with the fear that the bridge has been
+          hacked. Only a large yield could tempt them to bridge their core stash.
         </p>
       </CaseStudySection>
 
       <CaseStudySection number="04" title="The Impact: Rewriting the Cross-Chain Experience">
         <p>
-          The study acted as a definitive structural playbook, proving that technical safety must be
-          matched with psychological comfort to survive in high-stakes decentralized environments. I
-          synthesized these behavioral friction points into an actionable roadmap to re-engineer
-          user trust and interface learnability.
+          The study proved that technical safety must be matched with psychological comfort to
+          survive in a high-stakes decentralized environment. I synthesized the friction points into
+          an actionable roadmap for the design iteration that followed.
         </p>
         <p>
-          <strong>Terminology Alignment:</strong> Recommended shifting technical vocabulary from
-          "Mint" and "Unmint" to standard industry patterns like "Deposit" and "Withdraw" to lower
-          the entry barrier and match user mental models.
+          <strong>Terminology Alignment:</strong> Shift the vocabulary from "Mint" and "Unmint" to
+          the industry-standard "Deposit" and "Withdraw," matching the mental models users arrive
+          with.
         </p>
         <p>
-          <strong>Frictionless Recovery Handling:</strong> Proposed completely removing the
-          intimidating, manual recovery receipt download loop from the main transaction path.
-          Instead, receipts are preserved natively inside a specialized "Resume Deposits" dashboard
-          tab, utilizing gradual information reveal to avoid triggering unnecessary panic.
+          <strong>Frictionless Recovery Handling:</strong> Remove the intimidating manual receipt
+          download from the main transaction path. Store receipts for the user inside a "Resume
+          Deposits" area and reveal recovery information gradually, only when it is actually needed.
         </p>
         <p>
-          <strong>Automated System Clarification:</strong> Recommended rewriting the descriptive
-          copy surrounding system verification actors to explicitly highlight that Minters and
-          Guardians are automated, node-running software agents controlled by cryptography rather
-          than human entities.
+          <strong>Automated System Clarification:</strong> Rewrite the Minters and Guardians copy to
+          make explicit that these are automated software actors, not people approving transactions
+          by hand, and support it with optimistic-minting diagrams instead of plain text.
         </p>
         <p>
-          <strong>De-risking via Sandbox Environments:</strong> To accommodate the universal user
-          behavior of sending micro "test transactions" to safely learn a new dApp, I championed the
-          inclusion of an off-chain, tokenless "Sandbox Simulation Mode" allowing users to master
-          unique deposit address creation risk-free.
+          <strong>De-risking via a Sandbox:</strong> To work with, rather than against, the
+          universal test-small ritual, I proposed an off-chain, tokenless "sandbox/demo" mode where
+          users can rehearse the unfamiliar deposit-address flow without any fund risk.
         </p>
         <p>
-          <strong>Fiat Fee Conversions:</strong> Advised updating transaction confirmation screens
-          to display a total breakdown of gas and network fees completely denominated in USD,
-          eliminating manual mathematical conversions mid-flow.
+          <strong>Fiat Fee Totals:</strong> Add a USD-denominated total of all fees on the success
+          screen, requested by every single participant, and keep the elapsed-time counter, which
+          was the flow's most-loved element.
         </p>
       </CaseStudySection>
 
       <CaseStudySection number="05" title="Impact & Outcomes">
         <h3 className="mt-2 mb-4 text-base font-semibold text-foreground">Research Outcomes</h3>
         <p>
-          <strong>Roadmap Prioritization:</strong> The complete collection of interface,
-          instructional text, and layout findings was integrated into the core product team's
-          engineering priorities, reshaping the dApp layout for the production launch.
+          <strong>Roadmap Prioritization:</strong> The full set of findings, terminology, recovery
+          handling, system-status copy, and fee display, was folded into the next design iteration
+          of the tBTC dApp, with a follow-up round of usability testing scheduled to validate the
+          changes.
         </p>
         <p>
-          <strong>Value Messaging Pivot:</strong> By isolating the distinct behaviors of Maxis,
-          Swappers, and Utility users, the team successfully transitioned away from standard
-          speculative marketing to programmatic trust parameters focusing on public audits,
-          mathematical backing, and security visibility.
+          <strong>Pattern-Break Awareness:</strong> The study gave the team a clear-eyed view of
+          where tBTC's architecture genuinely breaks the standard bridge pattern (deposit address
+          generation, recovery receipts) and therefore where extra explanation, or account
+          abstraction, would always be needed. I used this evidence to champion gas abstraction so
+          users would no longer need the destination chain's native token to complete a bridge.
         </p>
 
-        <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">Broader Outcomes</h3>
+        <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">Retrospective</h3>
         <p>
-          Following the implemental recommendations of this iterative study, the updated interface
-          design significantly reduced user friction and address-recap confusion. By restructuring
-          data visibility and removing intimidating download constraints, subsequent testing
-          environments demonstrated a stark reduction in navigation errors, leading to smoother
-          transaction speeds and an elevated user confidence profile prior to deploying capital onto
-          the bridge.
+          Testing on a clickable prototype meant real waiting anxiety, the hours-long confirmation
+          window, could only be discussed, not observed. Analytics later corroborated the biggest
+          behavioral finding (users wait for full Bitcoin confirmations before initiating minting,
+          even when they don't need to), which is the kind of triangulation I would design in from
+          the start next time.
         </p>
 
         <div className="mt-10">

@@ -152,10 +152,21 @@ export function CaseStudySection({
   );
 }
 
-export function CaseStudyQuote({ children }: { children: ReactNode }) {
+export function CaseStudyQuote({
+  children,
+  attribution,
+}: {
+  children: ReactNode;
+  attribution?: string;
+}) {
   return (
     <blockquote className="my-10 border-l border-foreground pl-6 text-[15px] leading-[1.7] text-foreground md:text-base">
       {children}
+      {attribution && (
+        <footer className="mt-4 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+          — {attribution}
+        </footer>
+      )}
     </blockquote>
   );
 }

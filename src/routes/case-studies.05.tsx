@@ -1,5 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CaseStudyLayout, CaseStudySection, CaseStudySubhead } from "@/components/CaseStudyLayout";
+import {
+  CaseStudyLayout,
+  CaseStudySection,
+  CaseStudyQuote,
+  CaseStudySubhead,
+} from "@/components/CaseStudyLayout";
 import reportAsset from "@/assets/keep-generative-user-research.pdf.asset.json";
 
 const TITLE = "Keep Network: Node Operators Explorative User Study";
@@ -31,202 +36,209 @@ function CaseStudy05() {
         { label: "Sector", value: "Node Infra & Staking" },
         { label: "Year", value: "2021" },
         { label: "Method", value: "Exploratory Interviews & Persona Mapping" },
-        { label: "Sample", value: "8 participants" },
+        { label: "Sample", value: "3 participants" },
         { label: "Role", value: "Sole Researcher" },
       ]}
     >
       <CaseStudySection label="01" title="The Challenge: Surviving the High-Stakes Staking Puzzle">
         <p>
           For infrastructure operators in the Web3 space, running a node is rarely an automated
-          "set-and-forget" task. In complex ecosystem networks, operators must maintain continuous
-          machine uptime while locking up highly volatile capital to back programmatic data
-          verification. If local infrastructure drops or network peers fail to coordinate properly,
-          operators face immediate capital slashing and irreversible protocol liquidations.
+          "set-and-forget" task. Keep Network operators must balance two full-time jobs at once,
+          maintaining continuous machine uptime while managing highly volatile locked collateral. If
+          local infrastructure drops, or even if the random peers they are grouped with misbehave,
+          operators face capital slashing and irreversible liquidations.
         </p>
         <p>
-          While the internal product team assumed technical document updates on developer platforms
-          were sufficient to guide their target community, network operators were actively losing
-          funds to communication gaps. The Keep Network launched this generative research project to
-          systematically chart how independent node operators navigate these abstract technical
-          networks and evaluate their psychological threshold for systemic smart contract and
-          governance risks.
+          The internal team assumed it understood how operators discover the protocol, keep up with
+          updates, and manage risk. This generative study was launched to probe those assumptions:
+          to chart how independent node operators actually navigate the network, and to find where
+          the protocol's cognitive and financial load was quietly pushing them away.
         </p>
+        <CaseStudyQuote attribution="Participant 1, on why he started running a node">
+          "It was like a test for myself. Spinning up a node and running it and getting to know all
+          the facts around that. It was like a quiz for me, like a test, and I liked that. In the
+          first month it wasn't about money, it was about this puzzle and putting it together."
+        </CaseStudyQuote>
       </CaseStudySection>
 
       <CaseStudySection label="02" title="The Approach: Rooting Out Systemic Blind Spots">
         <p>
-          Uncovering the true operational workload of network node managers required moving past
-          standard developer feedback to target direct user behaviors.
+          Uncovering the true operational workload of node operators required moving past
+          stakeholder assumptions to direct user evidence.
         </p>
 
         <CaseStudySubhead>The Methodology</CaseStudySubhead>
         <p>
-          I conducted 60-minute remote qualitative interviews backed by continuous data capture
-          using Dovetail and Miro empathy mapping boards. The question architecture centered on past
-          discovery vectors, active node tracking behaviors, real-world liquidation events, and user
-          sentiment surrounding active governance protocol mergers.
+          Starting from stakeholder interviews and an assumption-gathering phase, I designed and
+          facilitated 60-minute remote qualitative interviews, captured in Miro, transcribed, and
+          synthesized into empathy maps and a low-level report in Dovetail. Topics ran from crypto
+          discovery and DeFi risk profiles through the full node-running arc: learning, setup,
+          monitoring, and liquidation events, plus sentiment on the upcoming Keep × NuCypher merger.
         </p>
 
         <CaseStudySubhead>The Participants</CaseStudySubhead>
         <p>
-          Highly sophisticated, entrepreneurial, and tech-savvy individuals with an
-          intermediate-to-advanced understanding of financial abstractions. Every participant had
-          extensive experience setting up testnet networks and managing live infrastructure nodes.
+          3 self-operating node runners, out of 8 scheduled; recruiting this niche, time-poor
+          audience proved brutal and most dropped out. All three were sophisticated,
+          entrepreneurial, tech-savvy users, exactly the profile the protocol demands, since
+          operating a Keep node requires balancing heavy technical work against live financial risk.
         </p>
 
         <CaseStudySubhead>The Benchmark</CaseStudySubhead>
         <p>
-          The user sessions shattered the stakeholder assumption that node operators closely track
-          core code repositories. The research established a new operational benchmark: node
-          operators are motivated by passive wealth accumulation and automated peace of mind. When
-          forced to choose between complex, manually managed open-source platforms and integrated
-          third-party custodial services, users universally defected to outsourced infrastructure
-          providers to protect their time and capital.
+          The sessions overturned a core stakeholder belief: that operators track protocol changes
+          through GitHub. None of them did. The study established a different operational baseline,
+          operators are motivated by curiosity and yield, but on mainnet they all defected to
+          third-party staking providers, because testnet slashing is theoretical and mainnet
+          slashing is real money.
         </p>
       </CaseStudySection>
 
       <CaseStudySection label="03" title="The Plot Twists: Assumptions vs. Reality">
         <p>
-          The qualitative findings exposed significant misalignments between the platform's
-          technical architecture and the everyday realities of live node management.
+          The interviews exposed significant misalignments between the platform's technical
+          architecture and the everyday realities of live node management.
         </p>
 
         <CaseStudySubhead>The GitHub Communication Fallacy</CaseStudySubhead>
         <p>
           <strong>The Expectation:</strong> Node operators are deeply embedded developers who
-          natively monitor GitHub commits to implement network updates.
+          natively monitor GitHub to catch network updates.
         </p>
         <p>
-          <strong>The Reality:</strong> Not a single participant reviewed GitHub for protocol
-          changes. Instead, operators relied entirely on filtered Discord chats or blog posts to
-          catch system updates. This communication gap led directly to severe financial penalties,
-          as operators missed unannounced network adjustments and suffered slashing events purely
-          due to poor documentation distribution.
+          <strong>The Reality:</strong> No participant used GitHub for updates; most operators are
+          not developers at all. They pieced together protocol changes from Discord threads, Medium
+          and blog posts, a noisy, unreliable pipeline they themselves called "bad communication".
+          Some had been slashed or lost funds purely because an update never reached them. The need
+          was unambiguous: a single source of truth for releases and protocol changes.
         </p>
 
         <CaseStudySubhead>The Active Desktop Prison</CaseStudySubhead>
         <p>
-          <strong>The Expectation:</strong> Protocol parameters naturally give operators complete
-          economic control over their collateral allocation.
+          <strong>The Expectation:</strong> Protocol parameters give operators sufficient economic
+          control over their collateral.
         </p>
         <p>
-          <strong>The Reality:</strong> Operators felt entirely helpless and out of control. The
-          network lacked mobile monitoring tools or dedicated alert integrations, turning node
-          operation into a grueling desktop job. Users lived in constant anxiety, forced to manually
-          check dashboards at their desks to ensure their collateral ratios didn't slip past
-          critical 125% liquidation thresholds.
+          <strong>The Reality:</strong> Liquidation was the operators' single biggest fear, and they
+          felt helpless against it. With no alerting tools, they had to sit at their desktops
+          watching collateral ratios, on their toes the moment the ratio dropped toward the 125%
+          threshold. Some over-collateralized just to buy peace of mind; others noted that fellow
+          operators would have avoided liquidation entirely "if they were paying attention". What
+          was sold as passive income was, in practice, an active job.
         </p>
+        <CaseStudyQuote attribution="Participant 1, on what would change the game">
+          "If you have some service of automated liquidity, avoiding liquidation, redeeming an
+          automatic deposit, a redeeming pool or whatever, this would make everything easier for all
+          node operators."
+        </CaseStudyQuote>
 
         <CaseStudySubhead>The Peer-Slashing Helplessness</CaseStudySubhead>
         <p>
           <strong>The Expectation:</strong> Decentralized multi-node verification groups ensure
-          bulletproof network trust and security.
+          bulletproof network trust.
         </p>
         <p>
-          <strong>The Reality:</strong> Multi-operator dynamics induced immense psychological
-          stress. Good-acting operators felt vulnerable because the protocol's architecture bundled
-          their financial safety with unknown third parties. If their random peers went offline or
-          failed to respond, the entire group faced liquidation, sparking intense frustration over
-          shared penalties.
-        </p>
-
-        <CaseStudySubhead>The Testnet Validation Mirage</CaseStudySubhead>
-        <p>
-          <strong>The Expectation:</strong> Running an open testnet provides operators with an
-          accurate mental model of mainnet configuration and risk management.
-        </p>
-        <p>
-          <strong>The Reality:</strong> Testnet performance created a false sense of security.
-          Operators viewed the testnet as a lightweight game where slashing wasn't "real". Once they
-          transitioned to the mainnet, the immediate reality of hard financial loss caused many to
-          abandon native configurations entirely and opt for third-party staking providers.
+          <strong>The Reality:</strong> Multi-operator dynamics induced real psychological stress.
+          Good actors felt vulnerable because the protocol bundled their financial safety with
+          strangers: if the other two operators in a signing group misbehaved or went offline,
+          everyone was slashed. Being competent was not enough to be safe.
         </p>
 
-        <CaseStudySubhead>
-          The Strategic Persona Shift: From Devs to Wealth Collaborators
-        </CaseStudySubhead>
+        <CaseStudySubhead>The Squad Wall: Social Proof as Due Diligence</CaseStudySubhead>
         <p>
-          The research forced the engineering team to reframe node operators not as pure developers,
-          but as sophisticated financial participants who cluster together to optimize capital
-          efficiency.
+          <strong>The Expectation:</strong> Operators discover and vet protocols through
+          documentation, audits, and whitepapers.
         </p>
         <p>
-          <strong>The Inquisitive Solo Tech:</strong> Driven by intrinsic curiosity, this user
-          treats new network deployment as a personal intellectual puzzle. They are tech-savvy
-          operators who enjoy assembling technical architecture and tracking runtime logs purely for
-          the challenge. However, their patience breaks if base code samples fail, causing them to
-          stall and look elsewhere if developer documentation is poorly structured.
+          <strong>The Reality:</strong> Investment decisions ran through what I named the "squad
+          wall", a small trusted circle that shares information, splits research effort, and often
+          pools capital. Vouches from friends, direct access to the team on Discord, and the
+          founders' perceived competence mattered more than any document.
         </p>
+        <CaseStudyQuote attribution="Participant 2">
+          "Most of the projects that I look at, they're referred to me through someone I trust."
+        </CaseStudyQuote>
+        <CaseStudyQuote attribution="Participant 2, on vetting Keep">
+          "I spent quite a bit of time talking to the team, so I understood the white paper and what
+          it actually did. As I got to know Matt, I was like, he's a pretty smart guy. You know,
+          back people that are smarter than yourself and things tend to work out pretty well."
+        </CaseStudyQuote>
+
+        <CaseStudySubhead>The Automation Preference</CaseStudySubhead>
         <p>
-          <strong>The Out-Sourced Staker:</strong> This user cares exclusively about capital
-          preservation and yield optimization. While they possess the technical ability to launch a
-          testnet node, they refuse to take on the active daily workload of mainnet maintenance.
-          They deliberately outsource operations to professional third-party staking providers,
-          happily paying a premium to guarantee flawless uptime and secure peaceful sleep.
+          Across their wider DeFi lives, all participants gravitated to protocols that quietly do
+          jobs for them, self-repaying loans on Alchemix, auto-rebalancing pools on Balancer, and
+          they wanted their rewards accessible and convertible into BTC and ETH, the assets they
+          actually trust. The insight for Keep: every micro-job a product lifts off the user's
+          shoulders is a retention feature, and complexity erodes the relationship.
         </p>
+
+        <CaseStudySubhead>The Persona Set: From Devs to Wealth Collaborators</CaseStudySubhead>
         <p>
-          <strong>The Wealth Cluster Node:</strong> Highly strategic, non-developer investors who
-          view node operations as a long-term enterprise. To handle steep protocol entrance fees and
-          reduce personal downside risk, they form tight inner trust circles or "Squad Goals" to
-          split financial allocation and share real-time maintenance duties among trusted friends.
+          The research reframed node operators not as pure developers but as financial participants
+          with distinct operating modes: the <strong>Inquisitive Solo Tech</strong>, who runs nodes
+          for the intellectual puzzle first and the money second; the{" "}
+          <strong>Out-Sourced Staker</strong>, who can set up a testnet node but delegates mainnet
+          operations to professional staking providers to protect capital and sleep; and the{" "}
+          <strong>Wealth Cluster Investor</strong>, who splits costs, risk, and maintenance duties
+          across a trusted inner circle.
         </p>
       </CaseStudySection>
 
       <CaseStudySection label="04" title="The Impact: Automating the Infrastructure Layer">
         <p>
-          This exploratory research triggered an internal design shift, proving that scaling
-          infrastructure requires reducing cognitive load and building automated fallback systems. I
-          translated these structural operator anxieties into a definitive set of product
-          requirements.
+          The findings converted structural operator anxieties into a concrete set of product
+          directions, centered on reducing cognitive load and building automated fallbacks.
         </p>
 
-        <CaseStudySubhead>Centralized Status Truth</CaseStudySubhead>
+        <CaseStudySubhead>A Single Source of Truth</CaseStudySubhead>
         <p>
-          Formulated plans to replace fragmented Discord chats with a single, dedicated platform
-          dashboard for all updates and critical network updates, ensuring a reliable source of
-          truth for non-developer operators.
+          Replace the Discord-digging ritual with one dedicated place for updates, releases, and
+          protocol changes, with redundant distribution across channels so every operator profile is
+          reached.
         </p>
 
         <CaseStudySubhead>Automated Collateral Safety</CaseStudySubhead>
         <p>
-          Championed the introduction of automated balance top-ups and programmatic pool mechanisms
-          to let nodes auto-defend against liquidation during extreme market drops.
+          Pursue automated liquidation-avoidance mechanisms, alerting, easier monitoring, and top-up
+          flows, so operators can defend their positions without living at their desks.
         </p>
 
-        <CaseStudySubhead>Mobile Risk Alerting</CaseStudySubhead>
+        <CaseStudySubhead>Accessible Rewards</CaseStudySubhead>
         <p>
-          Spearheaded the development of targeted push notification protocols across email and
-          mobile channels, relieving users from constant desktop monitoring.
+          Make rewards easy to claim and convert into the blue-chip assets operators actually hold,
+          removing the friction between earning and storing value.
         </p>
 
-        <CaseStudySubhead>Reward Path Streamlining</CaseStudySubhead>
+        <CaseStudySubhead>A Prioritized Research Pipeline</CaseStudySubhead>
         <p>
-          Initiated a total rework of the rewards panel to allow direct, single-click claims and
-          auto-compounding options into blue-chip assets like BTC and ETH, removing third-party
-          dependencies.
+          The study closed by mapping five candidate research directions, documentation, node
+          operation process, user growth, developer experience, and liquidity pools, feeding
+          directly into the team's ideation and prioritization workshops.
         </p>
       </CaseStudySection>
 
       <CaseStudySection label="05" title="Impact & Outcomes">
         <CaseStudySubhead>Research Outcomes</CaseStudySubhead>
         <p>
-          <strong>The Core Roadmap Pivot:</strong> The identification of widespread user dropouts
-          due to configuration complexity forced a major product transition, moving design
-          priorities toward automated processes and an optimized developer experience.
+          <strong>The Communication Fix:</strong> Exposing the GitHub fallacy, and the funds lost to
+          it, gave the team hard evidence that update distribution was a product problem, not a
+          community-management nuisance, and reset the documentation and communication strategy.
         </p>
         <p>
-          <strong>The Documentation Rehaul:</strong> The discovery that third-party Staking
-          Providers bore the brunt of technical slashing redefined the platform's documentation
-          strategy, shifting focus toward deep framework testing and reliable code samples.
+          <strong>The Roadmap Pivot:</strong> The liquidation-helplessness findings pushed
+          monitoring, alerting, and automation up the priority list, and the persona set gave the
+          team a durable model of who actually operates nodes, informing both this protocol's next
+          iteration and my later node-operator research (Case Study 01).
         </p>
 
-        <CaseStudySubhead>Broader Outcomes</CaseStudySubhead>
+        <CaseStudySubhead>Retrospective</CaseStudySubhead>
         <p>
-          Following this study, the engineering team launched specialized prioritization workshops
-          to streamline the node management pipeline. By removing technical bottlenecks and
-          addressing the structural lack of control, the next iteration of the protocol directly
-          reduced systemic user errors, providing node managers with a significantly more secure
-          operational environment before mainnet capital deployment.
+          This study's honest constraint is its sample: 3 of 8 scheduled operators showed up. I
+          treated the output as directional, strong for hypothesis generation, insufficient for
+          quantified claims, and it earned its keep by killing false stakeholder assumptions early
+          and setting the agenda for the larger studies that followed. It also taught me to
+          over-recruit aggressively for niche technical audiences.
         </p>
 
         <div className="mt-10">
