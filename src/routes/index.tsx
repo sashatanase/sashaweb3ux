@@ -73,12 +73,13 @@ type WorkItem = {
 const WORK: WorkItem[] = [
   {
     no: "01",
-    year: "\n2022 — Present",
+    year: "\n2022 — Present · Full-time since 2025",
     title: "Web3UX",
-    role: "Co-Founder · Sole Owner",
+    role: "Founder & Independent UX Researcher",
     bullets: [
-      "Co-founded Web3UX, a user testing platform built specifically for web3 native users.",
-      "Created to solve one of the core problems in decentralized product development: access to the right research participants. The platform connected web3 projects with real users for usability testing, discovery research, and behavioral studies.",
+      "Founded and solely operate Web3UX, a user-testing platform and participant panel connecting web3 product teams with web3-native research participants, built to solve the field's hardest research-ops problem: recruiting the right users.",
+      "Designed and shipped a public research portfolio: six end-to-end case studies with full downloadable reports.",
+      'Published an AI-assisted UXR framework ("From Fear to Empowerment," 2026) and "The Silent Villain in Your Data" (2026); spoke at EthCC[8], Cannes (2025), and ETHPrague, Prague (2026).',
     ],
     tags: ["Founder", "Web3", "Research Ops"],
   },
@@ -86,7 +87,7 @@ const WORK: WorkItem[] = [
     no: "02",
     year: "\n2021 — 2025",
     title: "Thesis*",
-    role: "UX Research Manager / Ops",
+    role: "UX Research Lead → UX Research Manager",
     kind: "studio",
     bullets: [
       "Led research focused on PMF across Mezo Network, Acre, and the BitcoinFi Accelerator, including discovery, segmentation, and value-prop validation.",
@@ -100,7 +101,7 @@ const WORK: WorkItem[] = [
         no: "02.1",
         year: "\n2024 — 2025",
         title: "Mezo",
-        role: "UX Research & Product Strategist",
+        role: "UX Research Manager & Product Strategy",
         kind: "product",
         bullets: [
           "Led research with a focus on PMF: discovery, segmentation, and value-prop validation.",
@@ -114,7 +115,7 @@ const WORK: WorkItem[] = [
         no: "02.2",
         year: "\n2021 — 2024",
         title: "Threshold Network",
-        role: "UX Research & Product Design Lead",
+        role: "UX Research & Design Lead",
         kind: "product",
         bullets: [
           "Built staking and provider experiences end to end, aligning direction with PMF insights.",
@@ -126,6 +127,17 @@ const WORK: WorkItem[] = [
         tags: ["UX Research", "Product Design", "tBTC"],
       },
     ],
+  },
+  {
+    no: "03",
+    year: "\n2018 — 2020",
+    title: "ConsenSys / Alethio",
+    role: "Head of Design & User Research",
+    bullets: [
+      "Led design and user research for the Ethereum data-analytics platform, taking Alethio Block Explorer, API, Monitoring, and the Alethio Design System from concept to launch-ready.",
+      "Established the research practice: explorative and generative interview programs plus stakeholder workshops that defined the problems worth solving for a large, multi-player ecosystem.",
+    ],
+    tags: ["Ethereum", "UX Research", "Design Systems"],
   },
 ];
 
@@ -215,7 +227,7 @@ function Index() {
             onClick={() => trackNav("top", "header")}
             className="col-span-6 font-mono text-xs uppercase tracking-[0.18em] md:col-span-3"
           >
-            Sasha Luca
+            Sasha (Tanase) Luca
           </a>
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
             <a
@@ -278,8 +290,8 @@ function Index() {
             </h1>
             <div className="mt-12 grid grid-cols-12 gap-6">
               <p className="col-span-12 max-w-2xl text-base font-medium leading-relaxed tracking-tight md:col-span-8 md:text-2xl">
-                I help teams figure out who they're building for and why. Currently open to UXR and
-                PM roles, full-time or contract.
+                I help teams figure out who they're building for and why. Currently open to Senior
+                UX Researcher roles, full-time or contract.
               </p>
               <div className="col-span-12 flex flex-col items-start gap-3 md:col-span-4 md:items-end">
                 <a
@@ -355,15 +367,18 @@ function Index() {
             <div className="grid grid-cols-12 gap-6">
               <div className="col-span-12 md:col-span-8">
                 <h2 className="max-w-[560px] text-3xl font-medium leading-tight tracking-tight md:text-5xl">
-                  Nine years making sure teams build the right thing for the right people.
+                  Eight years making sure teams build the right thing for the right people.
                 </h2>
                 <div className="mt-10 max-w-[560px] space-y-6 text-base leading-relaxed text-muted-foreground">
                   <p>
                     I've worked across fast-moving web3 startups and decentralized protocols, most
-                    recently at Mezo Network, where I built the insight repository that became the
-                    single source of truth for 15+ stakeholders.
+                    recently leading research at Mezo, where I built the insight repository that
+                    became the single source of truth for 15+ stakeholders. Since mid-2025 I run my
+                    research practice independently through Web3UX, and publish my full research
+                    reports openly on this site.
                   </p>
                   <p>
+                    I work on products where a confused user doesn't just churn, they lose funds.
                     My background sits between research and product. I'm fluent in discovery, JTBD,
                     and usability testing, and equally comfortable shaping roadmaps and aligning the
                     people who build from them.
@@ -373,7 +388,7 @@ function Index() {
               <div className="col-span-12 md:col-span-4">
                 <img
                   src={portrait}
-                  alt="Portrait of Sasha Luca"
+                  alt="Portrait of Sasha (Tanase) Luca"
                   className="w-full grayscale"
                   loading="lazy"
                   onError={(e) => {
@@ -389,7 +404,7 @@ function Index() {
                   "Methods",
                   "Discovery · JTBD · PMF Validation · Usability Testing · Qualitative Research · Stakeholder Alignment",
                 ],
-                ["Roles", "UX Researcher · Product Manager"],
+                ["Role", "Senior UX Researcher"],
                 ["Years", "2018 — Present"],
                 ["Status", "Open to roles"],
               ].map(([k, v]) => (
@@ -472,6 +487,10 @@ function Index() {
                 </li>
               ))}
             </ul>
+            <p className="mt-6 text-sm italic text-muted-foreground">
+              Some talks are published under Sasha Tanase, my pre-marriage name, which I continued
+              using on stage.
+            </p>
           </div>
         </section>
 
@@ -539,7 +558,7 @@ function Index() {
 
       <footer className="border-t border-border">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6 px-6 py-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:px-10">
-          <div className="col-span-6 md:col-span-4">© {year} Sasha Luca</div>
+          <div className="col-span-6 md:col-span-4">© {year} Sasha (Tanase) Luca</div>
           <div className="col-span-6 text-right md:col-span-4 md:text-center">
             Bucharest · 44.4268° N
           </div>

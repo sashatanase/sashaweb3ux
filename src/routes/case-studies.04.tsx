@@ -9,9 +9,9 @@ const SYNOPSIS =
 export const Route = createFileRoute("/case-studies/04")({
   head: () => ({
     meta: [
-      { title: `${TITLE} — Sasha Luca` },
+      { title: `${TITLE} · Sasha (Tanase) Luca` },
       { name: "description", content: SYNOPSIS },
-      { property: "og:title", content: `${TITLE} — Sasha Luca` },
+      { property: "og:title", content: `${TITLE} · Sasha (Tanase) Luca` },
       { property: "og:description", content: SYNOPSIS },
     ],
   }),

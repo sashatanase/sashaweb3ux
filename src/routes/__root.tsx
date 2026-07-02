@@ -72,13 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sasha Luca" },
+      { title: "Sasha (Tanase) Luca" },
       {
         name: "description",
         content:
           "Senior UX researcher specializing in web3, discovery, and PMF validation. Turning user signals into product decisions that actually move things forward.",
       },
-      { property: "og:title", content: "Sasha Luca" },
+      { property: "og:title", content: "Sasha (Tanase) Luca" },
       {
         property: "og:description",
         content:
@@ -86,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Sasha Luca" },
+      { name: "twitter:title", content: "Sasha (Tanase) Luca" },
       {
         name: "twitter:description",
         content:
