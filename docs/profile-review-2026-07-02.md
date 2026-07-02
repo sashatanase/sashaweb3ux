@@ -62,7 +62,7 @@ Scored against the standard set by strong published senior-UXR portfolios (Theo 
 
 1. **Add a contact block (critical).** Header currently reads only `LinkedIn | Website | Twitter`. Add: email (sasha@web3ux.org, matching the site), location + timezone ("Bucharest, RO (EET) · Remote-friendly"), and a GitHub link (it's part of your DevEx story). Without an email the resume is a dead end in every ATS and every forwarded-PDF scenario.
 2. **Account for Jul 2025 → present.** The last dated employment ends Jul 2025 — a year ago. Whatever the true story is, the resume should tell it explicitly rather than leave it to the recruiter's imagination: if you've done contract/consulting work, list it as a dated entry with an outcome bullet; if Web3UX has been your focus, re-date and re-frame that entry as your current operating role ("Founder & Researcher, 2022–present; full-time since 2025") with concrete activity; if it was a deliberate break, one honest line ("2025–2026: sabbatical; published X, spoke at Y") beats silence. An unexplained year is the most common silent-rejection trigger at senior level, and yours is fixable with truthful framing alone.
-3. **Fix the arithmetic: "9 years."** Your earliest listed role starts Jul 2018 — that's 8 years as of mid-2026, and the site's own About says "2018 — Present." Either write "8+ years" or explicitly count pre-2018 design work by listing it (one line: "Earlier: architecture & design practice, 2011–2018" also explains the post-M.Arch years). A reviewer who catches the resume overstating tenure by a year discounts every other number on the page.
+3. **Fix the arithmetic: "9 years."** Your earliest listed role starts Jul 2018 — that's 8 years as of mid-2026, and the site's own About says "2018 — Present" while your LinkedIn headline says "7 years." Your LinkedIn actually holds the honest fix: it lists **Senior Art Director UX/UI Designer at SMP+WEBSTYLER (2016–2018)**, which the resume omits entirely. Add it as a one-line entry ("Earlier: Senior Art Director UX/UI, SMP+WEBSTYLER, 2016–2018 — award-winning digital work across health, medical, and consumer sectors") — it makes "8 years in UX research, 10 in design" true, explains the post-M.Arch years, and gives every channel the same defensible number.
 4. **Fix the talk citations.** EthCC[7] was **Brussels 2024**; the Cannes 2025 edition was **EthCC[8]**. EthCC[4] was **2021**, not 2022 (Paris 2022 was EthCC[5]). Verify each entry against the conference archive. Small errors, outsized signal for a researcher.
 5. **De-duplicate the opening.** "9 years guided by one principle… 9 years leading UX research…" — same number twice in two sentences. Keep the principle, cut the second "9 years."
 6. **Give the metrics provenance (or round them).** 20%, 22%, 18%, 16%, 30%, 15%, 33%, 87%… A senior screen *will* probe two of these. For the 2–3 numbers you'd stake an interview on, add the basis ("per product analytics, 8 weeks post-launch," "n=12"). Consider softening the rest to "~20%" or moving them out of every single bullet — when *every* bullet ends in a percentage, each one is worth less.
@@ -109,14 +109,26 @@ Scored against the standard set by strong published senior-UXR portfolios (Theo 
 
 ## 5. LinkedIn review
 
-*Full profile is bot-blocked (999/405); this is based on publicly indexed data. Verify details against the live profile.*
+*Updated 2026-07-02 from a full screenshot of the live profile provided by Sasha (automated access is bot-blocked, so the first version of this section was based on stale indexed data).*
 
-1. **The headline is working against you.** Indexed headline: *"Web3 Product, Design & UX Research, past: Mezo Network, Thesis, Threshold Network, Keep Network, ConsenSys."* Problems: it never says **Senior UX Researcher** (the exact string recruiters search in LinkedIn Recruiter); it leads with "past:" — literally announcing what you no longer do; and it spends all 220 characters on employer names instead of value. Rewrite along the lines of: `Senior UX Researcher · Discovery, Research Ops & DevEx · 8+ yrs in fintech/web3 & high-stakes systems · ex-ConsenSys, Thesis · Speaker: DevCon, EthCC · Open to UXR roles`.
-2. **URL discrepancy — verify this today.** Your resume/website link to `linkedin.com/in/sasha-tanase-luca`, but the profile Google indexes is `linkedin.com/in/sasha-tanase-luca-b5190583`. If the short vanity URL isn't actually claimed, every LinkedIn link you distribute may 404. Open the short URL in a logged-out/incognito browser; claim the vanity URL if needed and make every channel use the same one.
-3. **Featured section:** pin the website, the tBTC diary case study, the "Designing for Trust in Web3" talk video, and the 2026 AI-framework Medium article. Talks with video are your unfair advantage; make them the first thing a recruiter sees.
-4. **Recommendations = your missing social proof.** When you collect the testimonials from §4.1, have them posted as LinkedIn recommendations too. Written recommendations from a Thesis founder or Mezo PM are read by every serious recruiter.
-5. **Mirror the resume's metric bullets** into the Experience entries (the indexed snippet suggests the profile is thinner than the resume), make sure the profile shows a *current* position (Web3UX and/or contract work) so it doesn't read as ended in mid-2025, and set Open-to-Work with target titles Senior/Lead UX Researcher.
-6. **Cadence:** you have publishable material sitting idle (talks, the AI framework, the diary-study method). One native post every 2–3 weeks re-cutting existing content is enough to look active; active profiles rank materially higher in recruiter search.
+### What scores well
+
+- **The vanity URL is claimed:** `linkedin.com/in/sasha-tanase-luca` is confirmed as the public URL. Earlier concern resolved; make sure every channel uses exactly this link.
+- **Real audience:** ~3,200 followers, 500+ connections, a speaking-photo banner, a recent long-form article ("The Silent Villain in Your Data: Why Researcher Bias Beats AI Bias"), and a populated Featured section. This profile is more alive than most senior-UXR profiles.
+- **Open-to-work is on**, and the current headline ("UX Researcher & Product Strategist | 7 Years Building Research in Web3 | Open to UXR & PM Roles") is value-based — better than the stale "past:" version Google still indexes.
+- **Full career history**, including **Senior Art Director UX/UI Designer at SMP+WEBSTYLER (2016–2018)** — pre-2018 experience that neither the resume nor the site mentions, and which honestly repairs the resume's years-of-experience math (§3.3).
+
+### What must change
+
+1. **The years now disagree three ways.** LinkedIn headline and About say "7 years," the resume says "9 years," the site says "Nine years" — and LinkedIn's own experience list (2016 start in UX/design, 2018 in research leadership) supports a defensible "10 years in design, 8 in UX research." Pick one formulation and repeat it verbatim on every channel. Three different numbers for the same career is the kind of inconsistency recruiters read as carelessness.
+2. **Headline: add the search keyword and drop the hedge.** It still doesn't contain "**Senior UX Researcher**" — the literal string recruiters type into LinkedIn Recruiter — and "UXR & PM Roles" dilutes (same issue as the website hero). Suggested: `Senior UX Researcher · Discovery, Research Ops & DevEx · 8 yrs in web3/fintech & high-stakes systems · ex-ConsenSys, Thesis · Speaker: DevCon, EthCC`.
+3. **The Skills section is your advertising past, not your research present.** Only 11 skills, and the top-endorsed are **Art Direction (28)** and **Interactive Advertising (29)** — 2016-era endorsements outranking your actual profession. Recruiters filter candidate searches by skills. Add and pin: User Research, UX Research, Usability Testing, Product Discovery, Research Ops, Jobs-to-be-Done; ask close colleagues to endorse them; let the advertising skills sink to the bottom (or remove them).
+4. **Recommendations: 2 received, and the visible one is off-target.** Sarah Mills' 2020 recommendation is warm but praises design attitude ("high-quality design"), not research impact — and it's six years old. This confirms the social-proof gap from §4.1: collect 4–6 research-specific recommendations (Thesis/Mezo/Threshold PMs, founders, engineers) that name outcomes; reuse the same text as website testimonials.
+5. **Featured section needs curation.** "The Future of Web3UX" appears **twice** with identical descriptions — remove the duplicate; add the portfolio site link, the 2025 "Designing for Trust in Web3" talk, and your strongest case study. Order: site → 2025 talk → article.
+6. **Experience entries are 1–3 truncated lines** while the resume has metric-rich bullets — port them over. Also review the Thesis sub-roles: "Research Manager" and "Research Manager/Ops and Product Strategist — Mezo" both show May 2024 – Jul 2025, which reads as two simultaneous full-time roles; merge or differentiate them.
+7. **Open-to-work preferences look restricted to Bucharest (on-site/hybrid).** If you'd take remote roles — and your site's positioning implies it — add Remote and the countries/EU regions you can work in. Recruiters filtering for remote candidates never see profiles without it. Also add "Product Manager" only if you truly want PM inbound; otherwise keep the target-title list purely UXR/Research Lead.
+8. **Awards section is 100% advertising.** Nine 2017 ADSTAR golds pull the profile's center of gravity toward your pre-UX career. Keep the two or three most impressive, trim the rest — the space is better spent on research proof.
+9. **Cadence:** the recent article is exactly right — keep one native post every 2–3 weeks re-cutting existing material (talks, the diary-study method, the AI framework). Active profiles rank materially higher in recruiter search.
 
 ---
 
@@ -160,13 +172,24 @@ What the strongest published portfolios do, and where you stand:
 
 | Item | Resume | Website | LinkedIn | GitHub | Fix |
 |---|---|---|---|---|---|
-| Name | Sasha (Tanase) Luca | Sasha Luca | Sasha Tanase-Luca | Sasha Tanase | Pick **one** public name; put the variant in parentheses only where legally needed |
+| Name | Sasha (Tanase) Luca | Sasha Luca | Sasha (Tanase) Luca | Sasha Tanase | Standardize on the transitional "Sasha (Tanase) Luca" everywhere — see the name-change playbook below |
 | Thesis title | UX Research & Product Design Lead | UX Research Manager / Ops | "Research Lead" (indexed) | — | One title (suggest: UX Research Lead → UX Research Manager, showing progression) |
 | Threshold title | UX Research & Design Lead | UX Research & Product Design Lead | — | — | Align |
 | Current work | ends Jul 2025 (gap) | "Available · 2026" only | unverifiable (bot-blocked) | — | Decide the one true story for Jul 2025–present and state it identically on all channels |
-| Years of experience | "9 years" | "Nine years" / "2018 — Present" | — | — | "8+" or list pre-2018 work |
-| LinkedIn URL | `/in/sasha-tanase-luca` | same | indexed as `/in/sasha-tanase-luca-b5190583` | — | Verify/claim vanity URL |
+| Years of experience | "9 years" | "Nine years" / "2018 — Present" | "7 Years" (headline + About) | — | One phrase everywhere; LinkedIn's own 2016 start supports "8 yrs research / 10 in design" |
+| LinkedIn URL | `/in/sasha-tanase-luca` | same | **confirmed claimed** ✓ | — | Resolved — use this exact URL on every channel |
 | Email | **absent** | sasha@web3ux.org | — | absent | Same email everywhere |
+
+### The name-change playbook (Tanase → Luca)
+
+Your public proof is split across two names: the speaking record, YouTube talks, Threshold blog features, and Medium handle live under **Sasha Tanase**; your current materials say **Sasha Luca**. The goal is not to pick a winner today — it's *continuity of proof*: anyone who Googles either name must land on the same person, with no flicker of doubt. Recommended sequence:
+
+1. **Adopt "Sasha (Tanase) Luca" as your single transitional public name.** You already use it on the resume and LinkedIn — the fix is simply making the website ("Sasha Luca") and GitHub ("Sasha Tanase") match. Run it for one to two years, until work published under "Luca" dominates your search results.
+2. **Use LinkedIn's former-name field, not just the parenthetical.** LinkedIn has a dedicated "former name" setting (Edit intro → Additional name, or Settings → Visibility); set it to "Tanase" and make it visible to *everyone*. This keeps you findable by recruiters searching "Sasha Tanase" even after you eventually simplify the display name — the parenthetical alone doesn't feed LinkedIn search as reliably.
+3. **Never change the LinkedIn URL.** `/in/sasha-tanase-luca` happens to contain both names — it's the perfect permanent identifier, and every printed resume and site link already points at it.
+4. **Add one disambiguation line where your talks are listed** (website Articles & Talks section + a resume footnote): *"Talks and articles before [year] were published under my pre-marriage name, Sasha Tanase."* This converts a recruiter's moment of confusion ("is this the same person as in the DevCon video?") into a moment of confirmed diligence. It also future-proofs the Medium handle (@sashagabrielatanase), which you should not rename — old article URLs breaking costs more than the name mismatch.
+5. **End state (year two+):** display name becomes simply **Sasha Luca** everywhere; the LinkedIn former-name field, the URL, and the talks footnote permanently carry the "Tanase" thread. Nothing ever gets orphaned.
+6. **What not to do:** don't run different names on different channels (the current state — it reads as two half-finished identities rather than one deliberate transition), and don't scrub "Tanase" — your strongest third-party proof (conference stages) is attached to it.
 
 ---
 
@@ -176,9 +199,9 @@ What the strongest published portfolios do, and where you stand:
 1. Resume header: add email, location/timezone, GitHub link.
 2. Resume: account for Jul 2025–present with whatever is true (dated contract entries, a re-framed Web3UX operating role, or an honest sabbatical line).
 3. Resume: fix "9 years" → "8+" (or add pre-2018 line); fix EthCC[7]→[8] and EthCC[4] year; de-dupe the opening; delete "I am very proud of."
-4. LinkedIn: rewrite headline; verify/claim the vanity URL; set up Featured section.
+4. LinkedIn: rewrite headline (add "Senior UX Researcher," drop the PM hedge); fix Skills (add + pin research skills, demote Art Direction/Interactive Advertising); de-duplicate Featured and pin site + 2025 talk; add Remote to open-to-work preferences; set the former-name field to "Tanase." (Vanity URL confirmed claimed — no action needed.)
 5. GitHub: professional bio, profile README, pin research repos, make `GitTutorial` + `Information-Unification` private.
-6. Normalize your name and the Thesis/Threshold titles across all four channels.
+6. Normalize your name to "Sasha (Tanase) Luca" and the Thesis/Threshold titles across all four channels; pick one years-of-experience phrase (LinkedIn says 7, resume 9, site nine) and use it verbatim everywhere.
 
 ### This month (the trust layer)
 7. Collect 4–6 testimonials from Thesis/Mezo/Threshold/ConsenSys colleagues; publish as site testimonials **and** LinkedIn recommendations.
@@ -205,7 +228,8 @@ What the strongest published portfolios do, and where you stand:
 - [UX Design Institute — What hiring managers look for in a UX portfolio](https://www.uxdesigninstitute.com/blog/hiring-managers-ux-portfolio/)
 - Benchmark portfolios: [Devin Harold](https://devinharold.com), [Mia Eltiste](https://heymia.co), [Sophie Chen](https://sophiemchen.com), Theo Johnson (uxfol.io/theojohns91), Benny Sun (uxfol.io/bennysun), [Jae Engle](https://jaeengle.com), [Cyd Harrell](https://cydharrell.com)
 - EthCC edition verification: [EthCC[8] Cannes 2025 (Palais des Festivals press release)](https://en.palaisdesfestivals.com/press-area/press-releases/the-ethereum-community-conference-chooses-cannes-for-its-8th-edition-from-30-june-to-3-july-2025/), [EthCC[7] Brussels 2024 wrap-up](https://yapglobal.com/events/ethcc7-wrap-up-bringing-ethereum-to-brussels/)
-- Public LinkedIn data: [indexed profile](https://ro.linkedin.com/in/sasha-tanase-luca-b5190583) (source of the current headline text)
+- Public LinkedIn data: [indexed profile](https://ro.linkedin.com/in/sasha-tanase-luca-b5190583) (used for the first draft of §5)
+- Full LinkedIn profile screenshot provided by Sasha, 2026-07-02 (basis of the current §5, the §8 updates, and the name-change playbook)
 
 ---
 
