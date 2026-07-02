@@ -34,7 +34,7 @@ export function CaseStudyLayout({
             to="/"
             className="col-span-6 font-mono text-xs uppercase tracking-[0.18em] md:col-span-3"
           >
-            Sasha Luca
+            Sasha (Tanase) Luca
           </Link>
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
             <Link to="/" hash="work" className="hover:text-accent transition-colors">
@@ -113,7 +113,7 @@ export function CaseStudyLayout({
 
       <footer className="border-t border-border">
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6 px-6 py-10 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:px-10">
-          <div className="col-span-6 md:col-span-3">© {currentYear} Sasha Luca</div>
+          <div className="col-span-6 md:col-span-3">© {currentYear} Sasha (Tanase) Luca</div>
           <div className="col-span-6 text-right md:col-span-9">
             <Link to="/" className="hover:text-accent transition-colors">
               ← Back home

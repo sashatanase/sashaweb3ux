@@ -21,9 +21,7 @@ assignees: ""
 <!-- Bullet each option. Flag tradeoffs inline if there's a real choice.
      If there's only one obvious fix, one bullet is fine. -->
 
--
-
----
+- ***
 
 ## Impact
 
