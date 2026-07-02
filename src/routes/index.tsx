@@ -143,9 +143,19 @@ const WORK: WorkItem[] = [
 
 const WRITING = [
   {
+    date: "2026.07",
+    title: "The Silent Villain in Your Data: Why Researcher Bias Beats AI Bias",
+    url: "https://medium.com/@sashagabrielatanase/the-silent-villain-in-your-data-why-researcher-bias-beats-ai-bias-18e19434a1c9",
+  },
+  {
     date: "2026.05",
     title: "From Fear to Empowerment: How to Supercharge UX Research with AI — a framework",
     url: "https://medium.com/@sashagabrielatanase/from-fear-to-empowerment-how-to-supercharge-ux-research-with-ai-a-framework-d576e39d1774",
+  },
+  {
+    date: "2026.05",
+    title: "ENHANCE UXR WITH AI: diverting from fear to empowerment",
+    url: "https://www.youtube.com/watch?v=TOZmt90-O4w",
   },
   {
     date: "2025.06",
