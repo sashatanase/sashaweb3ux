@@ -1,6 +1,6 @@
 # Canonical resume - source of truth for website & LinkedIn (updated 2026-07-02)
 
-> One placeholder remains: the EthPrague 2026 talk title. Everything else is final.
+> No placeholders remain; this version is final and ready to export.
 > Verified against public sources: Accessibility talk = EthCC[4], Paris, **2021**
 > (Forkast coverage + YouTube); the 2025 Cannes talk is credited "Sasha Tanase" in the
 > official EthCC archive, so the talks footnote is dateless by necessity.
@@ -76,7 +76,7 @@ One principle has guided my work for eight years: **explorative research helps t
 ## SELECTED TALKS
 
 - **Designing for Trust in Web3: Lessons from the User Research Field** - EthCC[8], Cannes, 2025
-- **`[EthPrague 2026 talk title]`** - ETHPrague, Prague, 2026
+- **ENHANCE UXR WITH AI: diverting from fear to empowerment** - ETHPrague, Prague, 2026
 - **Elevating Developer Experience (DX) in Web3: a Framework** - EthCC[6], Paris, 2023 (with Daniel Luca)
 - **The Future of Web3UX: a Paradigm Shift for Better Collaboration between Design and Development** - DevCon VI, Bogotá, 2022
 - **Accessibility: Ethereum for LITERALLY Everyone!** - EthCC[4], Paris, 2021
