@@ -51,8 +51,10 @@ each item says exactly where to make the change.
 `src/routes/index.tsx`, the `WRITING` array (~lines 119–141):
 - Add "The Silent Villain in Your Data: Why Researcher Bias Beats AI Bias" (2026) with its URL.
 - Add the EthPrague 2026 talk once a video/slides link exists.
-- Add the name-change footnote under the section (small muted text):
-  *"Talks through [year — match the resume footnote] were published under my pre-marriage name, Sasha Tanase."*
+- Add the name-change footnote under the section (small muted text), dateless — Sasha kept
+  speaking as "Sasha Tanase" after her 2022 marriage, so a date-based cutoff would mislead:
+  *"Some talks are published under Sasha Tanase — my pre-marriage name, which I continued using on stage."*
+  Use the same wording on the resume (replacing "Talks before 2022…").
 
 ### A6. Replace the hosted resume PDF — critical
 
@@ -89,8 +91,8 @@ add retrospective paragraphs; add the Mezo PMF case study 07. (Report §4.2–4.
      current entries are 1–3 truncated lines.
    - **SelfKey:** retitle to match resume: "UX Researcher & Design Lead — SelfKey / KYC-Chain".
    - **ConsenSys / Alethio:** title already matches; paste the two resume bullets.
-   - **GMP/SMP+WEBSTYLER:** fix the agency name to whichever is correct so resume and
-     LinkedIn agree; dates 2016–2018 already match.
+   - **GMP+WEBSTYLER** is the correct agency name (confirmed by Sasha). Check the LinkedIn
+     entry and correct it there if it reads differently; dates 2016–2018 already match.
 5. **Skills:** add User Research, UX Research, Usability Testing, Product Discovery,
    Research Ops, Jobs-to-be-Done; pin the top three; remove or demote Art Direction and
    Interactive Advertising (currently your two most-endorsed skills). Ask 3–4 close
