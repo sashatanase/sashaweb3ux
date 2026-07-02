@@ -31,8 +31,9 @@ each item says exactly where to make the change.
 `src/routes/index.tsx`:
 - ~line 320: "**Nine** years making sure teams build the right thing…" → "**Eight** years…" (resume says "eight years").
 - ~lines 323–332 (two paragraphs): update to cover the present. Suggested first paragraph:
-  *"I've worked across fast-moving web3 startups and decentralized protocols — most recently leading research at Mezo, where I built the insight repository that became the single source of truth for 15+ stakeholders. Since mid-2025 I run my research practice independently through Web3UX, and publish my full research reports openly on this site."*
-  Add one high-stakes framing sentence (mirrors the resume summary): *"I work on products where a confused user doesn't just churn — they lose funds."*
+  *"I've worked across fast-moving web3 startups and decentralized protocols, most recently leading research at Mezo, where I built the insight repository that became the single source of truth for 15+ stakeholders. Since mid-2025 I run my research practice independently through Web3UX, and publish my full research reports openly on this site."*
+  Add one high-stakes framing sentence (mirrors the resume summary): *"I work on products where a confused user doesn't just churn, they lose funds."*
+  (All suggested copy is em-dash-free by request; keep it that way when adapting.)
 - ~line 354, the `dl` facts list: "Roles — UX Researcher · Product Manager" → "Roles — Senior UX Researcher". Keep "Years — 2018 — Present" (consistent with "eight years"; the 2016–2018 design years live on the resume as Earlier Career).
 
 ### A4. Selected Work section — titles and entries to match resume
@@ -53,7 +54,7 @@ each item says exactly where to make the change.
 - Add the EthPrague 2026 talk once a video/slides link exists.
 - Add the name-change footnote under the section (small muted text), dateless — Sasha kept
   speaking as "Sasha Tanase" after her 2022 marriage, so a date-based cutoff would mislead:
-  *"Some talks are published under Sasha Tanase — my pre-marriage name, which I continued using on stage."*
+  *"Some talks are published under Sasha Tanase, my pre-marriage name, which I continued using on stage."*
   Use the same wording on the resume (replacing "Talks before 2022…").
 
 ### A6. Replace the hosted resume PDF — critical
