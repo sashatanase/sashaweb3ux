@@ -16,11 +16,11 @@ What holds the profile back is **packaging, proof, and consistency**, not substa
 
 1. **The resume has no email, phone, or location.** The header is only LinkedIn | Website | Twitter links. An ATS parse produces a candidate with no contact info; a recruiter skimming a printed PDF has no way to reach you. This is the single most damaging defect found.
 2. **Zero third-party validation anywhere.** No testimonials, no LinkedIn-style recommendations surfaced, no client logos, no stakeholder quotes. Five of six case studies say "Sole Researcher." Everything is self-reported. Benchmark portfolios (Devin Harold, Mia Eltiste) lead with testimonials.
-3. **The resume shows a 12-month employment gap that isn't real.** Thesis ends Jul 2025; it is now Jul 2026. Public LinkedIn data shows current independent UXR work with **Superbet (Sports & Trading)** — it appears nowhere on the resume or website. You are hiding your most recent (and only non-web3) work.
+3. **The resume leaves the last 12 months unaccounted for.** Thesis ends Jul 2025; it is now Jul 2026. Only the Web3UX line ("Apr 2022 – Present") spans the period, and it reads as a side venture rather than what you've been doing full-time. A recruiter's first screening question will be "what have you been doing for the past year?" — the resume should answer it before they ask (contract work, running Web3UX, the 2026 publication and speaking, a deliberate break — whatever is true, dated and framed on your terms).
 4. **Small factual errors a research-minded reviewer will catch** (details in §3): "9 years" vs. a 2018 start (8 years); "EthCC[7] Cannes, 2025" (EthCC[7] was Brussels 2024; Cannes 2025 was EthCC[8]); "EthCC[4] Paris, 2022" (EthCC[4] was 2021). For a researcher, citation accuracy is character evidence.
 5. **Identity fragmentation:** Sasha (Tanase) Luca / Sasha Tanase-Luca / Sasha Luca / Sasha Tanase across the four channels, with mismatched job titles for the same role. Recruiters cross-reference; every mismatch costs trust.
 
-Fix the contact block, add Superbet, add 4–6 testimonials, and put artifacts + participant quotes into the case studies, and this profile moves from "strong web3 specialist, contact if the role fits" to "contact for any senior UXR role that touches fintech, developer tools, or complex systems."
+Fix the contact block, account for the last 12 months, add 4–6 testimonials, and put artifacts + participant quotes into the case studies, and this profile moves from "strong web3 specialist, contact if the role fits" to "contact for any senior UXR role that touches fintech, developer tools, or complex systems."
 
 ---
 
@@ -38,7 +38,7 @@ Scored against the standard set by strong published senior-UXR portfolios (Theo 
 | **Social proof (testimonials, recs, logos)** | **2** | 8 | **Biggest gap.** Nothing third-party anywhere |
 | **Visual artifacts in case studies** | **3** | 8 | **Second biggest gap.** All text; no journey maps, diary excerpts, screenshots |
 | Collaboration / leadership signals | **5** | 8 | "Sole Researcher" ×5; no team credit, no mentoring/ops-leadership narrative |
-| Breadth beyond one domain | **4** | 7 | 100% web3 2018–2025; the one non-web3 engagement (Superbet) is invisible |
+| Breadth beyond one domain | **4** | 7 | 100% web3 2018–2025; no visible non-web3 evidence — the profile's biggest strategic exposure |
 | LinkedIn optimization / discoverability | **4** | 7 | Headline leads with "past:" companies; no "Senior UX Researcher" keyword |
 | GitHub as professional surface | **5** | n/a (most peers have none) | Real asset (mezo-insights) buried under joke bio and meta-repos |
 | Cross-channel consistency | **5** | 8 | Names, titles, and dates disagree across the four channels |
@@ -61,7 +61,7 @@ Scored against the standard set by strong published senior-UXR portfolios (Theo 
 ### What must change
 
 1. **Add a contact block (critical).** Header currently reads only `LinkedIn | Website | Twitter`. Add: email (sasha@web3ux.org, matching the site), location + timezone ("Bucharest, RO (EET) · Remote-friendly"), and a GitHub link (it's part of your DevEx story). Without an email the resume is a dead end in every ATS and every forwarded-PDF scenario.
-2. **Close the fake gap: add Superbet.** Public LinkedIn data says you're currently an independent UX Researcher for Superbet (Sports & Trading). Add it as a dated entry ("Independent UX Researcher (contract) — Superbet, 2025–present") with one or two outcome bullets. It (a) removes a 12-month gap, and (b) is your **only** evidence of working outside crypto — disproportionately valuable for de-pigeonholing.
+2. **Account for Jul 2025 → present.** The last dated employment ends Jul 2025 — a year ago. Whatever the true story is, the resume should tell it explicitly rather than leave it to the recruiter's imagination: if you've done contract/consulting work, list it as a dated entry with an outcome bullet; if Web3UX has been your focus, re-date and re-frame that entry as your current operating role ("Founder & Researcher, 2022–present; full-time since 2025") with concrete activity; if it was a deliberate break, one honest line ("2025–2026: sabbatical; published X, spoke at Y") beats silence. An unexplained year is the most common silent-rejection trigger at senior level, and yours is fixable with truthful framing alone.
 3. **Fix the arithmetic: "9 years."** Your earliest listed role starts Jul 2018 — that's 8 years as of mid-2026, and the site's own About says "2018 — Present." Either write "8+ years" or explicitly count pre-2018 design work by listing it (one line: "Earlier: architecture & design practice, 2011–2018" also explains the post-M.Arch years). A reviewer who catches the resume overstating tenure by a year discounts every other number on the page.
 4. **Fix the talk citations.** EthCC[7] was **Brussels 2024**; the Cannes 2025 edition was **EthCC[8]**. EthCC[4] was **2021**, not 2022 (Paris 2022 was EthCC[5]). Verify each entry against the conference archive. Small errors, outsized signal for a researcher.
 5. **De-duplicate the opening.** "9 years guided by one principle… 9 years leading UX research…" — same number twice in two sentences. Keep the principle, cut the second "9 years."
@@ -98,7 +98,7 @@ Scored against the standard set by strong published senior-UXR portfolios (Theo 
 5. **Sharpen the hero to one role.** "Currently open to UXR **and PM** roles, full-time or contract" hedges. Every benchmark portfolio makes one claim ("I lead effective UX teams"). Lead with Senior UX Researcher; mention product-management range in About ("my background sits between research and product" already does this well).
 6. **Add a short "How I work" block.** Mia Eltiste's three-principles section is what makes her read as strategic rather than executional. You already have the material: your explorative/iterative principle, the DX framework from your EthCC talk, your AI-workflows framework. Three principles, one paragraph each, on the home page.
 7. **Add a retrospective line to each case study.** Theo Johnson's differentiator is a "what I'd do differently" section — it signals seniority and self-awareness cheaply. One honest paragraph per study ("With more than 5 participants I'd have…", "I under-weighted X") also pre-answers the constraints question (n=5–12 everywhere).
-8. **Acknowledge the domain, plan the bridge.** All six studies are crypto-infra. The framing fix is cheap: one sentence in About positioning web3 as *the hardest usability environment there is* ("if users can lose funds irreversibly, research rigor isn't optional") — this converts "niche specialist" into "specialist in high-stakes, trust-critical systems," which generalizes to fintech, security, dev tools, health. The content fix is §6's Superbet case study. Longer-term: the `sasha.web3ux.org` domain itself brands you web3-only; if you broaden, a neutral domain (sashaluca.com) with a redirect is worth it.
+8. **Acknowledge the domain, plan the bridge.** All six studies are crypto-infra. The framing fix is cheap: one sentence in About positioning web3 as *the hardest usability environment there is* ("if users can lose funds irreversibly, research rigor isn't optional") — this converts "niche specialist" into "specialist in high-stakes, trust-critical systems," which generalizes to fintech, security, dev tools, health. The content fix is adding credible non-crypto evidence as it materializes (see §9, item 12). Longer-term: the `sasha.web3ux.org` domain itself brands you web3-only; if you broaden, a neutral domain (sashaluca.com) with a redirect is worth it.
 
 ### Minor
 
@@ -115,7 +115,7 @@ Scored against the standard set by strong published senior-UXR portfolios (Theo 
 2. **URL discrepancy — verify this today.** Your resume/website link to `linkedin.com/in/sasha-tanase-luca`, but the profile Google indexes is `linkedin.com/in/sasha-tanase-luca-b5190583`. If the short vanity URL isn't actually claimed, every LinkedIn link you distribute may 404. Open the short URL in a logged-out/incognito browser; claim the vanity URL if needed and make every channel use the same one.
 3. **Featured section:** pin the website, the tBTC diary case study, the "Designing for Trust in Web3" talk video, and the 2026 AI-framework Medium article. Talks with video are your unfair advantage; make them the first thing a recruiter sees.
 4. **Recommendations = your missing social proof.** When you collect the testimonials from §4.1, have them posted as LinkedIn recommendations too. Written recommendations from a Thesis founder or Mezo PM are read by every serious recruiter.
-5. **Mirror the resume's metric bullets** into the Experience entries (the indexed snippet suggests the profile is thinner than the resume), make sure Superbet is a proper current position (it seems to exist there — good; it's the resume that's behind), and set Open-to-Work with target titles Senior/Lead UX Researcher.
+5. **Mirror the resume's metric bullets** into the Experience entries (the indexed snippet suggests the profile is thinner than the resume), make sure the profile shows a *current* position (Web3UX and/or contract work) so it doesn't read as ended in mid-2025, and set Open-to-Work with target titles Senior/Lead UX Researcher.
 6. **Cadence:** you have publishable material sitting idle (talks, the AI framework, the diary-study method). One native post every 2–3 weeks re-cutting existing content is enough to look active; active profiles rank materially higher in recruiter search.
 
 ---
@@ -141,7 +141,7 @@ What the strongest published portfolios do, and where you stand:
 
 | Practice | Who does it well | You today | To match them |
 |---|---|---|---|
-| Testimonials & client logos up front | Devin Harold (3 testimonials + Capital One/Verizon logos), Mia Eltiste (4 testimonials) | Nothing | §4.1 — collect 4–6 quotes; logos of ConsenSys/Thesis/Mezo/Threshold/Superbet (with permission) |
+| Testimonials & client logos up front | Devin Harold (3 testimonials + Capital One/Verizon logos), Mia Eltiste (4 testimonials) | Nothing | §4.1 — collect 4–6 quotes; logos of ConsenSys/Thesis/Mezo/Threshold (with permission) |
 | Research philosophy / principles | Mia Eltiste ("Don't blame the user, blame the design") | Implicit only (one good line in resume) | §4.6 — a three-principle "How I work" block |
 | Retrospectives ("what I'd do differently") | Theo Johnson (dedicated section per study) | None | §4.7 — one paragraph per case study |
 | Real participant quotes grounding findings | Benny Sun, Chloe Blanchard | None (component exists, unused) | §4.2 — 1–2 verbatims per study |
@@ -163,7 +163,7 @@ What the strongest published portfolios do, and where you stand:
 | Name | Sasha (Tanase) Luca | Sasha Luca | Sasha Tanase-Luca | Sasha Tanase | Pick **one** public name; put the variant in parentheses only where legally needed |
 | Thesis title | UX Research & Product Design Lead | UX Research Manager / Ops | "Research Lead" (indexed) | — | One title (suggest: UX Research Lead → UX Research Manager, showing progression) |
 | Threshold title | UX Research & Design Lead | UX Research & Product Design Lead | — | — | Align |
-| Current work | ends Jul 2025 (gap) | no mention | Superbet (current) | — | Add Superbet to resume + site |
+| Current work | ends Jul 2025 (gap) | "Available · 2026" only | unverifiable (bot-blocked) | — | Decide the one true story for Jul 2025–present and state it identically on all channels |
 | Years of experience | "9 years" | "Nine years" / "2018 — Present" | — | — | "8+" or list pre-2018 work |
 | LinkedIn URL | `/in/sasha-tanase-luca` | same | indexed as `/in/sasha-tanase-luca-b5190583` | — | Verify/claim vanity URL |
 | Email | **absent** | sasha@web3ux.org | — | absent | Same email everywhere |
@@ -174,7 +174,7 @@ What the strongest published portfolios do, and where you stand:
 
 ### This week (hours of work, immediate risk removal)
 1. Resume header: add email, location/timezone, GitHub link.
-2. Resume: add Superbet entry (closes the gap, adds non-web3 proof).
+2. Resume: account for Jul 2025–present with whatever is true (dated contract entries, a re-framed Web3UX operating role, or an honest sabbatical line).
 3. Resume: fix "9 years" → "8+" (or add pre-2018 line); fix EthCC[7]→[8] and EthCC[4] year; de-dupe the opening; delete "I am very proud of."
 4. LinkedIn: rewrite headline; verify/claim the vanity URL; set up Featured section.
 5. GitHub: professional bio, profile README, pin research repos, make `GitTutorial` + `Information-Unification` private.
@@ -188,7 +188,7 @@ What the strongest published portfolios do, and where you stand:
 11. Hero: single positioning (Senior UX Researcher); add the three-principle "How I work" block.
 
 ### This quarter (the range problem)
-12. Sanitized Superbet case study (or at minimum a named mention in About/Work) — your bridge out of the crypto pigeonhole.
+12. Build non-web3 evidence — a sanitized case study from any non-crypto contract you take, a pro-bono or methods-focused study applied outside crypto, or writing that translates your web3 rigor to mainstream fintech/dev-tools problems — your bridge out of the crypto pigeonhole.
 13. Publish the DX framework + research templates on GitHub; one Medium/native-LinkedIn post every 2–3 weeks re-cutting existing material.
 14. Reframe the specialty everywhere: not "web3 researcher" but "researcher for high-stakes, trust-critical systems" — web3 is the evidence, not the ceiling.
 15. Consider a domain-neutral home (e.g., sashaluca.com) if non-web3 roles are a real target.
@@ -205,4 +205,8 @@ What the strongest published portfolios do, and where you stand:
 - [UX Design Institute — What hiring managers look for in a UX portfolio](https://www.uxdesigninstitute.com/blog/hiring-managers-ux-portfolio/)
 - Benchmark portfolios: [Devin Harold](https://devinharold.com), [Mia Eltiste](https://heymia.co), [Sophie Chen](https://sophiemchen.com), Theo Johnson (uxfol.io/theojohns91), Benny Sun (uxfol.io/bennysun), [Jae Engle](https://jaeengle.com), [Cyd Harrell](https://cydharrell.com)
 - EthCC edition verification: [EthCC[8] Cannes 2025 (Palais des Festivals press release)](https://en.palaisdesfestivals.com/press-area/press-releases/the-ethereum-community-conference-chooses-cannes-for-its-8th-edition-from-30-june-to-3-july-2025/), [EthCC[7] Brussels 2024 wrap-up](https://yapglobal.com/events/ethcc7-wrap-up-bringing-ethereum-to-brussels/)
-- Public LinkedIn data: [indexed profile](https://ro.linkedin.com/in/sasha-tanase-luca-b5190583) (source of the Superbet engagement and current headline)
+- Public LinkedIn data: [indexed profile](https://ro.linkedin.com/in/sasha-tanase-luca-b5190583) (source of the current headline text)
+
+---
+
+**Correction (2026-07-02):** an earlier version of this report stated that Sasha currently works as an independent UX Researcher with Superbet. That claim originated from an erroneous search-engine summary of indexed LinkedIn data, was confirmed false by Sasha, and could not be substantiated by follow-up searches. All Superbet references have been removed; the underlying finding (the resume's unexplained Jul 2025–present period) stands and is now framed accordingly.
