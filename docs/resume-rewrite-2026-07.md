@@ -26,13 +26,15 @@ One principle has guided my work for eight years: **explorative research helps t
 ## EXPERIENCE
 
 ### Web3UX - Founder & Independent UX Researcher
+
 **Apr 2022 – Present** · full-time since Jul 2025
 
 - Founded and solely operate Web3UX, a user-testing platform and participant panel connecting web3 product teams with web3-native research participants, built to solve the field's hardest research-ops problem: recruiting the right users.
 - Designed and shipped a public research portfolio: six end-to-end case studies with full downloadable reports (sasha.web3ux.org).
 - Published an AI-assisted UXR framework ("From Fear to Empowerment," 2026) and "The Silent Villain in Your Data" (2026); spoke at EthCC[8], Cannes (2025), and ETHPrague, Prague (2026).
 
-### Thesis* (web3 venture studio) - UX Research Lead → UX Research Manager
+### Thesis\* (web3 venture studio) - UX Research Lead → UX Research Manager
+
 **Apr 2021 – Jul 2025** · Led research and product design continuously across the studio's Bitcoin & Ethereum portfolio, moving with the studio from product to product.
 
 **Mezo - UX Research Manager & Product Strategy** · 2024 – 2025
@@ -56,21 +58,24 @@ One principle has guided my work for eight years: **explorative research helps t
 - Discovery on node-operator behavior surfaced a new high-value B2B segment (Staking Providers); the resulting documentation, setup guides, and client-code communication drove a 15% increase in active node operators and cut setup drop-offs 30%.
 - Led end-to-end research for Coverage Pools, the first feature of its kind in Ethereum DeFi (predating AAVE's equivalent). Interviews revealed demand for a lower-risk, passive-income option; the resulting feature ultimately locked 33% of total token supply. With a completely novel concept, I focused usability testing on learnability and recall: 87% of participants accurately recalled the full 3-step flow by end of testing.
 
-*Also contributed research to **Acre** (Bitcoin liquid staking) and the **BitcoinFi Accelerator**.*
+_Also contributed research to **Acre** (Bitcoin liquid staking) and the **BitcoinFi Accelerator**._
 
 ### SelfKey / KYC-Chain - UX Researcher & Design Lead
+
 **Jul 2020 – Apr 2021**
 
 - Ran explorative and generative research (interviews, discovery workshops) that shaped the product team's feature roadmap across the SelfKey Identity Wallet, Staking, Marketplace, and KeyFi DeFi Aggregator.
 - Redesigned onboarding and wallet recovery, adding Seed Phrase and Private Key login targeting blockchain-specific failure points.
 
 ### ConsenSys / Alethio - Head of Design & User Research
+
 **Jul 2018 – May 2020**
 
 - Led design and user research for the Ethereum data-analytics platform, taking Alethio Block Explorer, API, Monitoring (×2 versions), and the Alethio Design System from concept to launch-ready.
 - Established the research practice: explorative and generative interview programs plus stakeholder workshops that defined the problems worth solving for a large, multi-player ecosystem.
 
 ### Earlier career
+
 **Senior Art Director, UX/UI - GMP+WEBSTYLER** · 2016 – 2018 · digital products and campaigns across health, medical, and consumer sectors; 4× ADSTAR Gold (2017).
 
 ## SELECTED TALKS
@@ -83,7 +88,7 @@ One principle has guided my work for eight years: **explorative research helps t
 - **That Never Even Crossed My Mind! How to Spot & Fix Your Cognitive Biases** - EthCC[3], Paris, 2020
 - **User Research: How to Get Out of Our Bubbles by Talking to Users** - DevCon V, Osaka, 2019 (with Georgia Rakusen)
 
-*Some talks are published under Sasha Tanase, my pre-marriage name, which I continued using on stage.*
+_Some talks are published under Sasha Tanase, my pre-marriage name, which I continued using on stage._
 
 ## EDUCATION
 

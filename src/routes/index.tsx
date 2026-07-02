@@ -378,9 +378,9 @@ function Index() {
                     reports openly on this site.
                   </p>
                   <p>
-                    I work on products where a confused user doesn't just churn, they lose funds.
-                    My background sits between research and product. I'm fluent in discovery, JTBD,
-                    and usability testing, and equally comfortable shaping roadmaps and aligning the
+                    I work on products where a confused user doesn't just churn, they lose funds. My
+                    background sits between research and product. I'm fluent in discovery, JTBD, and
+                    usability testing, and equally comfortable shaping roadmaps and aligning the
                     people who build from them.
                   </p>
                 </div>

@@ -11,34 +11,37 @@ each item says exactly where to make the change.
 
 ### A1. Name → "Sasha (Tanase) Luca" (transitional name, per playbook)
 
-| Where | File | What to change |
-|---|---|---|
-| Header wordmark | `src/routes/index.tsx` (~line 202) | "Sasha Luca" → "Sasha (Tanase) Luca" |
-| Footer copyright | `src/routes/index.tsx` (~line 489) | "© {year} Sasha Luca" → "© {year} Sasha (Tanase) Luca" |
-| Case-studies header + footer | `src/routes/case-studies.index.tsx` (~lines 157, 270) and `src/routes/case-studies.tsx` | same change |
-| Page titles / OG meta | every `case-studies.0X.tsx` `head()` + `case-studies.index.tsx` | "— Sasha Luca" → "— Sasha (Tanase) Luca" |
-| Portrait alt text | `src/routes/index.tsx` (~line 338) | "Portrait of Sasha Luca" → match chosen name |
+| Where                        | File                                                                                    | What to change                                         |
+| ---------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| Header wordmark              | `src/routes/index.tsx` (~line 202)                                                      | "Sasha Luca" → "Sasha (Tanase) Luca"                   |
+| Footer copyright             | `src/routes/index.tsx` (~line 489)                                                      | "© {year} Sasha Luca" → "© {year} Sasha (Tanase) Luca" |
+| Case-studies header + footer | `src/routes/case-studies.index.tsx` (~lines 157, 270) and `src/routes/case-studies.tsx` | same change                                            |
+| Page titles / OG meta        | every `case-studies.0X.tsx` `head()` + `case-studies.index.tsx`                         | "— Sasha Luca" → "— Sasha (Tanase) Luca"               |
+| Portrait alt text            | `src/routes/index.tsx` (~line 338)                                                      | "Portrait of Sasha Luca" → match chosen name           |
 
 ### A2. Hero — single positioning (drop the PM hedge)
 
 `src/routes/index.tsx` (~lines 244–247):
-- Now: *"I help teams figure out who they're building for and why. Currently open to UXR and PM roles, full-time or contract."*
-- Change to: *"I help teams figure out who they're building for and why. Currently open to Senior UX Researcher roles, full-time or contract."*
+
+- Now: _"I help teams figure out who they're building for and why. Currently open to UXR and PM roles, full-time or contract."_
+- Change to: _"I help teams figure out who they're building for and why. Currently open to Senior UX Researcher roles, full-time or contract."_
 - (Resume headline is "Senior UX Researcher" — the site must make the same single claim.)
 
 ### A3. About section — years + framing
 
 `src/routes/index.tsx`:
+
 - ~line 320: "**Nine** years making sure teams build the right thing…" → "**Eight** years…" (resume says "eight years").
 - ~lines 323–332 (two paragraphs): update to cover the present. Suggested first paragraph:
-  *"I've worked across fast-moving web3 startups and decentralized protocols, most recently leading research at Mezo, where I built the insight repository that became the single source of truth for 15+ stakeholders. Since mid-2025 I run my research practice independently through Web3UX, and publish my full research reports openly on this site."*
-  Add one high-stakes framing sentence (mirrors the resume summary): *"I work on products where a confused user doesn't just churn, they lose funds."*
+  _"I've worked across fast-moving web3 startups and decentralized protocols, most recently leading research at Mezo, where I built the insight repository that became the single source of truth for 15+ stakeholders. Since mid-2025 I run my research practice independently through Web3UX, and publish my full research reports openly on this site."_
+  Add one high-stakes framing sentence (mirrors the resume summary): _"I work on products where a confused user doesn't just churn, they lose funds."_
   (All suggested copy is em-dash-free by request; keep it that way when adapting.)
 - ~line 354, the `dl` facts list: "Roles — UX Researcher · Product Manager" → "Roles — Senior UX Researcher". Keep "Years — 2018 — Present" (consistent with "eight years"; the 2016–2018 design years live on the resume as Earlier Career).
 
 ### A4. Selected Work section — titles and entries to match resume
 
 `src/routes/index.tsx`, the `WORK` array (~lines 60–117):
+
 - Web3UX `role` (~line 65): "Co-Founder · Sole Owner" → "Founder & Independent UX Researcher".
 - Web3UX `bullets`: replace with the final resume's merged bullets (platform line; public portfolio line; publications + EthCC[8]/EthPrague talks line).
 - Thesis `role` (~line 76): "UX Research Manager / Ops" → "UX Research Lead → UX Research Manager".
@@ -50,11 +53,12 @@ each item says exactly where to make the change.
 ### A5. Writing & talks section
 
 `src/routes/index.tsx`, the `WRITING` array (~lines 119–141):
+
 - Add "The Silent Villain in Your Data: Why Researcher Bias Beats AI Bias" (2026) with its URL.
 - Add the EthPrague 2026 talk once a video/slides link exists.
 - Add the name-change footnote under the section (small muted text), dateless — Sasha kept
   speaking as "Sasha Tanase" after her 2022 marriage, so a date-based cutoff would mislead:
-  *"Some talks are published under Sasha Tanase, my pre-marriage name, which I continued using on stage."*
+  _"Some talks are published under Sasha Tanase, my pre-marriage name, which I continued using on stage."_
   Use the same wording on the resume (replacing "Talks before 2022…").
 
 ### A6. Replace the hosted resume PDF — critical
