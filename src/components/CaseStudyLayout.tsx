@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CursorDots } from "@/components/CursorDots";
+import { trackNav } from "@/lib/analytics";
 import type { ReactNode } from "react";
 
 export type CaseStudyMeta = { label: string; value: string };
@@ -102,6 +103,7 @@ export function CaseStudyLayout({
         <section className="mx-auto max-w-[760px] border-t border-border py-16">
           <Link
             to="/case-studies"
+            onClick={() => trackNav("case-studies", `case-study-${no}-footer`)}
             className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm tracking-tight transition-colors hover:text-accent hover:border-accent"
           >
             ← Back to all case studies

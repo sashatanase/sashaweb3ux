@@ -1,0 +1,166 @@
+name: Analytics Agent
+
+# Reads Google Analytics (GA4) for sasha.web3ux.org and turns it into action:
+#   - DAILY  : fetch a KPI snapshot and append it to the history log.
+#   - WEEKLY : pull the full report, write a weekly review, and open ONE PR
+#              with concrete, data-driven site improvements.
+#
+# Requires repo secrets:
+#   - GA4_SERVICE_ACCOUNT_JSON  service-account key JSON (Viewer on the property)
+#   - GA4_PROPERTY_ID           numeric GA4 property id (NOT the G-XXXX id)
+#   - CLAUDE_CODE_OAUTH_TOKEN   (already used by claude.yml / recruiter.yml)
+
+on:
+  schedule:
+    - cron: "0 13 * * *" # daily snapshot, 13:00 UTC
+    - cron: "0 14 * * 1" # weekly review, Mondays 14:00 UTC
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        type: choice
+        default: weekly
+        options: [daily, weekly]
+
+concurrency:
+  group: analytics-agent
+  cancel-in-progress: false
+
+env:
+  GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+  GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+
+jobs:
+  # ---------------------------------------------------------------- DAILY -----
+  snapshot:
+    if: github.event.schedule == '0 13 * * *' || (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'daily')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GA Data API client (transient)
+        run: |
+          mkdir -p "$RUNNER_TEMP/ga"
+          cd "$RUNNER_TEMP/ga"
+          npm init -y >/dev/null 2>&1
+          npm install @google-analytics/data@latest
+
+      - name: Fetch daily snapshot
+        env:
+          GA_REQUIRE_BASE: ${{ runner.temp }}/ga/package.json
+          ANALYTICS_DAYS: "1"
+          ANALYTICS_CAPTURE_DIR: ${{ github.workspace }}/analytics-capture
+        run: node .github/analytics-agent/fetch.mjs
+
+      - name: Append to history log
+        run: |
+          set -e
+          month="$(date -u +%Y-%m)"
+          mkdir -p docs/analytics-log/data
+          line="$(node -e "process.stdout.write(JSON.stringify(require('./analytics-capture/summary.json')))")"
+          echo "$line" >> "docs/analytics-log/data/${month}.jsonl"
+          git config user.name "analytics-agent[bot]"
+          git config user.email "analytics-agent@users.noreply.github.com"
+          git add "docs/analytics-log/data/${month}.jsonl"
+          if git diff --staged --quiet; then
+            echo "No snapshot changes to commit."
+          else
+            git commit -m "chore(analytics): daily snapshot $(date -u +%Y-%m-%d)"
+            for i in 1 2 3 4; do git push && break || sleep $((2**i)); done
+          fi
+
+  # --------------------------------------------------------------- WEEKLY -----
+  report:
+    if: github.event.schedule == '0 14 * * 1' || (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'weekly')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install GA Data API client (transient)
+        run: |
+          mkdir -p "$RUNNER_TEMP/ga"
+          cd "$RUNNER_TEMP/ga"
+          npm init -y >/dev/null 2>&1
+          npm install @google-analytics/data@latest
+
+      - name: Fetch weekly report
+        env:
+          GA_REQUIRE_BASE: ${{ runner.temp }}/ga/package.json
+          ANALYTICS_DAYS: "7"
+          ANALYTICS_CAPTURE_DIR: ${{ github.workspace }}/analytics-capture
+        run: node .github/analytics-agent/fetch.mjs
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install project dependencies
+        run: bun install
+
+      - name: Run the analyst
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: "--allowedTools Bash,Edit,Write,Read,Glob,Grep"
+          prompt: |
+            You are running unattended in CI as a weekly analytics agent for
+            Sasha Luca's portfolio site (sasha.web3ux.org). See AGENTS.md for the
+            stack. A fresh GA4 pull is waiting in `analytics-capture/`
+            (`report.md` is the readable summary; `report.json` has the raw
+            numbers). Today is the date of this workflow run.
+
+            STEP 1 — Adopt the analyst brief.
+            Read `.github/analytics-agent/persona.md` and review the data
+            through that lens (the site exists to drive career contact).
+
+            STEP 2 — Write the weekly report.
+            Create `docs/analytics-log/reports/<ISO-year>-W<ISO-week>.md` (e.g.
+            2026-W26.md). Include: headline KPIs with the week-over-week change;
+            top pages & case studies; where traffic and NEW users came from;
+            the on-page section funnel and where people drop off; conversion
+            actions (CTA/outbound/résumé clicks); and a short "What this means"
+            with 3–6 specific, prioritized recommendations. If custom-dimension
+            reports failed (sections/links/CTAs not yet registered in GA4
+            Admin), note it instead of inventing numbers. Commit this report
+            directly to the default branch — it is a record, not a site change.
+            Do NOT commit the `analytics-capture/` directory (it is gitignored).
+
+            STEP 3 — Open ONE improvement PR (idempotent).
+            Use the `gh` CLI (GITHUB_TOKEN is set). If an OPEN PR labeled
+            `analytics-improvement` already exists, push refinements to that
+            branch instead of opening a competing one; otherwise:
+              - Pick the highest-leverage, data-justified changes to the site
+                source under `src/` (e.g. surface an ignored case study, fix a
+                drop-off point, strengthen a weak CTA, adjust for the dominant
+                device). Match existing code style (Tailwind tokens, shadcn
+                patterns).
+              - Branch: analytics/improvements-<run date YYYY-MM-DD>.
+              - Run `bun run lint` and `bun run build` (both must pass) and
+                `bun run format`.
+              - Commit, push, and open the PR:
+                  gh label create analytics-improvement --color 5319E7 \
+                    --description "Data-driven site improvements" 2>/dev/null || true
+                  gh pr create --label analytics-improvement \
+                    --title "..." --body-file <a file you write>
+              - In the PR body, lead with the data that motivated each change and
+                the expected effect, then a checklist of the edits. Link the
+                weekly report.
+            If the data does not justify any change this week, skip the PR and
+            say so in the report.
+
+      - name: Save the report capture (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: analytics-capture
+          path: analytics-capture/
+          retention-days: 14

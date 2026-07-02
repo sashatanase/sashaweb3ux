@@ -4,10 +4,23 @@ import portraitAsset from "@/assets/sasha-luca-portrait.png.asset.json";
 const portrait = portraitAsset.url;
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { CursorDots } from "@/components/CursorDots";
+import { track, trackCta, trackNav, trackOutbound } from "@/lib/analytics";
+import { useSectionTracking, type TrackedSection } from "@/hooks/use-section-tracking";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
+
+// Sections tracked for reach (drop-off) and dwell time. Module-level so the
+// tracking effect has a stable reference.
+const SECTIONS: TrackedSection[] = [
+  { id: "intro", name: "Hero" },
+  { id: "work", name: "Selected work" },
+  { id: "about", name: "About" },
+  { id: "case-studies", name: "Case studies" },
+  { id: "writing", name: "Articles & talks" },
+  { id: "contact", name: "Contact" },
+];
 
 const NAV = [
   { label: "Work", href: "#work" },
@@ -189,6 +202,8 @@ function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean })
 function Index() {
   const year = new Date().getFullYear();
 
+  useSectionTracking(SECTIONS);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <CursorDots />
@@ -197,24 +212,45 @@ function Index() {
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 items-center gap-6 px-6 py-5 md:px-10">
           <a
             href="#top"
+            onClick={() => trackNav("top", "header")}
             className="col-span-6 font-mono text-xs uppercase tracking-[0.18em] md:col-span-3"
           >
             Sasha Luca
           </a>
           <nav className="col-span-6 hidden justify-start gap-8 font-mono text-xs uppercase tracking-[0.18em] md:col-span-6 md:flex">
-            <a href="#work" className="hover:text-accent transition-colors">
+            <a
+              href="#work"
+              onClick={() => trackNav("work", "header")}
+              className="hover:text-accent transition-colors"
+            >
               Work
             </a>
-            <a href="#about" className="hover:text-accent transition-colors">
+            <a
+              href="#about"
+              onClick={() => trackNav("about", "header")}
+              className="hover:text-accent transition-colors"
+            >
               About
             </a>
-            <Link to="/case-studies" className="hover:text-accent transition-colors">
+            <Link
+              to="/case-studies"
+              onClick={() => trackNav("case-studies", "header")}
+              className="hover:text-accent transition-colors"
+            >
               Case Studies
             </Link>
-            <a href="#writing" className="hover:text-accent transition-colors">
+            <a
+              href="#writing"
+              onClick={() => trackNav("writing", "header")}
+              className="hover:text-accent transition-colors"
+            >
               Articles & Talks
             </a>
-            <a href="#contact" className="hover:text-accent transition-colors">
+            <a
+              href="#contact"
+              onClick={() => trackNav("contact", "header")}
+              className="hover:text-accent transition-colors"
+            >
               Contact
             </a>
           </nav>
@@ -226,7 +262,7 @@ function Index() {
 
       <main id="top" className="mx-auto max-w-[1400px] px-6 md:px-10">
         {/* Hero */}
-        <section className="grid grid-cols-12 gap-6 py-20 md:py-32">
+        <section id="intro" className="grid grid-cols-12 gap-6 py-20 md:py-32">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               §01 / Index
@@ -248,12 +284,14 @@ function Index() {
               <div className="col-span-12 flex flex-col items-start gap-3 md:col-span-4 md:items-end">
                 <a
                   href="mailto:sasha@web3ux.org"
+                  onClick={() => trackCta("get_in_touch", "Get in touch", "hero")}
                   className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground"
                 >
                   Get in touch ↗
                 </a>
                 <Link
                   to="/case-studies"
+                  onClick={() => trackCta("case_studies", "Case Studies", "hero")}
                   className="inline-flex items-center gap-2 border border-foreground bg-transparent px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground hover:text-background"
                 >
                   Case Studies →
@@ -380,6 +418,13 @@ function Index() {
                 <li key={cs.no} className="border-b border-border py-6">
                   <a
                     href={cs.href}
+                    onClick={() =>
+                      track("case_study_click", {
+                        case_study: cs.no,
+                        case_study_title: cs.title,
+                        location: "home_list",
+                      })
+                    }
                     className="grid grid-cols-12 items-baseline gap-6 transition-colors hover:text-accent"
                   >
                     <div className="col-span-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
@@ -413,6 +458,7 @@ function Index() {
                     href={w.url}
                     target={w.url.startsWith("http") ? "_blank" : undefined}
                     rel={w.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                    onClick={() => trackOutbound(w.url, w.title)}
                     className="grid grid-cols-12 items-baseline gap-6 border-b border-border py-6 transition-colors hover:text-accent"
                   >
                     <div className="col-span-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-2">
@@ -441,6 +487,7 @@ function Index() {
               Let's talk —{" "}
               <a
                 href="mailto:sasha@web3ux.org"
+                onClick={() => trackCta("email", "sasha@web3ux.org", "contact")}
                 className="text-accent underline decoration-1 underline-offset-[10px] hover:no-underline"
               >
                 sasha@web3ux.org
@@ -451,6 +498,9 @@ function Index() {
                 href="https://www.linkedin.com/in/sasha-tanase-luca/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackOutbound("https://www.linkedin.com/in/sasha-tanase-luca/", "LinkedIn")
+                }
                 className="col-span-6 hover:text-accent md:col-span-3"
               >
                 LinkedIn ↗
@@ -459,6 +509,7 @@ function Index() {
                 href="https://github.com/sashatanase"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackOutbound("https://github.com/sashatanase", "GitHub")}
                 className="col-span-6 hover:text-accent md:col-span-3"
               >
                 GitHub ↗
@@ -467,6 +518,7 @@ function Index() {
                 href="https://x.com/sasha_tanase"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackOutbound("https://x.com/sasha_tanase", "Twitter")}
                 className="col-span-6 hover:text-accent md:col-span-3"
               >
                 Twitter ↗
@@ -475,6 +527,7 @@ function Index() {
                 href={resumeAsset.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track("resume_download", { location: "contact" })}
                 className="col-span-6 hover:text-accent md:col-span-3"
               >
                 Résumé (PDF) ↗
