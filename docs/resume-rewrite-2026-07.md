@@ -25,11 +25,13 @@ One principle has guided my work for eight years: **explorative research helps t
 
 ## EXPERIENCE
 
-### Web3UX — Founder & Independent UX Researcher
-**Apr 2022 – Present** `[if Web3UX/independent work has been your main focus since Jul 2025, say so: "full-time since Aug 2025"]`
+### Independent UX Researcher · Founder, Web3UX
+**Jul 2025 – Present** *(Web3UX founded 2022)*
 
-- Founded (and now solely own) Web3UX, a user-testing platform connecting web3 product teams with web3-native research participants — built to solve the field's hardest research-ops problem: recruiting the right users. `[Add scale if you have it: "panel of N vetted participants; M studies run for K client teams." If you don't have numbers, keep the line as is.]`
-- `[REQUIRED — this entry must carry Jul 2025 → present. Add 1–2 truthful bullets: client/contract research engagements, studies run through Web3UX, or independent work. If the year was mostly writing/speaking, say that: "Published 'From Fear to Empowerment: How to Supercharge UX Research with AI — a framework' (2026); spoke at EthCC[8], Cannes (2025)." An honest sabbatical line also beats silence.]`
+- Run Web3UX, a user-testing platform and participant panel connecting web3 product teams with web3-native research participants — built to solve the field's hardest research-ops problem: recruiting the right users. `[Add scale/status if you have it: "panel of N vetted participants; M studies run for K client teams."]`
+- Designed and shipped a fully public research portfolio — six end-to-end case studies with complete, downloadable research reports (sasha.web3ux.org).
+- Published two practice frameworks — "From Fear to Empowerment: How to Supercharge UX Research with AI" (2026) and "The Silent Villain in Your Data: Why Researcher Bias Beats AI Bias" (2026) — and spoke at EthCC[8], Cannes (2025).
+- `[Add any client, freelance, pro-bono, or self-initiated research from this period — even one small study materially strengthens this entry. If none yet, consider running a short self-initiated study through your own panel and publishing it; see the note in the changelog.]`
 
 ### Thesis (web3 venture studio) — UX Research Lead → UX Research Manager
 **Apr 2021 – Jul 2025** · Led research and product design continuously across the studio's Bitcoin & Ethereum portfolio, moving with the studio from product to product.
@@ -99,7 +101,7 @@ One principle has guided my work for eight years: **explorative research helps t
 | 2 | **Headline says "Senior UX Researcher"** as the first words after your name — the exact search string. | §5.2 |
 | 3 | **Summary rewritten**: the principle now leads (it's your best line), "9 years… 9 years" duplication removed, and the domain is reframed as *high-stakes products where users can lose funds* — the bridge out of the web3 pigeonhole. Added "reports are public" — your rarest differentiator, now stated up front. Years phrasing set to "eight years" (2018 start); if you prefer "10 years in design, 8 in research," use it **identically everywhere**. | §3.3, §3.5, §4.8 |
 | 4 | **Core skills grouped into Research / Ops & leadership / Domains** — same keywords, but a recruiter can now see the *shape* of your seniority (methods + ops + domain) in three lines. | §3 |
-| 5 | **Web3UX promoted to the top as the current entry** and tasked with covering Jul 2025 → present. This kills the 12-month gap — but only you can fill in what's true. | §3.2 |
+| 5 | **Jul 2025 → present reframed as "Independent UX Researcher · Founder, Web3UX."** The layoff never appears on the resume — dates speak for themselves (a 4-year tenure ending in a sector-wide contraction is self-explanatory) — and the entry lists only verifiable activity from the period: EthCC[8] talk, two published pieces, the public portfolio build, Web3UX ownership. Explaining the layoff is interview material (one rehearsed sentence), not resume material. Strongest possible upgrade: one self-initiated study run through your own panel, published under the Luca name. | §3.2 |
 | 6 | **Thesis title shown as a progression** ("UX Research Lead → UX Research Manager") matching LinkedIn, instead of a third title variant. | §8 |
 | 7 | **Mezo/Threshold/Keep bullets tightened ~30%**: every bullet keeps its metric but leads with the decision the research changed; "I am very proud of" removed; the two overlapping Coverage Pools bullets merged into one; "(before AAVE)" rewritten as an explicit, checkable claim. | §3.6–3.8 |
 | 8 | **SelfKey and ConsenSys compressed** from task lists to two outcome-shaped bullets each; ConsenSys now asks for team scope — your only "Head of" title should carry a headcount. | §3.7 |
