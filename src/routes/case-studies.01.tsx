@@ -42,6 +42,7 @@ function CaseStudy01() {
         { label: "Method", value: "Diary Study, Interview, SUS" },
         { label: "Sample", value: "5 participants" },
         { label: "Role", value: "Sole Researcher" },
+        { label: "Team", value: "Tech writer + 3 protocol engineers" },
       ]}
     >
       <CaseStudySection
@@ -76,7 +77,10 @@ function CaseStudy01() {
           I launched a 6-day longitudinal diary study. Using GitHub Gists, participants logged their
           real-time progress, commands, and frustrations using "Write-Along" and "Snippet" tracking
           techniques. When this part was finished, I followed up with 60-minute deep-dive interviews
-          to unpack their diary entries.
+          to unpack their diary entries. I designed and ran the study solo, but embedded with the
+          client-code team: Victor, the technical writer, observed sessions and logged documentation
+          gaps, while three protocol engineers, Kuba Nowakowski, Michalina Cienciala, and Piotr
+          Dyraga, were on standby as dev support throughout the participants' setup week.
         </p>
         <CaseStudySubhead>The Participants</CaseStudySubhead>
         <p>

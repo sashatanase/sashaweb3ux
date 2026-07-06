@@ -38,6 +38,7 @@ function CaseStudy05() {
         { label: "Method", value: "Exploratory Interviews & Persona Mapping" },
         { label: "Sample", value: "3 participants" },
         { label: "Role", value: "Sole Researcher" },
+        { label: "Team", value: "Core team stakeholders" },
       ]}
     >
       <CaseStudySection label="01" title="The Challenge: Surviving the High-Stakes Staking Puzzle">

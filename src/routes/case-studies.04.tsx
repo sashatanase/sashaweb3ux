@@ -38,6 +38,7 @@ function CaseStudy04() {
         { label: "Method", value: "Exploratory In-Depth Interviews" },
         { label: "Sample", value: "12 participants" },
         { label: "Role", value: "Sole Researcher" },
+        { label: "Team", value: "Core team assumption workshop" },
       ]}
     >
       <CaseStudySection

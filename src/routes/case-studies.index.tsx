@@ -53,6 +53,7 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Method", value: "Diary Study" },
       { label: "Sample", value: "5 participants" },
       { label: "Role", value: "Sole Researcher" },
+      { label: "Team", value: "Tech writer + 3 protocol engineers" },
     ],
   },
   {
@@ -69,7 +70,8 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Year", value: "2025" },
       { label: "Method", value: "Interviews & Usability Testing" },
       { label: "Sample", value: "8 participants" },
-      { label: "Role", value: "Researcher Lead" },
+      { label: "Role", value: "Lead Researcher" },
+      { label: "Team", value: "With Borrow & Onboarding PMs" },
     ],
   },
   {
@@ -87,6 +89,7 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Method", value: "Qualitative Usability Testing & Deep-Dive Interviews" },
       { label: "Sample", value: "6 participants" },
       { label: "Role", value: "Sole Researcher" },
+      { label: "Team", value: "Findings to core dApp team" },
     ],
   },
   {
@@ -104,6 +107,7 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Method", value: "Exploratory In-Depth Interviews" },
       { label: "Sample", value: "12 participants" },
       { label: "Role", value: "Sole Researcher" },
+      { label: "Team", value: "Core team assumption workshop" },
     ],
   },
   {
@@ -121,6 +125,7 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Method", value: "Exploratory Interviews & Persona Mapping" },
       { label: "Sample", value: "3 participants" },
       { label: "Role", value: "Sole Researcher" },
+      { label: "Team", value: "Core team stakeholders" },
     ],
   },
   {
@@ -138,6 +143,7 @@ const CASE_STUDIES: CaseStudy[] = [
       { label: "Method", value: "Qualitative Usability Testing, Learnability Task, SEQ" },
       { label: "Sample", value: "8 participants" },
       { label: "Role", value: "Sole Researcher" },
+      { label: "Team", value: "Observer: Liz Shinn + 3 core team" },
     ],
   },
 ];

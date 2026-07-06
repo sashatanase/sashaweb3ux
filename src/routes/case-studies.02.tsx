@@ -38,6 +38,7 @@ function CaseStudy02() {
         { label: "Method", value: "Interviews & Usability Testing" },
         { label: "Sample", value: "8 participants" },
         { label: "Role", value: "Lead Researcher" },
+        { label: "Team", value: "With Borrow & Onboarding PMs" },
       ]}
     >
       <CaseStudySection number="01" title="The Challenge: Uncovering the Reality of the BTC Stack">
@@ -259,7 +260,9 @@ function CaseStudy02() {
           <strong>Audience Reframing:</strong> The four behavioral personas gave Mezo a shared
           vocabulary for positioning and messaging, replacing one-size-fits-all DeFi messaging with
           flows and copy targeted at the distinct needs of Maxis, Pragmatic Borrowers, Yield
-          Maximizers, and Spenders.
+          Maximizers, and Spenders. I reviewed the findings directly with the Borrow and Onboarding
+          product managers, and together we translated them into roadmap decisions rather than
+          leaving them in a report.
         </p>
         <p>
           <strong>Transparency as a Feature:</strong> The consistency with which participants

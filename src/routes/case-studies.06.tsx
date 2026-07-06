@@ -38,6 +38,7 @@ function CaseStudy06() {
         { label: "Method", value: "Qualitative Usability Testing, Learnability Task, SEQ" },
         { label: "Sample", value: "8 participants" },
         { label: "Role", value: "Sole Researcher" },
+        { label: "Team", value: "Observer: Liz Shinn + 3 core team" },
       ]}
     >
       <CaseStudySection
@@ -74,7 +75,10 @@ function CaseStudy06() {
           Ropsten ETH, with a tutorial for adding the custom token to their wallets, so sessions ran
           on real transactions, not simulations. The protocol covered three tasks: a pool deposit, a
           from-memory recall of the protocol timeline (learnability), and a partial withdrawal, with
-          each flow rated on the Single Ease Question (1–7).
+          each flow rated on the Single Ease Question (1–7). I moderated all sessions, with Liz
+          Shinn from the design team observing throughout and three more core team members, Doug,
+          Rafal, and Michal, sitting in as guest observers, so the people building the product heard
+          users struggle in real time.
         </p>
 
         <CaseStudySubhead>The Participants</CaseStudySubhead>

@@ -33,6 +33,7 @@ function CaseStudy03() {
         { label: "Method", value: "Qualitative Usability Testing & Deep-Dive Interviews" },
         { label: "Sample", value: "6 participants" },
         { label: "Role", value: "Sole Researcher" },
+        { label: "Team", value: "Findings to core dApp team" },
       ]}
     >
       <CaseStudySection
