@@ -254,13 +254,7 @@ function Index() {
             >
               About
             </a>
-            <Link
-              to="/case-studies"
-              onClick={() => trackNav("case-studies", "header")}
-              className="hover:text-accent transition-colors"
-            >
-              Case Studies
-            </Link>
+            <CaseStudiesMenu source="header" />
             <a
               href="#writing"
               onClick={() => trackNav("writing", "header")}
