@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { CursorDots } from "@/components/CursorDots";
-import { CaseStudiesMenu } from "@/components/CaseStudiesMenu";
 import { trackNav } from "@/lib/analytics";
 import type { ReactNode } from "react";
 
@@ -44,7 +43,9 @@ export function CaseStudyLayout({
             <Link to="/" hash="about" className="hover:text-accent transition-colors">
               About
             </Link>
-            <CaseStudiesMenu source="case-study-header" />
+            <Link to="/case-studies" className="hover:text-accent transition-colors">
+              Case Studies
+            </Link>
             <Link to="/" hash="writing" className="hover:text-accent transition-colors">
               Articles & Talks
             </Link>
