@@ -43,7 +43,7 @@ const SECTIONS = [
 function CaseStudiesHub() {
   return (
     <CaseStudiesShell>
-      <section className="grid grid-cols-12 gap-6 border-b border-border py-12 md:py-16">
+      <section className="grid grid-cols-12 gap-6 py-10 md:py-12">
         <div className="col-span-12 md:col-span-2">
           <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
             § / Case Studies
@@ -61,7 +61,7 @@ function CaseStudiesHub() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-6 pb-16 pt-6 md:grid-cols-2 md:pb-24 md:pt-10">
+      <section className="grid grid-cols-1 gap-6 pb-16 md:grid-cols-2 md:pb-24">
         {SECTIONS.map((s) => (
           <Link
             key={s.no}
