@@ -44,9 +44,7 @@ export function CaseStudyLayout({
             <Link to="/" hash="about" className="hover:text-accent transition-colors">
               About
             </Link>
-            <Link to="/case-studies" className="hover:text-accent transition-colors">
-              Case Studies
-            </Link>
+            <CaseStudiesMenu source="case-study-header" />
             <Link to="/" hash="writing" className="hover:text-accent transition-colors">
               Articles & Talks
             </Link>
