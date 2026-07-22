@@ -4,6 +4,7 @@ import portraitAsset from "@/assets/sasha-luca-portrait.png.asset.json";
 const portrait = portraitAsset.url;
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { CursorDots } from "@/components/CursorDots";
+import { CaseStudiesMenu } from "@/components/CaseStudiesMenu";
 import { track, trackCta, trackNav, trackOutbound } from "@/lib/analytics";
 import { useSectionTracking, type TrackedSection } from "@/hooks/use-section-tracking";
 
