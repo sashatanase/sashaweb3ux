@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CursorDots } from "@/components/CursorDots";
+import { CaseStudiesMenu } from "@/components/CaseStudiesMenu";
 import { trackNav } from "@/lib/analytics";
 import type { ReactNode } from "react";
 
