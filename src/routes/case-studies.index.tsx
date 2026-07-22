@@ -68,7 +68,7 @@ function CaseStudiesHub() {
             to={s.href}
             className="group flex min-h-[360px] flex-col border border-border p-8 transition-colors hover:bg-foreground/[0.02] md:min-h-[520px] md:p-12"
           >
-            <div className="flex items-start justify-between font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            <div className="mb-10 flex items-start justify-between font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:mb-16">
               <span className="text-foreground">{s.no}</span>
               <span>{s.count}</span>
             </div>
