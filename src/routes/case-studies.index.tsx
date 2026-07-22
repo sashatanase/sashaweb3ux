@@ -43,7 +43,7 @@ const SECTIONS = [
 function CaseStudiesHub() {
   return (
     <CaseStudiesShell>
-      <section className="grid grid-cols-12 gap-6 border-b border-border py-20 md:py-28">
+      <section className="grid grid-cols-12 gap-6 border-b border-border py-12 md:py-16">
         <div className="col-span-12 md:col-span-2">
           <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
             § / Case Studies
@@ -53,7 +53,7 @@ function CaseStudiesHub() {
           <h1 className="text-4xl font-medium leading-[1.02] tracking-tight sm:text-5xl md:text-7xl">
             Case studies.
           </h1>
-          <p className="mt-8 max-w-2xl text-base font-medium leading-relaxed tracking-tight text-muted-foreground md:text-xl">
+          <p className="mt-6 max-w-2xl text-base font-medium leading-relaxed tracking-tight text-muted-foreground md:text-xl">
             Every product has a story, and every user has a breaking point. Explore the work in two
             collections — the research that uncovered the reality, and the design that shaped the
             response.
@@ -61,7 +61,7 @@ function CaseStudiesHub() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-6 py-16 md:grid-cols-2 md:py-24">
+      <section className="grid grid-cols-1 gap-6 pb-16 pt-6 md:grid-cols-2 md:pb-24 md:pt-10">
         {SECTIONS.map((s) => (
           <Link
             key={s.no}
