@@ -161,9 +161,9 @@ function ResearchPage() {
             Research.
           </h1>
           <p className="mt-8 max-w-2xl text-base font-medium leading-relaxed tracking-tight text-muted-foreground md:text-xl">
-            Every product has a story, and every user has a breaking point. Here is a closer look
-            at selected projects: the messy realities I uncovered, the critical pivots I made, and
-            the impact of those decisions.
+            Every product has a story, and every user has a breaking point. Here is a closer look at
+            selected projects: the messy realities I uncovered, the critical pivots I made, and the
+            impact of those decisions.
           </p>
         </div>
       </section>

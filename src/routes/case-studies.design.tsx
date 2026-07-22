@@ -7,14 +7,12 @@ export const Route = createFileRoute("/case-studies/design")({
       { title: "Design Case Studies · Sasha (Tanase) Luca" },
       {
         name: "description",
-        content:
-          "Selected product and interaction design case studies by Sasha (Tanase) Luca.",
+        content: "Selected product and interaction design case studies by Sasha (Tanase) Luca.",
       },
       { property: "og:title", content: "Design Case Studies · Sasha (Tanase) Luca" },
       {
         property: "og:description",
-        content:
-          "Selected product and interaction design case studies by Sasha (Tanase) Luca.",
+        content: "Selected product and interaction design case studies by Sasha (Tanase) Luca.",
       },
     ],
   }),
