@@ -61,23 +61,19 @@ function CaseStudiesHub() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-0 py-16 md:grid-cols-2 md:py-24">
-        {SECTIONS.map((s, i) => (
+      <section className="grid grid-cols-1 divide-y divide-border border border-border py-16 md:grid-cols-2 md:divide-x md:divide-y-0 md:py-24">
+        {SECTIONS.map((s) => (
           <Link
             key={s.no}
             to={s.href}
-            className={`group relative flex min-h-[360px] flex-col justify-between border-border p-8 transition-colors hover:bg-foreground/[0.02] md:min-h-[520px] md:p-12 ${
-              i === 0
-                ? "border-b md:border-b-0 md:border-r"
-                : ""
-            } border`}
+            className="group relative flex min-h-[360px] flex-col p-8 transition-colors hover:bg-foreground/[0.02] md:min-h-[520px] md:p-12"
           >
             <div className="flex items-start justify-between font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               <span className="text-foreground">{s.no}</span>
               <span>{s.count}</span>
             </div>
 
-            <div>
+            <div className="flex flex-1 flex-col justify-end">
               <h2 className="text-5xl font-medium leading-[1] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
                 {s.title}.
               </h2>
