@@ -73,19 +73,13 @@ function CaseStudiesHub() {
               <span>{s.count}</span>
             </div>
 
-            <div className="flex flex-1 flex-col justify-end">
-              <h2 className="text-5xl font-medium leading-[1] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+            <div className="flex flex-col">
+              <h2 className="text-5xl font-medium leading-[1] tracking-tight transition-colors group-hover:text-red-600 sm:text-6xl md:text-7xl lg:text-8xl">
                 {s.title}.
               </h2>
               <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground md:text-lg">
                 {s.description}
               </p>
-              <div className="mt-10 inline-flex items-center gap-2 border-b border-foreground pb-1 text-sm tracking-tight transition-colors group-hover:text-accent group-hover:border-accent">
-                Explore {s.title.toLowerCase()}
-                <span aria-hidden className="transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </div>
             </div>
           </Link>
         ))}
