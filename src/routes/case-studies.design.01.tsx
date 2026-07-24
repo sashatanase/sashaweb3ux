@@ -150,12 +150,12 @@ function DesignProject01() {
         </div>
       </DesignSection>
 
-      <figure className="py-4">
-        <div className="relative w-full overflow-hidden border border-border">
+      <figure className="relative left-1/2 my-8 w-screen max-w-[1120px] -translate-x-1/2 px-6 md:px-0">
+        <div className="relative w-full border border-border bg-background">
           <img
             src={bridgeComparison.url}
             alt="Comparison diagram showing a typical bridge flow versus the tBTC bridge flow with additional unfamiliar steps"
-            className="h-auto w-full"
+            className="block h-auto w-full object-contain"
           />
         </div>
         <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
