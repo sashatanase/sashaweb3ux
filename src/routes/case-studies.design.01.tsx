@@ -187,39 +187,21 @@ function DesignProject01() {
           Findings, prioritised by how many of six participants raised them:
         </h3>
 
-        <div className="space-y-6 pt-2">
-          <div>
-            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              6/6 could not tell which actions happened on Bitcoin and which on Ethereum
-            </h3>
-          </div>
-
-          <div>
-            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              6/6 found the timeline the most useful thing on the page, and it was a column of plain
-              text
-            </h3>
-          </div>
-
-          <div>
-            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              4+ did not know what &ldquo;sweep&rdquo; meant, and the countdown attached to it
-              created pressure
-            </h3>
-          </div>
-
-          <div>
-            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              4+ wanted a signal that a mint was in progress, and a history
-            </h3>
-          </div>
-
-          <div>
-            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              2/6 read the recovery address field as proof that errors were common here
-            </h3>
-          </div>
-        </div>
+        <ul className="list-disc space-y-3 pl-5 pt-2 text-foreground marker:text-foreground/40">
+          <li>
+            6/6 could not tell which actions happened on Bitcoin and which on Ethereum.
+          </li>
+          <li>
+            6/6 found the timeline the most useful thing on the page, and it was a column of plain
+            text.
+          </li>
+          <li>
+            4+ did not know what &ldquo;sweep&rdquo; meant, and the countdown attached to it
+            created pressure.
+          </li>
+          <li>4+ wanted a signal that a mint was in progress, and a history.</li>
+          <li>2/6 read the recovery address field as proof that errors were common here.</li>
+        </ul>
       </DesignSection>
 
       <DesignSection number="04" title="Iteration 2 · tested May–June 2023, rated 4.75 and 6 / 7">
