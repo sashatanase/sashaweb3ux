@@ -284,6 +284,10 @@ function DesignProject01() {
           explorer, and an elapsed time counter running throughout.
         </p>
 
+        <div className="py-4">
+          <MintingDemo />
+        </div>
+
         <p>
           &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
           size. Every timeline step got a chain label and an illustration. The ETH address
