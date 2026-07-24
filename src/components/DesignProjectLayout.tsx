@@ -215,7 +215,7 @@ export function DesignSection({
 }) {
   const tag = number ?? label ?? "";
   return (
-    <section className="pt-20 first:pt-0">
+    <section className="overflow-x-hidden pt-20 first:pt-0">
       <div className="mx-auto max-w-[760px]">
         <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
           § {tag}
