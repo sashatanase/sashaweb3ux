@@ -76,7 +76,7 @@ function DesignProject01() {
     >
       <DesignSection number="01" title="Where it started">
         <h3 className="text-lg font-medium tracking-tight text-foreground md:text-xl">
-          The Eternal Spinner
+          Tested May 2022
         </h3>
         <p>
           tBTC turns Bitcoin into an ERC-20 token so it can be used on Ethereum. When I picked up
@@ -193,7 +193,7 @@ function DesignProject01() {
 
       <DesignSection number="03" title="Iteration 1 → establishing the baseline">
         <p>
-          Tested May 2022 · 6 participants · think-aloud through minting and unminting
+          Tested May 2022&nbsp;&middot;&nbsp;6 participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting flows
           <br />
           I designed the first prototype, then tested it myself. At the end of each session I asked
           participants to rate the ease of the flow from 1 to 7; the average landed at 5.8, and
@@ -258,24 +258,21 @@ function DesignProject01() {
       </DesignSection>
 
       <DesignSection number="04" title="Iteration 2 · designing the wait">
-        <p>Tested May–June 2023 · 6 participants · minting rated 4.75, unminting&nbsp;</p>
+        <p>Tested May- June 2023&nbsp;&middot;&nbsp;6 participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting flows</p>
         <p>
-          The redesign was organised around one idea: the moment a user initiates minting, their
-          active role ends.
+          At the end of each session I asked participants to rate the ease of the flow from 1 to 7; the average landed at 4.7 for minting and 6 for unminting.
           <br />
           <br />
-          They become a spectator. So the interface should behave like a narrator, mirroring the
-          protocol's actual stages rather than hiding them behind a loader.
+          <strong>The redesign was organised around one idea: the moment a user initiates minting, their active role ends.</strong>
           <br />
           <br />
-          Minting became four visible states: Bitcoin Confirmations, Minter Check, Guardian Check,
-          Minting Complete. Each with a plain-language explanation, its transaction linked on the
-          native explorer, and an elapsed-time counter running throughout.
+          They become a spectator. So the interface should behave like a narrator, mirroring the protocol's actual stages rather than hiding them behind a loader.
           <br />
           <br />
-          Visibility of system status, applied literally: don't summarise the machine, show it. The
-          explorer links mattered as much as the states. In crypto, users don't want your
-          reassurance; they want the receipts.
+          Minting became four visible states: Bitcoin Confirmations, Minter Check, Guardian Check, Minting Complete. Each with a plain-language explanation, its transaction linked on the native explorer, and an elapsed-time counter running throughout.
+          <br />
+          <br />
+          Visibility of system status, applied literally: don't summarise the machine, show it. The explorer links mattered as much as the states. In crypto, users don't want your reassurance; they want the receipts.
         </p>
 
         <figure className="py-4">
