@@ -13,6 +13,7 @@ import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CaseStudiesIndexRouteImport } from './routes/case-studies.index'
 import { Route as CaseStudiesResearchRouteImport } from './routes/case-studies.research'
+import { Route as CaseStudiesDesignRouteImport } from './routes/case-studies.design'
 import { Route as CaseStudies06RouteImport } from './routes/case-studies.06'
 import { Route as CaseStudies05RouteImport } from './routes/case-studies.05'
 import { Route as CaseStudies04RouteImport } from './routes/case-studies.04'
@@ -40,6 +41,11 @@ const CaseStudiesIndexRoute = CaseStudiesIndexRouteImport.update({
 const CaseStudiesResearchRoute = CaseStudiesResearchRouteImport.update({
   id: '/research',
   path: '/research',
+  getParentRoute: () => CaseStudiesRoute,
+} as any)
+const CaseStudiesDesignRoute = CaseStudiesDesignRouteImport.update({
+  id: '/design',
+  path: '/design',
   getParentRoute: () => CaseStudiesRoute,
 } as any)
 const CaseStudies06Route = CaseStudies06RouteImport.update({
@@ -73,14 +79,14 @@ const CaseStudies01Route = CaseStudies01RouteImport.update({
   getParentRoute: () => CaseStudiesRoute,
 } as any)
 const CaseStudiesDesignIndexRoute = CaseStudiesDesignIndexRouteImport.update({
-  id: '/design/',
-  path: '/design/',
-  getParentRoute: () => CaseStudiesRoute,
+  id: '/',
+  path: '/',
+  getParentRoute: () => CaseStudiesDesignRoute,
 } as any)
 const CaseStudiesDesign01Route = CaseStudiesDesign01RouteImport.update({
-  id: '/design/01',
-  path: '/design/01',
-  getParentRoute: () => CaseStudiesRoute,
+  id: '/01',
+  path: '/01',
+  getParentRoute: () => CaseStudiesDesignRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -92,6 +98,7 @@ export interface FileRoutesByFullPath {
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
   '/case-studies/06': typeof CaseStudies06Route
+  '/case-studies/design': typeof CaseStudiesDesignRouteWithChildren
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/case-studies/design/01': typeof CaseStudiesDesign01Route
@@ -120,6 +127,7 @@ export interface FileRoutesById {
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
   '/case-studies/06': typeof CaseStudies06Route
+  '/case-studies/design': typeof CaseStudiesDesignRouteWithChildren
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/case-studies/design/01': typeof CaseStudiesDesign01Route
@@ -136,6 +144,7 @@ export interface FileRouteTypes {
     | '/case-studies/04'
     | '/case-studies/05'
     | '/case-studies/06'
+    | '/case-studies/design'
     | '/case-studies/research'
     | '/case-studies/'
     | '/case-studies/design/01'
@@ -163,6 +172,7 @@ export interface FileRouteTypes {
     | '/case-studies/04'
     | '/case-studies/05'
     | '/case-studies/06'
+    | '/case-studies/design'
     | '/case-studies/research'
     | '/case-studies/'
     | '/case-studies/design/01'
@@ -202,6 +212,13 @@ declare module '@tanstack/react-router' {
       path: '/research'
       fullPath: '/case-studies/research'
       preLoaderRoute: typeof CaseStudiesResearchRouteImport
+      parentRoute: typeof CaseStudiesRoute
+    }
+    '/case-studies/design': {
+      id: '/case-studies/design'
+      path: '/design'
+      fullPath: '/case-studies/design'
+      preLoaderRoute: typeof CaseStudiesDesignRouteImport
       parentRoute: typeof CaseStudiesRoute
     }
     '/case-studies/06': {
@@ -248,20 +265,33 @@ declare module '@tanstack/react-router' {
     }
     '/case-studies/design/': {
       id: '/case-studies/design/'
-      path: '/design'
+      path: '/'
       fullPath: '/case-studies/design/'
       preLoaderRoute: typeof CaseStudiesDesignIndexRouteImport
-      parentRoute: typeof CaseStudiesRoute
+      parentRoute: typeof CaseStudiesDesignRoute
     }
     '/case-studies/design/01': {
       id: '/case-studies/design/01'
-      path: '/design/01'
+      path: '/01'
       fullPath: '/case-studies/design/01'
       preLoaderRoute: typeof CaseStudiesDesign01RouteImport
-      parentRoute: typeof CaseStudiesRoute
+      parentRoute: typeof CaseStudiesDesignRoute
     }
   }
 }
+
+interface CaseStudiesDesignRouteChildren {
+  CaseStudiesDesign01Route: typeof CaseStudiesDesign01Route
+  CaseStudiesDesignIndexRoute: typeof CaseStudiesDesignIndexRoute
+}
+
+const CaseStudiesDesignRouteChildren: CaseStudiesDesignRouteChildren = {
+  CaseStudiesDesign01Route: CaseStudiesDesign01Route,
+  CaseStudiesDesignIndexRoute: CaseStudiesDesignIndexRoute,
+}
+
+const CaseStudiesDesignRouteWithChildren =
+  CaseStudiesDesignRoute._addFileChildren(CaseStudiesDesignRouteChildren)
 
 interface CaseStudiesRouteChildren {
   CaseStudies01Route: typeof CaseStudies01Route
@@ -270,10 +300,9 @@ interface CaseStudiesRouteChildren {
   CaseStudies04Route: typeof CaseStudies04Route
   CaseStudies05Route: typeof CaseStudies05Route
   CaseStudies06Route: typeof CaseStudies06Route
+  CaseStudiesDesignRoute: typeof CaseStudiesDesignRouteWithChildren
   CaseStudiesResearchRoute: typeof CaseStudiesResearchRoute
   CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
-  CaseStudiesDesign01Route: typeof CaseStudiesDesign01Route
-  CaseStudiesDesignIndexRoute: typeof CaseStudiesDesignIndexRoute
 }
 
 const CaseStudiesRouteChildren: CaseStudiesRouteChildren = {
@@ -283,10 +312,9 @@ const CaseStudiesRouteChildren: CaseStudiesRouteChildren = {
   CaseStudies04Route: CaseStudies04Route,
   CaseStudies05Route: CaseStudies05Route,
   CaseStudies06Route: CaseStudies06Route,
+  CaseStudiesDesignRoute: CaseStudiesDesignRouteWithChildren,
   CaseStudiesResearchRoute: CaseStudiesResearchRoute,
   CaseStudiesIndexRoute: CaseStudiesIndexRoute,
-  CaseStudiesDesign01Route: CaseStudiesDesign01Route,
-  CaseStudiesDesignIndexRoute: CaseStudiesDesignIndexRoute,
 }
 
 const CaseStudiesRouteWithChildren = CaseStudiesRoute._addFileChildren(
