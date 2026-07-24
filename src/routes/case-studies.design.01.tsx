@@ -38,7 +38,8 @@ function DesignProject01() {
       subtitle="tBTC v2 · Threshold Network · 2022–2023"
       synopsis="I ran three studies with 24 participants and designed three iterations of the tBTC bridge, working alongside the smart-contract engineers. Successful bridge completion improved by around 18%."
       tags={["Product Designer", "UX Researcher", "3 studies", "3 iterations"]}
-      cover="radial-gradient(circle at 30% 30%, #f4f4f2 0%, #d9d8d3 55%, #b7b6b0 100%)"
+      coverImage={tBTCCover.url}
+      coverAlt="tBTC Bridge v2 — selected UI screens showing the deposit flow, bridging process, and completion state"
       gallery={[
         {
           media: "linear-gradient(135deg, #ececea 0%, #d9d8d3 100%)",
