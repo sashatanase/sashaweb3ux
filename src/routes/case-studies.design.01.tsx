@@ -7,7 +7,7 @@ import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
 import tBTCBridgeV2Sweep from "@/assets/tBTC-Bridge-v2-sweep-2.png.asset.json";
 import mintingTimelineBeforeAfter from "@/assets/Minting_Timeline_Before_and_After.png.asset.json";
 import resumeDepositScenarios from "@/assets/resume-deposit-scenarios.png.asset.json";
-import mintFailSafe from "@/assets/Mint_4.jpg.asset.json";
+import mintFailSafe from "@/assets/Resume_Minting.png.asset.json";
 import step2Image from "@/assets/Step_2.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
