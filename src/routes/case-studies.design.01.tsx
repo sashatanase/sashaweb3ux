@@ -166,8 +166,13 @@ function DesignProject01() {
 
       <DesignSection number="03" title="Iteration 1 → tested with 6 people">
         <p>
-          Rated 5.8 / 7. I designed the prototype and ran the sessions, so everything below is me
-          testing my own work.
+          Six participants, think aloud through minting and unminting. I designed the prototype and
+          ran the sessions, so everything below is me testing my own work.
+        </p>
+        <p>
+          At the end of each session I asked how easy the flow felt, on a scale of 1 for very
+          difficult to 7 for very easy. The average was 5.8, and I asked everyone who scored below 7
+          what was stopping them.
         </p>
 
         <figure className="py-4 md:-mx-16 lg:-mx-[180px] xl:-mx-[260px]">
