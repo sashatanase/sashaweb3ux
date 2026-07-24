@@ -196,21 +196,34 @@ function DesignProject01() {
         </figure>
 
         <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-          Findings, prioritised by how many of six participants raised them:
+          The findings clustered in a way I found more interesting than the score:
         </h3>
 
         <ul className="list-disc space-y-3 pl-5 pt-2 text-foreground marker:text-foreground/40">
-          <li>6/6 could not tell which actions happened on Bitcoin and which on Ethereum.</li>
           <li>
-            6/6 found the timeline the most useful thing on the page, and it was a column of plain
-            text.
+            6/6&nbsp; lost track of which chain they were acting on. Bitcoin and Ethereum fail
+            differently and cost differently, and the interface never said which one you were
+            touching.
           </li>
           <li>
-            4+ did not know what &ldquo;sweep&rdquo; meant, and the countdown attached to it created
-            pressure.
+            6/6&nbsp;leaned on the step timeline. This was the most-used element on the page, and it
+            was a column of undifferentiated text.
           </li>
-          <li>4+ wanted a signal that a mint was in progress, and a history.</li>
-          <li>2/6 read the recovery address field as proof that errors were common here.</li>
+          <li>
+            4+ &quot;Sweep&quot; meant nothing to anyone. Worse, the countdown attached to it
+            manufactured urgency where none existed. Protocol vocabulary had leaked into the
+            interface and brought protocol anxiety with it.
+          </li>
+          <li>
+            4+ wanted some way of signal that a mint was in progress, and they also requested a
+            transaction history.
+          </li>
+          <li>
+            2/6 read the recovery address field as an admission: if there&apos;s a recovery
+            mechanism, things must go wrong here a lot. Both were v1 users. The ones who&apos;d never
+            touched v1 found the same field reassuring. Same component, opposite meanings, depending
+            on what the user had lived through.
+          </li>
         </ul>
       </DesignSection>
 
