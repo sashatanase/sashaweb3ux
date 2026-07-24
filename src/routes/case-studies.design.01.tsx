@@ -117,53 +117,43 @@ function DesignProject01() {
         </blockquote>
 
         <p>
-          I didn't start with screens. I started with a generative study — 12 participants who held
-          or had bridged wrapped Bitcoin — because I suspected the problem wasn't usability in the
-          narrow sense, and I wanted the team's assumptions on the table before we invested in a
-          direction. We ran an assumption mapping workshop first; the interview guide came out of
-          what we realised we were guessing about.
+          I didn't start with screens. I started with a generative study: 12 participants who held or had bridged wrapped Bitcoin. I did this because I suspected the problem wasn't usability in the narrow sense, and I wanted the team's assumptions on the table before we invested in a direction. We ran an assumption mapping workshop first; the interview guide came out of what we realised we were guessing about.
+          <br /><br />
+          Three things reshaped how I framed the work.
         </p>
 
         <div className="space-y-8 pt-2">
           <div>
             <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              The long wait reads as failure.
+              The wait wasn't the problem. The silence was.
             </h3>
             <p className="mt-2 text-muted-foreground">
-              Participants were not impatient. The longer a bridge took, the more certain they
-              became that something had gone wrong with their funds.
+              Participants didn't experience a long bridge as slow, they experienced it as failing. Duration without feedback reads as breakdown. That distinction matters, because you can't design away a wait that lives at the protocol level, but you can absolutely design away silence.
             </p>
           </div>
 
           <div>
             <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              Decentralisation loses to liquidity.
+              Users' mental model was a swap.
             </h3>
             <p className="mt-2 text-muted-foreground">
-              Almost everyone described WBTC as centralised. Almost everyone used it anyway. Being
-              the most decentralised bridge was a reason to trust us, not a reason to switch.
+              Bridging and swapping had collapsed into one category for most participants. They arrived expecting seconds, met hours, and drew the reasonable conclusion that something was wrong. Some had even built their own workaround: swapping WBTC into tBTC to skip the mint entirely. When users construct a workaround, they're prototyping the product you should have built. I filed that away; it comes back at the end.
             </p>
           </div>
 
           <div>
             <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              Bridging and swapping had collapsed into one idea.
+              Decentralisation persuades nobody on its own.
             </h3>
-            <p className="mt-2 text-muted-foreground">
-              People arrived carrying a swap&rsquo;s expectations, seconds rather than hours. Some
-              were already swapping WBTC into tBTC just to skip the mint.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              The wait could not be removed.
-            </h3>
-            <p className="mt-2 text-muted-foreground">
-              Bitcoin confirmations and the sweep interval are protocol facts. So the design
-              question was never how to make bridging faster. It was what a person should understand
-              while a system they cannot influence does something irreversible with their money.
-            </p>
+            <div className="mt-2 text-muted-foreground">
+              <p>
+                Nearly everyone described WBTC as centralised, and nearly everyone used it anyway, because liquidity and integrations won. Our differentiator was real but it wasn't a motivator. It was a trust signal, not a selling point.
+              </p>
+              <p className="mt-6">
+                <span className="block font-medium text-foreground">The silent constraint</span>
+                And underneath all of it, the constraint: the smart contract dictated the flow. The deposit receipt, the confirmation windows, the order of operations; protocol facts. My job wasn't to shorten the journey. It was to decide what a person should understand at every point of a journey they couldn't control.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -183,15 +173,11 @@ function DesignProject01() {
         </figure>
       </DesignSection>
 
-      <DesignSection number="03" title="Iteration 1 → tested with 6 people">
+      <DesignSection number="03" title="Iteration 1 → establishing the baseline">
         <p>
-          Six participants, think aloud through minting and unminting. I designed the prototype and
-          ran the sessions, so everything below is me testing my own work.
-        </p>
-        <p>
-          At the end of each session I asked how easy the flow felt, on a scale of 1 for very
-          difficult to 7 for very easy. The average was 5.8, and I asked everyone who scored below 7
-          what was stopping them.
+          Tested May 2022 · 6 participants · think-aloud through minting and unminting
+          <br /><br /><br /><br />
+          I designed the first prototype, then tested it myself. At the end of each session I asked participants to rate the ease of the flow from 1 to 7; the average landed at 5.8, and everyone who scored under 7 told me why.
         </p>
 
         <figure className="py-4">
