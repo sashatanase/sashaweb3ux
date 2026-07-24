@@ -4,6 +4,7 @@ import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
 import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
 import tBTCBridgeV2Sweep from "@/assets/tBTC-Bridge-v2-sweep-2.png.asset.json";
+import mintingTimelineBeforeAfter from "@/assets/Minting_Timeline_Before_and_After.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -244,6 +245,21 @@ function DesignProject01() {
           size. Every timeline step got a chain label and an illustration. The ETH address
           autocompleted.
         </p>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={mintingTimelineBeforeAfter.url}
+              alt="Before and after comparison of the tBTC minting timeline redesign"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Before and After — Minting Timeline
+            </figcaption>
+          </div>
+        </figure>
 
         <div className="grid grid-cols-1 gap-6 py-4 md:grid-cols-2">
           {[

@@ -51,11 +51,7 @@ export function PanelGrid({ panels }: { panels: Panel[] }) {
         ))}
       </div>
       {openIndex != null && (
-        <ZoomOverlay
-          src={panels[openIndex].src}
-          alt={panels[openIndex].alt}
-          onClose={close}
-        />
+        <ZoomOverlay src={panels[openIndex].src} alt={panels[openIndex].alt} onClose={close} />
       )}
     </div>
   );
