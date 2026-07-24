@@ -93,9 +93,7 @@ function DesignProject01() {
             tBTC v1 · Post-deposit state
           </figcaption>
         </figure>
-        <p className="text-lg font-medium leading-relaxed text-foreground md:text-xl">
-          Everything below comes back to that spinner.
-        </p>
+        <p>Everything below comes back to that spinner.</p>
       </DesignSection>
 
       <DesignSection number="02" title="Problem.">
