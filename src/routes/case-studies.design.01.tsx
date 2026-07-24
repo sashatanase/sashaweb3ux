@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
+import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -66,15 +67,34 @@ function DesignProject01() {
       ]}
     >
       <DesignSection number="01" title="Context.">
+        <h3 className="text-lg font-medium tracking-tight text-foreground md:text-xl">
+          The Eternal Spinner
+        </h3>
         <p>
-          tBTC is a decentralized way to bring Bitcoin onto Ethereum. The bridge is the moment users
-          hand over real BTC and wait — sometimes hours — for the corresponding tBTC to appear on
-          the other side. That waiting window is where trust is either built or lost.
+          tBTC turns Bitcoin into an ERC-20 token on Ethereum. I inherited the first version, which
+          gave users no feedback at all. The moment someone deposited their funds they landed on a
+          screen with a spinner, and it sat there for hours while they panicked that their money was
+          gone.
         </p>
         <p>
-          Prior research surfaced a consistent pattern we called <em>bridge anxiety</em>: users
-          couldn&rsquo;t tell whether their transaction was progressing, stuck, or lost. The
-          existing UI showed technical state but not human state.
+          This consistent pattern I called <em>bridge anxiety</em>: users couldn&rsquo;t tell whether
+          their transaction was progressing, stuck, or lost. The existing UI showed technical state
+          but not human state.
+        </p>
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={tBTCv1Scary.url}
+              alt="tBTC v1 bridge UI showing a spinner with no progress feedback after a Bitcoin deposit"
+              className="h-auto w-full"
+            />
+          </div>
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            tBTC v1 · Post-deposit state
+          </figcaption>
+        </figure>
+        <p className="text-lg font-medium leading-relaxed text-foreground md:text-xl">
+          Everything below comes back to that spinner.
         </p>
       </DesignSection>
 
