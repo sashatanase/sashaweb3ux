@@ -236,13 +236,18 @@ function DesignProject01() {
         </p>
 
         <figure className="py-4">
-          <div className="relative mx-auto max-w-5xl overflow-hidden border border-border">
-            <img
-              src={visibilityOfSystemStatus.url}
-              alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
-              className="h-auto w-full"
-            />
-          </div>
+          <ImageLightbox
+            src={visibilityOfSystemStatus.url}
+            alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
+          >
+            <div className="relative mx-auto max-w-5xl overflow-hidden border border-border">
+              <img
+                src={visibilityOfSystemStatus.url}
+                alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
+                className="h-auto w-full"
+              />
+            </div>
+          </ImageLightbox>
           <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
             Visibility of System Status: The direct answer to the v1 spinner.
           </figcaption>
