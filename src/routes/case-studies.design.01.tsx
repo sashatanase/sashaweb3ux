@@ -118,8 +118,13 @@ function DesignProject01() {
         </blockquote>
 
         <p>
-          I didn't start with screens. I started with a generative study: 12 participants who held or had bridged wrapped Bitcoin. I did this because I suspected the problem wasn't usability in the narrow sense, and I wanted the team's assumptions on the table before we invested in a direction. We ran an assumption mapping workshop first; the interview guide came out of what we realised we were guessing about.
-          <br /><br />
+          I didn't start with screens. I started with a generative study: 12 participants who held
+          or had bridged wrapped Bitcoin. I did this because I suspected the problem wasn't
+          usability in the narrow sense, and I wanted the team's assumptions on the table before we
+          invested in a direction. We ran an assumption mapping workshop first; the interview guide
+          came out of what we realised we were guessing about.
+          <br />
+          <br />
           Three things reshaped how I framed the work.
         </p>
 
@@ -129,7 +134,10 @@ function DesignProject01() {
               The wait wasn't the problem. The silence was.
             </h3>
             <p className="mt-2 text-muted-foreground">
-              Participants didn't experience a long bridge as slow, they experienced it as failing. Duration without feedback reads as breakdown. That distinction matters, because you can't design away a wait that lives at the protocol level, but you can absolutely design away silence.
+              Participants didn't experience a long bridge as slow, they experienced it as failing.
+              Duration without feedback reads as breakdown. That distinction matters, because you
+              can't design away a wait that lives at the protocol level, but you can absolutely
+              design away silence.
             </p>
           </div>
 
@@ -138,7 +146,11 @@ function DesignProject01() {
               Users' mental model was a swap.
             </h3>
             <p className="mt-2 text-muted-foreground">
-              Bridging and swapping had collapsed into one category for most participants. They arrived expecting seconds, met hours, and drew the reasonable conclusion that something was wrong. Some had even built their own workaround: swapping WBTC into tBTC to skip the mint entirely. When users construct a workaround, they're prototyping the product you should have built. I filed that away; it comes back at the end.
+              Bridging and swapping had collapsed into one category for most participants. They
+              arrived expecting seconds, met hours, and drew the reasonable conclusion that
+              something was wrong. Some had even built their own workaround: swapping WBTC into tBTC
+              to skip the mint entirely. When users construct a workaround, they're prototyping the
+              product you should have built. I filed that away; it comes back at the end.
             </p>
           </div>
 
@@ -148,11 +160,16 @@ function DesignProject01() {
             </h3>
             <div className="mt-2 text-muted-foreground">
               <p>
-                Nearly everyone described WBTC as centralised, and nearly everyone used it anyway, because liquidity and integrations won. Our differentiator was real but it wasn't a motivator. It was a trust signal, not a selling point.
+                Nearly everyone described WBTC as centralised, and nearly everyone used it anyway,
+                because liquidity and integrations won. Our differentiator was real but it wasn't a
+                motivator. It was a trust signal, not a selling point.
               </p>
               <p className="mt-6">
                 <span className="block font-medium text-foreground">The silent constraint</span>
-                And underneath all of it, the constraint: the smart contract dictated the flow. The deposit receipt, the confirmation windows, the order of operations; protocol facts. My job wasn't to shorten the journey. It was to decide what a person should understand at every point of a journey they couldn't control.
+                And underneath all of it, the constraint: the smart contract dictated the flow. The
+                deposit receipt, the confirmation windows, the order of operations; protocol facts.
+                My job wasn't to shorten the journey. It was to decide what a person should
+                understand at every point of a journey they couldn't control.
               </p>
             </div>
           </div>
@@ -177,8 +194,9 @@ function DesignProject01() {
       <DesignSection number="03" title="Iteration 1 → establishing the baseline">
         <p>
           Tested May 2022 · 6 participants · think-aloud through minting and unminting
-          <br />
-          I designed the first prototype, then tested it myself. At the end of each session I asked participants to rate the ease of the flow from 1 to 7; the average landed at 5.8, and everyone was asked to motivate their score.
+          <br />I designed the first prototype, then tested it myself. At the end of each session I
+          asked participants to rate the ease of the flow from 1 to 7; the average landed at 5.8,
+          and everyone was asked to motivate their score.
         </p>
 
         <figure className="py-4">
@@ -221,9 +239,9 @@ function DesignProject01() {
           </li>
           <li>
             2/6 read the recovery address field as an admission: if there&apos;s a recovery
-            mechanism, things must go wrong here a lot. Both were v1 users. The ones who&apos;d never
-            touched v1 found the same field reassuring. Same component, opposite meanings, depending
-            on what the user had lived through.
+            mechanism, things must go wrong here a lot. Both were v1 users. The ones who&apos;d
+            never touched v1 found the same field reassuring. Same component, opposite meanings,
+            depending on what the user had lived through.
           </li>
         </ul>
 
@@ -232,22 +250,31 @@ function DesignProject01() {
         </blockquote>
 
         <p className="pt-6">
-          That last one taught me something I&apos;ve carried since: a safety feature is only reassuring
-          to people who haven&apos;t been burned. For everyone else it&apos;s a trigger, and you have to
-          design its disclosure, not just its existence.
+          That last one taught me something I&apos;ve carried since: a safety feature is only
+          reassuring to people who haven&apos;t been burned. For everyone else it&apos;s a trigger,
+          and you have to design its disclosure, not just its existence.
         </p>
       </DesignSection>
 
       <DesignSection number="04" title="Iteration 2 · designing the wait">
         <p>Tested May–June 2023 · 6 participants · minting rated 4.75, unminting&nbsp;</p>
         <p>
-          The redesign was organised around one idea: the moment a user initiates minting, their active role ends.
-          <br /><br />
-          They become a spectator. So the interface should behave like a narrator, mirroring the protocol's actual stages rather than hiding them behind a loader.
-          <br /><br />
-          Minting became four visible states: Bitcoin Confirmations, Minter Check, Guardian Check, Minting Complete. Each with a plain-language explanation, its transaction linked on the native explorer, and an elapsed-time counter running throughout.
-          <br /><br />
-          Visibility of system status, applied literally: don't summarise the machine, show it. The explorer links mattered as much as the states. In crypto, users don't want your reassurance; they want the receipts.
+          The redesign was organised around one idea: the moment a user initiates minting, their
+          active role ends.
+          <br />
+          <br />
+          They become a spectator. So the interface should behave like a narrator, mirroring the
+          protocol's actual stages rather than hiding them behind a loader.
+          <br />
+          <br />
+          Minting became four visible states: Bitcoin Confirmations, Minter Check, Guardian Check,
+          Minting Complete. Each with a plain-language explanation, its transaction linked on the
+          native explorer, and an elapsed-time counter running throughout.
+          <br />
+          <br />
+          Visibility of system status, applied literally: don't summarise the machine, show it. The
+          explorer links mattered as much as the states. In crypto, users don't want your
+          reassurance; they want the receipts.
         </p>
 
         <figure className="py-4">
@@ -267,9 +294,15 @@ function DesignProject01() {
         </figure>
 
         <p>
-          Around that core: "sweep" and its countdown were cut, replaced with a duration table keyed to deposit size. This was setting the expectation&nbsp;before commitment instead of pressure after it.
-          <br /><br />
-          Each timeline step got a chain label and a small illustration, giving the timeline the visual hierarchy its usage had earned. The ETH address autocompleted from the connected wallet: recognition over recall, no reason to make someone paste a 42-character string we already had.
+          Around that core: "sweep" and its countdown were cut, replaced with a duration table keyed
+          to deposit size. This was setting the expectation&nbsp;before commitment instead of
+          pressure after it.
+          <br />
+          <br />
+          Each timeline step got a chain label and a small illustration, giving the timeline the
+          visual hierarchy its usage had earned. The ETH address autocompleted from the connected
+          wallet: recognition over recall, no reason to make someone paste a 42-character string we
+          already had.
         </p>
 
         <figure className="py-4">
