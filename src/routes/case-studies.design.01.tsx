@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
+import { FigmaEmbed } from "@/components/FigmaEmbed";
 
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
@@ -469,6 +470,14 @@ function DesignProject01() {
           wrong.&nbsp;
         </p>
         <p>{"\n"}</p>
+
+        <FigmaEmbed
+          embedUrl="https://embed.figma.com/proto/X9u1z67oBm7WuoZkHj112Y/tBTC-Final---prototype?node-id=1-8479&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A8479&page-id=0%3A1&embed-host=share"
+          shareUrl="https://www.figma.com/proto/X9u1z67oBm7WuoZkHj112Y/tBTC-Final---prototype?node-id=1-8479&viewport=-72%2C-404%2C0.39&t=QjGVIz5PxITLTSGb-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A8479&page-id=0%3A1"
+          title="tBTC Bridge — final interactive prototype"
+          caption="Final prototype — click through the deposit and minting flow"
+          ratio={16 / 10}
+        />
       </DesignSection>
 
       <DesignSection number="06" title="Outcome.">
