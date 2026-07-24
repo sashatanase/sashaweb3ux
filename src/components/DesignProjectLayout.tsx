@@ -20,7 +20,9 @@ export type DesignProjectLayoutProps = {
   subtitle: ReactNode;
   synopsis: ReactNode;
   tags: string[];
-  cover: string; // CSS background value
+  cover?: string; // CSS background value (legacy/placeholder)
+  coverImage?: string; // Absolute or relative image URL
+  coverAlt?: string;
   children?: ReactNode;
   gallery?: GalleryItem[];
 };
