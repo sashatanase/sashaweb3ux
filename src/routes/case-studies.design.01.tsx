@@ -394,9 +394,9 @@ function DesignProject01() {
         </figure>
 
         <p>
-          Testing it was humbling in the specific way that's useful. The elapsed-time counter was
-          the most appreciated element in the study, the wait, once narrated, stopped reading as
-          failure.
+          <strong>Testing it was humbling in the specific way that&apos;s useful.</strong> The
+          elapsed-time counter was the most appreciated element in the study, the wait, once
+          narrated, stopped reading as failure.
         </p>
         <p>
           But the receipt modal frightened five of six participants. I'd solved a two-person problem
