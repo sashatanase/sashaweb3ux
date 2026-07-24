@@ -89,7 +89,7 @@ export function DesignProjectLayout({
               {title}
             </h1>
 
-            <div className="mt-5 max-w-2xl font-mono text-[12px] uppercase tracking-[0.18em] text-muted-foreground sm:text-[13px] md:mt-7">
+            <div className="mt-5 max-w-2xl text-xl font-light leading-snug text-muted-foreground sm:text-2xl md:mt-7 md:text-3xl">
               {subtitle}
             </div>
 
