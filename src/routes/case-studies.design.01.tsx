@@ -269,7 +269,7 @@ function DesignProject01() {
           </div>
           <div className="mx-auto max-w-[760px]">
             <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            Before and After — Minting Timeline
+              Before and After — Minting Timeline
             </figcaption>
           </div>
         </figure>
