@@ -242,11 +242,6 @@ function DesignProject01() {
           explorer, and an elapsed time counter running throughout.
         </p>
 
-        <div className="py-4">
-          <div className="mint-wrapper">
-            <MintingDemo />
-          </div>
-        </div>
 
 
         <p>
