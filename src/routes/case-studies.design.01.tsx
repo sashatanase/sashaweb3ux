@@ -407,6 +407,16 @@ function DesignProject01() {
             </figcaption>
           </div>
         </figure>
+
+        <p>
+          Testing it was humbling in the specific way that's useful. The elapsed-time counter was
+          the most appreciated element in the study — the wait, once narrated, stopped reading as
+          failure. But the receipt modal frightened five of six participants. I'd solved a
+          two-person problem and manufactured a five-person one. My fix had the same flaw as the
+          field it replaced: it front-loaded worst-case information at the exact moment the product
+          needed to be building calm. The right answer was progressive disclosure — hold the receipt
+          in the dashboard, surface it only when something has actually gone wrong.
+        </p>
       </DesignSection>
 
       <DesignSection number="05" title="Solution.">
