@@ -25,7 +25,7 @@ export function ImageLightbox({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="group/image block w-full text-left"
+        className="group/image block w-full cursor-zoom-in text-left"
         aria-label={`Open full-size view: ${alt}`}
       >
         {children}
