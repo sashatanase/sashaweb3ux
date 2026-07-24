@@ -1,10 +1,54 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
+import { ImageLoop, type ImageLoopItem } from "@/components/ImageLoop";
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
 import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
 import tBTCBridgeV2Sweep from "@/assets/tBTC-Bridge-v2-sweep-2.png.asset.json";
 import mintingTimelineBeforeAfter from "@/assets/Minting_Timeline_Before_and_After.png.asset.json";
+
+const tbtcPanels: ImageLoopItem[] = [
+  {
+    src: "/case-studies/tbtc/panels/01-waiting-for-confirmations.webp",
+    alt: "Step 1 — Waiting for Bitcoin confirmations",
+    caption: "01 · Waiting for confirmations",
+  },
+  {
+    src: "/case-studies/tbtc/panels/02-confirmations-complete.webp",
+    alt: "Step 2 — Confirmations complete",
+    caption: "02 · Confirmations complete",
+  },
+  {
+    src: "/case-studies/tbtc/panels/03-minting-initialized.webp",
+    alt: "Step 3 — Minting initialized",
+    caption: "03 · Minting initialized",
+  },
+  {
+    src: "/case-studies/tbtc/panels/04-minter-review.webp",
+    alt: "Step 4 — Minter review",
+    caption: "04 · Minter review",
+  },
+  {
+    src: "/case-studies/tbtc/panels/05-guardian-check.webp",
+    alt: "Step 5 — Guardian check",
+    caption: "05 · Guardian check",
+  },
+  {
+    src: "/case-studies/tbtc/panels/06-guardian-approved.webp",
+    alt: "Step 6 — Guardian approved",
+    caption: "06 · Guardian approved",
+  },
+  {
+    src: "/case-studies/tbtc/panels/07-minting-in-progress.webp",
+    alt: "Step 7 — Minting in progress",
+    caption: "07 · Minting in progress",
+  },
+  {
+    src: "/case-studies/tbtc/panels/08-minting-complete.webp",
+    alt: "Step 8 — Minting complete",
+    caption: "08 · Minting complete",
+  },
+];
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -261,21 +305,14 @@ function DesignProject01() {
           </div>
         </figure>
 
-        <div className="grid grid-cols-1 gap-6 py-4 md:grid-cols-2">
-          {[
-            "Image 5 — timeline illustrations as a set",
-            "Image 6 — Step 1 redesigned",
-            "Image 7 — Step 2, the step no other bridge has",
-            "Image 8 — the full minting flow end to end",
-          ].map((label) => (
-            <div
-              key={label}
-              className="flex aspect-[4/3] w-full items-center justify-center border border-dashed border-border bg-muted/30 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground"
-            >
-              {label}
-            </div>
-          ))}
-        </div>
+        <figure className="py-4">
+          <ImageLoop images={tbtcPanels} dwell={1.4} transition={0.5} ratio="16/10" />
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              The redesigned minting flow — looped step by step
+            </figcaption>
+          </div>
+        </figure>
 
         <p>
           The recovery address became a deposit receipt, a file the user downloads and keeps until
