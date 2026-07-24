@@ -410,12 +410,14 @@ function DesignProject01() {
 
         <p>
           Testing it was humbling in the specific way that's useful. The elapsed-time counter was
-          the most appreciated element in the study — the wait, once narrated, stopped reading as
-          failure. But the receipt modal frightened five of six participants. I'd solved a
-          two-person problem and manufactured a five-person one. My fix had the same flaw as the
-          field it replaced: it front-loaded worst-case information at the exact moment the product
-          needed to be building calm. The right answer was progressive disclosure — hold the receipt
-          in the dashboard, surface it only when something has actually gone wrong.
+          the most appreciated element in the study, the wait, once narrated, stopped reading as failure.
+          <br />
+          <br />
+          But the receipt modal frightened five of six participants. I'd solved a two-person problem and manufactured a five-person one. My fix had the same flaw as the field it replaced: it front-loaded worst-case information at the exact moment the product needed to be building calm.
+          <br />
+          <br />
+          <br />
+          The right answer was progressive disclosure: so i proposed to save the receipt&nbsp; in the dashboard, surface it only when something has actually gone wrong. This fix was added in the final iteration
         </p>
       </DesignSection>
 
