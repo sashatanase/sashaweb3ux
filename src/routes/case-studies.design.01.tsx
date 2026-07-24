@@ -77,9 +77,9 @@ function DesignProject01() {
           gone.
         </p>
         <p>
-          This consistent pattern I called <em>bridge anxiety</em>: users couldn&rsquo;t tell whether
-          their transaction was progressing, stuck, or lost. The existing UI showed technical state
-          but not human state.
+          This consistent pattern I called <em>bridge anxiety</em>: users couldn&rsquo;t tell
+          whether their transaction was progressing, stuck, or lost. The existing UI showed
+          technical state but not human state.
         </p>
         <figure className="py-4">
           <div className="relative w-full overflow-hidden border border-border">
@@ -96,19 +96,57 @@ function DesignProject01() {
         <p>Everything below comes back to that spinner.</p>
       </DesignSection>
 
-      <DesignSection number="02" title="Problem.">
-        <p>
-          The bridge asked users to reason about deposit addresses, minting phases, confirmations,
-          relayers, and finality windows — all at once. New users bounced at the deposit screen.
-          Returning users refreshed the page compulsively during the wait.
-        </p>
-        <p>
-          The design brief: keep the underlying protocol untouched, but redesign the surface so that
-          at any moment a user could answer three questions in under five seconds —{" "}
-          <em>
-            Where is my BTC? What&rsquo;s happening next? What do I do if something goes wrong?
-          </em>
-        </p>
+      <DesignSection
+        number="02"
+        title="The Problems: What 12 people told me before I designed anything."
+      >
+        <blockquote className="border-l-2 border-foreground/20 pl-5 text-lg font-light italic leading-relaxed text-foreground md:text-xl">
+          &ldquo;Sending your Bitcoin to an unknown address is a really scary thing, it&rsquo;s like
+          a leap of faith.&rdquo;
+        </blockquote>
+
+        <div className="space-y-8 pt-2">
+          <div>
+            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              The long wait reads as failure.
+            </h3>
+            <p className="mt-2 text-muted-foreground">
+              Participants were not impatient. The longer a bridge took, the more certain they
+              became that something had gone wrong with their funds.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              Decentralisation loses to liquidity.
+            </h3>
+            <p className="mt-2 text-muted-foreground">
+              Almost everyone described WBTC as centralised. Almost everyone used it anyway. Being
+              the most decentralised bridge was a reason to trust us, not a reason to switch.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              Bridging and swapping had collapsed into one idea.
+            </h3>
+            <p className="mt-2 text-muted-foreground">
+              People arrived carrying a swap&rsquo;s expectations, seconds rather than hours. Some
+              were already swapping WBTC into tBTC just to skip the mint.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              The wait could not be removed.
+            </h3>
+            <p className="mt-2 text-muted-foreground">
+              Bitcoin confirmations and the sweep interval are protocol facts. So the design
+              question was never how to make bridging faster. It was what a person should understand
+              while a system they cannot influence does something irreversible with their money.
+            </p>
+          </div>
+        </div>
       </DesignSection>
 
       <DesignSection number="03" title="Solution.">
