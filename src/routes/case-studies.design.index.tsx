@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CaseStudiesShell } from "@/components/CaseStudiesShell";
 
-export const Route = createFileRoute("/case-studies/design")({
+export const Route = createFileRoute("/case-studies/design/")({
   head: () => ({
     meta: [
       { title: "Design Case Studies · Sasha (Tanase) Luca" },
