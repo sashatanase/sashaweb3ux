@@ -406,8 +406,8 @@ function DesignProject01() {
         </p>
         <p>
           The right answer was progressive disclosure: so i proposed to save the receipt in the
-          dashboard, surface it only when something has actually gone wrong. This fix was added in the
-          final iteration.
+          dashboard, surface it only when something has actually gone wrong. This fix was added in
+          the final iteration.
         </p>
 
         <figure className="py-4">
