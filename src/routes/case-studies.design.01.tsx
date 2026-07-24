@@ -207,13 +207,29 @@ function DesignProject01() {
         </ul>
       </DesignSection>
 
-      <DesignSection number="04" title="Iteration 2 · tested May–June 2023, rated 4.75 and 6 / 7">
+      <DesignSection number="04" title="Iteration 2 · tested May–June 2023">
         <p>
-          The wait became the design problem. Once the user hits [Initiate minting], their active
-          role ends, and they enter a spectator state. So the interface started mirroring the
-          protocol: Bitcoin Confirmations, Minter Check, Guardian Check, Minting Complete, each with
-          an explanation, its transaction on the native explorer, and an elapsed time counter
-          running throughout.
+          Six participants again, and this time I split the ease question, because minting and
+          unminting are different jobs with different risks. Minting scored 4.75. Unminting scored 6.
+        </p>
+        <p>
+          A lower minting score than iteration 1 is not the failure it looks like. That 5.8 was a
+          single number covering a simpler flow, while this version carried optimistic minting,
+          guardians, receipts and recovery paths that did not exist before. The useful part is not
+          the number, it is what participants said was holding it back.
+        </p>
+
+        <h3 className="text-lg font-medium tracking-tight text-foreground md:text-xl">
+          The wait became the design problem.
+        </h3>
+        <p>
+          <em>
+            Once the user hits [Initiate minting], their active role ends, and they enter a
+            spectator state.
+          </em>{" "}
+          So the interface started mirroring the protocol: Bitcoin Confirmations, Minter Check,
+          Guardian Check, Minting Complete, each with an explanation, its transaction on the native
+          explorer, and an elapsed time counter running throughout.
         </p>
 
         <figure className="py-4">
