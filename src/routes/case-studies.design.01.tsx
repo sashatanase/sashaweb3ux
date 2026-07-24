@@ -246,7 +246,7 @@ function DesignProject01() {
           </li>
         </ul>
 
-        <blockquote className="mt-8 border-l-2 border-foreground/20 pl-6 text-xl font-medium leading-relaxed text-foreground md:text-2xl">
+        <blockquote className="mt-8 border-l-2 border-foreground/20 pl-6 text-xl font-medium italic leading-relaxed text-foreground md:text-2xl">
           if there&apos;s a recovery mechanism, things must go wrong here a lot.
         </blockquote>
 
