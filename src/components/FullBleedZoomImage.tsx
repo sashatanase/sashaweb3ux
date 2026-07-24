@@ -33,10 +33,7 @@ export function FullBleedZoomImage({
 
   return (
     <figure className="py-4">
-      <div
-        className="relative"
-        style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}
-      >
+      <div className="relative" style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
         <button
           ref={triggerRef}
           type="button"
@@ -74,9 +71,7 @@ export function FullBleedZoomImage({
           </figcaption>
         </div>
       )}
-      {open && (
-        <ZoomOverlay src={zoomSrc} alt={alt} onClose={closeOverlay} />
-      )}
+      {open && <ZoomOverlay src={zoomSrc} alt={alt} onClose={closeOverlay} />}
     </figure>
   );
 }
@@ -105,9 +100,7 @@ export function ZoomOverlay({
   const pinchRef = useRef<{ dist: number; scale: number } | null>(null);
 
   // fit-to-screen base scale so image fully visible at scale=1
-  const baseScale = imgSize
-    ? Math.min(viewport.w / imgSize.w, viewport.h / imgSize.h)
-    : 1;
+  const baseScale = imgSize ? Math.min(viewport.w / imgSize.w, viewport.h / imgSize.h) : 1;
   const displayScale = baseScale * scale;
 
   // clamp offset so image never fully leaves the screen
@@ -137,8 +130,7 @@ export function ZoomOverlay({
 
   // viewport tracking
   useEffect(() => {
-    const onResize = () =>
-      setViewport({ w: window.innerWidth, h: window.innerHeight });
+    const onResize = () => setViewport({ w: window.innerWidth, h: window.innerHeight });
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
@@ -274,7 +266,15 @@ export function ZoomOverlay({
         aria-label="Close"
         className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-black/60 text-white transition-colors hover:bg-black/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        >
           <path d="M6 6l12 12M18 6L6 18" />
         </svg>
       </button>
