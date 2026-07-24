@@ -37,8 +37,7 @@ const PROJECTS: DesignProject[] = [
     client: "Threshold Network",
     year: "2023",
     tags: "Product · Cross-chain",
-    cover:
-      "radial-gradient(circle at 30% 30%, #f4f4f2 0%, #d9d8d3 55%, #b7b6b0 100%)",
+    cover: "radial-gradient(circle at 30% 30%, #f4f4f2 0%, #d9d8d3 55%, #b7b6b0 100%)",
     href: "/case-studies/design/01",
   },
   {
@@ -47,8 +46,7 @@ const PROJECTS: DesignProject[] = [
     client: "Mezo",
     year: "2025",
     tags: "Product · DeFi",
-    cover:
-      "linear-gradient(135deg, #111 0%, #1a1a1a 40%, #2a2a2a 100%)",
+    cover: "linear-gradient(135deg, #111 0%, #1a1a1a 40%, #2a2a2a 100%)",
     status: "Coming soon",
   },
   {
@@ -57,8 +55,7 @@ const PROJECTS: DesignProject[] = [
     client: "Threshold Network",
     year: "2023",
     tags: "Onboarding · Ops",
-    cover:
-      "repeating-linear-gradient(45deg, #ececea 0 12px, #dedcd6 12px 24px)",
+    cover: "repeating-linear-gradient(45deg, #ececea 0 12px, #dedcd6 12px 24px)",
     status: "Coming soon",
   },
   {
@@ -67,8 +64,7 @@ const PROJECTS: DesignProject[] = [
     client: "Keep Network",
     year: "2021",
     tags: "DeFi · Underwriting",
-    cover:
-      "linear-gradient(180deg, #e8564c 0%, #b83e36 100%)",
+    cover: "linear-gradient(180deg, #e8564c 0%, #b83e36 100%)",
     status: "Coming soon",
   },
   {
@@ -77,8 +73,7 @@ const PROJECTS: DesignProject[] = [
     client: "Independent",
     year: "2024",
     tags: "AI · Branding",
-    cover:
-      "conic-gradient(from 210deg at 60% 40%, #f4f4f2, #d9d8d3, #b7b6b0, #f4f4f2)",
+    cover: "conic-gradient(from 210deg at 60% 40%, #f4f4f2, #d9d8d3, #b7b6b0, #f4f4f2)",
     status: "Coming soon",
   },
   {
@@ -87,8 +82,7 @@ const PROJECTS: DesignProject[] = [
     client: "Thesis*",
     year: "2024",
     tags: "System · Tokens",
-    cover:
-      "linear-gradient(135deg, #0f0f0f 0%, #1c1c1c 60%, #0f0f0f 100%)",
+    cover: "linear-gradient(135deg, #0f0f0f 0%, #1c1c1c 60%, #0f0f0f 100%)",
     status: "Coming soon",
   },
 ];

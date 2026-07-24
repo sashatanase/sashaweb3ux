@@ -59,9 +59,9 @@ function DesignProject01() {
     >
       <DesignSection number="01" title="Context.">
         <p>
-          tBTC is a decentralized way to bring Bitcoin onto Ethereum. The bridge is the moment
-          users hand over real BTC and wait — sometimes hours — for the corresponding tBTC to
-          appear on the other side. That waiting window is where trust is either built or lost.
+          tBTC is a decentralized way to bring Bitcoin onto Ethereum. The bridge is the moment users
+          hand over real BTC and wait — sometimes hours — for the corresponding tBTC to appear on
+          the other side. That waiting window is where trust is either built or lost.
         </p>
         <p>
           Prior research surfaced a consistent pattern we called <em>bridge anxiety</em>: users
@@ -77,23 +77,25 @@ function DesignProject01() {
           Returning users refreshed the page compulsively during the wait.
         </p>
         <p>
-          The design brief: keep the underlying protocol untouched, but redesign the surface so
-          that at any moment a user could answer three questions in under five seconds — <em>Where
-          is my BTC? What&rsquo;s happening next? What do I do if something goes wrong?</em>
+          The design brief: keep the underlying protocol untouched, but redesign the surface so that
+          at any moment a user could answer three questions in under five seconds —{" "}
+          <em>
+            Where is my BTC? What&rsquo;s happening next? What do I do if something goes wrong?
+          </em>
         </p>
       </DesignSection>
 
       <DesignSection number="03" title="Solution.">
         <p>
-          The redesign centered on a single vertical timeline that mapped every protocol phase to
-          a human-readable step, with live status, expected duration, and a clear recovery path if
-          a step stalled. Deposit addresses were treated as a first-class object with copy,
-          verify, and QR affordances. Confirmations were surfaced as progress, not raw numbers.
+          The redesign centered on a single vertical timeline that mapped every protocol phase to a
+          human-readable step, with live status, expected duration, and a clear recovery path if a
+          step stalled. Deposit addresses were treated as a first-class object with copy, verify,
+          and QR affordances. Confirmations were surfaced as progress, not raw numbers.
         </p>
         <p>
           A shared status system — pending, confirming, minting, complete, needs-attention — was
-          promoted into a component library used across the bridge, wallet, and staking surfaces
-          so the whole product spoke one language.
+          promoted into a component library used across the bridge, wallet, and staking surfaces so
+          the whole product spoke one language.
         </p>
       </DesignSection>
 

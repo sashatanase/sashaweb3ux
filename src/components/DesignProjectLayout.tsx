@@ -3,8 +3,6 @@ import { CursorDots } from "@/components/CursorDots";
 import { trackNav } from "@/lib/analytics";
 import type { ReactNode } from "react";
 
-
-
 export type GalleryItem = {
   /** CSS background value (gradient or url("...")) used until real imagery is wired in. */
   media: string;
@@ -136,10 +134,7 @@ export function DesignProjectLayout({
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {gallery.map((g, i) => (
-                <figure
-                  key={i}
-                  className={g.wide ? "md:col-span-2" : ""}
-                >
+                <figure key={i} className={g.wide ? "md:col-span-2" : ""}>
                   <div
                     className="relative w-full overflow-hidden border border-border"
                     style={{
