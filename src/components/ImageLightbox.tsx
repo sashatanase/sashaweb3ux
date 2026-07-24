@@ -38,11 +38,7 @@ export function ImageLightbox({
           aria-modal="true"
           aria-label={alt}
         >
-          <img
-            src={src}
-            alt={alt}
-            className="max-h-full max-w-full object-contain"
-          />
+          <img src={src} alt={alt} className="max-h-full max-w-full object-contain" />
           <button
             type="button"
             onClick={() => setOpen(false)}
