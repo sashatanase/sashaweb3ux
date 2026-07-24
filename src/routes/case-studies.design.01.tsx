@@ -188,16 +188,14 @@ function DesignProject01() {
         </h3>
 
         <ul className="list-disc space-y-3 pl-5 pt-2 text-foreground marker:text-foreground/40">
-          <li>
-            6/6 could not tell which actions happened on Bitcoin and which on Ethereum.
-          </li>
+          <li>6/6 could not tell which actions happened on Bitcoin and which on Ethereum.</li>
           <li>
             6/6 found the timeline the most useful thing on the page, and it was a column of plain
             text.
           </li>
           <li>
-            4+ did not know what &ldquo;sweep&rdquo; meant, and the countdown attached to it
-            created pressure.
+            4+ did not know what &ldquo;sweep&rdquo; meant, and the countdown attached to it created
+            pressure.
           </li>
           <li>4+ wanted a signal that a mint was in progress, and a history.</li>
           <li>2/6 read the recovery address field as proof that errors were common here.</li>
