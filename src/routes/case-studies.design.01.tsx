@@ -210,7 +210,8 @@ function DesignProject01() {
       <DesignSection number="04" title="Iteration 2 · tested May–June 2023">
         <p>
           Six participants again, and this time I split the ease question, because minting and
-          unminting are different jobs with different risks. Minting scored 4.75. Unminting scored 6.
+          unminting are different jobs with different risks. Minting scored 4.75. Unminting scored
+          6.
         </p>
         <p>
           A lower minting score than iteration 1 is not the failure it looks like. That 5.8 was a
