@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
-import { ImageLoop, type ImageLoopItem } from "@/components/ImageLoop";
 import MintingDemo from "@/components/MintingDemo";
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
@@ -8,48 +7,6 @@ import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
 import tBTCBridgeV2Sweep from "@/assets/tBTC-Bridge-v2-sweep-2.png.asset.json";
 import mintingTimelineBeforeAfter from "@/assets/Minting_Timeline_Before_and_After.png.asset.json";
 
-const tbtcPanels: ImageLoopItem[] = [
-  {
-    src: "/case-studies/tbtc/panels/01-waiting-for-confirmations.webp",
-    alt: "Step 1 — Waiting for Bitcoin confirmations",
-    caption: "01 · Waiting for confirmations",
-  },
-  {
-    src: "/case-studies/tbtc/panels/02-confirmations-complete.webp",
-    alt: "Step 2 — Confirmations complete",
-    caption: "02 · Confirmations complete",
-  },
-  {
-    src: "/case-studies/tbtc/panels/03-minting-initialized.webp",
-    alt: "Step 3 — Minting initialized",
-    caption: "03 · Minting initialized",
-  },
-  {
-    src: "/case-studies/tbtc/panels/04-minter-review.webp",
-    alt: "Step 4 — Minter review",
-    caption: "04 · Minter review",
-  },
-  {
-    src: "/case-studies/tbtc/panels/05-guardian-check.webp",
-    alt: "Step 5 — Guardian check",
-    caption: "05 · Guardian check",
-  },
-  {
-    src: "/case-studies/tbtc/panels/06-guardian-approved.webp",
-    alt: "Step 6 — Guardian approved",
-    caption: "06 · Guardian approved",
-  },
-  {
-    src: "/case-studies/tbtc/panels/07-minting-in-progress.webp",
-    alt: "Step 7 — Minting in progress",
-    caption: "07 · Minting in progress",
-  },
-  {
-    src: "/case-studies/tbtc/panels/08-minting-complete.webp",
-    alt: "Step 8 — Minting complete",
-    caption: "08 · Minting complete",
-  },
-];
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
