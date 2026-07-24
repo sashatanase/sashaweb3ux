@@ -110,7 +110,7 @@ export function DesignProjectLayout({
         </section>
 
         {/* Tags */}
-        <section className="mx-auto max-w-[1120px] border-t border-foreground/30 pt-6">
+        <section className="mx-auto max-w-[1120px] pt-6">
           <div className="flex flex-wrap gap-3">
             {tags.map((tag) => (
               <span
