@@ -242,7 +242,17 @@ function DesignProject01() {
           explorer, and an elapsed time counter running throughout.
         </p>
 
-
+        <div className="mx-auto my-10 w-full max-w-4xl">
+          <iframe
+            src="https://minting-demo.tiiny.site"
+            width="100%"
+            height="620"
+            frameBorder={0}
+            scrolling="no"
+            style={{ border: "none", borderRadius: "16px" }}
+            title="tBTC minting demo"
+          />
+        </div>
 
         <p>
           &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
