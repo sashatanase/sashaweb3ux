@@ -90,11 +90,23 @@ export function DesignProjectLayout({
             <p className="mt-8 max-w-2xl text-lg font-medium leading-relaxed tracking-tight text-foreground sm:text-xl md:mt-10 md:text-2xl">
               {synopsis}
             </p>
+
+            {/* Tags */}
+            <div className="mt-8 flex flex-wrap gap-3 md:mt-10">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex border border-border px-3 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-foreground sm:tracking-[0.18em]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Cover image */}
-        <section className="pb-4 md:pb-6">
+        <section className="pb-16 md:pb-20">
           <div
             className="relative aspect-[16/10] w-full overflow-hidden border border-border"
             style={{ backgroundImage: cover }}
@@ -106,20 +118,6 @@ export function DesignProjectLayout({
                   "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
               }}
             />
-          </div>
-        </section>
-
-        {/* Tags */}
-        <section className="mx-auto max-w-[1120px] pt-4 pb-16 md:pb-20">
-          <div className="flex flex-wrap gap-3">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="inline-flex border border-border px-3 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-foreground sm:tracking-[0.18em]"
-              >
-                {tag}
-              </span>
-            ))}
           </div>
         </section>
 
