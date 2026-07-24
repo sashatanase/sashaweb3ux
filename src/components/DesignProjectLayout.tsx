@@ -35,6 +35,8 @@ export function DesignProjectLayout({
   synopsis,
   tags,
   cover,
+  coverImage,
+  coverAlt,
   children,
   gallery,
 }: DesignProjectLayoutProps) {
