@@ -220,21 +220,6 @@ function DesignProject01() {
             </h3>
           </div>
         </div>
-
-        <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">What I changed.</h3>
-        <p>
-          The wait became the design problem. Once the user hits [Initiate minting], their active
-          role ends, and they enter a spectator state. The interface started mirroring the protocol:
-          Bitcoin Checkpoint, Minting Initialized, Guardian Check, Minting Completed, each with an
-          explanation, its transaction on the native explorer, and an elapsed time counter running
-          throughout.
-        </p>
-        <p>
-          &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
-          size. Every timeline step got a chain label and an illustration. The ETH address
-          autocompleted. The recovery address became a deposit receipt, with a Resume Deposit flow
-          covering three ways a deposit actually breaks.
-        </p>
       </DesignSection>
 
       <DesignSection
