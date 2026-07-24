@@ -93,9 +93,11 @@ function DesignProject01() {
               className="h-auto w-full"
             />
           </div>
-          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            tBTC v1 · Post-deposit state
-          </figcaption>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              tBTC v1 · Post-deposit state
+            </figcaption>
+          </div>
         </figure>
         <p>Everything below comes back to that spinner.</p>
       </DesignSection>
@@ -153,16 +155,18 @@ function DesignProject01() {
         </div>
 
         <figure className="pt-8">
-          <div className="relative mx-auto max-w-5xl overflow-hidden border border-border">
+          <div className="relative w-full overflow-hidden border border-border">
             <img
               src={bridgeComparison.url}
               alt="Comparison diagram showing a typical bridge flow versus the tBTC bridge flow with additional unfamiliar steps"
               className="block h-auto w-full object-contain"
             />
           </div>
-          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            Bridge Flow Comparison
-          </figcaption>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Bridge Flow Comparison
+            </figcaption>
+          </div>
         </figure>
       </DesignSection>
 
@@ -178,16 +182,18 @@ function DesignProject01() {
         </p>
 
         <figure className="py-4">
-          <div className="relative mx-auto max-w-5xl overflow-hidden border border-border">
+          <div className="relative w-full overflow-hidden border border-border">
             <img
               src={tBTCBridgeV2Sweep.url}
               alt="tBTC Bridge v2 iteration 1 UI showing the next sweep countdown and minting timeline"
               className="h-auto w-full"
             />
           </div>
-          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            tBTC Next Sweep Countdown
-          </figcaption>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              tBTC Next Sweep Countdown
+            </figcaption>
+          </div>
         </figure>
 
         <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
@@ -240,7 +246,7 @@ function DesignProject01() {
             src={visibilityOfSystemStatus.url}
             alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
           >
-            <div className="relative mx-auto max-w-5xl overflow-hidden border border-border">
+            <div className="relative w-full overflow-hidden border border-border">
               <img
                 src={visibilityOfSystemStatus.url}
                 alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
@@ -248,9 +254,11 @@ function DesignProject01() {
               />
             </div>
           </ImageLightbox>
-          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            Visibility of System Status: The direct answer to the v1 spinner.
-          </figcaption>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Visibility of System Status: The direct answer to the v1 spinner.
+            </figcaption>
+          </div>
         </figure>
 
         <p>
@@ -286,9 +294,11 @@ function DesignProject01() {
           <div className="flex aspect-[16/10] w-full items-center justify-center border border-dashed border-border bg-muted/30 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
             Image 9 — placeholder
           </div>
-          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            Resume Deposit — three failure scenarios.
-          </figcaption>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Resume Deposit — three failure scenarios.
+            </figcaption>
+          </div>
         </figure>
       </DesignSection>
 
