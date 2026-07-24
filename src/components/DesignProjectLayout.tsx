@@ -17,6 +17,7 @@ export type DesignProjectLayoutProps = {
   no: string;
   year: string;
   title: ReactNode;
+  subtitle: ReactNode;
   synopsis: ReactNode;
   tags: string[];
   cover: string; // CSS background value
