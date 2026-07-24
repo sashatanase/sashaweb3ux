@@ -241,6 +241,22 @@ function DesignProject01() {
           explorer, and an elapsed time counter running throughout.
         </p>
 
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <iframe
+              src="https://sashatanase.github.io/sashaweb3ux/"
+              title="tBTC minting demo"
+              loading="lazy"
+              style={{ width: "100%", height: "620px", border: 0, borderRadius: "12px" }}
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              tBTC minting demo
+            </figcaption>
+          </div>
+        </figure>
+
         <p>
           &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
           size. Every timeline step got a chain label and an illustration. The ETH address
