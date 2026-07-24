@@ -407,7 +407,7 @@ function DesignProject01() {
           calm.
         </p>
         <p>
-          The right answer was progressive disclosure: so i proposed to save the receipt in the
+          The right answer was progressive disclosure: so I proposed to save the receipt in the
           dashboard, surface it only when something has actually gone wrong. This fix was added in
           the final iteration.
         </p>
@@ -450,18 +450,25 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="05" title="Solution.">
+      <DesignSection number="05" title="Iteration 3 · what shipped">
         <p>
-          The redesign centered on a single vertical timeline that mapped every protocol phase to a
-          human-readable step, with live status, expected duration, and a clear recovery path if a
-          step stalled. Deposit addresses were treated as a first-class object with copy, verify,
-          and QR affordances. Confirmations were surfaced as progress, not raw numbers.
+          The last pass took the Round 2 evidence and applied it without sentiment. &quot;Mint&quot;
+          became &quot;Deposit&quot;, which is match between the system and the real world. Four of
+          six participants never connected minting to bridging, so the protocol&apos;s word lost.
+          <br />
+          <br />
+          Chain labels moved off the timeline and onto the step cards, into the line of reading. The
+          duration panel moved next to the amount decision.
+          <br />
+          <br />
+          Fees got totalled in USD, which every participant had asked for. The progress bar and time
+          counters stayed untouched, because they&apos;d earned it.
+          <br />
+          <br />
+          The receipt was saved in the dashboard, surfaced only when something has actually gone
+          wrong.&nbsp;
         </p>
-        <p>
-          A shared status system — pending, confirming, minting, complete, needs-attention — was
-          promoted into a component library used across the bridge, wallet, and staking surfaces so
-          the whole product spoke one language.
-        </p>
+        <p>{"\n"}</p>
       </DesignSection>
 
       <DesignSection number="06" title="Outcome.">
