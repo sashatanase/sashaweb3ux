@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
-import { ImageLightbox } from "@/components/ImageLightbox";
-import { FullBleedZoomImage } from "@/components/FullBleedZoomImage";
+import { PanelGrid } from "@/components/PanelGrid";
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
 import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
