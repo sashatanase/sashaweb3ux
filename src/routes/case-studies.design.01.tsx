@@ -30,14 +30,7 @@ function DesignProject01() {
       year="2023"
       title="tBTC Bridge — Redesigning the cross-chain flow."
       synopsis="Turning a high-stakes, multi-step Bitcoin bridge into a flow users trusted — by making state, status, and time-to-finality legible at every step."
-      meta={[
-        { label: "Client", value: "Threshold Network" },
-        { label: "Sector", value: "Bitcoin · Cross-chain" },
-        { label: "Year", value: "2023" },
-        { label: "Role", value: "Product Design Lead" },
-        { label: "Team", value: "1 PM · 2 Eng · 1 Design" },
-        { label: "Status", value: "Shipped" },
-      ]}
+      tags={["Product Design", "UX Research", "Design Systems"]}
       cover="radial-gradient(circle at 30% 30%, #f4f4f2 0%, #d9d8d3 55%, #b7b6b0 100%)"
       gallery={[
         {
