@@ -305,21 +305,14 @@ function DesignProject01() {
           </div>
         </figure>
 
-        <div className="grid grid-cols-1 gap-6 py-4 md:grid-cols-2">
-          {[
-            "Image 5 — timeline illustrations as a set",
-            "Image 6 — Step 1 redesigned",
-            "Image 7 — Step 2, the step no other bridge has",
-            "Image 8 — the full minting flow end to end",
-          ].map((label) => (
-            <div
-              key={label}
-              className="flex aspect-[4/3] w-full items-center justify-center border border-dashed border-border bg-muted/30 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground"
-            >
-              {label}
-            </div>
-          ))}
-        </div>
+        <figure className="py-4">
+          <ImageLoop images={tbtcPanels} dwell={1.4} transition={0.5} ratio="16/10" />
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              The redesigned minting flow — looped step by step
+            </figcaption>
+          </div>
+        </figure>
 
         <p>
           The recovery address became a deposit receipt, a file the user downloads and keeps until
