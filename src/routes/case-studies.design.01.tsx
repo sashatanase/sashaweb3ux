@@ -289,12 +289,46 @@ function DesignProject01() {
         </p>
 
         <figure className="py-4">
-          <div className="flex aspect-[16/10] w-full items-center justify-center border border-dashed border-border bg-muted/30 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            Image 9 — placeholder
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={resumeDepositScenarios.url}
+              alt="Resume Deposit diagram showing three failure scenarios and one recovery path via the deposit receipt"
+              className="h-auto w-full"
+            />
           </div>
           <div className="mx-auto max-w-[760px]">
             <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Resume Deposit — three failure scenarios.
+              Resume Deposit — three failure scenarios, one recovery path
+            </figcaption>
+          </div>
+        </figure>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={mintFailSafe.url}
+              alt="tBTC Initiate Minting screen showing a fail-safe message and bridging duration"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Minting fail-safe
+            </figcaption>
+          </div>
+        </figure>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={step2Image.url}
+              alt="tBTC Step 2 — Make your BTC deposit, with recovery receipt file download"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Step 2 — The not so usual bridge step
             </figcaption>
           </div>
         </figure>
