@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
 import { ImageLoop, type ImageLoopItem } from "@/components/ImageLoop";
+import MintingDemo from "@/components/MintingDemo";
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
 import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
@@ -283,6 +284,10 @@ function DesignProject01() {
           Guardian Check, Minting Complete, each with an explanation, its transaction on the native
           explorer, and an elapsed time counter running throughout.
         </p>
+
+        <div className="py-4">
+          <MintingDemo />
+        </div>
 
         <p>
           &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
