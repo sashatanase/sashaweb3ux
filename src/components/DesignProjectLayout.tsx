@@ -17,6 +17,7 @@ export type DesignProjectLayoutProps = {
   no: string;
   year: string;
   title: ReactNode;
+  subtitle: ReactNode;
   synopsis: ReactNode;
   tags: string[];
   cover: string; // CSS background value
@@ -28,6 +29,7 @@ export function DesignProjectLayout({
   no,
   year,
   title,
+  subtitle,
   synopsis,
   tags,
   cover,
@@ -87,7 +89,11 @@ export function DesignProjectLayout({
               {title}
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg font-medium leading-relaxed tracking-tight text-foreground sm:text-xl md:mt-10 md:text-2xl">
+            <div className="mt-5 max-w-2xl font-mono text-[12px] uppercase tracking-[0.18em] text-muted-foreground sm:text-[13px] md:mt-7">
+              {subtitle}
+            </div>
+
+            <p className="mt-6 max-w-2xl text-lg font-medium leading-relaxed tracking-tight text-foreground sm:text-xl md:mt-8 md:text-2xl">
               {synopsis}
             </p>
 
