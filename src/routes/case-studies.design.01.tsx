@@ -266,9 +266,9 @@ function DesignProject01() {
         </figure>
 
         <p>
-          &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
-          size. Every timeline step got a chain label and an illustration. The ETH address
-          autocompleted.
+          Around that core: "sweep" and its countdown were cut, replaced with a duration table keyed to deposit size. This was setting the expectation&nbsp;before commitment instead of pressure after it.
+          <br /><br />
+          Each timeline step got a chain label and a small illustration, giving the timeline the visual hierarchy its usage had earned. The ETH address autocompleted from the connected wallet: recognition over recall, no reason to make someone paste a 42-character string we already had.
         </p>
 
         <figure className="py-4">
