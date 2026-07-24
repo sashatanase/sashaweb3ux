@@ -424,6 +424,25 @@ function DesignProject01() {
             </figcaption>
           </div>
         </figure>
+
+        <p>
+          Three other fixes had a different problem. The chain labels, the duration table and the
+          restructured How It Works page were all correct, and all of them went unnoticed.
+          Participants walked past information that was sitting right there on the page.
+        </p>
+        <p>
+          That took me a while to accept, because I had answered each finding on its own terms and
+          each answer was right. What I had missed is that they were placement problems dressed up
+          as content problems. I had been adding information to a layout without asking where
+          attention actually goes in it. People work down the column where the action is, and
+          anything parked in the right rail reads as furniture. The How It Works page had it worse:
+          it lived behind an onboarding modal that half the participants never got past, so the best
+          explanatory work in the product was gated behind a thing they were trying to dismiss.
+        </p>
+        <p>
+          The lesson stuck. Adding the right content to the wrong position is indistinguishable,
+          from the user's side, from not doing the work at all.
+        </p>
       </DesignSection>
 
       <DesignSection number="05" title="Solution.">
