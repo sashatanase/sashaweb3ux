@@ -73,20 +73,22 @@ function DesignProject01() {
         },
       ]}
     >
-      <DesignSection number="01" title="Context.">
+      <DesignSection number="01" title="Where it started">
         <h3 className="text-lg font-medium tracking-tight text-foreground md:text-xl">
           The Eternal Spinner
         </h3>
         <p>
-          tBTC turns Bitcoin into an ERC-20 token on Ethereum. I inherited the first version, which
-          gave users no feedback at all. The moment someone deposited their funds they landed on a
-          screen with a spinner, and it sat there for hours while they panicked that their money was
-          gone.
+          tBTC turns Bitcoin into an ERC-20 token so it can be used on Ethereum. When I picked up the
+          product, v1 had already shipped and already had a reputation problem, and the reputation
+          was earned.
+          <br />
+          <br />
+          &nbsp;After depositing funds, users landed on a spinner. No states, no progress, no
+          estimate. It could sit there for six hours. People weren't waiting; they were watching a
+          screen that gave them no evidence their money still existed.
         </p>
         <p>
-          This consistent pattern I called <em>bridge anxiety</em>: users couldn&rsquo;t tell
-          whether their transaction was progressing, stuck, or lost. The existing UI showed
-          technical state but not human state.
+          {"\n"}
         </p>
         <figure className="py-4">
           <div className="relative w-full overflow-hidden border border-border">
@@ -102,12 +104,17 @@ function DesignProject01() {
             </figcaption>
           </div>
         </figure>
-        <p>Everything below comes back to that spinner.</p>
+        <p>
+          This is about as pure a violation of visibility of system status as you'll find, and in
+          most products it costs you a support ticket. In a bridge it costs you the user. The stakes
+          of that heuristic scale with the stakes of the transaction, and here the transaction was
+          someone's Bitcoin.
+        </p>
       </DesignSection>
 
       <DesignSection
         number="02"
-        title="The Problems: What 12 people told me before I designed anything."
+        title="Understanding the territory before touching the interface"
       >
         <blockquote className="border-l-2 border-foreground/20 pl-5 text-lg font-light italic leading-relaxed text-foreground md:text-xl">
           &ldquo;Sending your Bitcoin to an unknown address is a really scary thing, it&rsquo;s like
