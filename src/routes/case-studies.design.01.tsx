@@ -435,9 +435,12 @@ function DesignProject01() {
           each answer was right. What I had missed is that they were placement problems dressed up
           as content problems. I had been adding information to a layout without asking where
           attention actually goes in it. People work down the column where the action is, and
-          anything parked in the right rail reads as furniture. The How It Works page had it worse:
-          it lived behind an onboarding modal that half the participants never got past, so the best
-          explanatory work in the product was gated behind a thing they were trying to dismiss.
+          anything parked in the right rail reads as furniture.
+        </p>
+        <p>
+          The How It Works page had it worse: it lived behind an onboarding modal that half the
+          participants never got past, so the best explanatory work in the product was gated behind
+          a thing they were trying to dismiss.
         </p>
         <p>
           The lesson stuck. Adding the right content to the wrong position is indistinguishable,
