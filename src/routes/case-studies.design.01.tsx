@@ -121,6 +121,14 @@ function DesignProject01() {
           a leap of faith.&rdquo;
         </blockquote>
 
+        <p>
+          I didn't start with screens. I started with a generative study — 12 participants who held
+          or had bridged wrapped Bitcoin — because I suspected the problem wasn't usability in the
+          narrow sense, and I wanted the team's assumptions on the table before we invested in a
+          direction. We ran an assumption mapping workshop first; the interview guide came out of
+          what we realised we were guessing about.
+        </p>
+
         <div className="space-y-8 pt-2">
           <div>
             <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
