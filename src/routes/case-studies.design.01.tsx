@@ -222,15 +222,12 @@ function DesignProject01() {
         </div>
       </DesignSection>
 
-      <DesignSection
-        number="04"
-        title="Iteration 2 · tested May–June 2023, rated 4.75 and 6 / 7"
-      >
+      <DesignSection number="04" title="Iteration 2 · tested May–June 2023, rated 4.75 and 6 / 7">
         <p>
           The wait became the design problem. Once the user hits [Initiate minting], their active
           role ends, and they enter a spectator state. So the interface started mirroring the
-          protocol: Bitcoin Confirmations, Minter Check, Guardian Check, Minting Complete, each
-          with an explanation, its transaction on the native explorer, and an elapsed time counter
+          protocol: Bitcoin Confirmations, Minter Check, Guardian Check, Minting Complete, each with
+          an explanation, its transaction on the native explorer, and an elapsed time counter
           running throughout.
         </p>
 
@@ -269,8 +266,8 @@ function DesignProject01() {
         <p>
           The recovery address became a deposit receipt, a file the user downloads and keeps until
           their tBTC arrives, with a Resume Deposit flow covering three ways a deposit actually
-          breaks: a reveal that fails on low gas, a browser crash mid-flow, and a user who
-          dismisses the modal twice.
+          breaks: a reveal that fails on low gas, a browser crash mid-flow, and a user who dismisses
+          the modal twice.
         </p>
 
         <figure className="py-4">
