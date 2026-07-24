@@ -150,8 +150,8 @@ function DesignProject01() {
         </div>
       </DesignSection>
 
-      <figure className="relative left-1/2 my-8 w-screen max-w-[1120px] -translate-x-1/2 px-6 md:px-0">
-        <div className="relative w-full border border-border bg-background">
+      <figure className="relative left-1/2 my-8 w-screen max-w-[1280px] -translate-x-1/2 px-6 md:px-10">
+        <div className="relative w-full bg-background">
           <img
             src={bridgeComparison.url}
             alt="Comparison diagram showing a typical bridge flow versus the tBTC bridge flow with additional unfamiliar steps"
