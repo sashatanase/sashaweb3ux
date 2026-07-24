@@ -151,7 +151,7 @@ function DesignProject01() {
           </div>
         </div>
 
-        <figure className="pt-8 md:-mx-16 lg:-mx-[180px] xl:-mx-[260px]">
+        <figure className="relative left-1/2 w-screen -translate-x-1/2 pt-8">
           <div className="relative w-full overflow-hidden">
             <img
               src={bridgeComparison.url}
@@ -176,8 +176,8 @@ function DesignProject01() {
           what was stopping them.
         </p>
 
-        <figure className="py-4 md:-mx-16 lg:-mx-[180px] xl:-mx-[260px]">
-          <div className="relative w-full overflow-hidden border border-border">
+        <figure className="relative left-1/2 w-screen -translate-x-1/2 py-4">
+          <div className="relative w-full overflow-hidden border-y border-border">
             <img
               src={tBTCBridgeV2Sweep.url}
               alt="tBTC Bridge v2 iteration 1 UI showing the next sweep countdown and minting timeline"
@@ -234,8 +234,8 @@ function DesignProject01() {
           explorer, and an elapsed time counter running throughout.
         </p>
 
-        <figure className="py-4 md:-mx-16 lg:-mx-[180px] xl:-mx-[260px]">
-          <div className="relative w-full overflow-hidden border border-border">
+        <figure className="relative left-1/2 w-screen -translate-x-1/2 py-4">
+          <div className="relative w-full overflow-hidden border-y border-border">
             <img
               src={visibilityOfSystemStatus.url}
               alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
