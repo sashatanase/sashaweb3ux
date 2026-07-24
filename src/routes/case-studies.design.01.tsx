@@ -173,7 +173,7 @@ function DesignProject01() {
         </figure>
       </DesignSection>
 
-      <DesignSection number="03" title="Iteration 1 → tested with 6 people">
+      <DesignSection number="03" title="Iteration 1 → establishing the baseline">
         <p>
           Tested May 2022 · 6 participants · think-aloud through minting and unminting
           <br /><br /><br /><br />
