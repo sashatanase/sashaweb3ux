@@ -191,7 +191,7 @@ function DesignProject01() {
         </figure>
       </DesignSection>
 
-      <DesignSection number="03" title="Iteration 1 → establishing the baseline">
+      <DesignSection number="03" title={"Iteration 1 · establishing the baseline\n"}>
         <p>
           Tested May 2022&nbsp;&middot;&nbsp;6
           participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting
