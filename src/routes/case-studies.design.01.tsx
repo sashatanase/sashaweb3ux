@@ -149,6 +149,19 @@ function DesignProject01() {
             </p>
           </div>
         </div>
+
+        <figure className="pt-8">
+          <div className="relative w-full overflow-hidden">
+            <img
+              src={bridgeComparison.url}
+              alt="Comparison diagram showing a typical bridge flow versus the tBTC bridge flow with additional unfamiliar steps"
+              className="block h-auto w-full object-contain"
+            />
+          </div>
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Bridge Flow Comparison
+          </figcaption>
+        </figure>
       </DesignSection>
 
       <DesignSection number="03" title="Iteration 1 → tested with 6 people">
