@@ -138,7 +138,7 @@ export function DesignProjectLayout({
         </section>
 
         {/* Written sections (Context / Problem / Solution / Outcome) */}
-        <div className="mx-auto max-w-[760px] pb-16 md:pb-24">{children}</div>
+        <div className="pb-16 md:pb-24">{children}</div>
 
         {/* Gallery */}
         {gallery && gallery.length > 0 && (
@@ -216,13 +216,15 @@ export function DesignSection({
   const tag = number ?? label ?? "";
   return (
     <section className="pt-20 first:pt-0">
-      <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-        § {tag}
+      <div className="mx-auto max-w-[760px]">
+        <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+          § {tag}
+        </div>
+        <h2 className="mt-4 text-xl font-medium tracking-tight break-words sm:text-2xl md:text-3xl">
+          {title}
+        </h2>
       </div>
-      <h2 className="mt-4 text-xl font-medium tracking-tight break-words sm:text-2xl md:text-3xl">
-        {title}
-      </h2>
-      <div className="mt-10 space-y-6 text-base leading-[1.7] text-foreground md:text-[17px]">
+      <div className="mt-10 space-y-6 text-base leading-[1.7] text-foreground md:text-[17px] [&>*:not(figure)]:mx-auto [&>*:not(figure)]:max-w-[760px]">
         {children}
       </div>
     </section>
