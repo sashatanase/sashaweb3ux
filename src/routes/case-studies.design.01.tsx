@@ -150,7 +150,7 @@ function DesignProject01() {
           </div>
         </div>
 
-        <figure className="pt-8">
+        <figure className="pt-8 md:-mx-16 lg:-mx-[180px] xl:-mx-[260px]">
           <div className="relative w-full overflow-hidden">
             <img
               src={bridgeComparison.url}
