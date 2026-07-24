@@ -5,8 +5,6 @@ import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
 import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
 import tBTCBridgeV2Sweep from "@/assets/tBTC-Bridge-v2-sweep-2.png.asset.json";
 
-
-
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
     meta: [
