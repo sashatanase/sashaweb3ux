@@ -30,14 +30,7 @@ function DesignProject01() {
       year="2023"
       title="tBTC Bridge — Redesigning the cross-chain flow."
       synopsis="Turning a high-stakes, multi-step Bitcoin bridge into a flow users trusted — by making state, status, and time-to-finality legible at every step."
-      meta={[
-        { label: "Client", value: "Threshold Network" },
-        { label: "Sector", value: "Bitcoin · Cross-chain" },
-        { label: "Year", value: "2023" },
-        { label: "Role", value: "Product Design Lead" },
-        { label: "Team", value: "1 PM · 2 Eng · 1 Design" },
-        { label: "Status", value: "Shipped" },
-      ]}
+      tags={["Product Design", "UX Research", "Design Systems"]}
       cover="radial-gradient(circle at 30% 30%, #f4f4f2 0%, #d9d8d3 55%, #b7b6b0 100%)"
       gallery={[
         {
@@ -66,9 +59,9 @@ function DesignProject01() {
     >
       <DesignSection number="01" title="Context.">
         <p>
-          tBTC is a decentralized way to bring Bitcoin onto Ethereum. The bridge is the moment
-          users hand over real BTC and wait — sometimes hours — for the corresponding tBTC to
-          appear on the other side. That waiting window is where trust is either built or lost.
+          tBTC is a decentralized way to bring Bitcoin onto Ethereum. The bridge is the moment users
+          hand over real BTC and wait — sometimes hours — for the corresponding tBTC to appear on
+          the other side. That waiting window is where trust is either built or lost.
         </p>
         <p>
           Prior research surfaced a consistent pattern we called <em>bridge anxiety</em>: users
@@ -84,23 +77,25 @@ function DesignProject01() {
           Returning users refreshed the page compulsively during the wait.
         </p>
         <p>
-          The design brief: keep the underlying protocol untouched, but redesign the surface so
-          that at any moment a user could answer three questions in under five seconds — <em>Where
-          is my BTC? What&rsquo;s happening next? What do I do if something goes wrong?</em>
+          The design brief: keep the underlying protocol untouched, but redesign the surface so that
+          at any moment a user could answer three questions in under five seconds —{" "}
+          <em>
+            Where is my BTC? What&rsquo;s happening next? What do I do if something goes wrong?
+          </em>
         </p>
       </DesignSection>
 
       <DesignSection number="03" title="Solution.">
         <p>
-          The redesign centered on a single vertical timeline that mapped every protocol phase to
-          a human-readable step, with live status, expected duration, and a clear recovery path if
-          a step stalled. Deposit addresses were treated as a first-class object with copy,
-          verify, and QR affordances. Confirmations were surfaced as progress, not raw numbers.
+          The redesign centered on a single vertical timeline that mapped every protocol phase to a
+          human-readable step, with live status, expected duration, and a clear recovery path if a
+          step stalled. Deposit addresses were treated as a first-class object with copy, verify,
+          and QR affordances. Confirmations were surfaced as progress, not raw numbers.
         </p>
         <p>
           A shared status system — pending, confirming, minting, complete, needs-attention — was
-          promoted into a component library used across the bridge, wallet, and staking surfaces
-          so the whole product spoke one language.
+          promoted into a component library used across the bridge, wallet, and staking surfaces so
+          the whole product spoke one language.
         </p>
       </DesignSection>
 

@@ -3,8 +3,6 @@ import { CursorDots } from "@/components/CursorDots";
 import { trackNav } from "@/lib/analytics";
 import type { ReactNode } from "react";
 
-export type DesignMeta = { label: string; value: string };
-
 export type GalleryItem = {
   /** CSS background value (gradient or url("...")) used until real imagery is wired in. */
   media: string;
@@ -20,7 +18,7 @@ export type DesignProjectLayoutProps = {
   year: string;
   title: ReactNode;
   synopsis: ReactNode;
-  meta: DesignMeta[];
+  tags: string[];
   cover: string; // CSS background value
   children?: ReactNode;
   gallery?: GalleryItem[];
@@ -31,7 +29,7 @@ export function DesignProjectLayout({
   year,
   title,
   synopsis,
-  meta,
+  tags,
   cover,
   children,
   gallery,
@@ -111,20 +109,18 @@ export function DesignProjectLayout({
           </div>
         </section>
 
-        {/* Meta row */}
+        {/* Tags */}
         <section className="mx-auto max-w-[1120px] border-t border-foreground/30 pt-6">
-          <dl className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 md:grid-cols-6">
-            {meta.map((m) => (
-              <div key={m.label} className="min-w-0">
-                <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground sm:tracking-[0.22em]">
-                  {m.label}
-                </dt>
-                <dd className="mt-3 font-mono text-[11px] uppercase tracking-[0.14em] text-foreground break-words sm:tracking-[0.18em]">
-                  {m.value}
-                </dd>
-              </div>
+          <div className="flex flex-wrap gap-3">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex border border-border px-3 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-foreground sm:tracking-[0.18em]"
+              >
+                {tag}
+              </span>
             ))}
-          </dl>
+          </div>
         </section>
 
         {/* Written sections (Context / Problem / Solution / Outcome) */}
@@ -138,10 +134,7 @@ export function DesignProjectLayout({
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {gallery.map((g, i) => (
-                <figure
-                  key={i}
-                  className={g.wide ? "md:col-span-2" : ""}
-                >
+                <figure key={i} className={g.wide ? "md:col-span-2" : ""}>
                   <div
                     className="relative w-full overflow-hidden border border-border"
                     style={{
