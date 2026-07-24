@@ -170,7 +170,7 @@ function DesignProject01() {
           testing my own work.
         </p>
 
-        <figure className="py-4">
+        <figure className="py-4 md:-mx-16 lg:-mx-[180px] xl:-mx-[260px]">
           <div className="relative w-full overflow-hidden border border-border">
             <img
               src={tBTCBridgeV2Sweep.url}
