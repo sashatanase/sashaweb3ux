@@ -242,25 +242,17 @@ function DesignProject01() {
           explorer, and an elapsed time counter running throughout.
         </p>
 
-        <figure className="py-4">
-          <ImageLightbox
-            src={visibilityOfSystemStatus.url}
-            alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
-          >
-            <div className="relative w-full overflow-hidden border border-border">
-              <img
-                src={visibilityOfSystemStatus.url}
-                alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
-                className="h-auto w-full"
-              />
-            </div>
-          </ImageLightbox>
-          <div className="mx-auto max-w-[760px]">
-            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Visibility of System Status: The direct answer to the v1 spinner.
-            </figcaption>
-          </div>
-        </figure>
+        <FullBleedZoomImage
+          srcSet="/case-studies/tbtc/vss-800.webp 800w, /case-studies/tbtc/vss-1600.webp 1600w, /case-studies/tbtc/vss-2400.webp 2400w"
+          sizes="100vw"
+          fallbackSrc="/case-studies/tbtc/vss-2400.webp"
+          zoomSrc="/case-studies/tbtc/vss-8000.webp"
+          width={8000}
+          height={4398}
+          alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
+          caption="Visibility of System Status: The direct answer to the v1 spinner."
+        />
+
 
         <p>
           &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
