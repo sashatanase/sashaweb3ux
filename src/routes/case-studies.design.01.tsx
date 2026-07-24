@@ -9,6 +9,7 @@ import mintingTimelineBeforeAfter from "@/assets/Minting_Timeline_Before_and_Aft
 import resumeDepositScenarios from "@/assets/resume-deposit-scenarios.png.asset.json";
 import mintFailSafe from "@/assets/Resume_Minting.png.asset.json";
 import step2Image from "@/assets/Step_2.png.asset.json";
+import step2Iteration from "@/assets/Step-2-1.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -282,6 +283,21 @@ function DesignProject01() {
           <div className="mx-auto max-w-[760px]">
             <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
               Before and After — Minting Timeline
+            </figcaption>
+          </div>
+        </figure>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={step2Iteration.url}
+              alt="tBTC Bridge Step 2 iteration showing the minting process with duration table and timeline"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Step 2 iteration — minting process, duration table, and timeline
             </figcaption>
           </div>
         </figure>
