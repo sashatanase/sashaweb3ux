@@ -3,6 +3,7 @@ import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLa
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
 import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
+import tBTCBridgeV2Sweep from "@/assets/tBTC-Bridge-v2-sweep-2.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -150,6 +151,79 @@ function DesignProject01() {
         </div>
       </DesignSection>
 
+      <DesignSection number="03" title="Iteration 1 → tested with 6 people">
+        <p>
+          Rated 5.8 / 7. I designed the prototype and ran the sessions, so everything below is me
+          testing my own work.
+        </p>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={tBTCBridgeV2Sweep.url}
+              alt="tBTC Bridge v2 iteration 1 UI showing the next sweep countdown and minting timeline"
+              className="h-auto w-full"
+            />
+          </div>
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            tBTC Next Sweep Countdown
+          </figcaption>
+        </figure>
+
+        <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+          Findings, prioritised by how many of six participants raised them:
+        </h3>
+
+        <div className="space-y-6 pt-2">
+          <div>
+            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              6/6 could not tell which actions happened on Bitcoin and which on Ethereum
+            </h3>
+          </div>
+
+          <div>
+            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              6/6 found the timeline the most useful thing on the page, and it was a column of plain
+              text
+            </h3>
+          </div>
+
+          <div>
+            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              4+ did not know what &ldquo;sweep&rdquo; meant, and the countdown attached to it
+              created pressure
+            </h3>
+          </div>
+
+          <div>
+            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              4+ wanted a signal that a mint was in progress, and a history
+            </h3>
+          </div>
+
+          <div>
+            <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              2/6 read the recovery address field as proof that errors were common here
+            </h3>
+          </div>
+        </div>
+
+        <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">What I changed.</h3>
+        <p>
+          The wait became the design problem. Once the user hits [Initiate minting], their active
+          role ends, and they enter a spectator state. The interface started mirroring the protocol:
+          Bitcoin Checkpoint, Minting Initialized, Guardian Check, Minting Completed, each with an
+          explanation, its transaction on the native explorer, and an elapsed time counter running
+          throughout.
+        </p>
+        <p>
+          &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
+          size. Every timeline step got a chain label and an illustration. The ETH address
+          autocompleted. The recovery address became a deposit receipt, with a Resume Deposit flow
+          covering three ways a deposit actually breaks.
+        </p>
+      </DesignSection>
+
       <figure className="relative left-1/2 my-8 w-screen max-w-[1280px] -translate-x-1/2 px-6 md:px-10">
         <div className="relative w-full bg-background">
           <img
@@ -163,7 +237,7 @@ function DesignProject01() {
         </figcaption>
       </figure>
 
-      <DesignSection number="03" title="Solution.">
+      <DesignSection number="04" title="Solution.">
         <p>
           The redesign centered on a single vertical timeline that mapped every protocol phase to a
           human-readable step, with live status, expected duration, and a clear recovery path if a
@@ -177,7 +251,7 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="04" title="Outcome.">
+      <DesignSection number="05" title="Outcome.">
         <p>
           Post-launch, support tickets tagged &ldquo;is my bridge stuck?&rdquo; dropped
           meaningfully, completion rate on first-time deposits improved, and the status system was
