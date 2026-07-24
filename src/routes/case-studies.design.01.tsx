@@ -4,17 +4,20 @@ import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLa
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
     meta: [
-      { title: "tBTC Bridge · Design · Sasha (Tanase) Luca" },
+      { title: "tBTC Bridge: Designing for trust in a Bitcoin bridge · Sasha (Tanase) Luca" },
       {
         name: "description",
         content:
-          "Redesigning the tBTC Bridge cross-chain flow — reducing bridge anxiety through clearer state, status, and recovery affordances.",
+          "Designing for trust in the tBTC Bridge cross-chain flow — reducing bridge anxiety through clearer state, status, and recovery affordances.",
       },
-      { property: "og:title", content: "tBTC Bridge · Design · Sasha (Tanase) Luca" },
+      {
+        property: "og:title",
+        content: "tBTC Bridge: Designing for trust in a Bitcoin bridge · Sasha (Tanase) Luca",
+      },
       {
         property: "og:description",
         content:
-          "Redesigning the tBTC Bridge cross-chain flow — reducing bridge anxiety through clearer state, status, and recovery affordances.",
+          "Designing for trust in the tBTC Bridge cross-chain flow — reducing bridge anxiety through clearer state, status, and recovery affordances.",
       },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -28,7 +31,7 @@ function DesignProject01() {
     <DesignProjectLayout
       no="01"
       year="2023"
-      title="tBTC Bridge — Redesigning the cross-chain flow."
+      title="tBTC Bridge: Designing for trust in a Bitcoin bridge"
       synopsis="Turning a high-stakes, multi-step Bitcoin bridge into a flow users trusted — by making state, status, and time-to-finality legible at every step."
       tags={["Product Designer", "UX Researcher", "3 studies", "3 iterations"]}
       cover="radial-gradient(circle at 30% 30%, #f4f4f2 0%, #d9d8d3 55%, #b7b6b0 100%)"
