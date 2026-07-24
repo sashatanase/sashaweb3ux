@@ -20,8 +20,10 @@ export const Route = createFileRoute("/case-studies/design/01")({
         content:
           "Designing for trust in the tBTC Bridge cross-chain flow — reducing bridge anxiety through clearer state, status, and recovery affordances.",
       },
+      { property: "og:image", content: tBTCCover.url },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: tBTCCover.url },
     ],
   }),
   component: DesignProject01,
