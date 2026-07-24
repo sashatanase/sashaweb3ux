@@ -78,18 +78,16 @@ function DesignProject01() {
           The Eternal Spinner
         </h3>
         <p>
-          tBTC turns Bitcoin into an ERC-20 token so it can be used on Ethereum. When I picked up the
-          product, v1 had already shipped and already had a reputation problem, and the reputation
-          was earned.
+          tBTC turns Bitcoin into an ERC-20 token so it can be used on Ethereum. When I picked up
+          the product, v1 had already shipped and already had a reputation problem, and the
+          reputation was earned.
           <br />
           <br />
           &nbsp;After depositing funds, users landed on a spinner. No states, no progress, no
           estimate. It could sit there for six hours. People weren't waiting; they were watching a
           screen that gave them no evidence their money still existed.
         </p>
-        <p>
-          {"\n"}
-        </p>
+        <p>{"\n"}</p>
         <figure className="py-4">
           <div className="relative w-full overflow-hidden border border-border">
             <img
@@ -112,10 +110,7 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection
-        number="02"
-        title="Understanding the territory before touching the interface"
-      >
+      <DesignSection number="02" title="Understanding the territory before touching the interface">
         <blockquote className="border-l-2 border-foreground/20 pl-5 text-lg font-light italic leading-relaxed text-foreground md:text-xl">
           &ldquo;Sending your Bitcoin to an unknown address is a really scary thing, it&rsquo;s like
           a leap of faith.&rdquo;

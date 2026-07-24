@@ -1,168 +1,720 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>tBTC Minting Demo</title>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{background:linear-gradient(135deg,#f0e8ff 0%,#e8f4ff 50%,#f0ffe8 100%);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color-scheme:light;-webkit-font-smoothing:antialiased}
-@keyframes mintSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-@keyframes mintFadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.mint-spin{animation:mintSpin 1.4s linear infinite}
-.mint-fade{animation:mintFadeUp 0.4s ease both}
-.wrapper{display:flex;align-items:center;justify-content:center;padding:32px;min-height:100vh}
-.shadow-wrap{filter:drop-shadow(0 32px 64px rgba(125,0,255,0.12)) drop-shadow(0 8px 24px rgba(0,0,0,0.08))}
-.frame{border-radius:16px;overflow:hidden;width:800px;max-width:100%}
-.chrome{display:flex;align-items:center;gap:12px;padding:10px 16px;background:#1e1e2e}
-.traffic-lights{display:flex;gap:6px}
-.tl{width:12px;height:12px;border-radius:50%}
-.url-bar{flex:1;margin:0 8px;border-radius:6px;padding:5px 12px;background:#2a2a3e;font-size:12px;color:#6b7280;user-select:none}
-.app-shell{background:#f8fbff;padding:20px 24px 24px;display:flex;flex-direction:column;gap:16px}
-.tabs{background:#fff;border:1px solid #e2e8f0;border-radius:6px;display:flex;gap:4px;padding:4px}
-.tab{flex:1;height:36px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600}
-.tab.active{background:#fcf9ff;color:#7d00ff}
-.tab.inactive{color:#718096}
-.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;display:flex;overflow:hidden}
-.left{flex:1;padding:28px;display:flex;flex-direction:column;min-width:0}
-.back-nav{display:flex;align-items:center;gap:8px;margin-bottom:16px}
-.nav-label{font-size:11px;font-weight:700;color:#4a5568;letter-spacing:.1em;text-transform:uppercase}
-.btc-icon{width:20px;height:20px;border-radius:50%;background:#1D2229;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.status-row{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:20px;font-size:17px}
-.purple{font-weight:700;color:#7d00ff}
-.gray{color:#4a5568}
-.step-bar{display:flex;align-items:flex-start;width:100%;margin-bottom:28px}
-.step-item{display:flex;flex-direction:column;align-items:center}
-.step-item.flex1{flex:1}
-.step-row{display:flex;align-items:center;width:100%}
-.step-circle{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:4px solid #E2E8F0;background:#fff;transition:all .5s ease}
-.step-circle.done{background:#7D00FF;border-color:#7D00FF}
-.step-circle.active{border-color:#7D00FF}
-.step-track{flex:1;height:4px;background:#E2E8F0;position:relative;overflow:hidden}
-.step-fill{position:absolute;top:0;bottom:0;left:0;background:#7D00FF;width:0%;transition:width .7s ease}
-.step-label{margin-top:8px;font-size:11px;color:#4a5568;line-height:1.3;text-align:center}
-.phase-title{font-size:18px;color:#4a5568;font-weight:400;margin:0 0 24px}
-.circle-wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:20px}
-.circle-container{position:relative;width:160px;height:160px;flex-shrink:0}
-.circle-container>svg{position:absolute;top:0;left:0}
-.checkmark-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity .45s ease,transform .45s cubic-bezier(.34,1.56,.64,1)}
-.confirm-text{display:flex;align-items:center;gap:8px;margin-top:12px;color:#718096;font-size:14px}
-.desc{color:#4a5568;font-size:15px;line-height:1.65;flex:1}
-.footer-link{margin-top:20px;text-align:center;font-size:14px;color:#718096}
-.footer-link a{color:#7d00ff;text-decoration:underline;cursor:pointer}
-.right{width:248px;flex-shrink:0;border-left:1px solid #e2e8f0;display:flex;flex-direction:column;background:#fff}
-.tx-section{padding:20px;flex:1}
-.section-label{font-size:11px;font-weight:700;color:#4a5568;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
-.time-badge{display:inline-flex;align-items:center;gap:6px;background:#faad14;color:#fff;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:16px}
-.tx-list{display:flex;flex-direction:column;gap:8px}
-.tx-item{font-size:14px;color:#718096}
-.tx-item a{color:#7d00ff;text-decoration:underline;cursor:pointer}
-.no-tx{font-size:14px;color:#718096;text-align:center;padding:8px 0}
-.blog-card{border-top:1px solid #e2e8f0;background:#fffbe6;padding:20px}
-.blog-icon{background:#fff1b8;border-radius:8px;width:56px;height:56px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
-.blog-title{font-weight:700;color:#323a47;font-size:14px;line-height:1.4;margin-bottom:8px}
-.blog-body{color:#718096;font-size:12px;line-height:1.5;margin-bottom:4px}
-.blog-link{color:#7d00ff;font-size:12px;cursor:pointer}
-.dots{display:flex;justify-content:center;gap:6px;padding-top:4px}
-.dot-item{border-radius:999px;height:6px;background:#E2E8F0;transition:all .5s ease}
-</style>
-</head>
-<body>
-<div class="wrapper"><div class="shadow-wrap"><div class="frame">
-<div class="chrome">
-  <div class="traffic-lights">
-    <div class="tl" style="background:#ff5f57"></div>
-    <div class="tl" style="background:#ffbd2e"></div>
-    <div class="tl" style="background:#28c840"></div>
-  </div>
-  <div class="url-bar">app.threshold.network/tbtc/mint</div>
-</div>
-<div class="app-shell">
-  <div class="tabs"><div class="tab active">Mint</div><div class="tab inactive">Unmint</div></div>
-  <div class="card">
-    <div class="left">
-      <div class="back-nav">
-        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M13 4L7 10l6 6" stroke="#4a5568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div class="btc-icon"><svg viewBox="0 0 14 14" width="11" height="11" fill="none"><path d="M3 7h8M7 3v8" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="7" cy="7" r="6" stroke="white" stroke-width="1.2" fill="none"/></svg></div>
-        <span class="nav-label">tBTC – Minting process</span>
-      </div>
-      <div class="status-row"><p><span class="purple">Minting </span><span class="gray">- In progress...</span></p><span class="gray">1.2 tBTC</span></div>
-      <div class="step-bar" id="stepBar"></div>
-      <h2 class="phase-title" id="phaseTitle"></h2>
-      <div class="circle-wrap">
-        <div class="circle-container" id="circleContainer"></div>
-        <div class="confirm-text" id="confirmText" style="display:none">
-          <svg viewBox="0 0 16 16" width="15" height="15" fill="none"><circle cx="8" cy="8" r="7" stroke="#718096" stroke-width="1.5"/><path d="M5 8.5l2.5 2.5 4-4.5" stroke="#718096" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span id="confirmTextValue"></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>tBTC Minting Demo</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        background: linear-gradient(135deg, #f0e8ff 0%, #e8f4ff 50%, #f0ffe8 100%);
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        color-scheme: light;
+        -webkit-font-smoothing: antialiased;
+      }
+      @keyframes mintSpin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes mintFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .mint-spin {
+        animation: mintSpin 1.4s linear infinite;
+      }
+      .mint-fade {
+        animation: mintFadeUp 0.4s ease both;
+      }
+      .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+        min-height: 100vh;
+      }
+      .shadow-wrap {
+        filter: drop-shadow(0 32px 64px rgba(125, 0, 255, 0.12))
+          drop-shadow(0 8px 24px rgba(0, 0, 0, 0.08));
+      }
+      .frame {
+        border-radius: 16px;
+        overflow: hidden;
+        width: 800px;
+        max-width: 100%;
+      }
+      .chrome {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 16px;
+        background: #1e1e2e;
+      }
+      .traffic-lights {
+        display: flex;
+        gap: 6px;
+      }
+      .tl {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+      .url-bar {
+        flex: 1;
+        margin: 0 8px;
+        border-radius: 6px;
+        padding: 5px 12px;
+        background: #2a2a3e;
+        font-size: 12px;
+        color: #6b7280;
+        user-select: none;
+      }
+      .app-shell {
+        background: #f8fbff;
+        padding: 20px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .tabs {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        display: flex;
+        gap: 4px;
+        padding: 4px;
+      }
+      .tab {
+        flex: 1;
+        height: 36px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .tab.active {
+        background: #fcf9ff;
+        color: #7d00ff;
+      }
+      .tab.inactive {
+        color: #718096;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        display: flex;
+        overflow: hidden;
+      }
+      .left {
+        flex: 1;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+      .back-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .nav-label {
+        font-size: 11px;
+        font-weight: 700;
+        color: #4a5568;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .btc-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #1d2229;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .status-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-size: 17px;
+      }
+      .purple {
+        font-weight: 700;
+        color: #7d00ff;
+      }
+      .gray {
+        color: #4a5568;
+      }
+      .step-bar {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 28px;
+      }
+      .step-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .step-item.flex1 {
+        flex: 1;
+      }
+      .step-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+      .step-circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 4px solid #e2e8f0;
+        background: #fff;
+        transition: all 0.5s ease;
+      }
+      .step-circle.done {
+        background: #7d00ff;
+        border-color: #7d00ff;
+      }
+      .step-circle.active {
+        border-color: #7d00ff;
+      }
+      .step-track {
+        flex: 1;
+        height: 4px;
+        background: #e2e8f0;
+        position: relative;
+        overflow: hidden;
+      }
+      .step-fill {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: #7d00ff;
+        width: 0%;
+        transition: width 0.7s ease;
+      }
+      .step-label {
+        margin-top: 8px;
+        font-size: 11px;
+        color: #4a5568;
+        line-height: 1.3;
+        text-align: center;
+      }
+      .phase-title {
+        font-size: 18px;
+        color: #4a5568;
+        font-weight: 400;
+        margin: 0 0 24px;
+      }
+      .circle-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .circle-container {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        flex-shrink: 0;
+      }
+      .circle-container > svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .checkmark-wrap {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition:
+          opacity 0.45s ease,
+          transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .confirm-text {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 12px;
+        color: #718096;
+        font-size: 14px;
+      }
+      .desc {
+        color: #4a5568;
+        font-size: 15px;
+        line-height: 1.65;
+        flex: 1;
+      }
+      .footer-link {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #718096;
+      }
+      .footer-link a {
+        color: #7d00ff;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .right {
+        width: 248px;
+        flex-shrink: 0;
+        border-left: 1px solid #e2e8f0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+      }
+      .tx-section {
+        padding: 20px;
+        flex: 1;
+      }
+      .section-label {
+        font-size: 11px;
+        font-weight: 700;
+        color: #4a5568;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .time-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #faad14;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 999px;
+        margin-bottom: 16px;
+      }
+      .tx-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .tx-item {
+        font-size: 14px;
+        color: #718096;
+      }
+      .tx-item a {
+        color: #7d00ff;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .no-tx {
+        font-size: 14px;
+        color: #718096;
+        text-align: center;
+        padding: 8px 0;
+      }
+      .blog-card {
+        border-top: 1px solid #e2e8f0;
+        background: #fffbe6;
+        padding: 20px;
+      }
+      .blog-icon {
+        background: #fff1b8;
+        border-radius: 8px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+      .blog-title {
+        font-weight: 700;
+        color: #323a47;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+      .blog-body {
+        color: #718096;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 4px;
+      }
+      .blog-link {
+        color: #7d00ff;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      .dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        padding-top: 4px;
+      }
+      .dot-item {
+        border-radius: 999px;
+        height: 6px;
+        background: #e2e8f0;
+        transition: all 0.5s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="shadow-wrap">
+        <div class="frame">
+          <div class="chrome">
+            <div class="traffic-lights">
+              <div class="tl" style="background: #ff5f57"></div>
+              <div class="tl" style="background: #ffbd2e"></div>
+              <div class="tl" style="background: #28c840"></div>
+            </div>
+            <div class="url-bar">app.threshold.network/tbtc/mint</div>
+          </div>
+          <div class="app-shell">
+            <div class="tabs">
+              <div class="tab active">Mint</div>
+              <div class="tab inactive">Unmint</div>
+            </div>
+            <div class="card">
+              <div class="left">
+                <div class="back-nav">
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M13 4L7 10l6 6"
+                      stroke="#4a5568"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <div class="btc-icon">
+                    <svg viewBox="0 0 14 14" width="11" height="11" fill="none">
+                      <path
+                        d="M3 7h8M7 3v8"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <circle cx="7" cy="7" r="6" stroke="white" stroke-width="1.2" fill="none" />
+                    </svg>
+                  </div>
+                  <span class="nav-label">tBTC – Minting process</span>
+                </div>
+                <div class="status-row">
+                  <p>
+                    <span class="purple">Minting </span><span class="gray">- In progress...</span>
+                  </p>
+                  <span class="gray">1.2 tBTC</span>
+                </div>
+                <div class="step-bar" id="stepBar"></div>
+                <h2 class="phase-title" id="phaseTitle"></h2>
+                <div class="circle-wrap">
+                  <div class="circle-container" id="circleContainer"></div>
+                  <div class="confirm-text" id="confirmText" style="display: none">
+                    <svg viewBox="0 0 16 16" width="15" height="15" fill="none">
+                      <circle cx="8" cy="8" r="7" stroke="#718096" stroke-width="1.5" />
+                      <path
+                        d="M5 8.5l2.5 2.5 4-4.5"
+                        stroke="#718096"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span id="confirmTextValue"></span>
+                  </div>
+                </div>
+                <p class="desc" id="descText"></p>
+                <div class="footer-link" id="footerLink"></div>
+              </div>
+              <div class="right">
+                <div class="tx-section">
+                  <p class="section-label">Transaction History</p>
+                  <div class="time-badge">
+                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none">
+                      <circle cx="6" cy="6" r="5" stroke="white" stroke-width="1.2" />
+                      <path
+                        d="M6 3.5V6l1.5 1.5"
+                        stroke="white"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                      /></svg
+                    >~3 hours minting time
+                  </div>
+                  <div class="tx-list" id="txList"></div>
+                </div>
+                <div class="blog-card">
+                  <div class="blog-icon">
+                    <svg viewBox="0 0 56 56" width="48" height="48" fill="none">
+                      <path
+                        d="M19 22l-5 6 5 6M37 22l5 6-5 6M31 18l-6 20"
+                        stroke="url(#bic)"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="bic"
+                          x1="14"
+                          y1="18"
+                          x2="42"
+                          y2="44"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#BD30FF" />
+                          <stop offset="1" stop-color="#7D00FF" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p class="blog-title" id="blogTitle"></p>
+                  <p class="blog-body">
+                    Amazing body copy of the new update, feature, code or design improvement.
+                  </p>
+                  <p class="blog-link">Read more</p>
+                </div>
+              </div>
+            </div>
+            <div class="dots" id="dots"></div>
+          </div>
         </div>
       </div>
-      <p class="desc" id="descText"></p>
-      <div class="footer-link" id="footerLink"></div>
     </div>
-    <div class="right">
-      <div class="tx-section">
-        <p class="section-label">Transaction History</p>
-        <div class="time-badge"><svg viewBox="0 0 12 12" width="10" height="10" fill="none"><circle cx="6" cy="6" r="5" stroke="white" stroke-width="1.2"/><path d="M6 3.5V6l1.5 1.5" stroke="white" stroke-width="1" stroke-linecap="round"/></svg>~3 hours minting time</div>
-        <div class="tx-list" id="txList"></div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-icon"><svg viewBox="0 0 56 56" width="48" height="48" fill="none"><path d="M19 22l-5 6 5 6M37 22l5 6-5 6M31 18l-6 20" stroke="url(#bic)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="bic" x1="14" y1="18" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#BD30FF"/><stop offset="1" stop-color="#7D00FF"/></linearGradient></defs></svg></div>
-        <p class="blog-title" id="blogTitle"></p>
-        <p class="blog-body">Amazing body copy of the new update, feature, code or design improvement.</p>
-        <p class="blog-link">Read more</p>
-      </div>
-    </div>
-  </div>
-  <div class="dots" id="dots"></div>
-</div>
-</div></div></div>
-<script>
-const CIRC=2*Math.PI*65,SZ=160,R=65
-const STEPS=[{a:'Bitcoin',b:'checkpoint'},{a:'Minting',b:'initialized'},{a:'Guardian',b:'Check'},{a:'Minting',b:'Completed'}]
-const ALL_TX=[{prefix:'Reveal ',link:'transaction.'},{prefix:'BTC confirmations ',link:'transactions.'},{prefix:'Minting initiation ',link:'transaction.'},{prefix:'Minting completion ',link:'transaction.'}]
-const STATES=[
-  {stepsDone:0,activeStep:0,isCheck:false,c1:'#BD30FF',c2:'#7D00FF',arc:.5,title:'Waiting for the Bitcoin Network Confirmations...',desc:'The Bitcoin Deposit transaction needs to get 6 confirmations on the Bitcoin Network before the minting is initialised.',confirmText:'3/6 Bitcoin Network Confirmations',txLinks:[ALL_TX[0],ALL_TX[1]],footerText:'See transaction on',footerLink:'blockstream.',blogTitle:'6/6 Bitcoin Confirmations Requirement'},
-  {stepsDone:1,activeStep:-1,isCheck:true,c1:'#BD30FF',c2:'#7D00FF',arc:1,title:'Waiting for the Bitcoin Network Confirmations...',desc:'The Bitcoin Deposit transaction needs to get 6 confirmations on the Bitcoin Network before the minting is initialised.',confirmText:'6/6 Bitcoin Network Confirmations',txLinks:[ALL_TX[0],ALL_TX[1]],footerText:'See transaction on',footerLink:'blockstream.',blogTitle:'6/6 Bitcoin Confirmations Requirement'},
-  {stepsDone:1,activeStep:1,isCheck:false,c1:'#FAAD14',c2:'#F55B5B',arc:.35,title:'Minting Initialized',desc:'The minter is reviewing the minting initialisation. If everything is fine the minter will move the initialisation to the guardian.',txLinks:[ALL_TX[0],ALL_TX[1],ALL_TX[2]],footerText:'See transaction on',footerLink:'etherscan.',blogTitle:'Minters and Guardians in Optimistic Minting'},
-  {stepsDone:2,activeStep:-1,isCheck:true,c1:'#FAAD14',c2:'#F55B5B',arc:1,title:'Minting Initialized',desc:'The minter is reviewing the minting initialisation. If everything is fine the minter will move the initialisation to the guardian.',txLinks:[ALL_TX[0],ALL_TX[1],ALL_TX[2]],footerText:'See transaction on',footerLink:'etherscan.',blogTitle:'Minters and Guardians in Optimistic Minting'},
-  {stepsDone:2,activeStep:2,isCheck:false,c1:'#8FFF00',c2:'#48BB78',arc:.2,title:'Guardian Check',desc:'A guardian is reviewing the minting request forwarded by a minter. If everything is compliant the contract will move on to minting.',txLinks:[],blogTitle:'Minters and Guardians in Optimistic Minting'},
-  {stepsDone:3,activeStep:-1,isCheck:true,c1:'#8FFF00',c2:'#48BB78',arc:1,title:'Guardian Check',desc:'A guardian is reviewing the minting request forwarded by a minter. If everything is compliant the contract will move on to minting.',txLinks:[],blogTitle:'Minters and Guardians in Optimistic Minting'},
-  {stepsDone:3,activeStep:3,isCheck:false,c1:'#38BDF8',c2:'#BD30FF',arc:.25,title:'Minting in progress',desc:'The contract is minting your tBTC tokens.',txLinks:[ALL_TX[0],ALL_TX[1],ALL_TX[2],ALL_TX[3]],footerText:'See transaction on',footerLink:'etherscan.',blogTitle:'Minters and Guardians in Optimistic Minting'},
-  {stepsDone:4,activeStep:-1,isCheck:true,c1:'#38BDF8',c2:'#BD30FF',arc:1,title:'Minting in progress',desc:'The contract is minting your tBTC tokens.',txLinks:[ALL_TX[0],ALL_TX[1],ALL_TX[2],ALL_TX[3]],footerText:'See transaction on',footerLink:'etherscan.',blogTitle:'Minters and Guardians in Optimistic Minting'},
-]
-let idx=0
-function fade(el){el.classList.remove('mint-fade');void el.offsetWidth;el.classList.add('mint-fade')}
-function renderStepBar(done,active){
-  document.getElementById('stepBar').innerHTML=STEPS.map((s,i)=>{
-    const d=i<done,a=i===active,last=i===STEPS.length-1
-    return`<div class="step-item ${last?'':'flex1'}"><div class="step-row"><div class="step-circle ${d?'done':a?'active':''}">${d?'<svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M3 8.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>':''}</div>${last?'':`<div class="step-track"><div class="step-fill" style="width:${d?'100%':'0%'}"></div></div>`}</div><div class="step-label">${s.a}<br>${s.b}</div></div>`
-  }).join('')
-}
-function renderCircle(s,i){
-  const al=CIRC*s.arc,g=`g${i}${Date.now()}`
-  document.getElementById('circleContainer').innerHTML=`
-    <svg width="${SZ}" height="${SZ}"><circle cx="${SZ/2}" cy="${SZ/2}" r="${R}" fill="none" stroke="#E2E8F0" stroke-width="12"/></svg>
-    <svg width="${SZ}" height="${SZ}" class="mint-spin" style="opacity:${s.isCheck?0:1};transition:opacity .5s ease"><defs><linearGradient id="${g}a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${s.c1}"/><stop offset="100%" stop-color="${s.c2}"/></linearGradient></defs><circle cx="${SZ/2}" cy="${SZ/2}" r="${R}" fill="none" stroke="url(#${g}a)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${al} ${CIRC}" transform="rotate(-90 ${SZ/2} ${SZ/2})"/></svg>
-    <svg width="${SZ}" height="${SZ}" style="opacity:${s.isCheck?1:0};transition:opacity .5s ease"><defs><linearGradient id="${g}b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${s.c1}"/><stop offset="100%" stop-color="${s.c2}"/></linearGradient></defs><circle cx="${SZ/2}" cy="${SZ/2}" r="${R}" fill="none" stroke="url(#${g}b)" stroke-width="12"/></svg>
-    <div class="checkmark-wrap" style="opacity:${s.isCheck?1:0};transform:${s.isCheck?'scale(1)':'scale(0.6)'}"><svg viewBox="0 0 60 60" width="72" height="72" fill="none"><defs><linearGradient id="${g}c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${s.c1}"/><stop offset="100%" stop-color="${s.c2}"/></linearGradient></defs><path d="M12 30l13 13 23-26" stroke="url(#${g}c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`
-}
-function render(){
-  const s=STATES[idx]
-  renderStepBar(s.stepsDone,s.activeStep)
-  renderCircle(s,idx)
-  document.getElementById('dots').innerHTML=STATES.map((_,i)=>`<div class="dot-item" style="width:${i===idx?20:6}px;background:${i===idx?'#7D00FF':'#E2E8F0'}"></div>`).join('')
-  const t=document.getElementById('phaseTitle');t.textContent=s.title;fade(t)
-  const d=document.getElementById('descText');d.textContent=s.desc;fade(d)
-  const cf=document.getElementById('confirmText')
-  if(s.confirmText){document.getElementById('confirmTextValue').textContent=s.confirmText;cf.style.display='flex';fade(cf)}else{cf.style.display='none'}
-  const fl=document.getElementById('footerLink')
-  fl.innerHTML=s.footerText&&s.footerLink?`${s.footerText} <a>${s.footerLink}</a>`:(!s.footerText&&s.txLinks.length===0)?'No transaction':''
-  const tl=document.getElementById('txList')
-  tl.innerHTML=s.txLinks.length===0?'<p class="no-tx">No transaction</p>':s.txLinks.map((tx,i)=>`<p class="tx-item mint-fade" style="animation-delay:${i*60}ms">${tx.prefix}<a>${tx.link}</a></p>`).join('')
-  const bt=document.getElementById('blogTitle');bt.textContent=s.blogTitle;fade(bt)
-}
-render()
-setInterval(()=>{idx=(idx+1)%STATES.length;render()},2800)
-</script>
-</body>
+    <script>
+      const CIRC = 2 * Math.PI * 65,
+        SZ = 160,
+        R = 65;
+      const STEPS = [
+        { a: "Bitcoin", b: "checkpoint" },
+        { a: "Minting", b: "initialized" },
+        { a: "Guardian", b: "Check" },
+        { a: "Minting", b: "Completed" },
+      ];
+      const ALL_TX = [
+        { prefix: "Reveal ", link: "transaction." },
+        { prefix: "BTC confirmations ", link: "transactions." },
+        { prefix: "Minting initiation ", link: "transaction." },
+        { prefix: "Minting completion ", link: "transaction." },
+      ];
+      const STATES = [
+        {
+          stepsDone: 0,
+          activeStep: 0,
+          isCheck: false,
+          c1: "#BD30FF",
+          c2: "#7D00FF",
+          arc: 0.5,
+          title: "Waiting for the Bitcoin Network Confirmations...",
+          desc: "The Bitcoin Deposit transaction needs to get 6 confirmations on the Bitcoin Network before the minting is initialised.",
+          confirmText: "3/6 Bitcoin Network Confirmations",
+          txLinks: [ALL_TX[0], ALL_TX[1]],
+          footerText: "See transaction on",
+          footerLink: "blockstream.",
+          blogTitle: "6/6 Bitcoin Confirmations Requirement",
+        },
+        {
+          stepsDone: 1,
+          activeStep: -1,
+          isCheck: true,
+          c1: "#BD30FF",
+          c2: "#7D00FF",
+          arc: 1,
+          title: "Waiting for the Bitcoin Network Confirmations...",
+          desc: "The Bitcoin Deposit transaction needs to get 6 confirmations on the Bitcoin Network before the minting is initialised.",
+          confirmText: "6/6 Bitcoin Network Confirmations",
+          txLinks: [ALL_TX[0], ALL_TX[1]],
+          footerText: "See transaction on",
+          footerLink: "blockstream.",
+          blogTitle: "6/6 Bitcoin Confirmations Requirement",
+        },
+        {
+          stepsDone: 1,
+          activeStep: 1,
+          isCheck: false,
+          c1: "#FAAD14",
+          c2: "#F55B5B",
+          arc: 0.35,
+          title: "Minting Initialized",
+          desc: "The minter is reviewing the minting initialisation. If everything is fine the minter will move the initialisation to the guardian.",
+          txLinks: [ALL_TX[0], ALL_TX[1], ALL_TX[2]],
+          footerText: "See transaction on",
+          footerLink: "etherscan.",
+          blogTitle: "Minters and Guardians in Optimistic Minting",
+        },
+        {
+          stepsDone: 2,
+          activeStep: -1,
+          isCheck: true,
+          c1: "#FAAD14",
+          c2: "#F55B5B",
+          arc: 1,
+          title: "Minting Initialized",
+          desc: "The minter is reviewing the minting initialisation. If everything is fine the minter will move the initialisation to the guardian.",
+          txLinks: [ALL_TX[0], ALL_TX[1], ALL_TX[2]],
+          footerText: "See transaction on",
+          footerLink: "etherscan.",
+          blogTitle: "Minters and Guardians in Optimistic Minting",
+        },
+        {
+          stepsDone: 2,
+          activeStep: 2,
+          isCheck: false,
+          c1: "#8FFF00",
+          c2: "#48BB78",
+          arc: 0.2,
+          title: "Guardian Check",
+          desc: "A guardian is reviewing the minting request forwarded by a minter. If everything is compliant the contract will move on to minting.",
+          txLinks: [],
+          blogTitle: "Minters and Guardians in Optimistic Minting",
+        },
+        {
+          stepsDone: 3,
+          activeStep: -1,
+          isCheck: true,
+          c1: "#8FFF00",
+          c2: "#48BB78",
+          arc: 1,
+          title: "Guardian Check",
+          desc: "A guardian is reviewing the minting request forwarded by a minter. If everything is compliant the contract will move on to minting.",
+          txLinks: [],
+          blogTitle: "Minters and Guardians in Optimistic Minting",
+        },
+        {
+          stepsDone: 3,
+          activeStep: 3,
+          isCheck: false,
+          c1: "#38BDF8",
+          c2: "#BD30FF",
+          arc: 0.25,
+          title: "Minting in progress",
+          desc: "The contract is minting your tBTC tokens.",
+          txLinks: [ALL_TX[0], ALL_TX[1], ALL_TX[2], ALL_TX[3]],
+          footerText: "See transaction on",
+          footerLink: "etherscan.",
+          blogTitle: "Minters and Guardians in Optimistic Minting",
+        },
+        {
+          stepsDone: 4,
+          activeStep: -1,
+          isCheck: true,
+          c1: "#38BDF8",
+          c2: "#BD30FF",
+          arc: 1,
+          title: "Minting in progress",
+          desc: "The contract is minting your tBTC tokens.",
+          txLinks: [ALL_TX[0], ALL_TX[1], ALL_TX[2], ALL_TX[3]],
+          footerText: "See transaction on",
+          footerLink: "etherscan.",
+          blogTitle: "Minters and Guardians in Optimistic Minting",
+        },
+      ];
+      let idx = 0;
+      function fade(el) {
+        el.classList.remove("mint-fade");
+        void el.offsetWidth;
+        el.classList.add("mint-fade");
+      }
+      function renderStepBar(done, active) {
+        document.getElementById("stepBar").innerHTML = STEPS.map((s, i) => {
+          const d = i < done,
+            a = i === active,
+            last = i === STEPS.length - 1;
+          return `<div class="step-item ${last ? "" : "flex1"}"><div class="step-row"><div class="step-circle ${d ? "done" : a ? "active" : ""}">${d ? '<svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M3 8.5l3.5 3.5 6.5-7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : ""}</div>${last ? "" : `<div class="step-track"><div class="step-fill" style="width:${d ? "100%" : "0%"}"></div></div>`}</div><div class="step-label">${s.a}<br>${s.b}</div></div>`;
+        }).join("");
+      }
+      function renderCircle(s, i) {
+        const al = CIRC * s.arc,
+          g = `g${i}${Date.now()}`;
+        document.getElementById("circleContainer").innerHTML = `
+    <svg width="${SZ}" height="${SZ}"><circle cx="${SZ / 2}" cy="${SZ / 2}" r="${R}" fill="none" stroke="#E2E8F0" stroke-width="12"/></svg>
+    <svg width="${SZ}" height="${SZ}" class="mint-spin" style="opacity:${s.isCheck ? 0 : 1};transition:opacity .5s ease"><defs><linearGradient id="${g}a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${s.c1}"/><stop offset="100%" stop-color="${s.c2}"/></linearGradient></defs><circle cx="${SZ / 2}" cy="${SZ / 2}" r="${R}" fill="none" stroke="url(#${g}a)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${al} ${CIRC}" transform="rotate(-90 ${SZ / 2} ${SZ / 2})"/></svg>
+    <svg width="${SZ}" height="${SZ}" style="opacity:${s.isCheck ? 1 : 0};transition:opacity .5s ease"><defs><linearGradient id="${g}b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${s.c1}"/><stop offset="100%" stop-color="${s.c2}"/></linearGradient></defs><circle cx="${SZ / 2}" cy="${SZ / 2}" r="${R}" fill="none" stroke="url(#${g}b)" stroke-width="12"/></svg>
+    <div class="checkmark-wrap" style="opacity:${s.isCheck ? 1 : 0};transform:${s.isCheck ? "scale(1)" : "scale(0.6)"}"><svg viewBox="0 0 60 60" width="72" height="72" fill="none"><defs><linearGradient id="${g}c" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${s.c1}"/><stop offset="100%" stop-color="${s.c2}"/></linearGradient></defs><path d="M12 30l13 13 23-26" stroke="url(#${g}c)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`;
+      }
+      function render() {
+        const s = STATES[idx];
+        renderStepBar(s.stepsDone, s.activeStep);
+        renderCircle(s, idx);
+        document.getElementById("dots").innerHTML = STATES.map(
+          (_, i) =>
+            `<div class="dot-item" style="width:${i === idx ? 20 : 6}px;background:${i === idx ? "#7D00FF" : "#E2E8F0"}"></div>`,
+        ).join("");
+        const t = document.getElementById("phaseTitle");
+        t.textContent = s.title;
+        fade(t);
+        const d = document.getElementById("descText");
+        d.textContent = s.desc;
+        fade(d);
+        const cf = document.getElementById("confirmText");
+        if (s.confirmText) {
+          document.getElementById("confirmTextValue").textContent = s.confirmText;
+          cf.style.display = "flex";
+          fade(cf);
+        } else {
+          cf.style.display = "none";
+        }
+        const fl = document.getElementById("footerLink");
+        fl.innerHTML =
+          s.footerText && s.footerLink
+            ? `${s.footerText} <a>${s.footerLink}</a>`
+            : !s.footerText && s.txLinks.length === 0
+              ? "No transaction"
+              : "";
+        const tl = document.getElementById("txList");
+        tl.innerHTML =
+          s.txLinks.length === 0
+            ? '<p class="no-tx">No transaction</p>'
+            : s.txLinks
+                .map(
+                  (tx, i) =>
+                    `<p class="tx-item mint-fade" style="animation-delay:${i * 60}ms">${tx.prefix}<a>${tx.link}</a></p>`,
+                )
+                .join("");
+        const bt = document.getElementById("blogTitle");
+        bt.textContent = s.blogTitle;
+        fade(bt);
+      }
+      render();
+      setInterval(() => {
+        idx = (idx + 1) % STATES.length;
+        render();
+      }, 2800);
+    </script>
+  </body>
 </html>

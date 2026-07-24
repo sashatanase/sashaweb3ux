@@ -203,9 +203,7 @@ function StepBar({ stepsDone, activeStep }: { stepsDone: number; activeStep: num
                 )}
               </div>
               {!isLast && (
-                <div
-                  className={`mx-2 h-px flex-1 ${done ? "bg-emerald-500" : "bg-white/15"}`}
-                />
+                <div className={`mx-2 h-px flex-1 ${done ? "bg-emerald-500" : "bg-white/15"}`} />
               )}
             </div>
             <div className="mt-2 self-start text-left">
@@ -231,7 +229,14 @@ function CenterCircle({ s, idx }: { s: MState; idx: number }) {
             <stop offset="100%" stopColor={s.c2} />
           </linearGradient>
         </defs>
-        <circle cx={SZ / 2} cy={SZ / 2} r={R} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="6" />
+        <circle
+          cx={SZ / 2}
+          cy={SZ / 2}
+          r={R}
+          fill="none"
+          stroke="rgba(255,255,255,0.08)"
+          strokeWidth="6"
+        />
         <circle
           cx={SZ / 2}
           cy={SZ / 2}
@@ -258,9 +263,7 @@ function CenterCircle({ s, idx }: { s: MState; idx: number }) {
           </svg>
         ) : (
           <>
-            <div className="text-2xl font-semibold text-white">
-              {Math.round(s.arc * 100)}%
-            </div>
+            <div className="text-2xl font-semibold text-white">{Math.round(s.arc * 100)}%</div>
             <div className="mt-0.5 text-[10px] uppercase tracking-widest text-white/50">
               in progress
             </div>
@@ -374,7 +377,10 @@ export default function MintingDemo() {
                 </div>
               </div>
 
-              <div key={`blog-${idx}`} className="fade-up rounded-md border border-white/10 bg-white/[0.02] p-4">
+              <div
+                key={`blog-${idx}`}
+                className="fade-up rounded-md border border-white/10 bg-white/[0.02] p-4"
+              >
                 <div className="mb-1 text-[11px] uppercase tracking-widest text-white/40">
                   From the blog
                 </div>
