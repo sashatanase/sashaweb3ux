@@ -176,7 +176,7 @@ function DesignProject01() {
       <DesignSection number="03" title="Iteration 1 → establishing the baseline">
         <p>
           Tested May 2022 · 6 participants · think-aloud through minting and unminting
-          <br /><br />
+          <br />
           I designed the first prototype, then tested it myself. At the end of each session I asked participants to rate the ease of the flow from 1 to 7; the average landed at 5.8, and everyone was asked to motivate their score.
         </p>
 
@@ -237,30 +237,16 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="04" title="Iteration 2 · tested May–June 2023">
+      <DesignSection number="04" title="Iteration 2 · designing the wait">
+        <p>Tested May–June 2023 · 6 participants · minting rated 4.75, unminting&nbsp;</p>
         <p>
-          Six participants again, and this time I split the ease question, because minting and
-          unminting are different jobs with different risks. Minting scored 4.75. Unminting scored
-          6.
-        </p>
-        <p>
-          A lower minting score than iteration 1 is not the failure it looks like. That 5.8 was a
-          single number covering a simpler flow, while this version carried optimistic minting,
-          guardians, receipts and recovery paths that did not exist before. The useful part is not
-          the number, it is what participants said was holding it back.
-        </p>
-
-        <h3 className="text-lg font-medium tracking-tight text-foreground md:text-xl">
-          The wait became the design problem.
-        </h3>
-        <p>
-          <em>
-            Once the user hits [Initiate minting], their active role ends, and they enter a
-            spectator state.
-          </em>{" "}
-          So the interface started mirroring the protocol: Bitcoin Confirmations, Minter Check,
-          Guardian Check, Minting Complete, each with an explanation, its transaction on the native
-          explorer, and an elapsed time counter running throughout.
+          The redesign was organised around one idea: the moment a user initiates minting, their active role ends.
+          <br /><br />
+          They become a spectator. So the interface should behave like a narrator, mirroring the protocol's actual stages rather than hiding them behind a loader.
+          <br /><br />
+          Minting became four visible states: Bitcoin Confirmations, Minter Check, Guardian Check, Minting Complete. Each with a plain-language explanation, its transaction linked on the native explorer, and an elapsed-time counter running throughout.
+          <br /><br />
+          Visibility of system status, applied literally: don't summarise the machine, show it. The explorer links mattered as much as the states. In crypto, users don't want your reassurance; they want the receipts.
         </p>
 
         <figure className="py-4">
