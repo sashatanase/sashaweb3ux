@@ -20,6 +20,7 @@ import { Route as CaseStudies04RouteImport } from './routes/case-studies.04'
 import { Route as CaseStudies03RouteImport } from './routes/case-studies.03'
 import { Route as CaseStudies02RouteImport } from './routes/case-studies.02'
 import { Route as CaseStudies01RouteImport } from './routes/case-studies.01'
+import { Route as CaseStudiesDesign01RouteImport } from './routes/case-studies.design.01'
 
 const CaseStudiesRoute = CaseStudiesRouteImport.update({
   id: '/case-studies',
@@ -76,6 +77,11 @@ const CaseStudies01Route = CaseStudies01RouteImport.update({
   path: '/01',
   getParentRoute: () => CaseStudiesRoute,
 } as any)
+const CaseStudiesDesign01Route = CaseStudiesDesign01RouteImport.update({
+  id: '/01',
+  path: '/01',
+  getParentRoute: () => CaseStudiesDesignRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -86,9 +92,10 @@ export interface FileRoutesByFullPath {
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
   '/case-studies/06': typeof CaseStudies06Route
-  '/case-studies/design': typeof CaseStudiesDesignRoute
+  '/case-studies/design': typeof CaseStudiesDesignRouteWithChildren
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
+  '/case-studies/design/01': typeof CaseStudiesDesign01Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -98,9 +105,10 @@ export interface FileRoutesByTo {
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
   '/case-studies/06': typeof CaseStudies06Route
-  '/case-studies/design': typeof CaseStudiesDesignRoute
+  '/case-studies/design': typeof CaseStudiesDesignRouteWithChildren
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies': typeof CaseStudiesIndexRoute
+  '/case-studies/design/01': typeof CaseStudiesDesign01Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -112,9 +120,10 @@ export interface FileRoutesById {
   '/case-studies/04': typeof CaseStudies04Route
   '/case-studies/05': typeof CaseStudies05Route
   '/case-studies/06': typeof CaseStudies06Route
-  '/case-studies/design': typeof CaseStudiesDesignRoute
+  '/case-studies/design': typeof CaseStudiesDesignRouteWithChildren
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
+  '/case-studies/design/01': typeof CaseStudiesDesign01Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
     | '/case-studies/design'
     | '/case-studies/research'
     | '/case-studies/'
+    | '/case-studies/design/01'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -142,6 +152,7 @@ export interface FileRouteTypes {
     | '/case-studies/design'
     | '/case-studies/research'
     | '/case-studies'
+    | '/case-studies/design/01'
   id:
     | '__root__'
     | '/'
@@ -155,6 +166,7 @@ export interface FileRouteTypes {
     | '/case-studies/design'
     | '/case-studies/research'
     | '/case-studies/'
+    | '/case-studies/design/01'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -241,8 +253,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudies01RouteImport
       parentRoute: typeof CaseStudiesRoute
     }
+    '/case-studies/design/01': {
+      id: '/case-studies/design/01'
+      path: '/01'
+      fullPath: '/case-studies/design/01'
+      preLoaderRoute: typeof CaseStudiesDesign01RouteImport
+      parentRoute: typeof CaseStudiesDesignRoute
+    }
   }
 }
+
+interface CaseStudiesDesignRouteChildren {
+  CaseStudiesDesign01Route: typeof CaseStudiesDesign01Route
+}
+
+const CaseStudiesDesignRouteChildren: CaseStudiesDesignRouteChildren = {
+  CaseStudiesDesign01Route: CaseStudiesDesign01Route,
+}
+
+const CaseStudiesDesignRouteWithChildren =
+  CaseStudiesDesignRoute._addFileChildren(CaseStudiesDesignRouteChildren)
 
 interface CaseStudiesRouteChildren {
   CaseStudies01Route: typeof CaseStudies01Route
@@ -251,7 +281,7 @@ interface CaseStudiesRouteChildren {
   CaseStudies04Route: typeof CaseStudies04Route
   CaseStudies05Route: typeof CaseStudies05Route
   CaseStudies06Route: typeof CaseStudies06Route
-  CaseStudiesDesignRoute: typeof CaseStudiesDesignRoute
+  CaseStudiesDesignRoute: typeof CaseStudiesDesignRouteWithChildren
   CaseStudiesResearchRoute: typeof CaseStudiesResearchRoute
   CaseStudiesIndexRoute: typeof CaseStudiesIndexRoute
 }
@@ -263,7 +293,7 @@ const CaseStudiesRouteChildren: CaseStudiesRouteChildren = {
   CaseStudies04Route: CaseStudies04Route,
   CaseStudies05Route: CaseStudies05Route,
   CaseStudies06Route: CaseStudies06Route,
-  CaseStudiesDesignRoute: CaseStudiesDesignRoute,
+  CaseStudiesDesignRoute: CaseStudiesDesignRouteWithChildren,
   CaseStudiesResearchRoute: CaseStudiesResearchRoute,
   CaseStudiesIndexRoute: CaseStudiesIndexRoute,
 }

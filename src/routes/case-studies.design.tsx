@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { CaseStudiesShell } from "@/components/CaseStudiesShell";
 
 export const Route = createFileRoute("/case-studies/design")({
@@ -27,6 +27,7 @@ type DesignProject = {
   tags: string;
   cover: string; // CSS background
   status?: "Coming soon" | "In progress";
+  href?: "/case-studies/design/01";
 };
 
 const PROJECTS: DesignProject[] = [
@@ -38,7 +39,7 @@ const PROJECTS: DesignProject[] = [
     tags: "Product · Cross-chain",
     cover:
       "radial-gradient(circle at 30% 30%, #f4f4f2 0%, #d9d8d3 55%, #b7b6b0 100%)",
-    status: "Coming soon",
+    href: "/case-studies/design/01",
   },
   {
     no: "02",
@@ -113,66 +114,77 @@ function DesignPage() {
       </section>
 
       <section className="grid grid-cols-1 gap-x-6 gap-y-12 pb-20 sm:grid-cols-2 md:pb-28 lg:grid-cols-3">
-        {PROJECTS.map((p) => (
-          <a
-            key={p.no}
-            href="#"
-            aria-disabled="true"
-            onClick={(e) => e.preventDefault()}
-            className="group flex flex-col"
-          >
-            <div
-              className="relative aspect-[4/5] w-full overflow-hidden border border-border"
-              style={{ backgroundImage: p.cover }}
-            >
-              {/* Subtle grain overlay */}
+        {PROJECTS.map((p) => {
+          const tileInner = (
+            <>
               <div
-                className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
-                style={{
-                  backgroundImage:
-                    "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
-                }}
-              />
+                className="relative aspect-[4/5] w-full overflow-hidden border border-border"
+                style={{ backgroundImage: p.cover }}
+              >
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
+                  style={{
+                    backgroundImage:
+                      "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
+                  }}
+                />
 
-              {/* Number */}
-              <div className="absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.22em] text-foreground/70 mix-blend-difference">
-                {p.no}
-              </div>
-
-              {/* Status pill */}
-              {p.status && (
-                <div className="absolute right-4 top-4 border border-foreground/30 bg-background/70 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.22em] text-foreground backdrop-blur">
-                  {p.status}
+                <div className="absolute left-4 top-4 font-mono text-[10px] uppercase tracking-[0.22em] text-foreground/70 mix-blend-difference">
+                  {p.no}
                 </div>
-              )}
 
-              {/* Red hover wash */}
-              <div className="absolute inset-0 bg-red-600 opacity-0 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-100" />
+                {p.status && (
+                  <div className="absolute right-4 top-4 border border-foreground/30 bg-background/70 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.22em] text-foreground backdrop-blur">
+                    {p.status}
+                  </div>
+                )}
 
-              {/* Bottom meta strip on hover */}
-              <div className="absolute inset-x-0 bottom-0 translate-y-full bg-background/95 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-foreground backdrop-blur transition-transform duration-300 group-hover:translate-y-0">
-                <div className="flex items-center justify-between">
-                  <span>{p.tags}</span>
-                  <span aria-hidden>→</span>
+                <div className="absolute inset-0 bg-red-600 opacity-0 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-100" />
+
+                <div className="absolute inset-x-0 bottom-0 translate-y-full bg-background/95 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-foreground backdrop-blur transition-transform duration-300 group-hover:translate-y-0">
+                  <div className="flex items-center justify-between">
+                    <span>{p.tags}</span>
+                    <span aria-hidden>→</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-4 flex items-start justify-between gap-4">
-              <div className="min-w-0">
-                <h2 className="text-lg font-medium tracking-tight transition-colors group-hover:text-red-600 md:text-xl">
-                  {p.title}
-                </h2>
-                <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                  {p.client}
-                </p>
+              <div className="mt-4 flex items-start justify-between gap-4">
+                <div className="min-w-0">
+                  <h2 className="text-lg font-medium tracking-tight transition-colors group-hover:text-red-600 md:text-xl">
+                    {p.title}
+                  </h2>
+                  <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+                    {p.client}
+                  </p>
+                </div>
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+                  {p.year}
+                </span>
               </div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                {p.year}
-              </span>
-            </div>
-          </a>
-        ))}
+            </>
+          );
+
+          if (p.href) {
+            return (
+              <Link key={p.no} to={p.href} className="group flex flex-col">
+                {tileInner}
+              </Link>
+            );
+          }
+
+          return (
+            <a
+              key={p.no}
+              href="#"
+              aria-disabled="true"
+              onClick={(e) => e.preventDefault()}
+              className="group flex flex-col"
+            >
+              {tileInner}
+            </a>
+          );
+        })}
       </section>
     </CaseStudiesShell>
   );
