@@ -336,10 +336,9 @@ function DesignProject01() {
         </figure>
 
         <p>
-          The recovery address became a deposit receipt, a file the user downloads and keeps until
-          their tBTC arrives, with a Resume Deposit flow covering three ways a deposit actually
-          breaks: a reveal that fails on low gas, a browser crash mid-flow, and a user who dismisses
-          the modal twice.
+          The recovery address became a downloadable deposit receipt with a Resume Deposit flow
+          behind it, covering the three ways a reveal actually dies: gas set too low, a crash
+          mid-flow, or a user dismissing the modal and losing the thread.
         </p>
 
         <figure className="py-4">
