@@ -81,7 +81,7 @@ export function FullBleedZoomImage({
   );
 }
 
-function ZoomOverlay({
+export function ZoomOverlay({
   src,
   alt,
   onClose,
