@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
+import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
