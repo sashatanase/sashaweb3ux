@@ -307,7 +307,7 @@ function DesignProject01() {
           <div className="relative w-full overflow-hidden border border-border">
             <img
               src={mintFailSafe.url}
-              alt="tBTC Initiate Minting screen showing a fail-safe message and bridging duration"
+              alt="tBTC Resume Minting flow showing the recovery receipt upload and minting fail-safe screens"
               className="h-auto w-full"
             />
           </div>
