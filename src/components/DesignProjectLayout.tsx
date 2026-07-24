@@ -3,7 +3,7 @@ import { CursorDots } from "@/components/CursorDots";
 import { trackNav } from "@/lib/analytics";
 import type { ReactNode } from "react";
 
-export type DesignMeta = { label: string; value: string };
+
 
 export type GalleryItem = {
   /** CSS background value (gradient or url("...")) used until real imagery is wired in. */
