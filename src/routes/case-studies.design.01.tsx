@@ -193,11 +193,12 @@ function DesignProject01() {
 
       <DesignSection number="03" title="Iteration 1 → establishing the baseline">
         <p>
-          Tested May 2022&nbsp;&middot;&nbsp;6 participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting flows
-          <br />
-          I designed the first prototype, then tested it myself. At the end of each session I asked
-          participants to rate the ease of the flow from 1 to 7; the average landed at 5.8, and
-          everyone was asked to motivate their score.
+          Tested May 2022&nbsp;&middot;&nbsp;6
+          participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting
+          flows
+          <br />I designed the first prototype, then tested it myself. At the end of each session I
+          asked participants to rate the ease of the flow from 1 to 7; the average landed at 5.8,
+          and everyone was asked to motivate their score.
         </p>
 
         <figure className="py-4">
@@ -258,21 +259,34 @@ function DesignProject01() {
       </DesignSection>
 
       <DesignSection number="04" title="Iteration 2 · designing the wait">
-        <p>Tested May- June 2023&nbsp;&middot;&nbsp;6 participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting flows</p>
         <p>
-          At the end of each session I asked participants to rate the ease of the flow from 1 to 7; the average landed at 4.7 for minting and 6 for unminting.
+          Tested May- June 2023&nbsp;&middot;&nbsp;6
+          participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting
+          flows
+        </p>
+        <p>
+          At the end of each session I asked participants to rate the ease of the flow from 1 to 7;
+          the average landed at 4.7 for minting and 6 for unminting.
           <br />
           <br />
-          <strong>The redesign was organised around one idea: the moment a user initiates minting, their active role ends.</strong>
+          <strong>
+            The redesign was organised around one idea: the moment a user initiates minting, their
+            active role ends.
+          </strong>
           <br />
           <br />
-          They become a spectator. So the interface should behave like a narrator, mirroring the protocol's actual stages rather than hiding them behind a loader.
+          They become a spectator. So the interface should behave like a narrator, mirroring the
+          protocol's actual stages rather than hiding them behind a loader.
           <br />
           <br />
-          Minting became four visible states: Bitcoin Confirmations, Minter Check, Guardian Check, Minting Complete. Each with a plain-language explanation, its transaction linked on the native explorer, and an elapsed-time counter running throughout.
+          Minting became four visible states: Bitcoin Confirmations, Minter Check, Guardian Check,
+          Minting Complete. Each with a plain-language explanation, its transaction linked on the
+          native explorer, and an elapsed-time counter running throughout.
           <br />
           <br />
-          Visibility of system status, applied literally: don't summarise the machine, show it. The explorer links mattered as much as the states. In crypto, users don't want your reassurance; they want the receipts.
+          Visibility of system status, applied literally: don't summarise the machine, show it. The
+          explorer links mattered as much as the states. In crypto, users don't want your
+          reassurance; they want the receipts.
         </p>
 
         <figure className="py-4">
@@ -334,13 +348,13 @@ function DesignProject01() {
         </figure>
 
         <p>
-          Testing it was humbling in the specific way that's useful. The elapsed-time counter was the
-          most appreciated element in the study — the wait, once narrated, stopped reading as
-          failure. But the receipt modal frightened five of six participants. I'd solved a two-person
-          problem and manufactured a five-person one. My fix had the same flaw as the field it
-          replaced: it front-loaded worst-case information at the exact moment the product needed to
-          be building calm. The right answer was progressive disclosure — hold the receipt in the
-          dashboard, surface it only when something has actually gone wrong.
+          Testing it was humbling in the specific way that's useful. The elapsed-time counter was
+          the most appreciated element in the study — the wait, once narrated, stopped reading as
+          failure. But the receipt modal frightened five of six participants. I'd solved a
+          two-person problem and manufactured a five-person one. My fix had the same flaw as the
+          field it replaced: it front-loaded worst-case information at the exact moment the product
+          needed to be building calm. The right answer was progressive disclosure — hold the receipt
+          in the dashboard, surface it only when something has actually gone wrong.
         </p>
 
         <p>
