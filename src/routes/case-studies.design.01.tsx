@@ -306,15 +306,15 @@ function DesignProject01() {
         </figure>
 
         <p>
-          Around that core: "sweep" and its countdown were cut, replaced with a duration table keyed
-          to deposit size. This was setting the expectation&nbsp;before commitment instead of
-          pressure after it.
-          <br />
-          <br />
+          Around that core: &quot;sweep&quot; and its countdown were cut, replaced with a duration table
+          keyed to deposit size, so expectations get set before commitment instead of pressure
+          arriving after it.
+        </p>
+        <p>
           Each timeline step got a chain label and a small illustration, giving the timeline the
           visual hierarchy its usage had earned. The ETH address autocompleted from the connected
-          wallet: recognition over recall, no reason to make someone paste a 42-character string we
-          already had.
+          wallet. Recognition over recall, and no reason to make someone paste a 42-character string
+          we already had.
         </p>
 
         <figure className="py-4">
