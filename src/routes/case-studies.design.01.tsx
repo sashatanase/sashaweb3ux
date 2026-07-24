@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
-import { PanelGrid } from "@/components/PanelGrid";
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
 import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
@@ -240,21 +239,6 @@ function DesignProject01() {
           Guardian Check, Minting Complete, each with an explanation, its transaction on the native
           explorer, and an elapsed time counter running throughout.
         </p>
-
-        <PanelGrid
-          panels={[
-            { src: "/case-studies/tbtc/panels/01-waiting-for-confirmations.webp", alt: "Waiting for Bitcoin network confirmations", caption: "Caption TBD" },
-            { src: "/case-studies/tbtc/panels/02-confirmations-complete.webp", alt: "Bitcoin confirmations complete", caption: "Caption TBD" },
-            { src: "/case-studies/tbtc/panels/03-minting-initialized.webp", alt: "Minting initialized", caption: "Caption TBD" },
-            { src: "/case-studies/tbtc/panels/04-minter-review.webp", alt: "Minter review complete", caption: "Caption TBD" },
-            { src: "/case-studies/tbtc/panels/05-guardian-check.webp", alt: "Guardian check", caption: "Caption TBD" },
-            { src: "/case-studies/tbtc/panels/06-guardian-approved.webp", alt: "Guardian approved", caption: "Caption TBD" },
-            { src: "/case-studies/tbtc/panels/07-minting-in-progress.webp", alt: "Minting in progress", caption: "Caption TBD" },
-            { src: "/case-studies/tbtc/panels/08-minting-complete.webp", alt: "Minting complete", caption: "Caption TBD" },
-          ]}
-        />
-
-
 
         <p>
           &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
