@@ -94,7 +94,7 @@ export function DesignProjectLayout({
         </section>
 
         {/* Cover image */}
-        <section className="pb-12 md:pb-20">
+        <section className="pb-4 md:pb-6">
           <div
             className="relative aspect-[16/10] w-full overflow-hidden border border-border"
             style={{ backgroundImage: cover }}
@@ -110,7 +110,7 @@ export function DesignProjectLayout({
         </section>
 
         {/* Tags */}
-        <section className="mx-auto max-w-[1120px] pt-6">
+        <section className="mx-auto max-w-[1120px] pt-4 pb-16 md:pb-20">
           <div className="flex flex-wrap gap-3">
             {tags.map((tag) => (
               <span
