@@ -4,6 +4,7 @@ import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
 import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
 import tBTCBridgeV2Sweep from "@/assets/tBTC-Bridge-v2-sweep-2.png.asset.json";
+import visibilityOfSystemStatus from "@/assets/Visibility_of_System_Status.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -233,13 +234,16 @@ function DesignProject01() {
           explorer, and an elapsed time counter running throughout.
         </p>
 
-        <figure className="py-4">
-          <div className="flex aspect-[16/10] w-full items-center justify-center border border-dashed border-border bg-muted/30 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            Image 4 — placeholder
+        <figure className="py-4 md:-mx-16 lg:-mx-[180px] xl:-mx-[260px]">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={visibilityOfSystemStatus.url}
+              alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
+              className="h-auto w-full"
+            />
           </div>
           <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            Visibility of System Status — three states side by side, elapsed time visible in each.
-            The direct answer to the v1 spinner.
+            Visibility of System Status: The direct answer to the v1 spinner.
           </figcaption>
         </figure>
 
