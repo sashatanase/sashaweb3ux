@@ -28,7 +28,7 @@ function DesignProject01() {
     <DesignProjectLayout
       no="01"
       year="2023"
-      title="tBTC Bridge — Redesigning the cross-chain flow."
+      title="tBTC Bridge: Designing for trust in a Bitcoin bridge"
       synopsis="Turning a high-stakes, multi-step Bitcoin bridge into a flow users trusted — by making state, status, and time-to-finality legible at every step."
       tags={["Product Designer", "UX Researcher", "3 studies", "3 iterations"]}
       cover="radial-gradient(circle at 30% 30%, #f4f4f2 0%, #d9d8d3 55%, #b7b6b0 100%)"
