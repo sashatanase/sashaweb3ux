@@ -260,9 +260,9 @@ function DesignProject01() {
 
       <DesignSection number="04" title="Iteration 2 · designing the wait">
         <p>
-          Tested May- June 2023&nbsp;&middot;&nbsp;6
-          participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting
-          flows
+          Tested May 2022 · 6 participants · think-aloud through minting and unminting
+          <br />
+          Tested May–June 2023 · 6 participants · minting rated 4.75, unminting{" "}
         </p>
         <p>
           At the end of each session I asked participants to rate the ease of the flow from 1 to 7;
