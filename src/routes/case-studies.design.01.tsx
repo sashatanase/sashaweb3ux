@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
+import bridgeComparison from "@/assets/bridge-comparison.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -148,6 +149,19 @@ function DesignProject01() {
           </div>
         </div>
       </DesignSection>
+
+      <figure className="py-4">
+        <div className="relative w-full overflow-hidden border border-border">
+          <img
+            src={bridgeComparison.url}
+            alt="Comparison diagram showing a typical bridge flow versus the tBTC bridge flow with additional unfamiliar steps"
+            className="h-auto w-full"
+          />
+        </div>
+        <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+          Bridge Flow Comparison
+        </figcaption>
+      </figure>
 
       <DesignSection number="03" title="Solution.">
         <p>
