@@ -241,16 +241,19 @@ function DesignProject01() {
           explorer, and an elapsed time counter running throughout.
         </p>
 
-        <FullBleedZoomImage
-          srcSet="/case-studies/tbtc/vss-800.webp 800w, /case-studies/tbtc/vss-1600.webp 1600w, /case-studies/tbtc/vss-2400.webp 2400w"
-          sizes="100vw"
-          fallbackSrc="/case-studies/tbtc/vss-2400.webp"
-          zoomSrc="/case-studies/tbtc/vss-8000.webp"
-          width={8000}
-          height={4398}
-          alt="tBTC Bridge v2 iteration 2 showing visibility of system status across Bitcoin Confirmations, Minter Check, Guardian Check, and Minting Complete"
-          caption="Visibility of System Status: The direct answer to the v1 spinner."
+        <PanelGrid
+          panels={[
+            { src: "/case-studies/tbtc/panels/01-waiting-for-confirmations.webp", alt: "Waiting for Bitcoin network confirmations", caption: "Caption TBD" },
+            { src: "/case-studies/tbtc/panels/02-confirmations-complete.webp", alt: "Bitcoin confirmations complete", caption: "Caption TBD" },
+            { src: "/case-studies/tbtc/panels/03-minting-initialized.webp", alt: "Minting initialized", caption: "Caption TBD" },
+            { src: "/case-studies/tbtc/panels/04-minter-review.webp", alt: "Minter review complete", caption: "Caption TBD" },
+            { src: "/case-studies/tbtc/panels/05-guardian-check.webp", alt: "Guardian check", caption: "Caption TBD" },
+            { src: "/case-studies/tbtc/panels/06-guardian-approved.webp", alt: "Guardian approved", caption: "Caption TBD" },
+            { src: "/case-studies/tbtc/panels/07-minting-in-progress.webp", alt: "Minting in progress", caption: "Caption TBD" },
+            { src: "/case-studies/tbtc/panels/08-minting-complete.webp", alt: "Minting complete", caption: "Caption TBD" },
+          ]}
         />
+
 
 
         <p>
