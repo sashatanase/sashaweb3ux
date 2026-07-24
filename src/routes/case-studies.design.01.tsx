@@ -149,6 +149,19 @@ function DesignProject01() {
             </p>
           </div>
         </div>
+
+        <figure className="pt-8">
+          <div className="relative w-full overflow-hidden">
+            <img
+              src={bridgeComparison.url}
+              alt="Comparison diagram showing a typical bridge flow versus the tBTC bridge flow with additional unfamiliar steps"
+              className="block h-auto w-full object-contain"
+            />
+          </div>
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Bridge Flow Comparison
+          </figcaption>
+        </figure>
       </DesignSection>
 
       <DesignSection number="03" title="Iteration 1 → tested with 6 people">
@@ -207,37 +220,70 @@ function DesignProject01() {
             </h3>
           </div>
         </div>
+      </DesignSection>
 
-        <h3 className="mt-10 mb-4 text-base font-semibold text-foreground">What I changed.</h3>
+      <DesignSection
+        number="04"
+        title="Iteration 2 · tested May–June 2023, rated 4.75 and 6 / 7"
+      >
         <p>
           The wait became the design problem. Once the user hits [Initiate minting], their active
-          role ends, and they enter a spectator state. The interface started mirroring the protocol:
-          Bitcoin Checkpoint, Minting Initialized, Guardian Check, Minting Completed, each with an
-          explanation, its transaction on the native explorer, and an elapsed time counter running
-          throughout.
+          role ends, and they enter a spectator state. So the interface started mirroring the
+          protocol: Bitcoin Confirmations, Minter Check, Guardian Check, Minting Complete, each
+          with an explanation, its transaction on the native explorer, and an elapsed time counter
+          running throughout.
         </p>
+
+        <figure className="py-4">
+          <div className="flex aspect-[16/10] w-full items-center justify-center border border-dashed border-border bg-muted/30 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Image 4 — placeholder
+          </div>
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Visibility of System Status — three states side by side, elapsed time visible in each.
+            The direct answer to the v1 spinner.
+          </figcaption>
+        </figure>
+
         <p>
           &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
           size. Every timeline step got a chain label and an illustration. The ETH address
-          autocompleted. The recovery address became a deposit receipt, with a Resume Deposit flow
-          covering three ways a deposit actually breaks.
+          autocompleted.
         </p>
+
+        <div className="grid grid-cols-1 gap-6 py-4 md:grid-cols-2">
+          {[
+            "Image 5 — timeline illustrations as a set",
+            "Image 6 — Step 1 redesigned",
+            "Image 7 — Step 2, the step no other bridge has",
+            "Image 8 — the full minting flow end to end",
+          ].map((label) => (
+            <div
+              key={label}
+              className="flex aspect-[4/3] w-full items-center justify-center border border-dashed border-border bg-muted/30 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground"
+            >
+              {label}
+            </div>
+          ))}
+        </div>
+
+        <p>
+          The recovery address became a deposit receipt, a file the user downloads and keeps until
+          their tBTC arrives, with a Resume Deposit flow covering three ways a deposit actually
+          breaks: a reveal that fails on low gas, a browser crash mid-flow, and a user who
+          dismisses the modal twice.
+        </p>
+
+        <figure className="py-4">
+          <div className="flex aspect-[16/10] w-full items-center justify-center border border-dashed border-border bg-muted/30 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Image 9 — placeholder
+          </div>
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Resume Deposit — three failure scenarios.
+          </figcaption>
+        </figure>
       </DesignSection>
 
-      <figure className="relative left-1/2 my-8 w-screen max-w-[1280px] -translate-x-1/2 px-6 md:px-10">
-        <div className="relative w-full bg-background">
-          <img
-            src={bridgeComparison.url}
-            alt="Comparison diagram showing a typical bridge flow versus the tBTC bridge flow with additional unfamiliar steps"
-            className="block h-auto w-full object-contain"
-          />
-        </div>
-        <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-          Bridge Flow Comparison
-        </figcaption>
-      </figure>
-
-      <DesignSection number="04" title="Solution.">
+      <DesignSection number="05" title="Solution.">
         <p>
           The redesign centered on a single vertical timeline that mapped every protocol phase to a
           human-readable step, with live status, expected duration, and a clear recovery path if a
@@ -251,7 +297,7 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="05" title="Outcome.">
+      <DesignSection number="06" title="Outcome.">
         <p>
           Post-launch, support tickets tagged &ldquo;is my bridge stuck?&rdquo; dropped
           meaningfully, completion rate on first-time deposits improved, and the status system was
