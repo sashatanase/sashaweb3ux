@@ -306,15 +306,15 @@ function DesignProject01() {
         </figure>
 
         <p>
-          Around that core: "sweep" and its countdown were cut, replaced with a duration table keyed
-          to deposit size. This was setting the expectation&nbsp;before commitment instead of
-          pressure after it.
-          <br />
-          <br />
+          Around that core: &quot;sweep&quot; and its countdown were cut, replaced with a duration table
+          keyed to deposit size, so expectations get set before commitment instead of pressure
+          arriving after it.
+        </p>
+        <p>
           Each timeline step got a chain label and a small illustration, giving the timeline the
           visual hierarchy its usage had earned. The ETH address autocompleted from the connected
-          wallet: recognition over recall, no reason to make someone paste a 42-character string we
-          already had.
+          wallet. Recognition over recall, and no reason to make someone paste a 42-character string
+          we already had.
         </p>
 
         <figure className="py-4">
@@ -348,13 +348,15 @@ function DesignProject01() {
         </figure>
 
         <p>
-          Testing it was humbling in the specific way that's useful. The elapsed-time counter was
-          the most appreciated element in the study — the wait, once narrated, stopped reading as
-          failure. But the receipt modal frightened five of six participants. I'd solved a
-          two-person problem and manufactured a five-person one. My fix had the same flaw as the
-          field it replaced: it front-loaded worst-case information at the exact moment the product
-          needed to be building calm. The right answer was progressive disclosure — hold the receipt
-          in the dashboard, surface it only when something has actually gone wrong.
+          Around that core: &quot;sweep&quot; and its countdown were cut, replaced with a duration table
+          keyed to deposit size, so expectations get set before commitment instead of pressure
+          arriving after it.
+        </p>
+        <p>
+          Each timeline step got a chain label and a small illustration, giving the timeline the
+          visual hierarchy its usage had earned. The ETH address autocompleted from the connected
+          wallet. Recognition over recall, and no reason to make someone paste a 42-character string
+          we already had.
         </p>
 
         <p>
@@ -394,9 +396,9 @@ function DesignProject01() {
         </figure>
 
         <p>
-          Testing it was humbling in the specific way that's useful. The elapsed-time counter was
-          the most appreciated element in the study, the wait, once narrated, stopped reading as
-          failure.
+          <strong>Testing it was humbling in the specific way that&apos;s useful.</strong> The
+          elapsed-time counter was the most appreciated element in the study, the wait, once
+          narrated, stopped reading as failure.
         </p>
         <p>
           But the receipt modal frightened five of six participants. I'd solved a two-person problem
