@@ -4,17 +4,17 @@ import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLa
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
     meta: [
-      { title: "tBTC Bridge · Design · Sasha (Tanase) Luca" },
+      { title: "tBTC Bridge: Designing for trust in a Bitcoin bridge · Sasha (Tanase) Luca" },
       {
         name: "description",
         content:
-          "Redesigning the tBTC Bridge cross-chain flow — reducing bridge anxiety through clearer state, status, and recovery affordances.",
+          "Designing for trust in the tBTC Bridge cross-chain flow — reducing bridge anxiety through clearer state, status, and recovery affordances.",
       },
-      { property: "og:title", content: "tBTC Bridge · Design · Sasha (Tanase) Luca" },
+      { property: "og:title", content: "tBTC Bridge: Designing for trust in a Bitcoin bridge · Sasha (Tanase) Luca" },
       {
         property: "og:description",
         content:
-          "Redesigning the tBTC Bridge cross-chain flow — reducing bridge anxiety through clearer state, status, and recovery affordances.",
+          "Designing for trust in the tBTC Bridge cross-chain flow — reducing bridge anxiety through clearer state, status, and recovery affordances.",
       },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
