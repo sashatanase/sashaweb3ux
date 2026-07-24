@@ -125,10 +125,7 @@ export function DesignProjectLayout({
                 className="h-full w-full object-cover"
               />
             ) : (
-              <div
-                className="h-full w-full"
-                style={{ backgroundImage: cover }}
-              />
+              <div className="h-full w-full" style={{ backgroundImage: cover }} />
             )}
             <div
               className="pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-overlay"
