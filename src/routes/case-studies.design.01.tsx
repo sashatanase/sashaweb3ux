@@ -225,6 +225,16 @@ function DesignProject01() {
             on what the user had lived through.
           </li>
         </ul>
+
+        <blockquote className="mt-8 border-l-2 border-foreground/20 pl-6 text-xl font-medium leading-relaxed text-foreground md:text-2xl">
+          if there&apos;s a recovery mechanism, things must go wrong here a lot.
+        </blockquote>
+
+        <p className="pt-6">
+          That last one taught me something I&apos;ve carried since: a safety feature is only reassuring
+          to people who haven&apos;t been burned. For everyone else it&apos;s a trigger, and you have to
+          design its disclosure, not just its existence.
+        </p>
       </DesignSection>
 
       <DesignSection number="04" title="Iteration 2 · tested May–June 2023">
