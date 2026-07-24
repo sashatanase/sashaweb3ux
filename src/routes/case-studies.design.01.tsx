@@ -243,8 +243,11 @@ function DesignProject01() {
         </p>
 
         <div className="py-4">
-          <MintingDemo />
+          <div className="mint-wrapper">
+            <MintingDemo />
+          </div>
         </div>
+
 
         <p>
           &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit

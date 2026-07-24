@@ -198,3 +198,12 @@
 .fade-up {
   animation: fadeUp 0.4s ease both;
 }
+
+.mint-wrapper {
+  all: initial;
+  color-scheme: light;
+  font-family: 'Inter', sans-serif;
+}
+.mint-wrapper * {
+  color-scheme: light;
+}
