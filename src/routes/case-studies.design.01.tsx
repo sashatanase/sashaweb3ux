@@ -7,7 +7,6 @@ import bridgeComparison from "@/assets/bridge-comparison-full.png.asset.json";
 import tBTCBridgeV2Sweep from "@/assets/tBTC-Bridge-v2-sweep-2.png.asset.json";
 import mintingTimelineBeforeAfter from "@/assets/Minting_Timeline_Before_and_After.png.asset.json";
 
-
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
     meta: [
@@ -242,7 +241,17 @@ function DesignProject01() {
           explorer, and an elapsed time counter running throughout.
         </p>
 
-
+        <div className="mx-auto my-10 w-full max-w-4xl">
+          <iframe
+            src="https://minting-demo.tiiny.site"
+            width="100%"
+            height="620"
+            frameBorder={0}
+            scrolling="no"
+            style={{ border: "none", borderRadius: "16px" }}
+            title="tBTC minting demo"
+          />
+        </div>
 
         <p>
           &ldquo;Sweep&rdquo; and its countdown went, replaced by a duration table tied to deposit
@@ -264,7 +273,6 @@ function DesignProject01() {
             </figcaption>
           </div>
         </figure>
-
 
         <p>
           The recovery address became a deposit receipt, a file the user downloads and keeps until
