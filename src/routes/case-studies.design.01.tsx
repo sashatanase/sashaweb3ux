@@ -450,7 +450,7 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="05" title="Iteration 3 · what shipped">
+      <DesignSection number="05" title="The Solution - Iteration 3 · what shipped">
         <p>
           The last pass took the Round 2 evidence and applied it without sentiment. &quot;Mint&quot;
           became &quot;Deposit&quot;, which is match between the system and the real world. Four of
