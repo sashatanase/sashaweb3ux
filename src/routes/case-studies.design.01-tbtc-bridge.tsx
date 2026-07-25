@@ -299,13 +299,11 @@ function DesignProject01() {
         </p>
         <p>
           At the end of each session I asked participants to rate the ease of the flow from 1 to 7;
-          the average landed at 4.7 for minting and 6 for unminting.
+          the average landed at 4.75 for minting and 6 for unminting.
           <br />
           <br />
-          <strong>
-            The redesign was organised around one idea: the moment a user initiates minting, their
-            active role ends.
-          </strong>
+          The redesign was organised around one idea: the moment a user initiates minting, their
+          active role ends.
           <br />
           <br />
           They become a spectator. So the interface should behave like a narrator, mirroring the
