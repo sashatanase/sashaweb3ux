@@ -10,6 +10,8 @@ import resumeDepositScenarios from "@/assets/resume-deposit-scenarios.png.asset.
 import mintFailSafe from "@/assets/Resume_Minting.png.asset.json";
 import step2Image from "@/assets/Step_2.png.asset.json";
 import step2Iteration from "@/assets/Step-2-1-2.png.asset.json";
+import shippedBridge from "@/assets/Shipped_Bridge.png.asset.json";
+import shippedBridge2 from "@/assets/Shipped_Bridge_2.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -469,6 +471,26 @@ function DesignProject01() {
           wrong.&nbsp;
         </p>
         <p>{"\n"}</p>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={shippedBridge.url}
+              alt="Shipped tBTC bridge — deposit address generation, QR code, and emission steps"
+              className="block h-auto w-full"
+            />
+            <img
+              src={shippedBridge2.url}
+              alt="Shipped tBTC bridge — minting progress, Minter/Guardian checks, and completion summary"
+              className="-mt-px block h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Last shipped iteration
+            </figcaption>
+          </div>
+        </figure>
       </DesignSection>
 
       <DesignSection number="06" title="Outcome.">
