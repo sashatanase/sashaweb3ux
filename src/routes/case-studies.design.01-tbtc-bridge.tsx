@@ -113,7 +113,16 @@ function DesignProject01() {
         </blockquote>
 
         <p>
-          I didn't start with screens. I started with a generative study: 12 participants who held
+          I didn't start with screens. I started with a{" "}
+          <a
+            href="https://sasha.web3ux.org/case-studies/04"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-foreground/40 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+          >
+            generative study
+          </a>
+          : 12 participants who held
           or had bridged wrapped Bitcoin. I did this because I suspected the problem wasn't
           usability in the narrow sense, and I wanted the team's assumptions on the table before we
           invested in a direction. We ran an assumption mapping workshop first; the interview guide
