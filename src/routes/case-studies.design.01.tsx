@@ -51,30 +51,6 @@ function DesignProject01() {
       tags={["Product Designer", "UX Researcher", "3 studies", "3 iterations"]}
       coverImage={tBTCCover.url}
       coverAlt="tBTC Bridge v2 — selected UI screens showing the deposit flow, bridging process, and completion state"
-      gallery={[
-        {
-          media: "linear-gradient(135deg, #ececea 0%, #d9d8d3 100%)",
-          ratio: "16/10",
-          caption: "01 · Deposit flow — before / after",
-          wide: true,
-        },
-        {
-          media: "linear-gradient(160deg, #111 0%, #2a2a2a 100%)",
-          ratio: "4/5",
-          caption: "02 · Status system",
-        },
-        {
-          media: "radial-gradient(circle at 70% 30%, #e8564c 0%, #b83e36 100%)",
-          ratio: "4/5",
-          caption: "03 · Recovery states",
-        },
-        {
-          media: "repeating-linear-gradient(45deg, #ececea 0 12px, #dedcd6 12px 24px)",
-          ratio: "16/10",
-          caption: "04 · Component library",
-          wide: true,
-        },
-      ]}
     >
       <DesignSection number="01" title="Where it started">
         <h3 className="text-lg font-medium tracking-tight text-foreground md:text-xl">
