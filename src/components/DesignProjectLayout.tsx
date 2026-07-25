@@ -128,43 +128,6 @@ export function DesignProjectLayout({
         {/* Written sections (Context / Problem / Solution / Outcome) */}
         <div className="pb-16 md:pb-24">{children}</div>
 
-        {/* Gallery */}
-        {gallery && gallery.length > 0 && (
-          <section className="pb-20 md:pb-28">
-            <div className="mb-8 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-              § Gallery
-            </div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              {gallery.map((g, i) => (
-                <figure key={i} className={g.wide ? "md:col-span-2" : ""}>
-                  <div
-                    className="relative w-full overflow-hidden border border-border"
-                    style={{
-                      aspectRatio: g.ratio ?? "16/10",
-                      backgroundImage: g.media,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  >
-                    <div
-                      className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
-                      style={{
-                        backgroundImage:
-                          "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
-                      }}
-                    />
-                  </div>
-                  {g.caption && (
-                    <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                      {g.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              ))}
-            </div>
-          </section>
-        )}
-
         <section className="mx-auto max-w-[1120px] border-t border-border py-16">
           <Link
             to="/case-studies/design"
