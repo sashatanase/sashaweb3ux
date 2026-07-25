@@ -102,10 +102,9 @@ function DesignPage() {
             Design.
           </h1>
           <p className="mt-6 max-w-2xl text-base font-medium leading-relaxed tracking-tight text-muted-foreground md:text-xl">
-            Design work that sits close to the research: flows, interfaces, and systems for Bitcoin
-            DeFi, cross-chain bridges, and node operations. These are product design stories, not
-            just screenshots — each one runs through the messy middle of iterations and failed
-            assumptions, and ends with what actually shipped.
+            The products where I shaped the interface, not just the research behind it. Web3 design
+            for high-stakes, invisible-mechanism work: bridges, wallets, staking. Written to be
+            read, not skimmed.
           </p>
         </div>
       </section>
