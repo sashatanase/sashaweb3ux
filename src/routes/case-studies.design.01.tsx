@@ -46,7 +46,7 @@ function DesignProject01() {
       no="01"
       year="2023"
       title="tBTC Bridge: Designing for trust in a Bitcoin bridge"
-      subtitle="tBTC v2 · Threshold Network · 2022–2023"
+      subtitle="tBTC v2 · Threshold Network · 2022 – 2023"
       synopsis="Three studies, 24 participants, three design iterations, and an ~18% lift in successful bridge completion. This is the story of how each one led to the next."
       tags={["Product Designer", "UX Researcher", "3 studies", "3 iterations"]}
       coverImage={tBTCCover.url}
