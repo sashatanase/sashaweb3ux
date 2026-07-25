@@ -15,6 +15,7 @@ import shippedBridge2 from "@/assets/Shipped_Bridge_2.png.asset.json";
 import depositMintFlow from "@/assets/Deposit_and_mint_flow_-_tBTC.png.asset.json";
 import researchArc from "@/assets/research-arc.png.asset.json";
 import assumptionsMapping from "@/assets/Assumptions_Mapping.png.asset.json";
+import twoSpeedBridge from "@/assets/two-speed-bridge.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01-tbtc-bridge")({
   head: () => ({
@@ -582,6 +583,21 @@ function DesignProject01() {
           <br />
           <strong>Two years later, BOB shipped a gateway on the same economics.</strong>
         </p>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={twoSpeedBridge.url}
+              alt="Two-speed bridge proposal diagram showing slow lane deposits earning a premium and fast lane deposits drawing instantly from a tBTC liquidity pool"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              The proposal: one bridge, two speeds
+            </figcaption>
+          </div>
+        </figure>
       </DesignSection>
 
       <DesignSection number="08" title="What I took from it">
