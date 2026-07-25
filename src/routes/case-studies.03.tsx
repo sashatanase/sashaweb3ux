@@ -238,6 +238,18 @@ function CaseStudy03() {
             <span aria-hidden="true">↗</span>
           </a>
         </div>
+
+        <p className="mt-10 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          This research fed directly into a design case study:{" "}
+          <a
+            href="https://sasha.web3ux.org/case-studies/design/01-tbtc-bridge"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 transition-colors hover:text-accent"
+          >
+            Designing for trust in a Bitcoin bridge →
+          </a>
+        </p>
       </CaseStudySection>
     </CaseStudyLayout>
   );
