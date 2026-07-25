@@ -482,17 +482,18 @@ function DesignProject01() {
           </div>
         </figure>
 
-        <div className="py-4">
-          <iframe
-            style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-            width="800"
-            height="450"
-            src="https://embed.figma.com/proto/X9u1z67oBm7WuoZkHj112Y/tBTC-Final---prototype?page-id=0%3A1&node-id=1-8479&viewport=-72%2C-404%2C0.39&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A8479&embed-host=share"
-            allowFullScreen
-            title="tBTC Figma prototype"
-            loading="lazy"
-          />
-        </div>
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border" style={{ aspectRatio: "16 / 9" }}>
+            <iframe
+              src="https://embed.figma.com/proto/X9u1z67oBm7WuoZkHj112Y/tBTC-Final---prototype?page-id=0%3A1&node-id=1-8479&viewport=-72%2C-404%2C0.39&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A8479&embed-host=share"
+              allowFullScreen
+              title="tBTC Figma prototype"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full"
+            />
+          </div>
+        </figure>
+
 
       </DesignSection>
 
