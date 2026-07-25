@@ -15,6 +15,7 @@ import shippedBridge2 from "@/assets/Shipped_Bridge_2.png.asset.json";
 import depositMintFlow from "@/assets/Deposit_and_mint_flow_-_tBTC.png.asset.json";
 import researchArc from "@/assets/research-arc.png.asset.json";
 import assumptionsMapping from "@/assets/Assumptions_Mapping.png.asset.json";
+import twoSpeedBridge from "@/assets/two-speed-bridge.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01-tbtc-bridge")({
   head: () => ({
