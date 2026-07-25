@@ -217,7 +217,9 @@ function DesignProject01() {
           Tested May 2022&nbsp;&middot;&nbsp;6
           participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting
           flows
-          <br />I designed the first prototype, then tested it myself. At the end of each session I
+          <br />
+          <br />
+          I designed the first prototype, then tested it myself. At the end of each session I
           asked participants to rate the ease of the flow from 1 to 7; the average landed at 5.8,
           and everyone was asked to motivate their score.
         </p>
