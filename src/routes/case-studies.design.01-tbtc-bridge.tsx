@@ -583,6 +583,21 @@ function DesignProject01() {
           <br />
           <strong>Two years later, BOB shipped a gateway on the same economics.</strong>
         </p>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={twoSpeedBridge.url}
+              alt="Two-speed bridge proposal diagram showing slow lane deposits earning a premium and fast lane deposits drawing instantly from a tBTC liquidity pool"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              The proposal: one bridge, two speeds
+            </figcaption>
+          </div>
+        </figure>
       </DesignSection>
 
       <DesignSection number="08" title="What I took from it">
