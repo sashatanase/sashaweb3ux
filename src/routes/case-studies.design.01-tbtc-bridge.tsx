@@ -259,7 +259,7 @@ function DesignProject01() {
             interface and brought protocol anxiety with it.
           </li>
           <li>
-            4+ wanted some way of signal that a mint was in progress, and they also requested a
+            4+ wanted some way of signaling that a mint was in progress, and they also requested a
             transaction history.
           </li>
           <li>
