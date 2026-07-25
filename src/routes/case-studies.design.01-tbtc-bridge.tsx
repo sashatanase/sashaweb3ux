@@ -388,7 +388,7 @@ function DesignProject01() {
           </div>
           <div className="mx-auto max-w-[760px]">
             <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Step 2 iteration — minting process, duration table, and timeline
+              IMPROVED STEP 1
             </figcaption>
           </div>
         </figure>
