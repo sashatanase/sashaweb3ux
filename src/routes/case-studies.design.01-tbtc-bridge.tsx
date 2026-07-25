@@ -55,9 +55,9 @@ function DesignProject01() {
       coverImage={tBTCCover.url}
       coverAlt="tBTC Bridge v2 — selected UI screens showing the deposit flow, bridging process, and completion state"
     >
-      <DesignSection number="01" title="Where it started">
+      <DesignSection number="01" title="The Problem - Where it started">
         <h3 className="text-lg font-medium tracking-tight text-foreground md:text-xl">
-          Tested May 2022
+          tBTC v1 - 2019{" "}
         </h3>
         <p>
           tBTC turns Bitcoin into an ERC-20 token so it can be used on Ethereum. When I picked up
@@ -65,7 +65,7 @@ function DesignProject01() {
           reputation was earned.
           <br />
           <br />
-          &nbsp;After depositing funds, users landed on a spinner. No states, no progress, no
+          After depositing funds, users landed on a spinner. No states, no progress, no
           estimate. It could sit there for six hours. People weren't waiting; they were watching a
           screen that gave them no evidence their money still existed.
         </p>
@@ -92,7 +92,7 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="02" title="Understanding the territory before touching the interface">
+      <DesignSection number="02" title="Discovery - Understanding the territory before touching the interface">
         <figure className="mx-auto max-w-[760px] pb-4">
           <div className="relative w-full overflow-hidden border border-border">
             <img
@@ -138,6 +138,10 @@ function DesignProject01() {
         <div className="space-y-8 pt-2">
           <div>
             <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
+              User  - Understanding the territory before touching the interface
+              <br />
+              <br />
+              <br />
               The wait wasn't the problem. The silence was.
             </h3>
             <p className="mt-2 text-muted-foreground">
@@ -198,7 +202,7 @@ function DesignProject01() {
         </figure>
       </DesignSection>
 
-      <DesignSection number="03" title={"Iteration 1 · establishing the baseline\n"}>
+      <DesignSection number="03" title="First Solution - Iteration 1 · establishing the baseline">
         <p>
           Tested May 2022&nbsp;&middot;&nbsp;6
           participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting
@@ -265,7 +269,7 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="04" title="Iteration 2 · designing the wait">
+      <DesignSection number="04" title="Second Solution - Iteration 2 · designing the wait">
         <p>
           Tested May-June 2023&nbsp; 6 participants&nbsp;
         </p>
@@ -455,7 +459,7 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="05" title="The Solution - Iteration 3 · what shipped">
+      <DesignSection number="05" title="The Final Solution - Iteration 3 · live until 2026">
         <p>
           The last pass took the Round 2 evidence and applied it without sentiment. &quot;Mint&quot;
           became &quot;Deposit&quot;, which is match between the system and the real world. Four of
