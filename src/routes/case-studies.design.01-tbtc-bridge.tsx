@@ -650,6 +650,62 @@ function DesignProject01() {
           Trust isn't a feature you add at the end. On a product like this, it's the whole job.
         </p>
       </DesignSection>
+
+      <section className="pt-20">
+        <div className="mx-auto max-w-[760px] space-y-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          <p>
+            Watch the talk this thinking comes from:{" "}
+            <a
+              href="TALK_URL"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 transition-colors hover:text-accent"
+            >
+              Designing for Trust in web3
+            </a>
+          </p>
+          <p>
+            Read the research behind it:{" "}
+            <a
+              href="https://sasha.web3ux.org/case-studies/04"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 transition-colors hover:text-accent"
+            >
+              generative study
+            </a>{" "}
+            ·{" "}
+            <a
+              href="https://sasha.web3ux.org/case-studies/03"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 transition-colors hover:text-accent"
+            >
+              second usability round
+            </a>
+          </p>
+          <p>
+            Live prototypes:{" "}
+            <a
+              href="PROTOTYPE_URL_1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 transition-colors hover:text-accent"
+            >
+              minting flow
+            </a>{" "}
+            ·{" "}
+            <a
+              href="PROTOTYPE_URL_2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 transition-colors hover:text-accent"
+            >
+              unminting flow
+            </a>
+          </p>
+        </div>
+      </section>
     </DesignProjectLayout>
   );
 }
