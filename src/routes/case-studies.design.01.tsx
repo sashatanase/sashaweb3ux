@@ -483,14 +483,21 @@ function DesignProject01() {
         </figure>
 
         <figure className="py-4">
-          <div className="relative w-full overflow-hidden border border-border" style={{ aspectRatio: "16 / 9" }}>
+          <div className="relative w-full overflow-auto border border-border">
             <iframe
               src="https://embed.figma.com/proto/X9u1z67oBm7WuoZkHj112Y/tBTC-Final---prototype?page-id=0%3A1&node-id=1-8479&viewport=-72%2C-404%2C0.39&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A8479&embed-host=share"
               allowFullScreen
               title="tBTC Figma prototype"
               loading="lazy"
-              className="absolute inset-0 h-full w-full"
+              width="1440"
+              height="900"
+              className="block max-w-none"
             />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Figma prototype
+            </figcaption>
           </div>
         </figure>
 
