@@ -113,7 +113,7 @@ function DesignPage() {
           const tileInner = (
             <>
               <div
-                className="relative aspect-[4/5] w-full overflow-hidden border border-border"
+                className="relative aspect-[4/5] w-full overflow-hidden border border-border bg-cover bg-center"
                 style={{ backgroundImage: p.cover }}
               >
                 <div
