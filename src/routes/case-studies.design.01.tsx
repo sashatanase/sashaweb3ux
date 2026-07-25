@@ -471,6 +471,26 @@ function DesignProject01() {
           wrong.&nbsp;
         </p>
         <p>{"\n"}</p>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={shippedBridge.url}
+              alt="Shipped tBTC bridge — deposit address generation, QR code, and emission steps"
+              className="block h-auto w-full"
+            />
+            <img
+              src={shippedBridge2.url}
+              alt="Shipped tBTC bridge — minting progress, Minter/Guardian checks, and completion summary"
+              className="-mt-px block h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Last shipped iteration
+            </figcaption>
+          </div>
+        </figure>
       </DesignSection>
 
       <DesignSection number="06" title="Outcome.">
