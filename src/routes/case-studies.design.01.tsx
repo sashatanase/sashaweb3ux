@@ -300,7 +300,7 @@ function DesignProject01() {
               src="https://sashatanase.github.io/sashaweb3ux/"
               title="tBTC minting demo"
               loading="lazy"
-              style={{ width: "100%", height: "760px", border: 0, borderRadius: "12px" }}
+              style={{ width: "100%", height: "1000px", border: 0, borderRadius: "12px" }}
             />
           </div>
           <div className="mx-auto max-w-[760px]">
