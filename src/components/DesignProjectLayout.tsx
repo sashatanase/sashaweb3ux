@@ -172,7 +172,9 @@ export function DesignSection({
           § {tag}
         </div>
         <h2 className="mt-4 text-xl font-medium tracking-tight break-words sm:text-2xl md:text-3xl">
-          {title === "Outcome." ? "The Outcome." : title}
+          {title === "User  - Understanding the territory before touching the interface\n\n\nThe wait wasn't the problem. The silence was." 
+            ? "User pain points - Understanding the territory before touching the interface" 
+            : title}
         </h2>
       </div>
       <div className="mt-10 space-y-6 text-base leading-[1.7] text-foreground md:text-[17px] [&>*:not(figure)]:mx-auto [&>*:not(figure)]:max-w-[760px]">
