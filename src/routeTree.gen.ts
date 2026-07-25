@@ -21,7 +21,7 @@ import { Route as CaseStudies03RouteImport } from './routes/case-studies.03'
 import { Route as CaseStudies02RouteImport } from './routes/case-studies.02'
 import { Route as CaseStudies01RouteImport } from './routes/case-studies.01'
 import { Route as CaseStudiesDesignIndexRouteImport } from './routes/case-studies.design.index'
-import { Route as CaseStudiesDesign01RouteImport } from './routes/case-studies.design.01'
+import { Route as CaseStudiesDesign01TbtcBridgeRouteImport } from './routes/case-studies.design.01-tbtc-bridge'
 
 const CaseStudiesRoute = CaseStudiesRouteImport.update({
   id: '/case-studies',
@@ -83,11 +83,12 @@ const CaseStudiesDesignIndexRoute = CaseStudiesDesignIndexRouteImport.update({
   path: '/',
   getParentRoute: () => CaseStudiesDesignRoute,
 } as any)
-const CaseStudiesDesign01Route = CaseStudiesDesign01RouteImport.update({
-  id: '/01',
-  path: '/01',
-  getParentRoute: () => CaseStudiesDesignRoute,
-} as any)
+const CaseStudiesDesign01TbtcBridgeRoute =
+  CaseStudiesDesign01TbtcBridgeRouteImport.update({
+    id: '/01-tbtc-bridge',
+    path: '/01-tbtc-bridge',
+    getParentRoute: () => CaseStudiesDesignRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -101,7 +102,7 @@ export interface FileRoutesByFullPath {
   '/case-studies/design': typeof CaseStudiesDesignRouteWithChildren
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
-  '/case-studies/design/01': typeof CaseStudiesDesign01Route
+  '/case-studies/design/01-tbtc-bridge': typeof CaseStudiesDesign01TbtcBridgeRoute
   '/case-studies/design/': typeof CaseStudiesDesignIndexRoute
 }
 export interface FileRoutesByTo {
@@ -114,7 +115,7 @@ export interface FileRoutesByTo {
   '/case-studies/06': typeof CaseStudies06Route
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies': typeof CaseStudiesIndexRoute
-  '/case-studies/design/01': typeof CaseStudiesDesign01Route
+  '/case-studies/design/01-tbtc-bridge': typeof CaseStudiesDesign01TbtcBridgeRoute
   '/case-studies/design': typeof CaseStudiesDesignIndexRoute
 }
 export interface FileRoutesById {
@@ -130,7 +131,7 @@ export interface FileRoutesById {
   '/case-studies/design': typeof CaseStudiesDesignRouteWithChildren
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
-  '/case-studies/design/01': typeof CaseStudiesDesign01Route
+  '/case-studies/design/01-tbtc-bridge': typeof CaseStudiesDesign01TbtcBridgeRoute
   '/case-studies/design/': typeof CaseStudiesDesignIndexRoute
 }
 export interface FileRouteTypes {
@@ -147,7 +148,7 @@ export interface FileRouteTypes {
     | '/case-studies/design'
     | '/case-studies/research'
     | '/case-studies/'
-    | '/case-studies/design/01'
+    | '/case-studies/design/01-tbtc-bridge'
     | '/case-studies/design/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -160,7 +161,7 @@ export interface FileRouteTypes {
     | '/case-studies/06'
     | '/case-studies/research'
     | '/case-studies'
-    | '/case-studies/design/01'
+    | '/case-studies/design/01-tbtc-bridge'
     | '/case-studies/design'
   id:
     | '__root__'
@@ -175,7 +176,7 @@ export interface FileRouteTypes {
     | '/case-studies/design'
     | '/case-studies/research'
     | '/case-studies/'
-    | '/case-studies/design/01'
+    | '/case-studies/design/01-tbtc-bridge'
     | '/case-studies/design/'
   fileRoutesById: FileRoutesById
 }
@@ -270,23 +271,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesDesignIndexRouteImport
       parentRoute: typeof CaseStudiesDesignRoute
     }
-    '/case-studies/design/01': {
-      id: '/case-studies/design/01'
-      path: '/01'
-      fullPath: '/case-studies/design/01'
-      preLoaderRoute: typeof CaseStudiesDesign01RouteImport
+    '/case-studies/design/01-tbtc-bridge': {
+      id: '/case-studies/design/01-tbtc-bridge'
+      path: '/01-tbtc-bridge'
+      fullPath: '/case-studies/design/01-tbtc-bridge'
+      preLoaderRoute: typeof CaseStudiesDesign01TbtcBridgeRouteImport
       parentRoute: typeof CaseStudiesDesignRoute
     }
   }
 }
 
 interface CaseStudiesDesignRouteChildren {
-  CaseStudiesDesign01Route: typeof CaseStudiesDesign01Route
+  CaseStudiesDesign01TbtcBridgeRoute: typeof CaseStudiesDesign01TbtcBridgeRoute
   CaseStudiesDesignIndexRoute: typeof CaseStudiesDesignIndexRoute
 }
 
 const CaseStudiesDesignRouteChildren: CaseStudiesDesignRouteChildren = {
-  CaseStudiesDesign01Route: CaseStudiesDesign01Route,
+  CaseStudiesDesign01TbtcBridgeRoute: CaseStudiesDesign01TbtcBridgeRoute,
   CaseStudiesDesignIndexRoute: CaseStudiesDesignIndexRoute,
 }
 
