@@ -17,7 +17,7 @@ import depositMintFlow from "@/assets/Deposit_and_mint_flow_-_tBTC.png.asset.jso
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
     meta: [
-      { title: "tBTC Bridge: Designing for trust in a Bitcoin bridge · Sasha (Tanase) Luca" },
+      { title: "tBTC Bridge: Trust design in a Bitcoin bridge→20% conversion. · Sasha (Tanase) Luca" },
       {
         name: "description",
         content:
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/case-studies/design/01")({
       },
       {
         property: "og:title",
-        content: "tBTC Bridge: Designing for trust in a Bitcoin bridge · Sasha (Tanase) Luca",
+        content: "tBTC Bridge: Trust design in a Bitcoin bridge→20% conversion. · Sasha (Tanase) Luca",
       },
       {
         property: "og:description",
@@ -46,9 +46,9 @@ function DesignProject01() {
     <DesignProjectLayout
       no="01"
       year="2023"
-      title="tBTC Bridge: Designing for trust in a Bitcoin bridge +18% conversion."
+      title="tBTC Bridge: Trust design in a Bitcoin bridge→20% conversion."
       subtitle="tBTC v2 · Threshold Network · 2022 – 2024"
-      synopsis="Three studies, 24 participants, three design iterations, and an ~18% lift in successful bridge completion. This is the story of how each one led to the next."
+      synopsis="Three studies, 24 participants, three design iterations, and an ~20% lift in successful bridge completion. This is the story of how each one led to the next."
       tags={["Product Designer", "UX Researcher", "3 studies", "3 iterations"]}
       coverImage={tBTCCover.url}
       coverAlt="tBTC Bridge v2 — selected UI screens showing the deposit flow, bridging process, and completion state"
@@ -500,7 +500,7 @@ function DesignProject01() {
 
       <DesignSection number="06" title="Outcome.">
         <p>
-          Completion went up by roughly 18 percent. My headline UX metric was task success rate, and
+          Completion went up by roughly 20 percent. My headline UX metric was task success rate, and
           I triangulated it across three sources rather than trusting any one of them:
           <br />
           <br />
