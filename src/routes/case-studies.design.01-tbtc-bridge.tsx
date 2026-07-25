@@ -141,7 +141,7 @@ function DesignProject01() {
             />
           </div>
           <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            Assumption mapping workshop · team assumptions by risk and certainty
+            ASSUMPTION MAPPING WORKSHOP
           </figcaption>
         </figure>
 
