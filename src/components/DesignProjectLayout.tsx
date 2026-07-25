@@ -3,16 +3,6 @@ import { CursorDots } from "@/components/CursorDots";
 import { trackNav } from "@/lib/analytics";
 import type { ReactNode } from "react";
 
-export type GalleryItem = {
-  /** CSS background value (gradient or url("...")) used until real imagery is wired in. */
-  media: string;
-  caption?: string;
-  /** Aspect ratio, e.g. "16/10", "4/5", "1/1". Defaults to "16/10". */
-  ratio?: string;
-  /** If true the tile spans both columns on desktop. */
-  wide?: boolean;
-};
-
 export type DesignProjectLayoutProps = {
   no: string;
   year: string;
@@ -24,7 +14,6 @@ export type DesignProjectLayoutProps = {
   coverImage?: string; // Absolute or relative image URL
   coverAlt?: string;
   children?: ReactNode;
-  gallery?: GalleryItem[];
 };
 
 export function DesignProjectLayout({
