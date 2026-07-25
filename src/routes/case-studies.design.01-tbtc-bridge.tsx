@@ -283,6 +283,18 @@ function DesignProject01() {
         <p>
           Tested May-June 2023&nbsp; 6 participants&nbsp;
         </p>
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          The full research write-up for this round lives{" "}
+          <a
+            href="https://sasha.web3ux.org/case-studies/03"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 transition-colors hover:text-accent"
+          >
+            here
+          </a>
+          .
+        </p>
         <p>
           At the end of each session I asked participants to rate the ease of the flow from 1 to 7;
           the average landed at 4.7 for minting and 6 for unminting.
@@ -307,6 +319,21 @@ function DesignProject01() {
           explorer links mattered as much as the states. In crypto, users don't want your
           reassurance; they want the receipts.
         </p>
+
+        <aside className="border-l-2 border-accent bg-muted/40 p-6 text-sm leading-relaxed text-foreground md:text-base">
+          The four principles I keep returning to in this piece — visibility of system status,
+          verifiability, plain language, and letting users start small — come from a talk I gave on
+          designing for trust in web3. If the reasoning here interests you, the talk lays out the
+          whole framework.{" "}
+          <a
+            href="TALK_URL"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium underline underline-offset-4 transition-colors hover:text-accent"
+          >
+            Watch: Designing for Trust in web3 →
+          </a>
+        </aside>
 
         <figure className="py-4">
           <div className="relative w-full overflow-hidden border border-border">
