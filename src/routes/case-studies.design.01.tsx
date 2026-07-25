@@ -552,6 +552,18 @@ function DesignProject01() {
         </p>
         <p>{"\n"}</p>
       </DesignSection>
+
+      <DesignSection number="07" title="The pivot: a protocol-mechanism redesign that didn't get accepted">
+        <p>
+          By the third iteration I was fairly sure the biggest problem left wasn't one I could design my way out of at the interface. Across all three studies, the users' mental model never moved: they expected a bridge to behave like a swap, near-instant, and no amount of honest copy about a multi-hour wait was going to overwrite an expectation that deeply set. If the model wouldn't change, the product had to. That's the insight the pivot rests on.
+        </p>
+        <p>
+          So I proposed a two-speed bridge: patient users mint normally, pool their tBTC and earn a premium; impatient users draw from that pool instantly and pay for the privilege. It wasn't a hunch, either. Users had already improvised exactly this with WBTC swaps, and Hop Protocol was running the same mechanism in production, so the pattern was proven.
+        </p>
+        <p>
+          I pitched it to the CTO and CEO. It didn't ship. New mechanism, new audits, in the year of the great bridge hacks. I disagreed, but the cost they weighed was real. Three years later, BOB shipped a gateway on the same economics.
+        </p>
+      </DesignSection>
     </DesignProjectLayout>
   );
 }
