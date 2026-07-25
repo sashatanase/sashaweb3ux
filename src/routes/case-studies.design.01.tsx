@@ -10,6 +10,8 @@ import resumeDepositScenarios from "@/assets/resume-deposit-scenarios.png.asset.
 import mintFailSafe from "@/assets/Resume_Minting.png.asset.json";
 import step2Image from "@/assets/Step_2.png.asset.json";
 import step2Iteration from "@/assets/Step-2-1-2.png.asset.json";
+import shippedBridge from "@/assets/Shipped_Bridge.png.asset.json";
+import shippedBridge2 from "@/assets/Shipped_Bridge_2.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
