@@ -128,7 +128,7 @@ export function DesignProjectLayout({
         {/* Written sections (Context / Problem / Solution / Outcome) */}
         <div className="pb-16 md:pb-24">{children}</div>
 
-        <section className="mx-auto max-w-[1120px] border-t border-border py-16">
+        <section className="mx-auto max-w-[1120px] py-16">
           <Link
             to="/case-studies/design"
             onClick={() => trackNav("case-studies-design", `design-${no}-footer`)}
