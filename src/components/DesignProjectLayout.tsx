@@ -157,11 +157,13 @@ export function DesignSection({
   number,
   label,
   title,
+  subtitle,
   children,
 }: {
   number?: string;
   label?: string;
   title: string;
+  subtitle?: ReactNode;
   children: ReactNode;
 }) {
   const tag = number ?? label ?? "";
@@ -172,10 +174,13 @@ export function DesignSection({
           § {tag}
         </div>
         <h2 className="mt-4 text-xl font-medium tracking-tight break-words sm:text-2xl md:text-3xl">
-          {title.toString().includes("User  - Understanding the territory before touching the interface") 
-            ? "User pain points - Understanding the territory before touching the interface" 
+          {title.toString().includes("User  - Understanding the territory before touching the interface")
+            ? "User pain points - Understanding the territory before touching the interface"
             : title}
         </h2>
+        {subtitle && (
+          <p className="mt-3 text-sm text-muted-foreground md:text-base">{subtitle}</p>
+        )}
       </div>
       <div className="mt-10 space-y-6 text-base leading-[1.7] text-foreground md:text-[17px] [&>*:not(figure)]:mx-auto [&>*:not(figure)]:max-w-[760px]">
         {children}
