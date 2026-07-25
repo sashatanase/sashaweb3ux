@@ -13,6 +13,7 @@ import step2Iteration from "@/assets/Step-2-1-2.png.asset.json";
 import shippedBridge from "@/assets/Shipped_Bridge.png.asset.json";
 import shippedBridge2 from "@/assets/Shipped_Bridge_2.png.asset.json";
 import depositMintFlow from "@/assets/Deposit_and_mint_flow_-_tBTC.png.asset.json";
+import researchArc from "@/assets/research-arc.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -91,6 +92,21 @@ function DesignProject01() {
       </DesignSection>
 
       <DesignSection number="02" title="Understanding the territory before touching the interface">
+        <figure className="pb-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={researchArc.url}
+              alt="Research arc diagram showing three studies across 13 months: Generative, Iterative, Iterative 2, and Proposal"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Three studies · 24 participants · 13 months
+            </figcaption>
+          </div>
+        </figure>
+
         <blockquote className="border-l-2 border-foreground/20 pl-5 text-lg font-light italic leading-relaxed text-foreground md:text-xl">
           &ldquo;Sending your Bitcoin to an unknown address is a really scary thing, it&rsquo;s like
           a leap of faith.&rdquo;
