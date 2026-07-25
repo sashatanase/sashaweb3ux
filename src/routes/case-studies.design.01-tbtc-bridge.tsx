@@ -496,7 +496,7 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="05" title="The Final Solution - Iteration 3 · live until 2026">
+      <DesignSection number="05" title="The Final Solution - Iteration 3&nbsp;">
         <p>
           The last pass took the Round 2 evidence and applied it without sentiment. &quot;Mint&quot;
           became &quot;Deposit&quot;, which is match between the system and the real world. Four of
