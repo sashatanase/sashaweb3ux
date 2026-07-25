@@ -16,7 +16,7 @@ import depositMintFlow from "@/assets/Deposit_and_mint_flow_-_tBTC.png.asset.jso
 import researchArc from "@/assets/research-arc.png.asset.json";
 import assumptionsMapping from "@/assets/Assumptions_Mapping.png.asset.json";
 
-export const Route = createFileRoute("/case-studies/design/01")({
+export const Route = createFileRoute("/case-studies/design/01-tbtc-bridge")({
   head: () => ({
     meta: [
       { title: "tBTC Bridge: Trust design in a Bitcoin bridge→20% conversion. · Sasha (Tanase) Luca" },
