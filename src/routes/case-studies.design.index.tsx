@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CaseStudiesShell } from "@/components/CaseStudiesShell";
+import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/")({
   head: () => ({
@@ -25,7 +26,7 @@ type DesignProject = {
   client: string;
   year: string;
   tags: string;
-  cover: string; // CSS background
+  cover: string; // CSS background or image url()
   status?: "Coming soon" | "In progress";
   href?: "/case-studies/design/01-tbtc-bridge";
 };
@@ -37,7 +38,7 @@ const PROJECTS: DesignProject[] = [
     client: "Threshold Network",
     year: "2023",
     tags: "Product · Cross-chain",
-    cover: "radial-gradient(circle at 30% 30%, #f4f4f2 0%, #d9d8d3 55%, #b7b6b0 100%)",
+    cover: `url("${tBTCCover.url}")`,
     href: "/case-studies/design/01-tbtc-bridge",
   },
   {
@@ -112,7 +113,7 @@ function DesignPage() {
           const tileInner = (
             <>
               <div
-                className="relative aspect-[4/5] w-full overflow-hidden border border-border"
+                className="relative aspect-[4/5] w-full overflow-hidden border border-border bg-cover bg-center"
                 style={{ backgroundImage: p.cover }}
               >
                 <div
