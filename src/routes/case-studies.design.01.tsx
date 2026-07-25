@@ -12,6 +12,7 @@ import step2Image from "@/assets/Step_2.png.asset.json";
 import step2Iteration from "@/assets/Step-2-1-2.png.asset.json";
 import shippedBridge from "@/assets/Shipped_Bridge.png.asset.json";
 import shippedBridge2 from "@/assets/Shipped_Bridge_2.png.asset.json";
+import depositMintFlow from "@/assets/Deposit_and_mint_flow_-_tBTC.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -464,6 +465,21 @@ function DesignProject01() {
           <div className="mx-auto max-w-[760px]">
             <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
               Last shipped iteration
+            </figcaption>
+          </div>
+        </figure>
+
+        <figure className="py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={depositMintFlow.url}
+              alt="Deposit and mint flow diagram showing the complete tBTC bridging process from deposit to mint"
+              className="block h-auto w-full"
+            />
+          </div>
+          <div className="mx-auto max-w-[760px]">
+            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Deposit and mint flow
             </figcaption>
           </div>
         </figure>
