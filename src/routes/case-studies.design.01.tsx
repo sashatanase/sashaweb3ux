@@ -14,6 +14,7 @@ import shippedBridge from "@/assets/Shipped_Bridge.png.asset.json";
 import shippedBridge2 from "@/assets/Shipped_Bridge_2.png.asset.json";
 import depositMintFlow from "@/assets/Deposit_and_mint_flow_-_tBTC.png.asset.json";
 import researchArc from "@/assets/research-arc.png.asset.json";
+import assumptionsMapping from "@/assets/Assumptions_Mapping.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/01")({
   head: () => ({
@@ -120,6 +121,19 @@ function DesignProject01() {
           <br />
           Three things reshaped how I framed the work.
         </p>
+
+        <figure className="mx-auto max-w-[760px] py-4">
+          <div className="relative w-full overflow-hidden border border-border">
+            <img
+              src={assumptionsMapping.url}
+              alt="Assumption mapping workshop output showing participant workspaces and a risk matrix of team assumptions"
+              className="h-auto w-full"
+            />
+          </div>
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Assumption mapping workshop · team assumptions by risk and certainty
+          </figcaption>
+        </figure>
 
         <div className="space-y-8 pt-2">
           <div>
