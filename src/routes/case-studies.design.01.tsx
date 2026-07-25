@@ -498,6 +498,8 @@ function DesignProject01() {
 
       <DesignSection number="06" title="Outcome.">
         <p>
+          Tested May 2022
+          <br />
           Completion went up by roughly 20 percent.
           <br />
           <br />
