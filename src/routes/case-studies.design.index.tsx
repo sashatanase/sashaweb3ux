@@ -102,8 +102,10 @@ function DesignPage() {
             Design.
           </h1>
           <p className="mt-6 max-w-2xl text-base font-medium leading-relaxed tracking-tight text-muted-foreground md:text-xl">
-            Product and interaction design work — flows, systems, and interfaces shaped by the
-            research. Full write-ups coming soon.
+            Design work that sits close to the research: flows, interfaces, and systems for Bitcoin
+            DeFi, cross-chain bridges, and node operations. These are product design stories, not
+            just screenshots — each one runs through the messy middle of iterations and failed
+            assumptions, and ends with what actually shipped.
           </p>
         </div>
       </section>
