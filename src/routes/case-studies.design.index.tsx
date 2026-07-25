@@ -43,8 +43,8 @@ const PROJECTS: DesignProject[] = [
   },
   {
     no: "02",
-    title: "Mezo Borrow Portal",
-    client: "Mezo",
+    title: "Bitcoin On Base",
+    client: "Threshold Network",
     year: "2025",
     tags: "Product · DeFi",
     cover: "linear-gradient(135deg, #111 0%, #1a1a1a 40%, #2a2a2a 100%)",
@@ -52,7 +52,7 @@ const PROJECTS: DesignProject[] = [
   },
   {
     no: "03",
-    title: "Node Setup Flow",
+    title: "Threshold Financial Dashboard",
     client: "Threshold Network",
     year: "2023",
     tags: "Onboarding · Ops",
@@ -70,8 +70,8 @@ const PROJECTS: DesignProject[] = [
   },
   {
     no: "05",
-    title: "Tone of Voice App",
-    client: "Independent",
+    title: "Threshold Network Website",
+    client: "Threshold Network",
     year: "2024",
     tags: "AI · Branding",
     cover: "conic-gradient(from 210deg at 60% 40%, #f4f4f2, #d9d8d3, #b7b6b0, #f4f4f2)",
