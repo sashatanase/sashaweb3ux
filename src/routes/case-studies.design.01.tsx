@@ -92,7 +92,7 @@ function DesignProject01() {
       </DesignSection>
 
       <DesignSection number="02" title="Understanding the territory before touching the interface">
-        <figure className="pb-4">
+        <figure className="mx-auto max-w-[760px] pb-4">
           <div className="relative w-full overflow-hidden border border-border">
             <img
               src={researchArc.url}
@@ -100,11 +100,9 @@ function DesignProject01() {
               className="h-auto w-full"
             />
           </div>
-          <div className="mx-auto max-w-[760px]">
-            <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Three studies · 24 participants · 13 months
-            </figcaption>
-          </div>
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Three studies · 24 participants · 13 months
+          </figcaption>
         </figure>
 
         <blockquote className="border-l-2 border-foreground/20 pl-5 text-lg font-light italic leading-relaxed text-foreground md:text-xl">
