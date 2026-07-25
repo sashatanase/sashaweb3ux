@@ -574,11 +574,11 @@ function DesignProject01() {
       </DesignSection>
 
       <DesignSection number="06" title="Outcome.">
-        <p>
+        <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground mb-4">
           Tested May 2022
-          <br />
-          Completion went up by roughly 20 percent.
-          <br />
+        </p>
+        <p>
+          <strong>Completion went up by roughly 20 percent.</strong>
           <br />
           <br />
           My headline UX metric was task success rate, and I triangulated it across three sources
@@ -603,7 +603,6 @@ function DesignProject01() {
           deposit and closed the tab was not a failure, and I didn&apos;t let a drop-off in the UI
           count against the design when the on-chain reality said the bridge had done its job.
         </p>
-        <p>{"\n"}</p>
       </DesignSection>
 
       <DesignSection number="07" title="The pivot: a protocol-mechanism redesign that didn't get accepted">
