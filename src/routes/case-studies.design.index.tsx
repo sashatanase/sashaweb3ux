@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CaseStudiesShell } from "@/components/CaseStudiesShell";
-import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
+import tBTCThumbnail from "@/assets/tBTC-thumbnail.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/")({
   head: () => ({
@@ -38,7 +38,7 @@ const PROJECTS: DesignProject[] = [
     client: "Threshold Network",
     year: "2023",
     tags: "Product · Cross-chain",
-    cover: `url("${tBTCCover.url}")`,
+    cover: `url("${tBTCThumbnail.url}")`,
     href: "/case-studies/design/01-tbtc-bridge",
   },
   {
@@ -136,7 +136,7 @@ function DesignPage() {
                   </div>
                 )}
 
-                <div className="absolute inset-0 bg-red-600 opacity-0 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-purple-600 opacity-0 mix-blend-multiply transition-opacity duration-300 group-hover:opacity-100" />
 
                 <div className="absolute inset-x-0 bottom-0 translate-y-full bg-background/95 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-foreground backdrop-blur transition-transform duration-300 group-hover:translate-y-0">
                   <div className="flex items-center justify-between">
@@ -148,7 +148,7 @@ function DesignPage() {
 
               <div className="mt-4 flex items-start justify-between gap-4">
                 <div className="min-w-0">
-                  <h2 className="text-lg font-medium tracking-tight transition-colors group-hover:text-red-600 md:text-xl">
+                  <h2 className="text-lg font-medium tracking-tight transition-colors group-hover:text-purple-600 md:text-xl">
                     {p.title}
                   </h2>
                   <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
