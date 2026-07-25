@@ -567,6 +567,21 @@ function DesignProject01() {
           <strong>Two years later, BOB shipped a gateway on the same economics.</strong>
         </p>
       </DesignSection>
+
+      <DesignSection number="08" title="What I took from it">
+        <p>
+          The thing I keep coming back to is that I never solved the problem people thought I'd been hired to solve. The bridge was still slow when I finished. Bitcoin doesn't hurry, and no design decision was going to change that.
+        </p>
+        <p>
+          What I could change was the story the product told a person during the wait, and it turned out that was the real problem all along. People weren't afraid of waiting. They were afraid of waiting without knowing whether their money still existed. Once the interface stopped going quiet on them, the same wait became tolerable, even reassuring.
+        </p>
+        <p>
+          That's the lesson I've carried into every project since. In products where the stakes are high and the mechanism is invisible, users aren't really evaluating your features. They're deciding, moment to moment, whether they can trust you, and they make that decision on the evidence you give them: what you show, what you let them verify, whether you speak to them in their language or hide behind your own. Get that wrong and the best-engineered system in the world still feels like a black box you'd be a fool to put your Bitcoin into.
+        </p>
+        <p>
+          Trust isn't a feature you add at the end. On a product like this, it's the whole job.
+        </p>
+      </DesignSection>
     </DesignProjectLayout>
   );
 }
