@@ -27,7 +27,6 @@ export function DesignProjectLayout({
   coverImage,
   coverAlt,
   children,
-  gallery,
 }: DesignProjectLayoutProps) {
   const currentYear = new Date().getFullYear();
 
