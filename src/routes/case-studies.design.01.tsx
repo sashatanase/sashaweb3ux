@@ -509,8 +509,6 @@ function DesignProject01() {
           I triangulated it across three sources rather than trusting any one of them:
           <br />
           <br />
-          <br />
-          <br />
           PostHog, for how people moved through the interface
           <br />
           The Graph, for what actually settled on-chain
@@ -521,8 +519,6 @@ function DesignProject01() {
           Between them I could watch the number of new mints, the growth in TVL, and the count of
           unique wallet addresses touching the bridge, so a lift in success rate was corroborated by
           real deposits from real addresses rather than resting on interface events alone.
-          <br />
-          <br />
           <br />
           <br />
           The definition of the metric mattered as much as the number. I only counted a session as a
