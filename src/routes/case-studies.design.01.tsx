@@ -484,21 +484,18 @@ function DesignProject01() {
           </div>
         </figure>
 
-        <figure className="py-4">
-          <div className="relative w-full overflow-hidden border border-border">
+        <figure className="relative left-1/2 w-screen -translate-x-1/2 py-4">
+          <div className="relative h-screen w-full overflow-hidden border-y border-border md:border-x-0">
             <iframe
               src="https://embed.figma.com/proto/X9u1z67oBm7WuoZkHj112Y/tBTC-Final---prototype?page-id=0%3A1&node-id=1-8479&viewport=-72%2C-404%2C0.39&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A8479&embed-host=share"
               title="tBTC Figma prototype"
               loading="lazy"
               allowFullScreen
-              style={{
-                width: "100%",
-                height: "700px",
-                border: "1px solid rgba(0, 0, 0, 0.1)",
-              }}
+              className="h-full w-full"
+              style={{ border: 0 }}
             />
           </div>
-          <div className="mx-auto max-w-[760px]">
+          <div className="mx-auto max-w-[760px] px-6 md:px-10">
             <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
               Figma prototype — final tBTC bridge flow
             </figcaption>
