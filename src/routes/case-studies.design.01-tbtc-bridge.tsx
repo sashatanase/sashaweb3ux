@@ -321,8 +321,8 @@ function DesignProject01() {
         </p>
 
         <aside className="border-l-2 border-accent bg-muted/40 p-6 text-sm leading-relaxed text-foreground md:text-base">
-          The four principles I keep returning to in this piece — visibility of system status,
-          verifiability, plain language, and letting users start small — come from a talk I gave on
+          The four principles I keep returning to in this piece: visibility of system status,
+          verifiability, plain language, and letting users start small, come from a talk I gave on
           designing for trust in web3. If the reasoning here interests you, the talk lays out the
           whole framework.{" "}
           <a
