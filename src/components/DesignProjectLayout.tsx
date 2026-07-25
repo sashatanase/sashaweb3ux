@@ -179,7 +179,7 @@ export function DesignSection({
             : title}
         </h2>
         {subtitle && (
-          <p className="mt-3 text-sm text-muted-foreground md:text-base">{subtitle}</p>
+          <p className="mt-3 text-base text-muted-foreground md:text-lg">{subtitle}</p>
         )}
       </div>
       <div className="mt-10 space-y-6 text-base leading-[1.7] text-foreground md:text-[17px] [&>*:not(figure)]:mx-auto [&>*:not(figure)]:max-w-[760px]">
