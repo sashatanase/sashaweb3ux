@@ -444,7 +444,7 @@ function DesignProject01() {
           <br />
           <br />
           The receipt was saved in the dashboard, surfaced only when something has actually gone
-          wrong.&nbsp;
+          wrong.
         </p>
         <p>{"\n"}</p>
 
@@ -471,15 +471,33 @@ function DesignProject01() {
 
       <DesignSection number="06" title="Outcome.">
         <p>
-          Post-launch, support tickets tagged &ldquo;is my bridge stuck?&rdquo; dropped
-          meaningfully, completion rate on first-time deposits improved, and the status system was
-          adopted by adjacent teams as the default pattern for long-running on-chain flows.
+          Completion went up by roughly 18 percent. My headline UX metric was task success rate, and
+          I triangulated it across three sources rather than trusting any one of them:
+          <br />
+          <br />
+          <br />
+          <br />
+          PostHog, for how people moved through the interface
+          <br />
+          The Graph, for what actually settled on-chain
+          <br />
+          TVL, for whether value was accruing
+          <br />
+          <br />
+          Between them I could watch the number of new mints, the growth in TVL, and the count of
+          unique wallet addresses touching the bridge, so a lift in success rate was corroborated by
+          real deposits from real addresses rather than resting on interface events alone.
+          <br />
+          <br />
+          <br />
+          <br />
+          The definition of the metric mattered as much as the number. I only counted a session as a
+          bounce when the protocol had genuinely not registered the BTC deposit, meaning the smart
+          contract never triggered Step 3. That kept the rate honest: someone who completed a
+          deposit and closed the tab was not a failure, and I didn&apos;t let a drop-off in the UI
+          count against the design when the on-chain reality said the bridge had done its job.
         </p>
-        <p>
-          The bigger win was internal: engineering, product, and design converged on a shared
-          vocabulary for bridge state — which made every subsequent iteration cheaper to design,
-          build, and explain.
-        </p>
+        <p>{"\n"}</p>
       </DesignSection>
     </DesignProjectLayout>
   );
