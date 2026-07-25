@@ -575,7 +575,7 @@ function DesignProject01() {
 
       <DesignSection number="06" title="Outcome.">
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground mb-4">
-          Tested May 2022
+          {"\n"}
         </p>
         <p>
           <strong>Completion went up by roughly 20 percent.</strong>
