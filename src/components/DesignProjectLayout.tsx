@@ -172,7 +172,7 @@ export function DesignSection({
           § {tag}
         </div>
         <h2 className="mt-4 text-xl font-medium tracking-tight break-words sm:text-2xl md:text-3xl">
-          {title === "User  - Understanding the territory before touching the interface\n\n\nThe wait wasn't the problem. The silence was." 
+          {title.toString().includes("User  - Understanding the territory before touching the interface") 
             ? "User pain points - Understanding the territory before touching the interface" 
             : title}
         </h2>
