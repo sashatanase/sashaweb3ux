@@ -114,10 +114,12 @@ function DesignPage() {
         {PROJECTS.map((p) => {
           const tileInner = (
             <>
-              <div
-                className="relative aspect-[4/5] w-full overflow-hidden border border-border bg-cover bg-center"
-                style={{ backgroundImage: p.cover }}
-              >
+              <div className="relative aspect-[4/5] w-full overflow-hidden border border-border">
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
+                  style={{ backgroundImage: p.cover }}
+                />
+
                 <div
                   className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
                   style={{
