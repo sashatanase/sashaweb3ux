@@ -302,10 +302,20 @@ function MultiAppStaking() {
       <DesignSection number="03" title="Solution">
         <p>
           The design job was to make that layered-risk model legible and safe, inside a flow a
-          first-time staker could actually finish. I led the work to a three-step spine: deposit
-          your tokens, authorise and configure how much each application can draw on, then set up
-          the node. Separating deposit from authorisation mattered, because it let people commit
-          their stake without being forced to make every risk decision in the same breath.
+          first-time staker could actually finish. I led the work to a three-step spine:
+          <br />
+          →&nbsp; deposit your tokens
+          <br />
+          →&nbsp; authorise and configure how much each application can draw on
+          <br />
+          →&nbsp; then set up the node.
+          <br />
+          <br />
+          <br />
+          <strong>
+            Separating deposit from authorisation mattered, because it let people commit their stake
+            without being forced to make every risk decision in the same breath.
+          </strong>
         </p>
 
         <ImagePlaceholder label="[IMAGE — PRIORITY 4: THE THREE-STEP FLOW AS A STRIP (DEPOSIT, AUTHORISE, SET UP NODE). TO ADD]" />
