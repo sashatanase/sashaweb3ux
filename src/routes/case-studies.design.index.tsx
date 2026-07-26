@@ -38,7 +38,7 @@ const PROJECTS: DesignProject[] = [
     title: "tBTC Bridge",
     client: "Threshold Network",
     year: "2023",
-    tags: "UX DESIGN · UX RESEARCCROSS-CHAIN",
+    tags: "UX DESIGN · UX RESEARCH ·CROSS-CHAIN",
     cover: `url("${tBTCThumbnail.url}")`,
     href: "/case-studies/design/01-tbtc-bridge",
   },
