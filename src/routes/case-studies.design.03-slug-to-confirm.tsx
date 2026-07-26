@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
 import { KeepReading } from "@/components/KeepReading";
+import masCover from "@/assets/mas-cover.png.asset.json";
 
 // [SLUG TO CONFIRM] — this route file uses a placeholder slug.
 // Rename the file (and the createFileRoute string) once the final slug is decided.
