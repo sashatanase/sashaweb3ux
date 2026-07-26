@@ -191,8 +191,22 @@ function BitcoinOnBase() {
           trust most now when I move between contexts, because the work that travels well is the
           work that was never on autopilot.
         </p>
-        <Placeholder label="[GALLERY TO CONFIRM] — 3 to 5 key screens: overview, main bridge step, success state, staking and campaign surfaces" />
-        <Placeholder label="[GALLERY TO CONFIRM] — craft details: close crops of components, iconography, layout" />
+        <figure className="py-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {gallery.map((item) => (
+              <img
+                key={item.src}
+                src={item.src}
+                alt={item.alt}
+                className="w-full border border-border"
+                loading="lazy"
+              />
+            ))}
+          </div>
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Shipped screens in the On interface — deposit, minting timeline and success states
+          </figcaption>
+        </figure>
       </DesignSection>
     </DesignProjectLayout>
   );
