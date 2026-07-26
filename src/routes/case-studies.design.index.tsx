@@ -28,7 +28,7 @@ type DesignProject = {
   tags: string;
   cover: string; // CSS background or image url()
   status?: "Coming soon" | "In progress";
-  href?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-bitcoin-on-base";
+  href?: "/case-studies/design/01-tbtc-bridge";
 };
 
 const PROJECTS: DesignProject[] = [
@@ -40,15 +40,6 @@ const PROJECTS: DesignProject[] = [
     tags: "Product · Cross-chain",
     cover: `url("${tBTCThumbnail.url}")`,
     href: "/case-studies/design/01-tbtc-bridge",
-  },
-  {
-    no: "02",
-    title: "Bitcoin On Base",
-    client: "Threshold Network",
-    year: "2025",
-    tags: "Product · DeFi",
-    cover: "linear-gradient(135deg, #111 0%, #1a1a1a 40%, #2a2a2a 100%)",
-    href: "/case-studies/design/02-bitcoin-on-base",
   },
   {
     no: "03",
