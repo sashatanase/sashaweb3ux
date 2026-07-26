@@ -144,10 +144,7 @@ function BitcoinOnBase() {
           afterSrc={onTimeline.url}
           beforeAlt="Minting timeline in the Threshold dashboard styling"
           afterAlt="Minting timeline rebuilt in the On interface"
-          beforeLabel="Threshold"
-          afterLabel="On"
-          caption="Drag to compare — same minting timeline, two design languages"
-
+          caption="Drag to compare. The same minting timeline in two design languages, Threshold's dashboard on the left and the rebuilt On interface on the right."
         />
       </div>
 
