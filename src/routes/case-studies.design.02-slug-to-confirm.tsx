@@ -51,23 +51,6 @@ export const Route = createFileRoute("/case-studies/design/02-slug-to-confirm")(
   component: BitcoinOnBase,
 });
 
-function Placeholder({ label, note }: { label: string; note?: string }) {
-  return (
-    <figure className="py-4">
-      <div className="flex min-h-[220px] w-full items-center justify-center border border-dashed border-border px-6 py-12 md:min-h-[320px]">
-        <span className="text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-          {label}
-        </span>
-      </div>
-      {note && (
-        <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-          {note}
-        </figcaption>
-      )}
-    </figure>
-  );
-}
-
 function BitcoinOnBase() {
   return (
     <DesignProjectLayout
