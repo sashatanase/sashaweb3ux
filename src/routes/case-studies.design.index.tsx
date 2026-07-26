@@ -44,8 +44,8 @@ const PROJECTS: DesignProject[] = [
   {
     no: "02",
     title: "Bitcoin on Base",
-    client: "[CLIENT TO CONFIRM]",
-    year: "[YEAR TO CONFIRM]",
+    client: "THRESHOLD NETWORK",
+    year: "2024",
     tags: "Product · Visual design",
     cover: "linear-gradient(135deg, #e9e9e6 0%, #d5d4cf 100%)",
     href: "/case-studies/design/02-bitcoin-on-base",
