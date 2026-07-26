@@ -48,7 +48,7 @@ const PROJECTS: DesignProject[] = [
     client: "THRESHOLD NETWORK",
     year: "2024",
     tags: "Product · Visual design",
-    cover: "linear-gradient(135deg, #e9e9e6 0%, #d5d4cf 100%)",
+    cover: `url("${bitcoinOnBaseThumbnail.url}")`,
     href: "/case-studies/design/02-bitcoin-on-base",
   },
   {
