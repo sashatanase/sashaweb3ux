@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { BitcoinOnBaseDiagram } from "@/components/BitcoinOnBaseDiagram";
+import { ImageLightbox } from "@/components/ImageLightbox";
 import bitcoinOnBaseCover from "@/assets/Bitcoin_on_Base_cover.png.asset.json";
 import thresholdTimeline from "@/assets/tBTC_v2_Minting_Timeline.jpg.asset.json";
 import onTimeline from "@/assets/Bitcoin_On_Base_Minting_Timeline.png.asset.json";
@@ -192,13 +193,14 @@ function BitcoinOnBase() {
         <figure className="py-4">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {gallery.map((item) => (
-              <img
-                key={item.src}
-                src={item.src}
-                alt={item.alt}
-                className="w-full border border-border"
-                loading="lazy"
-              />
+              <ImageLightbox key={item.src} src={item.src} alt={item.alt}>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full transition-opacity hover:opacity-90"
+                  loading="lazy"
+                />
+              </ImageLightbox>
             ))}
           </div>
           <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
