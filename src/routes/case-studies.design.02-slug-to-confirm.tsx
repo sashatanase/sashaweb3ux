@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
+import bitcoinOnBaseCover from "@/assets/Bitcoin_on_Base_cover.png.asset.json";
 
 // [SLUG TO CONFIRM] — this route file is named with a placeholder slug.
 // Rename the file (and the createFileRoute string) once the final slug is decided.
@@ -53,7 +54,7 @@ function BitcoinOnBase() {
       synopsis="A validated Bitcoin bridge experience, rebuilt from the ground up in a new brand language so it reads as a native Base product rather than a transplanted network dashboard."
       tags={["Product Design Lead", "Design Strategy", "Web Application", "Design Team Of 3"]}
       coverAlt="Bitcoin on Base — cover"
-      cover="linear-gradient(135deg, #e9e9e6 0%, #d5d4cf 100%)"
+      coverImage={bitcoinOnBaseCover.url}
     >
       <DesignSection number="01" title="Problem">
         <p>
