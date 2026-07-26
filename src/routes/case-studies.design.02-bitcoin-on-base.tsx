@@ -27,10 +27,6 @@ const gallery = [
   { src: onSuccess.url, alt: "Mint completed success state" },
 ];
 
-
-
-
-
 // [SLUG TO CONFIRM] — this route file is named with a placeholder slug.
 // Rename the file (and the createFileRoute string) once the final slug is decided.
 
@@ -151,7 +147,7 @@ function BitcoinOnBase() {
           To keep my own patterns out, I treated every element as a project I had never worked on
           before and styled it fresh rather than reaching for what had worked on Threshold.
         </p>
-        
+
         <BitcoinOnBaseDiagram />
       </DesignSection>
 
@@ -173,10 +169,6 @@ function BitcoinOnBase() {
           caption="Prototype recording — the minting flow in the On interface"
         />
       </div>
-
-
-
-
 
       <DesignSection number="04" title="Outcome">
         <p>
@@ -200,10 +192,10 @@ function BitcoinOnBase() {
           what a new brand and a new audience cannot afford.
           <br />
           <br />
-          Forcing each element to prove itself again, as if I had no history with it, is what let the
-          product belong to Base instead of quietly still belonging to Threshold. It is the habit I
-          trust most now when I move between contexts, because the work that travels well is the
-          work that was never on autopilot.
+          Forcing each element to prove itself again, as if I had no history with it, is what let
+          the product belong to Base instead of quietly still belonging to Threshold. It is the
+          habit I trust most now when I move between contexts, because the work that travels well is
+          the work that was never on autopilot.
         </p>
         <figure className="py-4">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -219,7 +211,8 @@ function BitcoinOnBase() {
             ))}
           </div>
           <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            SHIPPED SCREENS IN THE ON INTERFACE — DEPOSIT - STEP 1,2,3- MINTING TIMELINE AND SUCCESS STATES
+            SHIPPED SCREENS IN THE ON INTERFACE — DEPOSIT - STEP 1,2,3- MINTING TIMELINE AND SUCCESS
+            STATES
           </figcaption>
         </figure>
       </DesignSection>

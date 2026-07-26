@@ -21,7 +21,10 @@ import twoSpeedBridge from "@/assets/two-speed-bridge.png.asset.json";
 export const Route = createFileRoute("/case-studies/design/01-tbtc-bridge")({
   head: () => ({
     meta: [
-      { title: "tBTC Bridge: Trust design in a Bitcoin bridge→20% conversion. · Sasha (Tanase) Luca" },
+      {
+        title:
+          "tBTC Bridge: Trust design in a Bitcoin bridge→20% conversion. · Sasha (Tanase) Luca",
+      },
       {
         name: "description",
         content:
@@ -29,7 +32,8 @@ export const Route = createFileRoute("/case-studies/design/01-tbtc-bridge")({
       },
       {
         property: "og:title",
-        content: "tBTC Bridge: Trust design in a Bitcoin bridge→20% conversion. · Sasha (Tanase) Luca",
+        content:
+          "tBTC Bridge: Trust design in a Bitcoin bridge→20% conversion. · Sasha (Tanase) Luca",
       },
       {
         property: "og:description",
@@ -67,9 +71,9 @@ function DesignProject01() {
           reputation was earned.
           <br />
           <br />
-          After depositing funds, users landed on a spinner. No states, no progress, no
-          estimate. It could sit there for six hours. People weren't waiting; they were watching a
-          screen that gave them no evidence their money still existed.
+          After depositing funds, users landed on a spinner. No states, no progress, no estimate. It
+          could sit there for six hours. People weren't waiting; they were watching a screen that
+          gave them no evidence their money still existed.
         </p>
         <p>{"\n"}</p>
         <figure className="py-4">
@@ -94,7 +98,10 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="02" title="Discovery - Understanding the territory before touching the interface">
+      <DesignSection
+        number="02"
+        title="Discovery - Understanding the territory before touching the interface"
+      >
         <figure className="mx-auto max-w-[760px] pb-4">
           <div className="relative w-full overflow-hidden border border-border">
             <img
@@ -123,11 +130,10 @@ function DesignProject01() {
           >
             generative study
           </a>
-          : 12 participants who held
-          or had bridged wrapped Bitcoin. I did this because I suspected the problem wasn't
-          usability in the narrow sense, and I wanted the team's assumptions on the table before we
-          invested in a direction. We ran an assumption mapping workshop first; the interview guide
-          came out of what we realised we were guessing about.
+          : 12 participants who held or had bridged wrapped Bitcoin. I did this because I suspected
+          the problem wasn't usability in the narrow sense, and I wanted the team's assumptions on
+          the table before we invested in a direction. We ran an assumption mapping workshop first;
+          the interview guide came out of what we realised we were guessing about.
           <br />
           <br />
           Three things reshaped how I framed the work.
@@ -149,7 +155,7 @@ function DesignProject01() {
         <div className="space-y-8 pt-2">
           <div>
             <h3 className="text-base font-medium tracking-tight text-foreground md:text-lg">
-              User  - Understanding the territory before touching the interface
+              User - Understanding the territory before touching the interface
               <br />
               <br />
               <br />
@@ -219,8 +225,7 @@ function DesignProject01() {
           participants&nbsp;&nbsp;&middot;&nbsp;&nbsp;think-aloud through minting and unminting
           flows
           <br />
-          <br />
-          I designed the first prototype, then tested it myself. At the end of each session I
+          <br />I designed the first prototype, then tested it myself. At the end of each session I
           asked participants to rate the ease of the flow from 1 to 7; the average landed at 5.8,
           and everyone was asked to motivate their score.
         </p>
@@ -283,9 +288,7 @@ function DesignProject01() {
       </DesignSection>
 
       <DesignSection number="04" title="Second Solution - Iteration 2 · designing the wait">
-        <p>
-          Tested May-June 2023&nbsp; 6 participants&nbsp;
-        </p>
+        <p>Tested May-June 2023&nbsp; 6 participants&nbsp;</p>
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
           The full research write-up for this round lives{" "}
           <a
@@ -353,8 +356,8 @@ function DesignProject01() {
         </figure>
 
         <p>
-          Around that core: &quot;sweep&quot; and its countdown were cut, replaced with a duration table
-          keyed to deposit size, so expectations get set before commitment instead of pressure
+          Around that core: &quot;sweep&quot; and its countdown were cut, replaced with a duration
+          table keyed to deposit size, so expectations get set before commitment instead of pressure
           arriving after it.
         </p>
         <p>
@@ -395,8 +398,8 @@ function DesignProject01() {
         </figure>
 
         <p>
-          Around that core: &quot;sweep&quot; and its countdown were cut, replaced with a duration table
-          keyed to deposit size, so expectations get set before commitment instead of pressure
+          Around that core: &quot;sweep&quot; and its countdown were cut, replaced with a duration
+          table keyed to deposit size, so expectations get set before commitment instead of pressure
           arriving after it.
         </p>
         <p>
@@ -574,8 +577,6 @@ function DesignProject01() {
             </figcaption>
           </div>
         </figure>
-
-
       </DesignSection>
 
       <DesignSection number="06" title="Outcome.">
@@ -610,15 +611,26 @@ function DesignProject01() {
         </p>
       </DesignSection>
 
-      <DesignSection number="07" title="The pivot: a protocol-mechanism redesign that didn't get accepted">
+      <DesignSection
+        number="07"
+        title="The pivot: a protocol-mechanism redesign that didn't get accepted"
+      >
         <p>
-          By the third iteration I was fairly sure the biggest problem left wasn't one I could design my way out of at the interface. Across all three studies, the users' mental model never moved: they expected a bridge to behave like a swap, near-instant, and no amount of honest copy about a multi-hour wait was going to overwrite an expectation that deeply set. If the model wouldn't change, the product had to. That's the insight the pivot rests on.
+          By the third iteration I was fairly sure the biggest problem left wasn't one I could
+          design my way out of at the interface. Across all three studies, the users' mental model
+          never moved: they expected a bridge to behave like a swap, near-instant, and no amount of
+          honest copy about a multi-hour wait was going to overwrite an expectation that deeply set.
+          If the model wouldn't change, the product had to. That's the insight the pivot rests on.
         </p>
         <p>
-          So I proposed a two-speed bridge: patient users mint normally, pool their tBTC and earn a premium; impatient users draw from that pool instantly and pay for the privilege. It wasn't a hunch, either. Users had already improvised exactly this with WBTC swaps, and Hop Protocol was running the same mechanism in production, so the pattern was proven.
+          So I proposed a two-speed bridge: patient users mint normally, pool their tBTC and earn a
+          premium; impatient users draw from that pool instantly and pay for the privilege. It
+          wasn't a hunch, either. Users had already improvised exactly this with WBTC swaps, and Hop
+          Protocol was running the same mechanism in production, so the pattern was proven.
         </p>
         <p>
-          I pitched it to the CTO and CEO. It didn't ship. New mechanism, new audits, in the year of the great bridge hacks. I disagreed, but the cost they weighed was real.
+          I pitched it to the CTO and CEO. It didn't ship. New mechanism, new audits, in the year of
+          the great bridge hacks. I disagreed, but the cost they weighed was real.
           <br />
           <br />
           <strong>Two years later, BOB shipped a gateway on the same economics.</strong>
@@ -642,17 +654,25 @@ function DesignProject01() {
 
       <DesignSection number="08" title="What I took from it">
         <p>
-          The thing I keep coming back to is that I never solved the problem people thought I'd been hired to solve. The bridge was still slow when I finished. Bitcoin doesn't hurry, and no design decision was going to change that.
+          The thing I keep coming back to is that I never solved the problem people thought I'd been
+          hired to solve. The bridge was still slow when I finished. Bitcoin doesn't hurry, and no
+          design decision was going to change that.
         </p>
         <p>
-          What I could change was the story the product told a person during the wait, and it turned out that was the real problem all along. People weren't afraid of waiting. They were afraid of waiting without knowing whether their money still existed. Once the interface stopped going quiet on them, the same wait became tolerable, even reassuring.
+          What I could change was the story the product told a person during the wait, and it turned
+          out that was the real problem all along. People weren't afraid of waiting. They were
+          afraid of waiting without knowing whether their money still existed. Once the interface
+          stopped going quiet on them, the same wait became tolerable, even reassuring.
         </p>
         <p>
-          That's the lesson I've carried into every project since. In products where the stakes are high and the mechanism is invisible, users aren't really evaluating your features. They're deciding, moment to moment, whether they can trust you, and they make that decision on the evidence you give them: what you show, what you let them verify, whether you speak to them in their language or hide behind your own. Get that wrong and the best-engineered system in the world still feels like a black box you'd be a fool to put your Bitcoin into.
+          That's the lesson I've carried into every project since. In products where the stakes are
+          high and the mechanism is invisible, users aren't really evaluating your features. They're
+          deciding, moment to moment, whether they can trust you, and they make that decision on the
+          evidence you give them: what you show, what you let them verify, whether you speak to them
+          in their language or hide behind your own. Get that wrong and the best-engineered system
+          in the world still feels like a black box you'd be a fool to put your Bitcoin into.
         </p>
-        <p>
-          Trust isn't a feature you add at the end. On a product like this, it's the whole job.
-        </p>
+        <p>Trust isn't a feature you add at the end. On a product like this, it's the whole job.</p>
       </DesignSection>
 
       <section className="pt-20">

@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CaseStudiesShell } from "@/components/CaseStudiesShell";
 import tBTCThumbnail from "@/assets/tBTC-thumbnail.png.asset.json";
+import bitcoinOnBaseThumbnail from "@/assets/bitcoin-on-base-thumbnail.png.asset.json";
 
 export const Route = createFileRoute("/case-studies/design/")({
   head: () => ({
@@ -47,7 +48,7 @@ const PROJECTS: DesignProject[] = [
     client: "THRESHOLD NETWORK",
     year: "2024",
     tags: "Product · Visual design",
-    cover: "linear-gradient(135deg, #e9e9e6 0%, #d5d4cf 100%)",
+    cover: `url("${bitcoinOnBaseThumbnail.url}")`,
     href: "/case-studies/design/02-bitcoin-on-base",
   },
   {
@@ -149,9 +150,7 @@ function DesignPage() {
 
               <div className="mt-4 flex items-start justify-between gap-4">
                 <div className="min-w-0">
-                  <h2 className="text-lg font-medium tracking-tight md:text-xl">
-                    {p.title}
-                  </h2>
+                  <h2 className="text-lg font-medium tracking-tight md:text-xl">{p.title}</h2>
                   <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
                     {p.client}
                   </p>
