@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
+import { KeepReading } from "@/components/KeepReading";
 
 import tBTCCover from "@/assets/tBTC_Project_Cover.png.asset.json";
 import tBTCv1Scary from "@/assets/tBTC_v1_scary.png.asset.json";
@@ -709,6 +710,8 @@ function DesignProject01() {
           </p>
         </div>
       </section>
+
+      <KeepReading currentId="01" />
     </DesignProjectLayout>
   );
 }
