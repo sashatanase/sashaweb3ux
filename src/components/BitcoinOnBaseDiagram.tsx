@@ -1,37 +1,3 @@
-import { useRef, useState } from "react";
-import { toPng } from "html-to-image";
-
-function DownloadIcon() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-      <path
-        d="M6.5 1v7M6.5 8l-2.5-2.5M6.5 8l2.5-2.5"
-        stroke="currentColor"
-        strokeWidth="1.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path d="M1.5 10.5h10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function Spinner() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" className="animate-spin">
-      <circle
-        cx="6.5"
-        cy="6.5"
-        r="5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeDasharray="20 12"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 const SANS = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`;
 
 const L_CARD = "#FAF9F6";
@@ -55,26 +21,6 @@ const R_DESC = "#3870A8";
 const R_DOT = "#5090CC";
 
 export function BitcoinOnBaseDiagram() {
-  const diagramRef = useRef<HTMLDivElement>(null);
-  const [exporting, setExporting] = useState(false);
-
-  async function handleDownload() {
-    if (!diagramRef.current) return;
-    setExporting(true);
-    try {
-      const dataUrl = await toPng(diagramRef.current, {
-        backgroundColor: "#ffffff",
-        pixelRatio: 3,
-      });
-      const link = document.createElement("a");
-      link.download = "bitcoin-on-base-comparison.png";
-      link.href = dataUrl;
-      link.click();
-    } finally {
-      setExporting(false);
-    }
-  }
-
   const VW = 740;
   const VH = 348;
   const COL_Y = 44;
@@ -102,34 +48,8 @@ export function BitcoinOnBaseDiagram() {
 
   return (
     <figure className="py-4">
-      <div className="w-full space-y-4 rounded-sm border border-border/40 bg-white p-6">
-        <div className="flex justify-end">
-          <button
-            onClick={handleDownload}
-            disabled={exporting}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-[12px] font-medium transition-colors hover:opacity-80"
-            style={{
-              color: exporting ? "#A78BFA" : "#7B3FE4",
-              background: "rgba(123,63,228,0.07)",
-              border: "1px solid rgba(123,63,228,0.18)",
-              cursor: exporting ? "default" : "pointer",
-            }}
-          >
-            {exporting ? (
-              <>
-                <Spinner />
-                Exporting…
-              </>
-            ) : (
-              <>
-                <DownloadIcon />
-                Download PNG
-              </>
-            )}
-          </button>
-        </div>
-
-        <div ref={diagramRef} className="bg-white">
+      <div className="w-full rounded-sm border border-border/40 bg-white p-6">
+        <div className="bg-white">
           <svg
             viewBox={`0 0 ${VW} ${VH}`}
             width="100%"
@@ -181,13 +101,7 @@ export function BitcoinOnBaseDiagram() {
             >
               KEPT INTACT
             </text>
-            <text
-              x={L_X + MX}
-              y={COL_Y + 52}
-              fontSize="10.5"
-              fill={L_DESC}
-              fontFamily={SANS}
-            >
+            <text x={L_X + MX} y={COL_Y + 52} fontSize="10.5" fill={L_DESC} fontFamily={SANS}>
               Already validated on tBTC
             </text>
             <line
@@ -261,13 +175,7 @@ export function BitcoinOnBaseDiagram() {
             >
               REBUILT FROM SCRATCH
             </text>
-            <text
-              x={R_X + MX}
-              y={COL_Y + 52}
-              fontSize="10.5"
-              fill={R_DESC}
-              fontFamily={SANS}
-            >
+            <text x={R_X + MX} y={COL_Y + 52} fontSize="10.5" fill={R_DESC} fontFamily={SANS}>
               My interface work
             </text>
             <line
