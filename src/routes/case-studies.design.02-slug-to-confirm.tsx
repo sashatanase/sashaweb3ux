@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import bitcoinOnBaseCover from "@/assets/Bitcoin_on_Base_cover.png.asset.json";
+
+// [IMAGE PATH TO CONFIRM] — before/after comparison images (identical dimensions).
+const COMPARISON_BEFORE_SRC = "[BITCOIN_ON_BASE_MINTING_TIMELINE_IMAGE_PATH]";
+const COMPARISON_AFTER_SRC = "[TBTC_MINTING_TIMELINE_IMAGE_PATH]";
+
 
 // [SLUG TO CONFIRM] — this route file is named with a placeholder slug.
 // Rename the file (and the createFileRoute string) once the final slug is decided.
@@ -132,6 +138,20 @@ function BitcoinOnBase() {
         <Placeholder label="[IMAGE PATH TO CONFIRM] — before and after: same screen in Threshold styling vs the rebuilt On interface" />
         <Placeholder label="[DIAGRAM TO CONFIRM] — inherited vs rebuilt (paste SVG markup here)" />
       </DesignSection>
+
+      <div className="mx-auto mt-16 max-w-[760px]">
+        <BeforeAfterSlider
+          beforeSrc={COMPARISON_BEFORE_SRC}
+          afterSrc={COMPARISON_AFTER_SRC}
+          beforeAlt="[ALT TEXT TO CONFIRM] — Bitcoin on Base minting timeline"
+          afterAlt="[ALT TEXT TO CONFIRM] — tBTC minting timeline"
+          beforeLabel="Threshold"
+          afterLabel="On"
+          caption="[CAPTION TO CONFIRM] — drag to compare"
+        />
+      </div>
+
+
 
       <DesignSection number="04" title="Outcome">
         <p>
