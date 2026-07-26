@@ -92,7 +92,197 @@ function MultiAppStaking() {
           shared risk on top of it.
         </p>
 
-        <ImagePlaceholder label="[DIAGRAM: SHARED-RISK STAKE MODEL — PASTE PROVIDED SVG MARKUP HERE VERBATIM. TO ADD]" />
+        <figure className="py-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 680 452"
+            width="100%"
+            role="img"
+            aria-labelledby="mas-t mas-d"
+            className="mx-auto h-auto w-full max-w-[680px]"
+            style={{
+              fontFamily:
+                "'Anthropic Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif",
+            }}
+          >
+            <title id="mas-t">How multi-app staking allocates a stake</title>
+            <desc id="mas-d">
+              Two panels. The top panel shows the intuitive but wrong assumption that authorizing
+              three apps splits a 100k T stake into three 33k portions. The bottom panel shows how
+              it actually works: the same 100k T fully backs all three apps at once, and each app
+              can slash only up to the amount you authorize.
+            </desc>
+
+            <text x="40" y="28" fontSize="14" fontWeight="600" fill="#2C2C2A">
+              What people expect: more apps split the stake
+            </text>
+            <text x="40" y="46" fontSize="12" fill="#5F5E5A">
+              A natural assumption, and the wrong one
+            </text>
+
+            <line x1="160" y1="103" x2="400" y2="80" stroke="#C9C6BC" strokeWidth="1.5" />
+            <line x1="160" y1="103" x2="400" y2="122" stroke="#C9C6BC" strokeWidth="1.5" />
+            <line x1="160" y1="103" x2="400" y2="164" stroke="#C9C6BC" strokeWidth="1.5" />
+
+            <rect
+              x="40"
+              y="68"
+              width="120"
+              height="70"
+              rx="10"
+              fill="#F1EFE8"
+              stroke="#5F5E5A"
+              strokeWidth="0.75"
+            />
+            <text x="100" y="98" textAnchor="middle" fontSize="12" fill="#5F5E5A">
+              Your stake
+            </text>
+            <text x="100" y="118" textAnchor="middle" fontSize="14" fontWeight="600" fill="#2C2C2A">
+              100k T
+            </text>
+
+            <rect
+              x="400"
+              y="62"
+              width="240"
+              height="36"
+              rx="8"
+              fill="#F1EFE8"
+              stroke="#5F5E5A"
+              strokeWidth="0.75"
+            />
+            <text x="414" y="85" fontSize="13" fill="#2C2C2A">
+              PRE
+            </text>
+            <text x="626" y="85" textAnchor="end" fontSize="12" fill="#5F5E5A">
+              33k T
+            </text>
+
+            <rect
+              x="400"
+              y="104"
+              width="240"
+              height="36"
+              rx="8"
+              fill="#F1EFE8"
+              stroke="#5F5E5A"
+              strokeWidth="0.75"
+            />
+            <text x="414" y="127" fontSize="13" fill="#2C2C2A">
+              Random Beacon
+            </text>
+            <text x="626" y="127" textAnchor="end" fontSize="12" fill="#5F5E5A">
+              33k T
+            </text>
+
+            <rect
+              x="400"
+              y="146"
+              width="240"
+              height="36"
+              rx="8"
+              fill="#F1EFE8"
+              stroke="#5F5E5A"
+              strokeWidth="0.75"
+            />
+            <text x="414" y="169" fontSize="13" fill="#2C2C2A">
+              tBTC
+            </text>
+            <text x="626" y="169" textAnchor="end" fontSize="12" fill="#5F5E5A">
+              33k T
+            </text>
+
+            <line x1="40" y1="212" x2="640" y2="212" stroke="#E5E3DB" strokeWidth="1" />
+
+            <text x="40" y="248" fontSize="14" fontWeight="600" fill="#042C53">
+              How multi-app staking works: one stake backs every app
+            </text>
+            <text x="40" y="266" fontSize="12" fill="#185FA5">
+              Authorizing more apps layers shared risk, it does not divide your tokens
+            </text>
+
+            <line x1="160" y1="325" x2="400" y2="300" stroke="#9EC4E8" strokeWidth="1.75" />
+            <line x1="160" y1="325" x2="400" y2="342" stroke="#9EC4E8" strokeWidth="1.75" />
+            <line x1="160" y1="325" x2="400" y2="384" stroke="#9EC4E8" strokeWidth="1.75" />
+
+            <rect
+              x="40"
+              y="290"
+              width="120"
+              height="70"
+              rx="10"
+              fill="#E6F1FB"
+              stroke="#185FA5"
+              strokeWidth="0.75"
+            />
+            <text x="100" y="320" textAnchor="middle" fontSize="12" fill="#185FA5">
+              Your stake
+            </text>
+            <text x="100" y="340" textAnchor="middle" fontSize="14" fontWeight="600" fill="#042C53">
+              100k T
+            </text>
+
+            <rect
+              x="400"
+              y="282"
+              width="240"
+              height="36"
+              rx="8"
+              fill="#E6F1FB"
+              stroke="#185FA5"
+              strokeWidth="0.75"
+            />
+            <text x="414" y="305" fontSize="13" fill="#042C53">
+              PRE
+            </text>
+            <text x="626" y="305" textAnchor="end" fontSize="12" fill="#185FA5">
+              up to 100k T
+            </text>
+
+            <rect
+              x="400"
+              y="324"
+              width="240"
+              height="36"
+              rx="8"
+              fill="#E6F1FB"
+              stroke="#185FA5"
+              strokeWidth="0.75"
+            />
+            <text x="414" y="347" fontSize="13" fill="#042C53">
+              Random Beacon
+            </text>
+            <text x="626" y="347" textAnchor="end" fontSize="12" fill="#185FA5">
+              up to 100k T
+            </text>
+
+            <rect
+              x="400"
+              y="366"
+              width="240"
+              height="36"
+              rx="8"
+              fill="#E6F1FB"
+              stroke="#185FA5"
+              strokeWidth="0.75"
+            />
+            <text x="414" y="389" fontSize="13" fill="#042C53">
+              tBTC
+            </text>
+            <text x="626" y="389" textAnchor="end" fontSize="12" fill="#185FA5">
+              up to 100k T
+            </text>
+
+            <text x="40" y="432" fontSize="12" fill="#5F5E5A">
+              The same 100k T backs all three. Each app can slash only up to the amount you
+              authorize, so you set your risk per app.
+            </text>
+          </svg>
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            The same stake fully backs every authorised application. Each app can only slash up to
+            the amount you grant it.
+          </figcaption>
+        </figure>
 
         <ImagePlaceholder label="[IMAGE — PRIORITY 3: OPERATOR ADDRESS MAPPING SCREEN (RESPONSE TO THE 199/267 FINDING). TO ADD]" />
       </DesignSection>
