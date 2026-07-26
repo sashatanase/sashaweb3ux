@@ -49,7 +49,7 @@ function BitcoinOnBase() {
       no="02"
       year="2023"
       title="Bitcoin on Base"
-      subtitle="tBTC on Base · Threshold Network ·  2024"
+      subtitle="tBTC on Base · Threshold Network ·  2024"
       synopsis="A validated Bitcoin bridge experience, rebuilt from the ground up in a new brand language so it reads as a native Base product rather than a transplanted network dashboard."
       tags={["Product Design Lead", "Design Strategy", "Web Application", "Design Team Of 3"]}
       coverAlt="Bitcoin on Base — cover"
@@ -91,6 +91,7 @@ function BitcoinOnBase() {
           art direction that the product needed to feel part of, and Base&rsquo;s audience would
           judge a standalone tool against every other app in that suite rather than against a web3
           governance dashboard.
+          <br />
           <br />
           <br />
           The harder constraint was internal to me. I had designed the bridge this was built on,
