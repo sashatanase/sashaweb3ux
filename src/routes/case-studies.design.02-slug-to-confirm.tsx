@@ -3,6 +3,9 @@ import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLa
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { BitcoinOnBaseDiagram } from "@/components/BitcoinOnBaseDiagram";
 import { ImageLightbox } from "@/components/ImageLightbox";
+import { LoopingVideo } from "@/components/LoopingVideo";
+import stakingFlowVideo from "@/assets/bitcoin-on-base-staking-flow.mp4.asset.json";
+import stakingFlowPoster from "@/assets/on-timeline-1-of-4-poster.png.asset.json";
 import bitcoinOnBaseCover from "@/assets/Bitcoin_on_Base_cover.png.asset.json";
 import thresholdTimeline from "@/assets/tBTC_v2_Minting_Timeline.jpg.asset.json";
 import onTimeline from "@/assets/Bitcoin_On_Base_Minting_Timeline.png.asset.json";
