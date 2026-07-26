@@ -63,7 +63,7 @@ function MultiAppStaking() {
           across several of them at once and holding a different level of risk in each.
         </p>
 
-        <ImagePlaceholder label="[IMAGE — HERO, PRIORITY 1: AUTHORISATION AND STAKE-CONFIGURATION STEP. TO ADD]" />
+        <ImagePlaceholder label="" />
       </DesignSection>
 
       <DesignSection number="02" title="Discovery">
