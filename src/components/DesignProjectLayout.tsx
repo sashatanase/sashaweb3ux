@@ -105,12 +105,12 @@ export function DesignProjectLayout({
 
         {/* Cover image */}
         <section className="pb-16 md:pb-20">
-          <div className="relative aspect-[16/10] w-full overflow-hidden border border-border">
+          <div className="relative w-full overflow-hidden border border-border">
             {coverImage ? (
               <img
                 src={coverImage}
                 alt={coverAlt ?? `${title} cover`}
-                className="h-full w-full object-cover"
+                className="h-auto w-full"
               />
             ) : (
               <div className="h-full w-full" style={{ backgroundImage: cover }} />
