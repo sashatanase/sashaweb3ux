@@ -219,7 +219,7 @@ function BitcoinOnBase() {
             ))}
           </div>
           <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-            Shipped screens in the On interface — deposit, minting timeline and success states
+            SHIPPED SCREENS IN THE ON INTERFACE — DEPOSIT - STEP 1,2,3- MINTING TIMELINE AND SUCCESS STATES
           </figcaption>
         </figure>
       </DesignSection>
