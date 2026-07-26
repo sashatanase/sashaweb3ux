@@ -50,6 +50,7 @@ const PROJECTS: DesignProject[] = [
     cover: "linear-gradient(135deg, #e9e9e6 0%, #d5d4cf 100%)",
     href: "/case-studies/design/02-slug-to-confirm",
   },
+  {
     no: "03",
     title: "Threshold Financial Dashboard",
     client: "Threshold Network",
