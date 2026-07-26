@@ -139,6 +139,20 @@ function BitcoinOnBase() {
         <Placeholder label="[DIAGRAM TO CONFIRM] — inherited vs rebuilt (paste SVG markup here)" />
       </DesignSection>
 
+      <div className="mx-auto mt-16 max-w-[760px]">
+        <BeforeAfterSlider
+          beforeSrc={COMPARISON_BEFORE_SRC}
+          afterSrc={COMPARISON_AFTER_SRC}
+          beforeAlt="[ALT TEXT TO CONFIRM] — Bitcoin on Base minting timeline"
+          afterAlt="[ALT TEXT TO CONFIRM] — tBTC minting timeline"
+          beforeLabel="Threshold"
+          afterLabel="On"
+          caption="[CAPTION TO CONFIRM] — drag to compare"
+        />
+      </div>
+
+
+
       <DesignSection number="04" title="Outcome">
         <p>
           The app shipped in its new visual language and stood on its own as a product. What came
