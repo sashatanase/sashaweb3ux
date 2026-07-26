@@ -88,7 +88,17 @@ function BitcoinOnBase() {
           design system and parked inside a network dashboard would never read as a first-class Base
           product, and on Base that gap is the whole game.
         </p>
-        <Placeholder label="[IMAGE PATH TO CONFIRM] — hero shot of the finished main screen in the On interface" />
+        <figure className="py-4">
+          <img
+            src={tbtcBridgeDiagram.url}
+            alt="tBTC Bridge Deposit diagram — protocol and user flow"
+            className="w-full"
+            loading="lazy"
+          />
+          <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            tBTC Bridge Deposit diagram — protocol and user flow
+          </figcaption>
+        </figure>
       </DesignSection>
 
       <DesignSection number="02" title="Discovery">
