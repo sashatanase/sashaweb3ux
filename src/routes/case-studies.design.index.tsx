@@ -28,7 +28,7 @@ type DesignProject = {
   tags: string;
   cover: string; // CSS background or image url()
   status?: "Coming soon" | "In progress";
-  href?: "/case-studies/design/01-tbtc-bridge";
+  href?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-bitcoin-on-base";
 };
 
 const PROJECTS: DesignProject[] = [
@@ -48,7 +48,7 @@ const PROJECTS: DesignProject[] = [
     year: "2025",
     tags: "Product · DeFi",
     cover: "linear-gradient(135deg, #111 0%, #1a1a1a 40%, #2a2a2a 100%)",
-    status: "Coming soon",
+    href: "/case-studies/design/02-bitcoin-on-base",
   },
   {
     no: "03",
