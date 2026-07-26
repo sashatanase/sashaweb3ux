@@ -5,6 +5,7 @@ import { BitcoinOnBaseDiagram } from "@/components/BitcoinOnBaseDiagram";
 import bitcoinOnBaseCover from "@/assets/Bitcoin_on_Base_cover.png.asset.json";
 import thresholdTimeline from "@/assets/tBTC_v2_Minting_Timeline.jpg.asset.json";
 import onTimeline from "@/assets/Bitcoin_On_Base_Minting_Timeline.png.asset.json";
+import tbtcBridgeDiagram from "@/assets/tBTC_bridge_diagram_-_protocol_and_user_flow.png.asset.json";
 
 
 
