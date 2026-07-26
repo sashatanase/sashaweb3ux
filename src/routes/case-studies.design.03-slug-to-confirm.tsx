@@ -285,7 +285,18 @@ function MultiAppStaking() {
           </figcaption>
         </figure>
 
-        <ImagePlaceholder label="[IMAGE — PRIORITY 3: OPERATOR ADDRESS MAPPING SCREEN (RESPONSE TO THE 199/267 FINDING). TO ADD]" />
+        <figure className="py-4">
+          <img
+            src={operatorAddressMapping.url}
+            alt="Operator address mapping screens: mapped state on the dashboard, mapping modal, and confirmation state"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Operator address mapping brought into the dashboard, so self-operated stakers could
+            finish the flow without leaving the app.
+          </figcaption>
+        </figure>
       </DesignSection>
 
       <DesignSection number="03" title="Solution">
