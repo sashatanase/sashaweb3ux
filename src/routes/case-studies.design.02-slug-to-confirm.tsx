@@ -134,7 +134,7 @@ function BitcoinOnBase() {
           To keep my own patterns out, I treated every element as a project I had never worked on
           before and styled it fresh rather than reaching for what had worked on Threshold.
         </p>
-        <Placeholder label="[IMAGE PATH TO CONFIRM] — before and after: same screen in Threshold styling vs the rebuilt On interface" />
+        
         <Placeholder label="[DIAGRAM TO CONFIRM] — inherited vs rebuilt (paste SVG markup here)" />
       </DesignSection>
 
