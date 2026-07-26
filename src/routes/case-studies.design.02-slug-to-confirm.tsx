@@ -58,21 +58,26 @@ function BitcoinOnBase() {
     >
       <DesignSection number="01" title="Problem">
         <p>
-          Base was opening a new space that promised the reach of web2 with the guarantees of web3,
-          and it was open to almost everyone. Bitcoin holders were the exception, because they could
-          not take part without first swapping their BTC into another asset and giving up the thing
-          they most wanted to hold.
+          Base was opening a space that folded the reach of consumer web into the guarantees of
+          onchain infrastructure, and it was open to nearly everyone. Bitcoin holders were the
+          exception. To take part they had to swap their BTC into something else first, which asked
+          them to give up the one asset they were least willing to part with.
           <br />
           <br />
-          tBTC was invited by Base to close that gap and bring the first native, fully decentralized
-          Bitcoin representation to the network, letting holders keep their Bitcoin while gaining
-          access to the Ethereum L1 and L2 ecosystem.
           <br />
           <br />
-          The bridging flow itself was already proven from the tBTC bridge I had designed and
-          validated on the Threshold dashboard, so the problem was not the flow. The problem was
-          that this proven experience was locked to Threshold&rsquo;s design system and buried
-          inside a governance dashboard, so it would never read as a native Base product.
+          tBTC was invited by Base to remove that tax and bring the first native, fully
+          decentralized Bitcoin representation to the network, so holders could stay in Bitcoin and
+          still reach the Ethereum L1 and L2 economy. The UX flow itself was settled, since I had
+          already designed and validated that bridging experience for tBTC on the Threshold
+          dashboard.
+          <br />
+          <br />
+          <br />
+          <br />
+          What did not translate was the context around it. A proven flow bound to Threshold's
+          design system and parked inside a network dashboard would never read as a first-class Base
+          product, and on Base that gap is the whole game.
         </p>
         <Placeholder label="[IMAGE PATH TO CONFIRM] — hero shot of the finished main screen in the On interface" />
       </DesignSection>
@@ -89,8 +94,7 @@ function BitcoinOnBase() {
           That left the visual language as the real variable, bounded by two things. Base had its
           own art direction that the product needed to feel part of, and Base&rsquo;s audience would
           judge a standalone tool against every other app in that suite rather than against a web3
-          governance dashboard.
-          <br />
+          network dashboard.
           <br />
           <br />
           The harder constraint was internal to me. I had designed the bridge this was built on,
@@ -113,13 +117,13 @@ function BitcoinOnBase() {
           <br />
           I kept the flows deliberately intact, since reworking a validated experience would have
           thrown away hard evidence for no reason, which let me spend my time where the value
-          actually was, on the visual cues and the styling. Two heuristics carried the work.
+          actually was, on the visual cues and the styling.
           <br />
           <br />
-          Consistency and standards meant aligning to Base&rsquo;s art direction so the bridge sat
-          inside the suite as a peer rather than a transplant. Match between the system and the real
-          world meant designing to what Base&rsquo;s users already expected a native tool to look
-          and behave like.
+          &nbsp;Two heuristics carried the work.. Consistency and standards meant aligning to
+          Base&rsquo;s art direction so the bridge sat inside the suite as a peer rather than a
+          transplant. Match between the system and the real world meant designing to what
+          Base&rsquo;s users already expected a native tool to look and behave like.
           <br />
           <br />
           To keep my own patterns out, I treated every element as a project I had never worked on
