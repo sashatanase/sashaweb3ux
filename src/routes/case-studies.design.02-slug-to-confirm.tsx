@@ -138,7 +138,7 @@ function BitcoinOnBase() {
         <Placeholder label="[DIAGRAM TO CONFIRM] — inherited vs rebuilt (paste SVG markup here)" />
       </DesignSection>
 
-      <div className="mx-auto mt-16 max-w-[760px]">
+      <div className="mt-16 w-full">
         <BeforeAfterSlider
           beforeSrc={thresholdTimeline.url}
           afterSrc={onTimeline.url}
