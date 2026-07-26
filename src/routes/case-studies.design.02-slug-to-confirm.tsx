@@ -47,7 +47,7 @@ function BitcoinOnBase() {
   return (
     <DesignProjectLayout
       no="02"
-      year="[YEAR TO CONFIRM]"
+      year="2023"
       title="Bitcoin on Base"
       subtitle="On · [CLIENT TO CONFIRM]"
       synopsis="A validated Bitcoin bridge experience, rebuilt from the ground up in a new brand language so it reads as a native Base product rather than a transplanted network dashboard."
