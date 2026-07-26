@@ -93,6 +93,7 @@ function BitcoinOnBase() {
           governance dashboard.
           <br />
           <br />
+          <br />
           The harder constraint was internal to me. I had designed the bridge this was built on,
           which meant my own defaults were the first thing likely to seep back in.
         </p>
