@@ -140,13 +140,14 @@ function BitcoinOnBase() {
 
       <div className="mx-auto mt-16 max-w-[760px]">
         <BeforeAfterSlider
-          beforeSrc={COMPARISON_BEFORE_SRC}
-          afterSrc={COMPARISON_AFTER_SRC}
-          beforeAlt="[ALT TEXT TO CONFIRM] — Bitcoin on Base minting timeline"
-          afterAlt="[ALT TEXT TO CONFIRM] — tBTC minting timeline"
+          beforeSrc={thresholdTimeline.url}
+          afterSrc={onTimeline.url}
+          beforeAlt="Minting timeline in the Threshold dashboard styling"
+          afterAlt="Minting timeline rebuilt in the On interface"
           beforeLabel="Threshold"
           afterLabel="On"
-          caption="[CAPTION TO CONFIRM] — drag to compare"
+          caption="Drag to compare — same minting timeline, two design languages"
+
         />
       </div>
 
