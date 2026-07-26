@@ -7,7 +7,7 @@ export type KeepReadingEntry = {
   title: string;
   descriptor: string;
   /** Typed route path. Leave undefined when the slug is still to confirm. */
-  to?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-slug-to-confirm";
+  to?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-bitcoin-on-base";
   /** Image URL for the card cover. Leave undefined for [COVER TO CONFIRM]. */
   cover?: string;
 };
@@ -28,7 +28,7 @@ export const CASE_STUDY_SEQUENCE: KeepReadingEntry[] = [
     id: "02",
     title: "Bitcoin on Base",
     descriptor: "A validated bridge rebuilt as a native Base product",
-    to: "/case-studies/design/02-slug-to-confirm",
+    to: "/case-studies/design/02-bitcoin-on-base",
     cover: bitcoinOnBaseCover.url,
   },
   {

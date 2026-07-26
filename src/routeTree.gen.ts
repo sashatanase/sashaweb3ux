@@ -21,7 +21,7 @@ import { Route as CaseStudies03RouteImport } from './routes/case-studies.03'
 import { Route as CaseStudies02RouteImport } from './routes/case-studies.02'
 import { Route as CaseStudies01RouteImport } from './routes/case-studies.01'
 import { Route as CaseStudiesDesignIndexRouteImport } from './routes/case-studies.design.index'
-import { Route as CaseStudiesDesign02SlugToConfirmRouteImport } from './routes/case-studies.design.02-slug-to-confirm'
+import { Route as CaseStudiesDesign02BitcoinOnBaseRouteImport } from './routes/case-studies.design.02-bitcoin-on-base'
 import { Route as CaseStudiesDesign01TbtcBridgeRouteImport } from './routes/case-studies.design.01-tbtc-bridge'
 
 const CaseStudiesRoute = CaseStudiesRouteImport.update({
@@ -84,10 +84,10 @@ const CaseStudiesDesignIndexRoute = CaseStudiesDesignIndexRouteImport.update({
   path: '/',
   getParentRoute: () => CaseStudiesDesignRoute,
 } as any)
-const CaseStudiesDesign02SlugToConfirmRoute =
-  CaseStudiesDesign02SlugToConfirmRouteImport.update({
-    id: '/02-slug-to-confirm',
-    path: '/02-slug-to-confirm',
+const CaseStudiesDesign02BitcoinOnBaseRoute =
+  CaseStudiesDesign02BitcoinOnBaseRouteImport.update({
+    id: '/02-bitcoin-on-base',
+    path: '/02-bitcoin-on-base',
     getParentRoute: () => CaseStudiesDesignRoute,
   } as any)
 const CaseStudiesDesign01TbtcBridgeRoute =
@@ -110,7 +110,7 @@ export interface FileRoutesByFullPath {
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/case-studies/design/01-tbtc-bridge': typeof CaseStudiesDesign01TbtcBridgeRoute
-  '/case-studies/design/02-slug-to-confirm': typeof CaseStudiesDesign02SlugToConfirmRoute
+  '/case-studies/design/02-bitcoin-on-base': typeof CaseStudiesDesign02BitcoinOnBaseRoute
   '/case-studies/design/': typeof CaseStudiesDesignIndexRoute
 }
 export interface FileRoutesByTo {
@@ -124,7 +124,7 @@ export interface FileRoutesByTo {
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies': typeof CaseStudiesIndexRoute
   '/case-studies/design/01-tbtc-bridge': typeof CaseStudiesDesign01TbtcBridgeRoute
-  '/case-studies/design/02-slug-to-confirm': typeof CaseStudiesDesign02SlugToConfirmRoute
+  '/case-studies/design/02-bitcoin-on-base': typeof CaseStudiesDesign02BitcoinOnBaseRoute
   '/case-studies/design': typeof CaseStudiesDesignIndexRoute
 }
 export interface FileRoutesById {
@@ -141,7 +141,7 @@ export interface FileRoutesById {
   '/case-studies/research': typeof CaseStudiesResearchRoute
   '/case-studies/': typeof CaseStudiesIndexRoute
   '/case-studies/design/01-tbtc-bridge': typeof CaseStudiesDesign01TbtcBridgeRoute
-  '/case-studies/design/02-slug-to-confirm': typeof CaseStudiesDesign02SlugToConfirmRoute
+  '/case-studies/design/02-bitcoin-on-base': typeof CaseStudiesDesign02BitcoinOnBaseRoute
   '/case-studies/design/': typeof CaseStudiesDesignIndexRoute
 }
 export interface FileRouteTypes {
@@ -159,7 +159,7 @@ export interface FileRouteTypes {
     | '/case-studies/research'
     | '/case-studies/'
     | '/case-studies/design/01-tbtc-bridge'
-    | '/case-studies/design/02-slug-to-confirm'
+    | '/case-studies/design/02-bitcoin-on-base'
     | '/case-studies/design/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -173,7 +173,7 @@ export interface FileRouteTypes {
     | '/case-studies/research'
     | '/case-studies'
     | '/case-studies/design/01-tbtc-bridge'
-    | '/case-studies/design/02-slug-to-confirm'
+    | '/case-studies/design/02-bitcoin-on-base'
     | '/case-studies/design'
   id:
     | '__root__'
@@ -189,7 +189,7 @@ export interface FileRouteTypes {
     | '/case-studies/research'
     | '/case-studies/'
     | '/case-studies/design/01-tbtc-bridge'
-    | '/case-studies/design/02-slug-to-confirm'
+    | '/case-studies/design/02-bitcoin-on-base'
     | '/case-studies/design/'
   fileRoutesById: FileRoutesById
 }
@@ -284,11 +284,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CaseStudiesDesignIndexRouteImport
       parentRoute: typeof CaseStudiesDesignRoute
     }
-    '/case-studies/design/02-slug-to-confirm': {
-      id: '/case-studies/design/02-slug-to-confirm'
-      path: '/02-slug-to-confirm'
-      fullPath: '/case-studies/design/02-slug-to-confirm'
-      preLoaderRoute: typeof CaseStudiesDesign02SlugToConfirmRouteImport
+    '/case-studies/design/02-bitcoin-on-base': {
+      id: '/case-studies/design/02-bitcoin-on-base'
+      path: '/02-bitcoin-on-base'
+      fullPath: '/case-studies/design/02-bitcoin-on-base'
+      preLoaderRoute: typeof CaseStudiesDesign02BitcoinOnBaseRouteImport
       parentRoute: typeof CaseStudiesDesignRoute
     }
     '/case-studies/design/01-tbtc-bridge': {
@@ -303,13 +303,13 @@ declare module '@tanstack/react-router' {
 
 interface CaseStudiesDesignRouteChildren {
   CaseStudiesDesign01TbtcBridgeRoute: typeof CaseStudiesDesign01TbtcBridgeRoute
-  CaseStudiesDesign02SlugToConfirmRoute: typeof CaseStudiesDesign02SlugToConfirmRoute
+  CaseStudiesDesign02BitcoinOnBaseRoute: typeof CaseStudiesDesign02BitcoinOnBaseRoute
   CaseStudiesDesignIndexRoute: typeof CaseStudiesDesignIndexRoute
 }
 
 const CaseStudiesDesignRouteChildren: CaseStudiesDesignRouteChildren = {
   CaseStudiesDesign01TbtcBridgeRoute: CaseStudiesDesign01TbtcBridgeRoute,
-  CaseStudiesDesign02SlugToConfirmRoute: CaseStudiesDesign02SlugToConfirmRoute,
+  CaseStudiesDesign02BitcoinOnBaseRoute: CaseStudiesDesign02BitcoinOnBaseRoute,
   CaseStudiesDesignIndexRoute: CaseStudiesDesignIndexRoute,
 }
 

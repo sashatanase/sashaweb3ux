@@ -28,7 +28,7 @@ type DesignProject = {
   tags: string;
   cover: string; // CSS background or image url()
   status?: "Coming soon" | "In progress";
-  href?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-slug-to-confirm";
+  href?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-bitcoin-on-base";
 };
 
 const PROJECTS: DesignProject[] = [
@@ -48,7 +48,7 @@ const PROJECTS: DesignProject[] = [
     year: "[YEAR TO CONFIRM]",
     tags: "Product · Visual design",
     cover: "linear-gradient(135deg, #e9e9e6 0%, #d5d4cf 100%)",
-    href: "/case-studies/design/02-slug-to-confirm",
+    href: "/case-studies/design/02-bitcoin-on-base",
   },
   {
     no: "03",

@@ -34,7 +34,7 @@ const gallery = [
 // [SLUG TO CONFIRM] — this route file is named with a placeholder slug.
 // Rename the file (and the createFileRoute string) once the final slug is decided.
 
-export const Route = createFileRoute("/case-studies/design/02-slug-to-confirm")({
+export const Route = createFileRoute("/case-studies/design/02-bitcoin-on-base")({
   head: () => ({
     meta: [
       { title: "Bitcoin on Base · Sasha (Tanase) Luca" },
