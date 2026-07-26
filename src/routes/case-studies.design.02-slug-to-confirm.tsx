@@ -50,7 +50,7 @@ function BitcoinOnBase() {
       year="[YEAR TO CONFIRM]"
       title="Bitcoin on Base"
       subtitle="On · [CLIENT TO CONFIRM]"
-      synopsis="A validated Bitcoin bridge experience, rebuilt from the ground up in a new brand language so it reads as a native Base product rather than a transplanted governance dashboard."
+      synopsis="A validated Bitcoin bridge experience, rebuilt from the ground up in a new brand language so it reads as a native Base product rather than a transplanted network dashboard."
       tags={["Product Designer", "Visual Design", "Brand Application"]}
       coverAlt="Bitcoin on Base — cover"
       cover="linear-gradient(135deg, #e9e9e6 0%, #d5d4cf 100%)"
