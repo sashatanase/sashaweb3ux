@@ -1,0 +1,166 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
+import { KeepReading } from "@/components/KeepReading";
+
+// [SLUG TO CONFIRM] — this route file uses a placeholder slug.
+// Rename the file (and the createFileRoute string) once the final slug is decided.
+
+export const Route = createFileRoute("/case-studies/design/03-slug-to-confirm")({
+  head: () => ({
+    meta: [
+      { title: "Multi-App Staking · Sasha (Tanase) Luca" },
+      {
+        name: "description",
+        content:
+          "One stake, several applications, and a counterintuitive shared-risk model made legible for 267 stakers on Threshold Network.",
+      },
+      { property: "og:title", content: "Multi-App Staking · Sasha (Tanase) Luca" },
+      {
+        property: "og:description",
+        content:
+          "One stake, several applications, and a counterintuitive shared-risk model made legible for 267 stakers on Threshold Network.",
+      },
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: MultiAppStaking,
+});
+
+function ImagePlaceholder({ label }: { label: string }) {
+  return (
+    <figure className="py-4">
+      <div className="grid min-h-[240px] w-full place-items-center border border-dashed border-border bg-muted/40 px-6 py-16 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+        {label}
+      </div>
+    </figure>
+  );
+}
+
+function MultiAppStaking() {
+  return (
+    <DesignProjectLayout
+      no="03"
+      year="2022 – 2023"
+      title="Multi-App Staking: making shared-stake risk legible → the mechanism the network ran on."
+      subtitle="Threshold Network Dashboard · Threshold Network · 2022 – 2023"
+      synopsis="One stake, several applications, and a counterintuitive risk model to make safe. I led design and research through a discovery that rewrote the solution, when 199 of 267 stakers broke the assumption it was built on."
+      tags={["Design Lead", "UX Researcher", "267 stakers", "3 applications"]}
+      coverAlt="[COVER IMAGE PATH TO CONFIRM]"
+    >
+      <DesignSection number="01" title="Problem">
+        <p>
+          When Keep and NuCypher merged into Threshold, a staker&rsquo;s tokens stopped backing a
+          single job. The same stake could now be put to work across several independent
+          applications on the network, each with its own duties and its own power to slash that
+          stake if a node misbehaved.
+          <br />
+          <br />
+          That created a problem no staking interface I knew of solved well. A person had to decide
+          how much of one stake to authorise to each application, understand that each app could
+          penalise them independently, and manage that exposure over time. The novelty was not the
+          applications themselves, which stakers already ran. It was authorising a single stake
+          across several of them at once and holding a different level of risk in each.
+        </p>
+
+        <ImagePlaceholder label="[IMAGE — HERO, PRIORITY 1: AUTHORISATION AND STAKE-CONFIGURATION STEP. TO ADD]" />
+      </DesignSection>
+
+      <DesignSection number="02" title="Discovery">
+        <p>
+          I led the design and research on this, and the most useful thing I learned came from being
+          wrong. My first solution rested on an assumption I was confident in, that most stakers ran
+          through a dedicated staking provider, so the address that owned the stake and the address
+          that operated the node would belong to different people. The interface was built around
+          that separation.
+          <br />
+          <br />
+          When I checked it against the real staker set, the assumption collapsed. 199 of 267
+          stakers used the same address for both roles, which meant the model I had designed around
+          did not describe who these people actually were. That correction reshaped the product.
+          Because so many stakers ran their own nodes, often from hardware wallets, I had to bring
+          operator address mapping into the dashboard itself rather than pushing those users out to
+          Etherscan or the command line to do something the product should own.
+          <br />
+          <br />
+          The second discovery was conceptual. The mechanism under multi-app staking is genuinely
+          counterintuitive. You are not slicing a stake into portions. The same stake fully backs
+          every application you authorise it for, and each application can slash up to the amount
+          you grant it, so one hundred thousand tokens can be authorised in full to three different
+          apps at once. That is powerful and efficient, and it is also easy to misread, since the
+          natural assumption is that authorising more apps divides your stake rather than layering
+          shared risk on top of it.
+        </p>
+
+        <ImagePlaceholder label="[DIAGRAM: SHARED-RISK STAKE MODEL — PASTE PROVIDED SVG MARKUP HERE VERBATIM. TO ADD]" />
+
+        <ImagePlaceholder label="[IMAGE — PRIORITY 3: OPERATOR ADDRESS MAPPING SCREEN (RESPONSE TO THE 199/267 FINDING). TO ADD]" />
+      </DesignSection>
+
+      <DesignSection number="03" title="Solution">
+        <p>
+          The design job was to make that layered-risk model legible and safe, inside a flow a
+          first-time staker could actually finish. I led the work to a three-step spine: deposit
+          your tokens, authorise and configure how much each application can draw on, then set up
+          the node. Separating deposit from authorisation mattered, because it let people commit
+          their stake without being forced to make every risk decision in the same breath.
+        </p>
+
+        <ImagePlaceholder label="[IMAGE — PRIORITY 4: THE THREE-STEP FLOW AS A STRIP (DEPOSIT, AUTHORISE, SET UP NODE). TO ADD]" />
+
+        <p>
+          The heart of it was treating per-app authorisation as a risk control, not a form field.
+          Setting how much an application could slash was really the staker deciding their exposure
+          to that application, so the interface had to present it as a deliberate choice. I leaned
+          on progressive disclosure to keep each step from overwhelming the user, and on recognition
+          over recall so the state of each application, authorised or not, node running or not,
+          lived on the cards instead of in the user&rsquo;s memory.
+        </p>
+
+        <ImagePlaceholder label="[IMAGE — PRIORITY 2: STAKING CARD SHOWING APP AND NODE STATE. TO ADD]" />
+
+        <p>
+          Two decisions show where I pushed back. The first was a dense step-modal that trapped
+          people mid-flow, which a design trust review flagged for exactly that, losing context on
+          every &ldquo;next&rdquo; with no way out. I moved that weight out of a blocking modal
+          toward contextual prompts on the cards, honouring user control and freedom rather than
+          holding people hostage to a wizard. The second was naming. An &ldquo;Authorize All
+          Apps&rdquo; button that only ever authorised the apps you had selected was a small lie, so
+          it became &ldquo;Authorize Selected Apps,&rdquo; a match between what the system said and
+          what it did. Small, but it is the kind of honesty that decides whether people trust an
+          interface handling their money.
+        </p>
+
+        <ImagePlaceholder label="[IMAGE — PRIORITY 5, OPTIONAL: BEFORE/AFTER OF THE DENSE STEP-MODAL VS THE CONTEXTUAL CARD PROMPT (USE BEFORE/AFTER SLIDER). TO ADD]" />
+      </DesignSection>
+
+      <DesignSection number="04" title="Outcome">
+        <p>
+          Multi-app staking shipped as the second phase of the Threshold staking process. The result
+          I stand behind is not a number I can honestly pin on the interface alone, so I will not
+          borrow one. It is that the hardest thing in the product to explain became the mechanism
+          the network ran on. Authorising a stake across applications was not a feature sitting
+          beside Threshold, it was how Threshold worked, and stakers from both legacy networks came
+          to do it through a single dashboard rather than two. Making a high-stakes,
+          counterintuitive decision legible enough that people made it confidently, with real money,
+          is the outcome I care about most.
+        </p>
+
+        <ImagePlaceholder label="[IMAGE — PRIORITY 6, OPTIONAL: INCREASE/DECREASE AUTHORISATION SCREEN (EXPOSURE MANAGED OVER TIME). TO ADD]" />
+      </DesignSection>
+
+      <DesignSection number="05" title="Takeaway">
+        <p>
+          What I carried forward is to pressure-test the assumption your whole solution rests on
+          before you build on it. I was confident about how these stakers operated, I was wrong in a
+          way that touched every screen, and I only found out because I checked against{" "}
+          <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+            [TAKEAWAY ENDING TO CONFIRM]
+          </span>
+        </p>
+      </DesignSection>
+
+      <KeepReading currentId="03" />
+    </DesignProjectLayout>
+  );
+}
