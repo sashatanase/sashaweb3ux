@@ -6,6 +6,21 @@ import bitcoinOnBaseCover from "@/assets/Bitcoin_on_Base_cover.png.asset.json";
 import thresholdTimeline from "@/assets/tBTC_v2_Minting_Timeline.jpg.asset.json";
 import onTimeline from "@/assets/Bitcoin_On_Base_Minting_Timeline.png.asset.json";
 import tbtcBridgeDiagram from "@/assets/tBTC_bridge_diagram_-_protocol_and_user_flow.png.asset.json";
+import onStep1 from "@/assets/on_Step1.png.asset.json";
+import onStep2 from "@/assets/on_Step_2_-_Make_a_BTC_deposit.png.asset.json";
+import onStep3 from "@/assets/on_Step_3.png.asset.json";
+import onTimeline1 from "@/assets/on_Timeline_1_of_4.png.asset.json";
+import onTimeline4 from "@/assets/on_Timeline_4_of_4.png.asset.json";
+import onSuccess from "@/assets/on_Success.png.asset.json";
+
+const gallery = [
+  { src: onStep1.url, alt: "Step 1 — provide a deposit address" },
+  { src: onStep2.url, alt: "Step 2 — make a BTC deposit" },
+  { src: onStep3.url, alt: "Step 3 — initiate minting" },
+  { src: onTimeline1.url, alt: "Minting timeline — minter check" },
+  { src: onTimeline4.url, alt: "Minting timeline — completing deposit" },
+  { src: onSuccess.url, alt: "Mint completed success state" },
+];
 
 
 
