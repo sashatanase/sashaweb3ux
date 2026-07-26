@@ -150,9 +150,7 @@ function DesignPage() {
 
               <div className="mt-4 flex items-start justify-between gap-4">
                 <div className="min-w-0">
-                  <h2 className="text-lg font-medium tracking-tight md:text-xl">
-                    {p.title}
-                  </h2>
+                  <h2 className="text-lg font-medium tracking-tight md:text-xl">{p.title}</h2>
                   <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
                     {p.client}
                   </p>

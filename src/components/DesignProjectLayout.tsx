@@ -107,11 +107,7 @@ export function DesignProjectLayout({
         <section className="pb-16 md:pb-20">
           <div className="relative w-full overflow-hidden border border-border">
             {coverImage ? (
-              <img
-                src={coverImage}
-                alt={coverAlt ?? `${title} cover`}
-                className="h-auto w-full"
-              />
+              <img src={coverImage} alt={coverAlt ?? `${title} cover`} className="h-auto w-full" />
             ) : (
               <div className="h-full w-full" style={{ backgroundImage: cover }} />
             )}
@@ -174,13 +170,13 @@ export function DesignSection({
           § {tag}
         </div>
         <h2 className="mt-4 text-xl font-medium tracking-tight break-words sm:text-2xl md:text-3xl">
-          {title.toString().includes("User  - Understanding the territory before touching the interface")
+          {title
+            .toString()
+            .includes("User  - Understanding the territory before touching the interface")
             ? "User pain points - Understanding the territory before touching the interface"
             : title}
         </h2>
-        {subtitle && (
-          <p className="mt-3 text-base text-muted-foreground md:text-lg">{subtitle}</p>
-        )}
+        {subtitle && <p className="mt-3 text-base text-muted-foreground md:text-lg">{subtitle}</p>}
       </div>
       <div className="mt-10 space-y-6 text-base leading-[1.7] text-foreground md:text-[17px] [&>*:not(figure)]:mx-auto [&>*:not(figure)]:max-w-[760px]">
         {children}
