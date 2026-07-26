@@ -164,6 +164,17 @@ function BitcoinOnBase() {
         />
       </div>
 
+      <div className="mt-16 w-full">
+        <LoopingVideo
+          src={stakingFlowVideo.url}
+          poster={stakingFlowPoster.url}
+          label="Bitcoin on Base staking flow prototype recording"
+          caption="Prototype recording — the staking flow in the On interface"
+        />
+      </div>
+
+
+
 
 
       <DesignSection number="04" title="Outcome">
