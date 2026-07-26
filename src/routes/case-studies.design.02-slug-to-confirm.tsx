@@ -49,7 +49,7 @@ function BitcoinOnBase() {
       no="02"
       year="2023"
       title="Bitcoin on Base"
-      subtitle="On · [CLIENT TO CONFIRM]"
+      subtitle="tBTC on Base · Threshold Network ·  2024"
       synopsis="A validated Bitcoin bridge experience, rebuilt from the ground up in a new brand language so it reads as a native Base product rather than a transplanted network dashboard."
       tags={["Product Design Lead", "Design Strategy", "Web Application", "Design Team Of 3"]}
       coverAlt="Bitcoin on Base — cover"
@@ -60,13 +60,18 @@ function BitcoinOnBase() {
           Base was opening a new space that promised the reach of web2 with the guarantees of web3,
           and it was open to almost everyone. Bitcoin holders were the exception, because they could
           not take part without first swapping their BTC into another asset and giving up the thing
-          they most wanted to hold. tBTC was invited by Base to close that gap and bring the first
-          native, fully decentralized Bitcoin representation to the network, letting holders keep
-          their Bitcoin while gaining access to the Ethereum L1 and L2 ecosystem. The bridging flow
-          itself was already proven from the tBTC bridge I had designed and validated on the
-          Threshold dashboard, so the problem was not the flow. The problem was that this proven
-          experience was locked to Threshold&rsquo;s design system and buried inside a governance
-          dashboard, so it would never read as a native Base product.
+          they most wanted to hold.
+          <br />
+          <br />
+          tBTC was invited by Base to close that gap and bring the first native, fully decentralized
+          Bitcoin representation to the network, letting holders keep their Bitcoin while gaining
+          access to the Ethereum L1 and L2 ecosystem.
+          <br />
+          <br />
+          The bridging flow itself was already proven from the tBTC bridge I had designed and
+          validated on the Threshold dashboard, so the problem was not the flow. The problem was that
+          this proven experience was locked to Threshold&rsquo;s design system and buried inside a
+          governance dashboard, so it would never read as a native Base product.
         </p>
         <Placeholder
           label="[IMAGE PATH TO CONFIRM] — hero shot of the finished main screen in the On interface"
@@ -78,32 +83,47 @@ function BitcoinOnBase() {
           There was no new research round here, and I would rather say that plainly than dress
           reasoning up as findings. What I was designing against was a set of fixed constraints. The
           UX was already settled and the pain points from the earlier tBTC rounds were already
-          understood and already solved in the flows, so I was not free to touch that and had no
-          reason to want to. That left the visual language as the real variable, bounded by two
-          things. Base had its own art direction that the product needed to feel part of, and
-          Base&rsquo;s audience would judge a standalone tool against every other app in that suite
-          rather than against a web3 governance dashboard. The harder constraint was internal to me.
-          I had designed the bridge this was built on, which meant my own defaults were the first
-          thing likely to seep back in.
+          understood and already solved in the flows, so my team and I were not free to touch that
+          and had no reason to want to.
+          <br />
+          <br />
+          That left the visual language as the real variable, bounded by two things. Base had its own
+          art direction that the product needed to feel part of, and Base&rsquo;s audience would
+          judge a standalone tool against every other app in that suite rather than against a web3
+          governance dashboard.
+          <br />
+          <br />
+          The harder constraint was internal to me. I had designed the bridge this was built on,
+          which meant my own defaults were the first thing likely to seep back in.
         </p>
       </DesignSection>
 
       <DesignSection number="03" title="Solution">
         <p>
           The team broke from the Threshold style guide completely and stood up a new brand identity,
-          On, drawn from Bitcoin on Base. My work sat in the interface. Because the product no longer
-          had to live inside a dashboard and stood on its own, I had room to rebuild it from the
-          ground up in that new language rather than reskin the old one. The platform was also meant
-          to be more than a bridge, surfacing staking pools and onchain campaigns alongside the flow,
-          so the shell had to work as a product home rather than a single tool. I kept the flows
-          deliberately intact, since reworking a validated experience would have thrown away hard
-          evidence for no reason, which let me spend my time where the value actually was, on the
-          visual cues and the styling. Two heuristics carried the work. Consistency and standards
-          meant aligning to Base&rsquo;s art direction so the bridge sat inside the suite as a peer
-          rather than a transplant. Match between the system and the real world meant designing to
-          what Base&rsquo;s users already expected a native tool to look and behave like. To keep my
-          own patterns out, I treated every element as a project I had never worked on before and
-          styled it fresh rather than reaching for what had worked on Threshold.
+          On, drawn from Bitcoin on Base. Our work sat in the interface. Because the product no
+          longer had to live inside a dashboard and stood on its own, my team and I had room to
+          rebuild it from the ground up in that new language rather than reskin the old one.
+          <br />
+          <br />
+          The platform was also meant to be more than a bridge, surfacing staking pools and on-chain
+          campaigns alongside the flow, so the shell had to work as a product home rather than a
+          single tool.
+          <br />
+          <br />
+          I kept the flows deliberately intact, since reworking a validated experience would have
+          thrown away hard evidence for no reason, which let me spend my time where the value
+          actually was, on the visual cues and the styling. Two heuristics carried the work.
+          <br />
+          <br />
+          Consistency and standards meant aligning to Base&rsquo;s art direction so the bridge sat
+          inside the suite as a peer rather than a transplant. Match between the system and the real
+          world meant designing to what Base&rsquo;s users already expected a native tool to look
+          and behave like.
+          <br />
+          <br />
+          To keep my own patterns out, I treated every element as a project I had never worked on
+          before and styled it fresh rather than reaching for what had worked on Threshold.
         </p>
         <Placeholder
           label="[IMAGE PATH TO CONFIRM] — before and after: same screen in Threshold styling vs the rebuilt On interface"
