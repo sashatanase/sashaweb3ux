@@ -710,6 +710,8 @@ function DesignProject01() {
           </p>
         </div>
       </section>
+
+      <KeepReading currentId="01" />
     </DesignProjectLayout>
   );
 }
