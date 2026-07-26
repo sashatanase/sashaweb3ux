@@ -134,11 +134,13 @@ function BitcoinOnBase() {
 
       <DesignSection number="04" title="Outcome">
         <p>
-          The interface was rebuilt in full and the product reached a working prototype, with the
-          whole app designed and ready to hand off. I do not have adoption or completion figures to
-          point to from the time, and I would rather leave that honest than borrow a number. The
-          product is no longer live today, and the name now belongs to an unrelated project I had no
-          part in.
+          The application shipped in its new visual language and ran as a standalone product. New
+          Threshold leadership later decided to retire the separate app and fold its functionality
+          into the next version of the bridge, which has been live since early 2026.
+          <br />
+          <br />
+          The interface I designed for it carried into that consolidation rather than being set aside,
+          which is about the best afterlife a standalone product gets in this space
         </p>
         <Placeholder label="[GALLERY TO CONFIRM] — 3 to 5 key screens: overview, main bridge step, success state, staking and campaign surfaces" />
         <Placeholder label="[GALLERY TO CONFIRM] — craft details: close crops of components, iconography, layout" />
@@ -148,9 +150,11 @@ function BitcoinOnBase() {
         <p>
           The discipline I carried forward was treating the familiar as unfamiliar. When you have
           solved a problem once, the reflex is to solve it the same way again, and that reflex is
-          exactly what a new brand and a new audience cannot afford. Forcing myself to approach every
-          element as if I had never designed it before was what let the interface belong to Base
-          instead of quietly still belonging to Threshold.
+          exactly what a new brand and a new audience cannot afford.
+          <br />
+          <br />
+          Forcing myself to approach every element as if I had never designed it before was what let
+          the interface belong to Base instead of quietly still belonging to Threshold.
         </p>
       </DesignSection>
     </DesignProjectLayout>
