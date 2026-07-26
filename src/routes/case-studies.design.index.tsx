@@ -28,7 +28,7 @@ type DesignProject = {
   tags: string;
   cover: string; // CSS background or image url()
   status?: "Coming soon" | "In progress";
-  href?: "/case-studies/design/01-tbtc-bridge";
+  href?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-slug-to-confirm";
 };
 
 const PROJECTS: DesignProject[] = [
@@ -40,6 +40,15 @@ const PROJECTS: DesignProject[] = [
     tags: "Product · Cross-chain",
     cover: `url("${tBTCThumbnail.url}")`,
     href: "/case-studies/design/01-tbtc-bridge",
+  },
+  {
+    no: "02",
+    title: "Bitcoin on Base",
+    client: "[CLIENT TO CONFIRM]",
+    year: "[YEAR TO CONFIRM]",
+    tags: "Product · Visual design",
+    cover: "linear-gradient(135deg, #e9e9e6 0%, #d5d4cf 100%)",
+    href: "/case-studies/design/02-slug-to-confirm",
   },
   {
     no: "03",
