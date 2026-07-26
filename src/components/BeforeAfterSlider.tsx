@@ -62,7 +62,7 @@ export function BeforeAfterSlider({
     <figure className="py-4">
       <div
         ref={frameRef}
-        className="relative w-full touch-none select-none overflow-hidden border border-border"
+        className="relative w-full touch-none select-none overflow-hidden"
         onPointerDown={(e) => {
           draggingRef.current = true;
           updateFromClientX(e.clientX);
