@@ -101,13 +101,7 @@ export function BitcoinOnBaseDiagram() {
             >
               KEPT INTACT
             </text>
-            <text
-              x={L_X + MX}
-              y={COL_Y + 52}
-              fontSize="10.5"
-              fill={L_DESC}
-              fontFamily={SANS}
-            >
+            <text x={L_X + MX} y={COL_Y + 52} fontSize="10.5" fill={L_DESC} fontFamily={SANS}>
               Already validated on tBTC
             </text>
             <line
@@ -181,13 +175,7 @@ export function BitcoinOnBaseDiagram() {
             >
               REBUILT FROM SCRATCH
             </text>
-            <text
-              x={R_X + MX}
-              y={COL_Y + 52}
-              fontSize="10.5"
-              fill={R_DESC}
-              fontFamily={SANS}
-            >
+            <text x={R_X + MX} y={COL_Y + 52} fontSize="10.5" fill={R_DESC} fontFamily={SANS}>
               My interface work
             </text>
             <line
