@@ -170,7 +170,7 @@ function BitcoinOnBase() {
           src={stakingFlowVideo.url}
           poster={stakingFlowPoster.url}
           label="Bitcoin on Base staking flow prototype recording"
-          caption="Prototype recording — the staking flow in the On interface"
+          caption="Prototype recording — the minting flow in the On interface"
         />
       </div>
 
