@@ -2,10 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import bitcoinOnBaseCover from "@/assets/Bitcoin_on_Base_cover.png.asset.json";
+import thresholdTimeline from "@/assets/tBTC_v2_Minting_Timeline.jpg.asset.json";
+import onTimeline from "@/assets/Bitcoin_On_Base_Minting_Timeline.png.asset.json";
 
-// [IMAGE PATH TO CONFIRM] — before/after comparison images (identical dimensions).
-const COMPARISON_BEFORE_SRC = "[BITCOIN_ON_BASE_MINTING_TIMELINE_IMAGE_PATH]";
-const COMPARISON_AFTER_SRC = "[TBTC_MINTING_TIMELINE_IMAGE_PATH]";
 
 
 // [SLUG TO CONFIRM] — this route file is named with a placeholder slug.
