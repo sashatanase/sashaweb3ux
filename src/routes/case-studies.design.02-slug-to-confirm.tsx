@@ -135,28 +135,33 @@ function BitcoinOnBase() {
 
       <DesignSection number="04" title="Outcome">
         <p>
-          The application shipped in its new visual language and ran as a standalone product. New
-          Threshold leadership later decided to retire the separate app and fold its functionality
-          into the next version of the bridge, which has been live since early 2026.
+          The app shipped in its new visual language and stood on its own as a product. What came
+          next is the ordinary arc of infrastructure work at this layer.
           <br />
           <br />
-          The interface I designed for it carried into that consolidation rather than being set
-          aside, which is about the best afterlife a standalone product gets in this space
+          Threshold consolidated its Bitcoin tooling, and the standalone apps gave way to a single
+          unified bridge that mints, moves assets across chains, and handles staking in one place,
+          which is the live product now. Native Bitcoin-to-Base movement, the thing this project set
+          out to solve, sits inside it.
+          <br />
+          <br />
+          Somewhere along the way I stopped judging a project by whether its original shell survived
+          and started judging it by whether the work held up once someone else inherited it. This
+          one did. The interface carried into the consolidation intact.
+          <br />
+          <br />
+          Takeaway. What I kept was the discipline of treating the familiar as unfamiliar. Solve a
+          problem once and the reflex is to reach for the same answer, and that reflex is precisely
+          what a new brand and a new audience cannot afford.
+          <br />
+          <br />
+          Forcing each element to prove itself again, as if I had no history with it, is what let the
+          product belong to Base instead of quietly still belonging to Threshold. It is the habit I
+          trust most now when I move between contexts, because the work that travels well is the
+          work that was never on autopilot.
         </p>
         <Placeholder label="[GALLERY TO CONFIRM] — 3 to 5 key screens: overview, main bridge step, success state, staking and campaign surfaces" />
         <Placeholder label="[GALLERY TO CONFIRM] — craft details: close crops of components, iconography, layout" />
-      </DesignSection>
-
-      <DesignSection number="05" title="Takeaway">
-        <p>
-          The discipline I carried forward was treating the familiar as unfamiliar. When you have
-          solved a problem once, the reflex is to solve it the same way again, and that reflex is
-          exactly what a new brand and a new audience cannot afford.
-          <br />
-          <br />
-          Forcing myself to approach every element as if I had never designed it before was what let
-          the interface belong to Base instead of quietly still belonging to Threshold.
-        </p>
       </DesignSection>
     </DesignProjectLayout>
   );
