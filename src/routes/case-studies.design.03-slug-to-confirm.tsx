@@ -64,8 +64,6 @@ function MultiAppStaking() {
           applications themselves, which stakers already ran. It was authorising a single stake
           across several of them at once and holding a different level of risk in each.
         </p>
-
-        <ImagePlaceholder label="" />
       </DesignSection>
 
       <DesignSection number="02" title="Discovery">
