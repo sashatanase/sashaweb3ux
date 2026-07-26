@@ -46,7 +46,8 @@ function MultiAppStaking() {
       subtitle="Threshold Network Dashboard · Threshold Network · 2022 – 2023"
       synopsis="One stake, several applications, and a counterintuitive risk model to make safe. I led design and research through a discovery that rewrote the solution, when 199 of 267 stakers broke the assumption it was built on."
       tags={["Design Lead", "UX Researcher", "267 stakers", "3 applications"]}
-      coverAlt="[COVER IMAGE PATH TO CONFIRM]"
+      coverImage={masCover.url}
+      coverAlt="Multi App Staking — the mechanism the network ran on: authorisation and stake-configuration screens"
     >
       <DesignSection number="01" title="Problem">
         <p>
