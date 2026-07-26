@@ -29,7 +29,10 @@ type DesignProject = {
   tags: string;
   cover: string; // CSS background or image url()
   status?: "Coming soon" | "In progress";
-  href?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-bitcoin-on-base";
+  href?:
+    | "/case-studies/design/01-tbtc-bridge"
+    | "/case-studies/design/02-bitcoin-on-base"
+    | "/case-studies/design/03-slug-to-confirm";
 };
 
 const PROJECTS: DesignProject[] = [
@@ -58,7 +61,7 @@ const PROJECTS: DesignProject[] = [
     year: "",
     tags: "Onboarding · Ops",
     cover: "repeating-linear-gradient(45deg, #ececea 0 12px, #dedcd6 12px 24px)",
-    status: "Coming soon",
+    href: "/case-studies/design/03-slug-to-confirm",
   },
   {
     no: "04",

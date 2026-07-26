@@ -7,7 +7,10 @@ export type KeepReadingEntry = {
   title: string;
   descriptor: string;
   /** Typed route path. Leave undefined when the slug is still to confirm. */
-  to?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-bitcoin-on-base";
+  to?:
+    | "/case-studies/design/01-tbtc-bridge"
+    | "/case-studies/design/02-bitcoin-on-base"
+    | "/case-studies/design/03-slug-to-confirm";
   /** Image URL for the card cover. Leave undefined for [COVER TO CONFIRM]. */
   cover?: string;
 };
@@ -33,8 +36,9 @@ export const CASE_STUDY_SEQUENCE: KeepReadingEntry[] = [
   },
   {
     id: "03",
-    title: "[TITLE TO CONFIRM]",
-    descriptor: "[DESCRIPTOR TO CONFIRM]",
+    title: "Multi-App Staking",
+    descriptor: "Making shared-stake risk legible",
+    to: "/case-studies/design/03-slug-to-confirm",
   },
   {
     id: "04",
