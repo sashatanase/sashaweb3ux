@@ -222,6 +222,8 @@ function BitcoinOnBase() {
           </figcaption>
         </figure>
       </DesignSection>
+
+      <KeepReading currentId="02" />
     </DesignProjectLayout>
   );
 }
