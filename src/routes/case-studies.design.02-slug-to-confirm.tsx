@@ -60,7 +60,7 @@ function BitcoinOnBase() {
   return (
     <DesignProjectLayout
       no="02"
-      year="2023"
+      year="2024"
       title="Bitcoin on Base"
       subtitle="tBTC on Base · Threshold Network ·  2024"
       synopsis="A validated Bitcoin bridge experience, rebuilt from the ground up in a new brand language so it reads as a native Base product rather than a transplanted network dashboard."
