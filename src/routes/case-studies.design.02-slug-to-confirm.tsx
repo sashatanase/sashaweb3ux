@@ -138,7 +138,7 @@ function BitcoinOnBase() {
           before and styled it fresh rather than reaching for what had worked on Threshold.
         </p>
         
-        <Placeholder label="[DIAGRAM TO CONFIRM] — inherited vs rebuilt (paste SVG markup here)" />
+        <BitcoinOnBaseDiagram />
       </DesignSection>
 
       <div className="mt-16 w-full">
