@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLayout";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { BitcoinOnBaseDiagram } from "@/components/BitcoinOnBaseDiagram";
 import bitcoinOnBaseCover from "@/assets/Bitcoin_on_Base_cover.png.asset.json";
 import thresholdTimeline from "@/assets/tBTC_v2_Minting_Timeline.jpg.asset.json";
 import onTimeline from "@/assets/Bitcoin_On_Base_Minting_Timeline.png.asset.json";
+
+
 
 
 
@@ -135,7 +138,7 @@ function BitcoinOnBase() {
           before and styled it fresh rather than reaching for what had worked on Threshold.
         </p>
         
-        <Placeholder label="[DIAGRAM TO CONFIRM] — inherited vs rebuilt (paste SVG markup here)" />
+        <BitcoinOnBaseDiagram />
       </DesignSection>
 
       <div className="mt-16 w-full">
