@@ -28,7 +28,7 @@ type DesignProject = {
   tags: string;
   cover: string; // CSS background or image url()
   status?: "Coming soon" | "In progress";
-  href?: "/case-studies/design/01-tbtc-bridge";
+  href?: "/case-studies/design/01-tbtc-bridge" | "/case-studies/design/02-slug-to-confirm";
 };
 
 const PROJECTS: DesignProject[] = [
