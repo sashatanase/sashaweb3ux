@@ -61,7 +61,7 @@ const PROJECTS: DesignProject[] = [
     client: "Threshold Network",
     year: "",
     tags: "Onboarding · Ops",
-    cover: "repeating-linear-gradient(45deg, #ececea 0 12px, #dedcd6 12px 24px)",
+    cover: `url("${multiAppStakingThumbnail.url}")`,
     href: "/case-studies/design/03-slug-to-confirm",
   },
   {
