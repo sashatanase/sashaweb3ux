@@ -64,33 +64,6 @@ const PROJECTS: DesignProject[] = [
     cover: `url("${multiAppStakingThumbnail.url}")`,
     href: "/case-studies/design/03-slug-to-confirm",
   },
-  {
-    no: "04",
-    title: "Coverage Pools",
-    client: "Keep Network",
-    year: "",
-    tags: "DeFi · Underwriting",
-    cover: "linear-gradient(180deg, #e8564c 0%, #b83e36 100%)",
-    status: "Coming soon",
-  },
-  {
-    no: "05",
-    title: "Threshold Network Website",
-    client: "Threshold Network",
-    year: "",
-    tags: "AI · Branding",
-    cover: "conic-gradient(from 210deg at 60% 40%, #f4f4f2, #d9d8d3, #b7b6b0, #f4f4f2)",
-    status: "Coming soon",
-  },
-  {
-    no: "06",
-    title: "Design System",
-    client: "Thesis*",
-    year: "",
-    tags: "System · Tokens",
-    cover: "linear-gradient(135deg, #0f0f0f 0%, #1c1c1c 60%, #0f0f0f 100%)",
-    status: "Coming soon",
-  },
 ];
 
 function DesignPage() {
