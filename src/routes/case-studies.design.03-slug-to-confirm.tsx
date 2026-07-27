@@ -3,6 +3,11 @@ import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLa
 import { KeepReading } from "@/components/KeepReading";
 import masCover from "@/assets/mas-cover.png.asset.json";
 import operatorAddressMapping from "@/assets/operator-address-mapping.png.asset.json";
+import masFlow from "@/assets/mas-flow.png.asset.json";
+import stakingCards from "@/assets/staking-cards---applications.png.asset.json";
+import stakeConfiguration from "@/assets/stake-configuration.png.asset.json";
+import newStakerFlow from "@/assets/new-staker.png.asset.json";
+import multiStakeFlow from "@/assets/staker-with-more-than-one-stake.png.asset.json";
 
 // [SLUG TO CONFIRM] — this route file uses a placeholder slug.
 // Rename the file (and the createFileRoute string) once the final slug is decided.
@@ -318,7 +323,17 @@ function MultiAppStaking() {
           </strong>
         </p>
 
-        <ImagePlaceholder label="[IMAGE — PRIORITY 4: THE THREE-STEP FLOW AS A STRIP (DEPOSIT, AUTHORISE, SET UP NODE). TO ADD]" />
+        <figure className="my-12">
+          <img
+            src={masFlow.url}
+            alt="The three-step staking flow: stake tokens, authorize apps, set up node"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            The three-step spine: deposit, authorise, set up node.
+          </figcaption>
+        </figure>
 
         <p>
           The heart of it was treating per-app authorisation as a risk control, not a form field.
@@ -329,7 +344,18 @@ function MultiAppStaking() {
           lived on the cards instead of in the user&rsquo;s memory.
         </p>
 
-        <ImagePlaceholder label="[IMAGE — PRIORITY 2: STAKING CARD SHOWING APP AND NODE STATE. TO ADD]" />
+        <figure className="my-12">
+          <img
+            src={stakingCards.url}
+            alt="Staking cards showing per-application authorisation percentage, node status and increase or decrease controls"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Each application card carries its own state: authorised amount, node status, and the
+            controls to change exposure.
+          </figcaption>
+        </figure>
 
         <p>
           Two decisions show where I pushed back. The first was a dense step-modal that trapped
@@ -343,7 +369,42 @@ function MultiAppStaking() {
           interface handling their money.
         </p>
 
-        <ImagePlaceholder label="[IMAGE — PRIORITY 5, OPTIONAL: BEFORE/AFTER OF THE DENSE STEP-MODAL VS THE CONTEXTUAL CARD PROMPT (USE BEFORE/AFTER SLIDER). TO ADD]" />
+        <figure className="my-12">
+          <img
+            src={stakeConfiguration.url}
+            alt="Stake configuration screens: staking overview, staking applications and staking providers tabs"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Configuration split across overview, applications and providers, so each decision had
+            its own place.
+          </figcaption>
+        </figure>
+
+        <figure className="my-12">
+          <img
+            src={newStakerFlow.url}
+            alt="Service blueprint for a new Threshold staker"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            The new-staker flow, mapped end to end including error and interrupted states.
+          </figcaption>
+        </figure>
+
+        <figure className="my-12">
+          <img
+            src={multiStakeFlow.url}
+            alt="Flow for a staker with one or more existing stakes and PRE node setup"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            The returning staker with one or more stakes, including legacy and native paths.
+          </figcaption>
+        </figure>
       </DesignSection>
 
       <DesignSection number="04" title="Outcome">
