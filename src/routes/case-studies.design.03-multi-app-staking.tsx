@@ -9,10 +9,7 @@ import stakeConfiguration from "@/assets/stake-configuration.png.asset.json";
 import newStakerFlow from "@/assets/new-staker.png.asset.json";
 import multiStakeFlow from "@/assets/staker-with-more-than-one-stake.png.asset.json";
 
-// [SLUG TO CONFIRM] — this route file uses a placeholder slug.
-// Rename the file (and the createFileRoute string) once the final slug is decided.
-
-export const Route = createFileRoute("/case-studies/design/03-slug-to-confirm")({
+export const Route = createFileRoute("/case-studies/design/03-multi-app-staking")({
   head: () => ({
     meta: [
       { title: "Multi-App Staking · Sasha (Tanase) Luca" },

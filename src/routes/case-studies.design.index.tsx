@@ -33,7 +33,7 @@ type DesignProject = {
   href?:
     | "/case-studies/design/01-tbtc-bridge"
     | "/case-studies/design/02-bitcoin-on-base"
-    | "/case-studies/design/03-slug-to-confirm";
+    | "/case-studies/design/03-multi-app-staking";
 };
 
 const PROJECTS: DesignProject[] = [
@@ -62,7 +62,7 @@ const PROJECTS: DesignProject[] = [
     year: "",
     tags: "Onboarding · Ops",
     cover: `url("${multiAppStakingThumbnail.url}")`,
-    href: "/case-studies/design/03-slug-to-confirm",
+    href: "/case-studies/design/03-multi-app-staking",
   },
 ];
 
