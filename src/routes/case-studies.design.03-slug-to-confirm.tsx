@@ -318,8 +318,10 @@ function MultiAppStaking() {
           <br />
           <br />
           <strong>
-            Separating deposit from authorisation mattered, because it let people commit their stake
-            without being forced to make every risk decision in the same breath.
+            I put node setup last on purpose, because it is a separate technical step, done on the
+            command line and sometimes handed to a third-party provider, so a staker could commit
+            their stake and set their per-app risk on the dashboard before touching any node
+            infrastructure.
           </strong>
         </p>
 
@@ -358,15 +360,18 @@ function MultiAppStaking() {
         </figure>
 
         <p>
-          Two decisions show where I pushed back. The first was a dense step-modal that trapped
-          people mid-flow, which a design trust review flagged for exactly that, losing context on
-          every &ldquo;next&rdquo; with no way out. I moved that weight out of a blocking modal
-          toward contextual prompts on the cards, honouring user control and freedom rather than
-          holding people hostage to a wizard. The second was naming. An &ldquo;Authorize All
-          Apps&rdquo; button that only ever authorised the apps you had selected was a small lie, so
-          it became &ldquo;Authorize Selected Apps,&rdquo; a match between what the system said and
-          what it did. Small, but it is the kind of honesty that decides whether people trust an
-          interface handling their money.
+          The authorisation step was where the counterintuitive model had to become something you
+          could see and act on, not a concept to explain. Each application sat on its own card, and
+          you set how much of your stake it could use, up to the full amount, with the minimum and
+          your remaining balance shown right there.
+          <br />
+          <br />
+          Because the same stake could back every app at once, a staker could authorise their entire
+          balance to tBTC and their entire balance to Random Beacon from one stake, and the
+          interface showed exactly that instead of asking them to reason it out. PRE, which could
+          not slash, was marked as not requiring authorisation, so no one spent a decision on it.
+          The button that committed the choice read &ldquo;Authorize Selected Apps,&rdquo; naming
+          what it actually did when only some apps were chosen.
         </p>
 
         <figure className="my-12">
