@@ -323,7 +323,17 @@ function MultiAppStaking() {
           </strong>
         </p>
 
-        <ImagePlaceholder label="[IMAGE — PRIORITY 4: THE THREE-STEP FLOW AS A STRIP (DEPOSIT, AUTHORISE, SET UP NODE). TO ADD]" />
+        <figure className="my-12">
+          <img
+            src={masFlow.url}
+            alt="The three-step staking flow: stake tokens, authorize apps, set up node"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            The three-step spine: deposit, authorise, set up node.
+          </figcaption>
+        </figure>
 
         <p>
           The heart of it was treating per-app authorisation as a risk control, not a form field.
