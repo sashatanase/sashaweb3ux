@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import tBTCThumbnail from "@/assets/tBTC-thumbnail.png.asset.json";
 import bitcoinOnBaseThumbnail from "@/assets/bitcoin-on-base-thumbnail.png.asset.json";
+import multiAppStakingThumbnail from "@/assets/multi-app-staking-thumbnail.png.asset.json";
 
 export type KeepReadingEntry = {
   id: string;
