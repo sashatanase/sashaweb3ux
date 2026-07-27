@@ -40,6 +40,7 @@ export const CASE_STUDY_SEQUENCE: KeepReadingEntry[] = [
     title: "Multi-App Staking",
     descriptor: "Making shared-stake risk legible",
     to: "/case-studies/design/03-slug-to-confirm",
+    cover: multiAppStakingThumbnail.url,
   },
   {
     id: "04",
