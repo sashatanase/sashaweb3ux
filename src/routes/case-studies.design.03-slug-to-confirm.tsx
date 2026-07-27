@@ -437,7 +437,7 @@ function MultiAppStaking() {
           is the outcome I care about most.
         </p>
 
-        <ImagePlaceholder label="[IMAGE — PRIORITY 6, OPTIONAL: INCREASE/DECREASE AUTHORISATION SCREEN (EXPOSURE MANAGED OVER TIME). TO ADD]" />
+        
       </DesignSection>
 
       <DesignSection number="05" title="Takeaway">
