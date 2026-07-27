@@ -344,7 +344,18 @@ function MultiAppStaking() {
           lived on the cards instead of in the user&rsquo;s memory.
         </p>
 
-        <ImagePlaceholder label="[IMAGE — PRIORITY 2: STAKING CARD SHOWING APP AND NODE STATE. TO ADD]" />
+        <figure className="my-12">
+          <img
+            src={stakingCards.url}
+            alt="Staking cards showing per-application authorisation percentage, node status and increase or decrease controls"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Each application card carries its own state: authorised amount, node status, and the
+            controls to change exposure.
+          </figcaption>
+        </figure>
 
         <p>
           Two decisions show where I pushed back. The first was a dense step-modal that trapped
