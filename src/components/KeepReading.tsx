@@ -11,7 +11,7 @@ export type KeepReadingEntry = {
   to?:
     | "/case-studies/design/01-tbtc-bridge"
     | "/case-studies/design/02-bitcoin-on-base"
-    | "/case-studies/design/03-slug-to-confirm";
+    | "/case-studies/design/03-multi-app-staking";
   /** Image URL for the card cover. Leave undefined for [COVER TO CONFIRM]. */
   cover?: string;
 };
@@ -39,7 +39,7 @@ export const CASE_STUDY_SEQUENCE: KeepReadingEntry[] = [
     id: "03",
     title: "Multi-App Staking",
     descriptor: "Making shared-stake risk legible",
-    to: "/case-studies/design/03-slug-to-confirm",
+    to: "/case-studies/design/03-multi-app-staking",
     cover: multiAppStakingThumbnail.url,
   },
   {
