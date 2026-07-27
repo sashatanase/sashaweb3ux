@@ -9,7 +9,6 @@ import stakeConfiguration from "@/assets/stake-configuration.png.asset.json";
 import newStakerFlow from "@/assets/new-staker.png.asset.json";
 import multiStakeFlow from "@/assets/staker-with-more-than-one-stake.png.asset.json";
 
-
 export const Route = createFileRoute("/case-studies/design/03-multi-app-staking")({
   head: () => ({
     meta: [
