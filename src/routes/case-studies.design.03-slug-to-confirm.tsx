@@ -369,7 +369,42 @@ function MultiAppStaking() {
           interface handling their money.
         </p>
 
-        <ImagePlaceholder label="[IMAGE — PRIORITY 5, OPTIONAL: BEFORE/AFTER OF THE DENSE STEP-MODAL VS THE CONTEXTUAL CARD PROMPT (USE BEFORE/AFTER SLIDER). TO ADD]" />
+        <figure className="my-12">
+          <img
+            src={stakeConfiguration.url}
+            alt="Stake configuration screens: staking overview, staking applications and staking providers tabs"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            Configuration split across overview, applications and providers, so each decision had
+            its own place.
+          </figcaption>
+        </figure>
+
+        <figure className="my-12">
+          <img
+            src={newStakerFlow.url}
+            alt="Service blueprint for a new Threshold staker"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            The new-staker flow, mapped end to end including error and interrupted states.
+          </figcaption>
+        </figure>
+
+        <figure className="my-12">
+          <img
+            src={multiStakeFlow.url}
+            alt="Flow for a staker with one or more existing stakes and PRE node setup"
+            className="mx-auto h-auto w-full"
+            loading="lazy"
+          />
+          <figcaption className="mx-auto max-w-[760px] pt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+            The returning staker with one or more stakes, including legacy and native paths.
+          </figcaption>
+        </figure>
       </DesignSection>
 
       <DesignSection number="04" title="Outcome">
