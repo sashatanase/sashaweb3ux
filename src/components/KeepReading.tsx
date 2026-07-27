@@ -102,7 +102,7 @@ const cardClass =
   "group flex flex-col transition-transform duration-300 ease-out hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background";
 
 export function KeepReading({ currentId }: { currentId: string }) {
-  const entries = nextTwo(currentId);
+  const entries = otherExisting(currentId);
   if (entries.length === 0) return null;
 
   return (
@@ -111,7 +111,7 @@ export function KeepReading({ currentId }: { currentId: string }) {
         Keep reading
       </h2>
       <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-        {entries.map((entry) =>
+        {entries.map((entry: KeepReadingEntry) =>
           entry.to ? (
             <Link key={entry.id} to={entry.to} className={cardClass}>
               <CardInner entry={entry} />
