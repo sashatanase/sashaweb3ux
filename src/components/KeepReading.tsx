@@ -58,9 +58,7 @@ export const CASE_STUDY_SEQUENCE: KeepReadingEntry[] = [
 ];
 
 function otherExisting(currentId: string): KeepReadingEntry[] {
-  return CASE_STUDY_SEQUENCE.filter(
-    (entry) => entry.id !== currentId && entry.to && entry.cover,
-  );
+  return CASE_STUDY_SEQUENCE.filter((entry) => entry.id !== currentId && entry.to && entry.cover);
 }
 
 function CardInner({ entry }: { entry: KeepReadingEntry }) {

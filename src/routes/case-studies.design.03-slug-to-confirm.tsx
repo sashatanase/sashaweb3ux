@@ -436,8 +436,6 @@ function MultiAppStaking() {
           counterintuitive decision legible enough that people made it confidently, with real money,
           is the outcome I care about most.
         </p>
-
-        
       </DesignSection>
 
       <DesignSection number="05" title="Takeaway">
