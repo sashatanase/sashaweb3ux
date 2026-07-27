@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import tBTCThumbnail from "@/assets/tBTC-thumbnail.png.asset.json";
 import bitcoinOnBaseThumbnail from "@/assets/bitcoin-on-base-thumbnail.png.asset.json";
+import multiAppStakingThumbnail from "@/assets/multi-app-staking-thumbnail.png.asset.json";
 
 export type KeepReadingEntry = {
   id: string;
@@ -39,6 +40,7 @@ export const CASE_STUDY_SEQUENCE: KeepReadingEntry[] = [
     title: "Multi-App Staking",
     descriptor: "Making shared-stake risk legible",
     to: "/case-studies/design/03-slug-to-confirm",
+    cover: multiAppStakingThumbnail.url,
   },
   {
     id: "04",
