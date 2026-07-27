@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import tBTCThumbnail from "@/assets/tBTC-thumbnail.png.asset.json";
-import bitcoinOnBaseCover from "@/assets/Bitcoin_on_Base_cover.png.asset.json";
+import bitcoinOnBaseThumbnail from "@/assets/bitcoin-on-base-thumbnail.png.asset.json";
 
 export type KeepReadingEntry = {
   id: string;
@@ -32,7 +32,7 @@ export const CASE_STUDY_SEQUENCE: KeepReadingEntry[] = [
     title: "Bitcoin on Base",
     descriptor: "A validated bridge rebuilt as a native Base product",
     to: "/case-studies/design/02-bitcoin-on-base",
-    cover: bitcoinOnBaseCover.url,
+    cover: bitcoinOnBaseThumbnail.url,
   },
   {
     id: "03",
@@ -57,11 +57,10 @@ export const CASE_STUDY_SEQUENCE: KeepReadingEntry[] = [
   },
 ];
 
-function nextTwo(currentId: string): KeepReadingEntry[] {
-  const i = CASE_STUDY_SEQUENCE.findIndex((e) => e.id === currentId);
-  if (i === -1) return [];
-  const len = CASE_STUDY_SEQUENCE.length;
-  return [CASE_STUDY_SEQUENCE[(i + 1) % len], CASE_STUDY_SEQUENCE[(i + 2) % len]];
+function otherExisting(currentId: string): KeepReadingEntry[] {
+  return CASE_STUDY_SEQUENCE.filter(
+    (entry) => entry.id !== currentId && entry.to && entry.cover,
+  );
 }
 
 function CardInner({ entry }: { entry: KeepReadingEntry }) {
