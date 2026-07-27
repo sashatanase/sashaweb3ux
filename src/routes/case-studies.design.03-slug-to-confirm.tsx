@@ -3,6 +3,11 @@ import { DesignProjectLayout, DesignSection } from "@/components/DesignProjectLa
 import { KeepReading } from "@/components/KeepReading";
 import masCover from "@/assets/mas-cover.png.asset.json";
 import operatorAddressMapping from "@/assets/operator-address-mapping.png.asset.json";
+import masFlow from "@/assets/mas-flow.png.asset.json";
+import stakingCards from "@/assets/staking-cards---applications.png.asset.json";
+import stakeConfiguration from "@/assets/stake-configuration.png.asset.json";
+import newStakerFlow from "@/assets/new-staker.png.asset.json";
+import multiStakeFlow from "@/assets/staker-with-more-than-one-stake.png.asset.json";
 
 // [SLUG TO CONFIRM] — this route file uses a placeholder slug.
 // Rename the file (and the createFileRoute string) once the final slug is decided.
