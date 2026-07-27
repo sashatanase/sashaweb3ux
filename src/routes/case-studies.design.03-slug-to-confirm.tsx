@@ -387,6 +387,16 @@ function MultiAppStaking() {
           </figcaption>
         </figure>
 
+        <p>
+          Risk could not be a blind, one-time commitment, so the ongoing authorisation view set each
+          application&rsquo;s reward beside its danger, its APR next to its slashing rate, alongside
+          the node&rsquo;s status. From there a staker could increase or decrease how much any app
+          could draw on at any time. That turned the frightening part, exposing real money to
+          something that could take it, into a position a person could read and adjust with their
+          eyes open, which for an interface handling money is the difference between trust and a
+          leap of faith.
+        </p>
+
         <figure className="my-12">
           <img
             src={newStakerFlow.url}
