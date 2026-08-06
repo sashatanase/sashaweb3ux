@@ -192,9 +192,9 @@
 }
 
 @utility hero-title {
-  font-size: clamp(1rem, 6.5vw, 9rem);
-  line-height: 0.9;
-  letter-spacing: 0;
+  font-size: clamp(1.5rem, 8.5vw, 12rem);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
 }
 
 .hero-title > span {
