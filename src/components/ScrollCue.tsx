@@ -25,17 +25,23 @@ export function ScrollCue({ targetId, className }: ScrollCueProps) {
   };
 
   return (
-    <button
-      type="button"
-      onClick={handleClick}
-      aria-label="Scroll to next section"
+    <div
       className={cn(
-        "scroll-cue fixed bottom-7 left-1/2 z-50 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border border-foreground/40 bg-transparent text-foreground transition-[opacity,border-color,background-color] duration-300 hover:border-foreground hover:bg-foreground/5 md:h-12 md:w-12",
-        visible ? "opacity-100" : "pointer-events-none opacity-0",
+        "pointer-events-none fixed inset-x-0 bottom-7 z-50 flex justify-center",
         className,
       )}
     >
-      <ChevronDown className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
-    </button>
+      <button
+        type="button"
+        onClick={handleClick}
+        aria-label="Scroll to next section"
+        className={cn(
+          "scroll-cue pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full border border-foreground/40 bg-transparent text-foreground transition-[opacity,border-color,background-color] duration-300 hover:border-foreground hover:bg-foreground/5 md:h-12 md:w-12",
+          visible ? "opacity-100" : "pointer-events-none opacity-0",
+        )}
+      >
+        <ChevronDown className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
+      </button>
+    </div>
   );
 }
