@@ -290,10 +290,13 @@ function Index() {
         <div className="mb-6 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
           §01 / Index
         </div>
-        <h1 className="hero-title w-full font-medium" aria-label="UX designer and researcher who makes products make sense.">
-          <span className="block whitespace-nowrap">UX designer and researcher</span>
-          <span className="block whitespace-nowrap text-muted-foreground">who makes products</span>
-          <span className="block whitespace-nowrap text-accent">make sense.</span>
+        <h1
+          className="hero-title w-full font-medium"
+          aria-label="UX designer and researcher who makes products make sense."
+        >
+          <span>UX&nbsp;designer&nbsp;and&nbsp;researcher</span>
+          <span className="text-muted-foreground">who&nbsp;makes&nbsp;products</span>
+          <span className="text-accent">make&nbsp;sense.</span>
         </h1>
         <div className="mt-10 flex w-full flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <p className="max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight md:text-2xl">
