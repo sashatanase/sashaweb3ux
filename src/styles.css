@@ -223,10 +223,10 @@
 @keyframes scrollCueBounce {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate(-50%, 0);
   }
   50% {
-    transform: translateY(7px);
+    transform: translate(-50%, 7px);
   }
 }
 .scroll-cue {
