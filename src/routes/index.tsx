@@ -382,6 +382,9 @@ function Index() {
               Contact
             </a>
           </nav>
+          <div className="py-8 text-center font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            Available · {year}
+          </div>
         </div>
       )}
 
