@@ -305,13 +305,13 @@ function Index() {
             </a>
           </nav>
           <div className="col-span-6 flex items-center justify-end gap-4 text-right font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
-            <span>Available · {year}</span>
+            <span className="hidden md:inline">Available · {year}</span>
             <button
               type="button"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
-              className="-mr-1 inline-flex h-9 w-9 items-center justify-center md:hidden"
+              className="inline-flex h-9 w-9 items-center justify-center md:hidden"
             >
               {menuOpen ? (
                 <X className="h-5 w-5" strokeWidth={1.5} />
