@@ -299,8 +299,8 @@ function Index() {
         </h1>
         <div className="mt-10 flex w-full flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <p className="max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight md:text-2xl">
-            I help teams figure out who they're building for and why, then design what makes sense to
-            the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or contract.
+            I help teams figure out who they're building for and why, then design what makes sense
+            to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or contract.
           </p>
           <div className="flex flex-col items-start gap-3 md:items-end">
             <a
