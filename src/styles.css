@@ -144,6 +144,8 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
   }
 
   html,
@@ -205,7 +207,6 @@
   overflow-wrap: break-word;
 }
 
-
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -238,7 +239,6 @@
     transform: translateX(-50%);
   }
 }
-
 
 .mint-wrapper {
   all: initial;
