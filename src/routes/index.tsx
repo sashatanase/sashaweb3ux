@@ -299,11 +299,12 @@ function Index() {
           <span className="text-accent">make&nbsp;sense.</span>
         </h1>
         <div className="mt-10 flex w-full flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <p className="max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+          <p className="w-full min-w-0 max-w-[38ch] flex-1 text-base font-medium leading-relaxed tracking-tight text-pretty sm:text-lg md:max-w-[42ch] md:text-xl lg:text-2xl xl:text-3xl">
             I help teams figure out who they're building for and why, then design what makes sense
-            to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or contract.
+            to the users. Open to Senior UXR & Product Design roles, full-time or contract.
           </p>
-          <div className="flex flex-col items-start gap-3 md:items-end">
+          <div className="flex shrink-0 flex-col items-start gap-3 md:items-end">
+
             <a
               href="mailto:sasha@web3ux.org"
               onClick={() => trackCta("get_in_touch", "Get in touch", "hero")}
