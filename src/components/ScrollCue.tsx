@@ -12,7 +12,7 @@ export function ScrollCue({ targetId, className }: ScrollCueProps) {
 
   useEffect(() => {
     const onScroll = () => {
-      setVisible(window.scrollY < window.innerHeight * 0.5);
+      setVisible(window.scrollY < 300);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -30,7 +30,7 @@ export function ScrollCue({ targetId, className }: ScrollCueProps) {
       onClick={handleClick}
       aria-label="Scroll to next section"
       className={cn(
-        "scroll-cue mx-auto flex h-11 w-11 items-center justify-center rounded-full border border-foreground/40 bg-transparent text-foreground transition-[opacity,border-color,background-color] duration-300 hover:border-foreground hover:bg-foreground/5 md:h-12 md:w-12",
+        "scroll-cue fixed bottom-7 left-1/2 z-50 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border border-foreground/40 bg-transparent text-foreground transition-[opacity,border-color,background-color] duration-300 hover:border-foreground hover:bg-foreground/5 md:h-12 md:w-12",
         visible ? "opacity-100" : "pointer-events-none opacity-0",
         className,
       )}
