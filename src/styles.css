@@ -199,9 +199,7 @@
 
 .hero-title > span {
   display: block;
-  white-space: nowrap;
-  overflow-wrap: normal;
-  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 @keyframes fadeUp {

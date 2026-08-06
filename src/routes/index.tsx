@@ -294,9 +294,9 @@ function Index() {
           className="hero-title w-full font-black"
           aria-label="UX designer and researcher who makes products make sense."
         >
-          <span>UX&nbsp;designer&nbsp;and&nbsp;researcher</span>
-          <span className="text-muted-foreground">who&nbsp;makes&nbsp;products</span>
-          <span className="text-accent">make&nbsp;sense.</span>
+          <span>UX designer and researcher</span>
+          <span className="text-muted-foreground">who makes products</span>
+          <span className="text-accent">make sense.</span>
         </h1>
         <div className="mt-10 flex w-full flex-col items-start gap-6 md:flex-row md:gap-10">
           <p className="w-full min-w-0 flex-1 text-[clamp(1rem,1.6vw,2.25rem)] leading-[1.45] font-medium">
