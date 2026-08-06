@@ -192,8 +192,9 @@
 }
 
 @utility hero-title {
-  font-size: clamp(2.25rem, 4vw + 1.25rem, 4.5rem);
-  line-height: 1.05;
+  font-size: clamp(3.5rem, 11vw + 0.5rem, 13rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
 }
 
 @keyframes fadeUp {

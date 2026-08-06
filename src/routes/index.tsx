@@ -282,45 +282,55 @@ function Index() {
         </div>
       </header>
 
+      {/* Hero - full viewport */}
+      <section
+        id="intro"
+        className="grid min-h-screen w-full grid-cols-12 gap-6 px-6 pt-32 pb-12 md:px-10 md:pt-40 md:pb-20"
+      >
+        <div className="col-span-12 md:col-span-2">
+          <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            §01 / Index
+          </div>
+        </div>
+        <div className="col-span-12 flex flex-col justify-center md:col-span-10">
+          <h1 className="hero-title font-medium">
+            UX designer
+            <br />
+            and researcher
+            <br />
+            <span className="text-muted-foreground">who makes</span>
+            <br />
+            <span className="text-muted-foreground">products</span>
+            <br />
+            <span className="text-accent">make sense</span>.
+          </h1>
+          <div className="mt-10 grid grid-cols-12 gap-6">
+            <p className="col-span-12 max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight md:col-span-8 md:text-2xl">
+              I help teams figure out who they're building for and why, then design what makes sense
+              to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or contract.
+            </p>
+            <div className="col-span-12 flex flex-col items-start gap-3 md:col-span-4 md:items-end">
+              <a
+                href="mailto:sasha@web3ux.org"
+                onClick={() => trackCta("get_in_touch", "Get in touch", "hero")}
+                className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground"
+              >
+                Get in touch ↗
+              </a>
+              <Link
+                to="/case-studies"
+                onClick={() => trackCta("case_studies", "Case Studies", "hero")}
+                className="inline-flex items-center gap-2 border border-foreground bg-transparent px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground hover:text-background"
+              >
+                Case Studies →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <main id="top" className="mx-auto max-w-[1400px] px-6 md:px-10">
-        {/* Hero */}
-        <section id="intro" className="grid grid-cols-12 gap-6 py-12 md:py-20">
-          <div className="col-span-12 md:col-span-2">
-            <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              §01 / Index
-            </div>
-          </div>
-          <div className="col-span-12 md:col-span-10">
-            <h1 className="hero-title font-medium tracking-tight">
-              UX designer and researcher&nbsp;
-              <span className="text-muted-foreground">who makes products&nbsp;</span>
-              <span className="text-accent">make sense</span>.
-            </h1>
-            <div className="mt-8 grid grid-cols-12 gap-6">
-              <p className="col-span-12 max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight md:col-span-8 md:text-2xl">
-                I help teams figure out who they're building for and why, then design what makes
-                sense to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or
-                contract.
-              </p>
-              <div className="col-span-12 flex flex-col items-start gap-3 md:col-span-4 md:items-end">
-                <a
-                  href="mailto:sasha@web3ux.org"
-                  onClick={() => trackCta("get_in_touch", "Get in touch", "hero")}
-                  className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground"
-                >
-                  Get in touch ↗
-                </a>
-                <Link
-                  to="/case-studies"
-                  onClick={() => trackCta("case_studies", "Case Studies", "hero")}
-                  className="inline-flex items-center gap-2 border border-foreground bg-transparent px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground hover:text-background"
-                >
-                  Case Studies →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Selected Work */}
 
         {/* Selected Work */}
         <section id="work" className="grid grid-cols-12 gap-6 py-20 md:py-28">
