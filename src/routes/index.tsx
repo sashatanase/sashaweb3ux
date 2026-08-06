@@ -294,9 +294,13 @@ function Index() {
         </div>
         <div className="col-span-12 flex flex-col justify-center md:col-span-10">
           <h1 className="hero-title font-medium">
-            UX designer and researcher
+            UX designer
             <br />
-            <span className="text-muted-foreground">who makes products</span>
+            and researcher
+            <br />
+            <span className="text-muted-foreground">who makes</span>
+            <br />
+            <span className="text-muted-foreground">products</span>
             <br />
             <span className="text-accent">make sense</span>.
           </h1>
