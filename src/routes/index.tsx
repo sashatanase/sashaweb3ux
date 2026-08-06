@@ -243,7 +243,12 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <CursorDots />
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+      <header
+        className={cn(
+          "sticky top-0 z-50 border-b border-border bg-background transition-shadow duration-300",
+          scrolled && "shadow-[0_1px_2px_0_rgba(0,0,0,0.04)]"
+        )}
+      >
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 items-center gap-6 px-6 py-5 md:px-10">
           <a
             href="#top"
