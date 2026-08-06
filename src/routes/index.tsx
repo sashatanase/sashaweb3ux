@@ -247,7 +247,7 @@ function Index() {
       <header
         className={cn(
           "sticky top-0 z-50 border-b border-border bg-background transition-shadow duration-300",
-          scrolled && "shadow-[0_1px_2px_0_rgba(0,0,0,0.04)]"
+          scrolled && "shadow-[0_1px_2px_0_rgba(0,0,0,0.04)]",
         )}
       >
         <div className="mx-auto grid max-w-[1400px] grid-cols-12 items-center gap-6 px-6 py-5 md:px-10">
@@ -318,7 +318,6 @@ function Index() {
           <span className="text-accent">make sense.</span>
         </h1>
         <div className="mt-12 flex w-full flex-col items-start gap-6 md:mt-16 md:flex-row md:gap-10">
-
           <p className="w-full min-w-0 flex-1 text-[clamp(1rem,1.6vw,2.25rem)] leading-[1.45] font-medium">
             I help teams figure out who they're building for and why, then design what makes sense
             to the users. Open to Senior UXR & Product Design roles, full-time or contract.
@@ -342,7 +341,6 @@ function Index() {
         </div>
         <ScrollCue targetId="work" />
       </section>
-
 
       <main id="top" className="mx-auto max-w-[1400px] px-6 md:px-10">
         {/* Selected Work */}
