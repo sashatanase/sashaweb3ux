@@ -294,8 +294,10 @@ function Index() {
         </div>
         <div className="col-span-12 flex flex-col justify-center md:col-span-10">
           <h1 className="hero-title font-medium">
-            UX designer and researcher&nbsp;
-            <span className="text-muted-foreground">who makes products&nbsp;</span>
+            UX designer and researcher
+            <br />
+            <span className="text-muted-foreground">who makes products</span>
+            <br />
             <span className="text-accent">make sense</span>.
           </h1>
           <div className="mt-10 grid grid-cols-12 gap-6">
