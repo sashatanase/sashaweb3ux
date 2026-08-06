@@ -323,7 +323,7 @@ function Index() {
             </Link>
           </div>
         </div>
-        <ScrollCue targetId="work" className="mt-14 md:mt-20" />
+        <ScrollCue targetId="work" />
       </section>
 
 
