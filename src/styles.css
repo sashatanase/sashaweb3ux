@@ -192,15 +192,17 @@
 }
 
 @utility hero-title {
-  font-size: clamp(1.5rem, 8.5vw, 12rem);
+  font-size: clamp(1.5rem, 8vw, 10rem);
   line-height: 1;
   letter-spacing: -0.02em;
+  padding-right: clamp(1.5rem, 5vw, 5rem);
 }
 
 .hero-title > span {
   display: block;
   overflow-wrap: break-word;
 }
+
 
 @keyframes fadeUp {
   from {
