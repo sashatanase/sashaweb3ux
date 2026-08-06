@@ -291,7 +291,7 @@ function Index() {
           §01 / Index
         </div>
         <h1
-          className="hero-title w-full font-medium"
+          className="hero-title w-full font-black"
           aria-label="UX designer and researcher who makes products make sense."
         >
           <span>UX&nbsp;designer&nbsp;and&nbsp;researcher</span>
