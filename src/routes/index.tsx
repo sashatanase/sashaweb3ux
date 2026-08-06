@@ -285,7 +285,7 @@ function Index() {
       {/* Hero - sits just below the header */}
       <section
         id="intro"
-        className="flex min-h-[calc(100vh-4.5rem)] w-full flex-col justify-start px-4 pt-6 pb-12 md:px-6 md:pt-8 md:pb-16"
+        className="flex min-h-[calc(100vh-4.5rem)] w-full flex-col justify-start px-4 pt-10 pb-12 md:px-6 md:pt-16 md:pb-16"
       >
         <div className="mb-6 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
           §01 / Index
