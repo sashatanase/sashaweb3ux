@@ -284,21 +284,21 @@ function Index() {
 
       <main id="top" className="mx-auto max-w-[1400px] px-6 md:px-10">
         {/* Hero */}
-        <section id="intro" className="grid grid-cols-12 gap-6 py-20 md:py-32">
+        <section id="intro" className="grid grid-cols-12 gap-6 py-12 md:py-20">
           <div className="col-span-12 md:col-span-2">
             <div className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               §01 / Index
             </div>
           </div>
           <div className="col-span-12 md:col-span-10">
-            <h1 className="text-3xl font-medium leading-[1.05] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-medium leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
               UX specialist
               <br />
               <span className="text-muted-foreground">who makes products</span>
               <br />
               <span className="text-accent">make sense</span>.
             </h1>
-            <div className="mt-12 grid grid-cols-12 gap-6">
+            <div className="mt-8 grid grid-cols-12 gap-6">
               <p className="col-span-12 max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight md:col-span-8 md:text-2xl">
                 I help teams figure out who they're building for and why, then design what makes
                 sense to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or
