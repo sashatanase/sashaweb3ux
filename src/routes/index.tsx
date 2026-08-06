@@ -321,7 +321,9 @@ function Index() {
             </Link>
           </div>
         </div>
+        <ScrollCue targetId="work" className="mt-14 md:mt-20" />
       </section>
+
 
       <main id="top" className="mx-auto max-w-[1400px] px-6 md:px-10">
         {/* Selected Work */}
