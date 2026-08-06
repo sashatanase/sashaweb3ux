@@ -292,10 +292,8 @@ function Index() {
           </div>
           <div className="col-span-12 md:col-span-10">
             <h1 className="hero-title font-medium tracking-tight">
-              UX specialist
-              <br />
-              <span className="text-muted-foreground">who makes products</span>
-              <br />
+              UX specialist&nbsp;
+              <span className="text-muted-foreground">who makes products&nbsp;</span>
               <span className="text-accent">make sense</span>.
             </h1>
             <div className="mt-8 grid grid-cols-12 gap-6">
