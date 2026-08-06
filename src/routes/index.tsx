@@ -295,11 +295,87 @@ function Index() {
               Contact
             </a>
           </nav>
-          <div className="col-span-6 text-right font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
-            Available · {year}
+          <div className="col-span-6 flex items-center justify-end gap-4 text-right font-mono text-xs uppercase tracking-[0.18em] md:col-span-3">
+            <span>Available · {year}</span>
+            <button
+              type="button"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((v) => !v)}
+              className="-mr-1 inline-flex h-9 w-9 items-center justify-center md:hidden"
+            >
+              {menuOpen ? (
+                <X className="h-5 w-5" strokeWidth={1.5} />
+              ) : (
+                <Menu className="h-5 w-5" strokeWidth={1.5} />
+              )}
+            </button>
           </div>
         </div>
       </header>
+
+      {menuOpen && (
+        <div className="fixed inset-0 z-[60] flex flex-col bg-background md:hidden">
+          <div className="flex justify-end px-6 py-5">
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setMenuOpen(false)}
+              className="inline-flex h-9 w-9 items-center justify-center"
+            >
+              <X className="h-6 w-6" strokeWidth={1.5} />
+            </button>
+          </div>
+          <nav className="flex flex-1 flex-col items-center justify-center gap-8 font-mono text-2xl uppercase tracking-[0.14em]">
+            <a
+              href="#work"
+              onClick={() => {
+                trackNav("work", "header");
+                setMenuOpen(false);
+              }}
+            >
+              Work
+            </a>
+            <a
+              href="#about"
+              onClick={() => {
+                trackNav("about", "header");
+                setMenuOpen(false);
+              }}
+            >
+              About
+            </a>
+            <Link
+              to="/case-studies"
+              onClick={() => {
+                trackNav("case-studies", "header");
+                setMenuOpen(false);
+              }}
+            >
+              Case Studies
+            </Link>
+            <a
+              href="#writing"
+              onClick={() => {
+                trackNav("writing", "header");
+                setMenuOpen(false);
+              }}
+            >
+              Articles & Talks
+            </a>
+            <a
+              href="#contact"
+              onClick={() => {
+                trackNav("contact", "header");
+                setMenuOpen(false);
+              }}
+            >
+              Contact
+            </a>
+          </nav>
+        </div>
+      )}
+
       <div className="h-[55px]" aria-hidden="true" />
 
       {/* Hero - sits just below the header */}
