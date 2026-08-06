@@ -292,16 +292,17 @@ function Index() {
           </div>
           <div className="col-span-12 md:col-span-10">
             <h1 className="text-4xl font-medium leading-[1.02] tracking-tight sm:text-5xl md:text-7xl lg:text-[8rem]">
-              UX researcher
+              UX specialist
               <br />
               <span className="text-muted-foreground">who makes products</span>
               <br />
               <span className="text-accent">make sense</span>.
             </h1>
             <div className="mt-12 grid grid-cols-12 gap-6">
-              <p className="col-span-12 max-w-2xl text-base font-medium leading-relaxed tracking-tight md:col-span-8 md:text-2xl">
-                I help teams figure out who they're building for and why. Currently open to Senior
-                UX Researcher roles, full-time or contract.
+              <p className="col-span-12 max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight md:col-span-8 md:text-2xl">
+                I help teams figure out who they're building for and why, then design what makes
+                sense to the users.{"\n\n\n\n\n"}Open to Senior UXR & Product Design roles,
+                full-time or contract.
               </p>
               <div className="col-span-12 flex flex-col items-start gap-3 md:col-span-4 md:items-end">
                 <a
@@ -389,9 +390,9 @@ function Index() {
                   </p>
                   <p>
                     I work on products where a confused user doesn't just churn, they lose funds. My
-                    background sits between research and product. I'm fluent in discovery, JTBD, and
-                    usability testing, and equally comfortable shaping roadmaps and aligning the
-                    people who build from them.
+                    background sits between research and product design. I'm fluent in discovery,
+                    JTBD, and usability testing, and equally comfortable shaping roadmaps and
+                    aligning the people who build from them.
                   </p>
                 </div>
               </div>
