@@ -36,7 +36,7 @@ const SECTIONS = [
     href: "/case-studies/design" as const,
     description:
       "Product and interaction design work — flows, systems, and interfaces shaped by the research.",
-    count: "Coming soon",
+    count: "3 STUDIES",
   },
 ];
 
@@ -55,7 +55,7 @@ function CaseStudiesHub() {
           </h1>
           <p className="mt-6 max-w-2xl text-base font-medium leading-relaxed tracking-tight text-muted-foreground md:text-xl">
             Every product has a story, and every user has a breaking point. Explore the work in two
-            collections — the research that uncovered the reality, and the design that shaped the
+            collections - the research that uncovered the reality, and the design that shaped the
             response.
           </p>
         </div>
