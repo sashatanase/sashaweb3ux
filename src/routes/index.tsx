@@ -300,9 +300,8 @@ function Index() {
           </h1>
           <div className="mt-10 grid grid-cols-12 gap-6">
             <p className="col-span-12 max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight md:col-span-8 md:text-2xl">
-              I help teams figure out who they're building for and why, then design what makes
-              sense to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or
-              contract.
+              I help teams figure out who they're building for and why, then design what makes sense
+              to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or contract.
             </p>
             <div className="col-span-12 flex flex-col items-start gap-3 md:col-span-4 md:items-end">
               <a
