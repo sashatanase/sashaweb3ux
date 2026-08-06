@@ -285,7 +285,7 @@ function Index() {
       {/* Hero - sits just below the header */}
       <section
         id="intro"
-        className="flex min-h-[calc(100vh-4.5rem)] w-full flex-col justify-start px-4 pt-10 pb-12 md:px-6 md:pt-16 md:pb-16"
+        className="flex w-full flex-col justify-start px-4 pt-10 pb-16 md:px-6 md:pt-16 md:pb-24"
       >
         <div className="mb-6 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
           §01 / Index
@@ -298,7 +298,8 @@ function Index() {
           <span className="text-muted-foreground">who makes products</span>
           <span className="text-accent">make sense.</span>
         </h1>
-        <div className="mt-10 flex w-full flex-col items-start gap-6 md:flex-row md:gap-10">
+        <div className="mt-12 flex w-full flex-col items-start gap-6 md:mt-16 md:flex-row md:gap-10">
+
           <p className="w-full min-w-0 flex-1 text-[clamp(1rem,1.6vw,2.25rem)] leading-[1.45] font-medium">
             I help teams figure out who they're building for and why, then design what makes sense
             to the users. Open to Senior UXR & Product Design roles, full-time or contract.
