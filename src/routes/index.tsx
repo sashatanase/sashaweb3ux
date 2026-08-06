@@ -307,14 +307,14 @@ function Index() {
             <a
               href="mailto:sasha@web3ux.org"
               onClick={() => trackCta("get_in_touch", "Get in touch", "hero")}
-              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground"
+              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground xl:px-7 xl:py-4"
             >
               Get in touch ↗
             </a>
             <Link
               to="/case-studies"
               onClick={() => trackCta("case_studies", "Case Studies", "hero")}
-              className="inline-flex items-center gap-2 border border-foreground bg-transparent px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground hover:text-background"
+              className="inline-flex items-center gap-2 border border-foreground bg-transparent px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground hover:text-background xl:px-7 xl:py-4"
             >
               Case Studies →
             </Link>
