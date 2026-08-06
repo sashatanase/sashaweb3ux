@@ -9,6 +9,7 @@ import { ScrollCue } from "@/components/ScrollCue";
 
 import { track, trackCta, trackNav, trackOutbound } from "@/lib/analytics";
 import { useSectionTracking, type TrackedSection } from "@/hooks/use-section-tracking";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
   component: Index,
