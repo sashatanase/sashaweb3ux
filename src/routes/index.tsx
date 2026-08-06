@@ -292,7 +292,7 @@ function Index() {
           </div>
           <div className="col-span-12 md:col-span-10">
             <h1 className="hero-title font-medium tracking-tight">
-              UX specialist&nbsp;
+              UX designer and UX researcher&nbsp;
               <span className="text-muted-foreground">who makes products&nbsp;</span>
               <span className="text-accent">make sense</span>.
             </h1>
