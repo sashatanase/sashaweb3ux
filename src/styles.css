@@ -218,6 +218,25 @@
   animation: fadeUp 0.4s ease both;
 }
 
+@keyframes scrollCueBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+.scroll-cue {
+  animation: scrollCueBounce 1.5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue {
+    animation: none;
+  }
+}
+
+
 .mint-wrapper {
   all: initial;
   color-scheme: light;
