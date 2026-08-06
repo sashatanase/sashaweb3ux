@@ -291,20 +291,16 @@ function Index() {
           §01 / Index
         </div>
         <h1 className="hero-title w-full font-medium">
-          UX designer
+          UX designer and researcher
           <br />
-          and researcher
-          <br />
-          <span className="text-muted-foreground">who makes</span>
-          <br />
-          <span className="text-muted-foreground">products</span>
+          <span className="text-muted-foreground">who makes products</span>
           <br />
           <span className="text-accent">make sense</span>.
         </h1>
         <div className="mt-10 flex w-full flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <p className="max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight md:text-2xl">
-            I help teams figure out who they're building for and why, then design what makes sense to
-            the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or contract.
+            I help teams figure out who they're building for and why, then design what makes sense
+            to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or contract.
           </p>
           <div className="flex flex-col items-start gap-3 md:items-end">
             <a
