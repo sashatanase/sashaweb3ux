@@ -235,6 +235,7 @@
 @media (prefers-reduced-motion: reduce) {
   .scroll-cue {
     animation: none;
+    transform: translateX(-50%);
   }
 }
 
