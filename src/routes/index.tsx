@@ -4,6 +4,8 @@ import portraitAsset from "@/assets/sasha-luca-bw-2.png.asset.json";
 const portrait = portraitAsset.url;
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { CursorDots } from "@/components/CursorDots";
+import { ScrollCue } from "@/components/ScrollCue";
+
 import { track, trackCta, trackNav, trackOutbound } from "@/lib/analytics";
 import { useSectionTracking, type TrackedSection } from "@/hooks/use-section-tracking";
 
@@ -321,7 +323,9 @@ function Index() {
             </Link>
           </div>
         </div>
+        <ScrollCue targetId="work" className="mt-14 md:mt-20" />
       </section>
+
 
       <main id="top" className="mx-auto max-w-[1400px] px-6 md:px-10">
         {/* Selected Work */}
