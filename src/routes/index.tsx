@@ -246,7 +246,7 @@ function Index() {
       {/* Header */}
       <header
         className={cn(
-          "sticky top-0 z-50 border-b border-border bg-background transition-shadow duration-300",
+          "fixed inset-x-0 top-0 z-50 border-b border-border bg-background transition-shadow duration-300",
           scrolled && "shadow-[0_1px_2px_0_rgba(0,0,0,0.04)]",
         )}
       >
@@ -300,6 +300,7 @@ function Index() {
           </div>
         </div>
       </header>
+      <div className="h-[55px]" aria-hidden="true" />
 
       {/* Hero - sits just below the header */}
       <section
