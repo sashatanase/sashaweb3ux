@@ -229,6 +229,7 @@ function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean })
 function Index() {
   const year = new Date().getFullYear();
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -238,6 +239,13 @@ function Index() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   useSectionTracking(SECTIONS);
 
