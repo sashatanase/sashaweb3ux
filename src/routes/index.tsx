@@ -299,7 +299,7 @@ function Index() {
           <span className="text-accent">make&nbsp;sense.</span>
         </h1>
         <div className="mt-10 flex w-full flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <p className="max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight sm:text-lg md:text-xl lg:text-2xl">
+          <p className="max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
             I help teams figure out who they're building for and why, then design what makes sense
             to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or contract.
           </p>
@@ -307,14 +307,14 @@ function Index() {
             <a
               href="mailto:sasha@web3ux.org"
               onClick={() => trackCta("get_in_touch", "Get in touch", "hero")}
-              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground"
+              className="inline-flex items-center gap-2 border border-foreground bg-foreground px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-background transition-colors hover:bg-background hover:text-foreground xl:px-7 xl:py-4"
             >
               Get in touch ↗
             </a>
             <Link
               to="/case-studies"
               onClick={() => trackCta("case_studies", "Case Studies", "hero")}
-              className="inline-flex items-center gap-2 border border-foreground bg-transparent px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground hover:text-background"
+              className="inline-flex items-center gap-2 border border-foreground bg-transparent px-5 py-3 font-mono text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-foreground hover:text-background xl:px-7 xl:py-4"
             >
               Case Studies →
             </Link>
