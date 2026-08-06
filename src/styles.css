@@ -144,6 +144,8 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
   }
 
   html,
