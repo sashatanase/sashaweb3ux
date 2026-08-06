@@ -298,7 +298,7 @@ function Index() {
           <span className="text-muted-foreground">who&nbsp;makes&nbsp;products</span>
           <span className="text-accent">make&nbsp;sense.</span>
         </h1>
-        <div className="mt-10 flex w-full flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="mt-10 flex w-full flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <p className="max-w-2xl text-base font-medium whitespace-pre-line leading-relaxed tracking-tight md:text-2xl">
             I help teams figure out who they're building for and why, then design what makes sense
             to the users.{"\n"}Open to Senior UXR & Product Design roles, full-time or contract.
