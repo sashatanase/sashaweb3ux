@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portraitAsset from "@/assets/sasha-luca-portrait.png.asset.json";
+import portraitAsset from "@/assets/sasha-luca-bw-2.png.asset.json";
 
 const portrait = portraitAsset.url;
 import resumeAsset from "@/assets/resume.pdf.asset.json";
