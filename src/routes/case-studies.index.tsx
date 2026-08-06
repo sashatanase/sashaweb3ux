@@ -35,7 +35,7 @@ const SECTIONS = [
     title: "Design",
     href: "/case-studies/design" as const,
     description:
-      "Product and interaction design work — flows, systems, and interfaces shaped by the research.",
+      "Product and interaction design work - flows, systems, and interfaces shaped by the research.",
     count: "3 STUDIES",
   },
 ];
