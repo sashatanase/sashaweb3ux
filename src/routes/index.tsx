@@ -87,7 +87,7 @@ const WORK: WorkItem[] = [
     no: "02",
     year: "\n2021 — 2025",
     title: "Thesis*",
-    role: "UX Research Lead → UX Research Manager",
+    role: "UX RESEARCH\u00a0 AND DESIGN\u00a0LEAD→ UX RESEARCH MANAGER",
     kind: "studio",
     bullets: [
       "Led research focused on PMF across Mezo Network, Acre, and the BitcoinFi Accelerator, including discovery, segmentation, and value-prop validation.",
