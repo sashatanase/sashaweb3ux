@@ -298,13 +298,12 @@ function Index() {
           <span className="text-muted-foreground">who&nbsp;makes&nbsp;products</span>
           <span className="text-accent">make&nbsp;sense.</span>
         </h1>
-        <div className="mt-10 flex w-full flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <p className="w-full min-w-0 max-w-[38ch] flex-1 text-base font-medium leading-relaxed tracking-tight text-pretty sm:text-lg md:max-w-[42ch] md:text-xl lg:text-2xl xl:text-3xl">
+        <div className="mt-10 grid w-full grid-cols-1 items-start gap-6 md:grid-cols-12">
+          <p className="w-full min-w-0 text-base leading-relaxed font-medium sm:text-lg md:col-span-8 md:text-xl lg:col-span-7 lg:text-2xl xl:text-3xl 2xl:col-span-8">
             I help teams figure out who they're building for and why, then design what makes sense
             to the users. Open to Senior UXR & Product Design roles, full-time or contract.
           </p>
-          <div className="flex shrink-0 flex-col items-start gap-3 md:items-end">
-
+          <div className="flex flex-col items-start gap-3 md:col-span-4 md:items-end lg:col-span-5 2xl:col-span-4">
             <a
               href="mailto:sasha@web3ux.org"
               onClick={() => trackCta("get_in_touch", "Get in touch", "hero")}
