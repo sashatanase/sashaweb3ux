@@ -226,6 +226,16 @@ function WorkRow({ item, nested = false }: { item: WorkItem; nested?: boolean })
 
 function Index() {
   const year = new Date().getFullYear();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 8);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useSectionTracking(SECTIONS);
 
