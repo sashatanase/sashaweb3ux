@@ -291,13 +291,9 @@ function Index() {
           §01 / Index
         </div>
         <h1 className="hero-title w-full font-medium">
-          UX designer
+          UX designer and researcher
           <br />
-          and researcher
-          <br />
-          <span className="text-muted-foreground">who makes</span>
-          <br />
-          <span className="text-muted-foreground">products</span>
+          <span className="text-muted-foreground">who makes products</span>
           <br />
           <span className="text-accent">make sense</span>.
         </h1>
